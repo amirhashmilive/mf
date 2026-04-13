@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Meer Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
+            <div class="container hero-content">
+                <span class="hero-branding">Meer Foundation · Est. 2011 · Chhattisgarh</span>
+                <h1>Get in Touch</h1>
+                <p>We'd love to hear from you. Reach out for partnerships, volunteering, or queries.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1.5fr; gap: var(--space-lg);">
+                <!-- Info -->
+                <div class="fade-in">
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-map-marker-alt" style="color: var(--secondary);"></i> Our Office</h3>
+                        <p>Housing Board Colony, Dhamtari,<br>Chhattisgarh - 493773, India</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-envelope" style="color: var(--secondary);"></i> Email Us</h3>
+                        <p>meercare@live.com</p>
+                        <p>info@meerfoundation.org</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-phone-alt" style="color: var(--secondary);"></i> Call Us</h3>
+                        <p>+91 9826121177</p>
+                    </div>
+                    <div class="social-links" style="justify-content: flex-start;">
+                        <a href="#" class="social-icon" style="background: var(--primary); color: white;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" style="background: var(--primary); color: white;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" style="background: var(--primary); color: white;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" style="background: var(--primary); color: white;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="fade-in card" style="padding: var(--space-md);">
+                    <form id="contact-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;">Full Name</label>
+                                <input type="text" placeholder="John Doe" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;">Email Address</label>
+                                <input type="email" placeholder="john@example.com" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;">Subject</label>
+                            <input type="text" placeholder="Partnership Opportunity" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;">Your Message</label>
+                            <textarea rows="5" placeholder="How can we help you?" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-cta" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                    </form>
+                    <div id="form-success" style="display: none; margin-top: 1rem; color: var(--secondary); text-align: center; font-weight: 600;">
+                        Thank you! Your message has been sent.
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: var(--space-lg); border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-lg);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14917.40428610565!2d81.5471933!3d20.710123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2ede13a52c3c9b%3A0x6b862e3d36b9e59!2sDhamtari%2C%20Chhattisgarh%2C%20India!5e0!3m2!1sen!2sus!4v1713000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
