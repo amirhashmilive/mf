@@ -4,75 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="images/logo/LOGO%20-%20MEER%20FOUNDATION%201x1.png">
 </head>
 <body>
 
-    <div id="header-placeholder"></div>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img class="logo-header" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link">Initiatives <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="bolti-nadi.html" class="dropdown-link">Bolti Nadi</a>
+                        <a href="farmours.html" class="dropdown-link">Farmours</a>
+                        <a href="prayaas.html" class="dropdown-link">Prayaas</a>
+                        <a href="yoga-kutumb.html" class="dropdown-link">Yoga Kutumb</a>
+                        <a href="social-heritage-walk.html" class="dropdown-link">Social Heritage Walk</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Research <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="rivers-chhattisgarh.html" class="dropdown-link">Rivers of Chhattisgarh</a>
+                        <a href="edusuto-courses.html" class="dropdown-link">EduSuTo Courses</a>
+                        <a href="ijmeer.html" class="dropdown-link">IJMEER Journal</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Emerging <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="community-radio.html" class="dropdown-link">Community Radio</a>
+                        <a href="guriya-magazine.html" class="dropdown-link">Guriya Magazine</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm">DONATE NOW</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div class="mobile-sidebar">
+        <div class="sidebar-close"><i class="fas fa-times"></i></div>
+        <div class="sidebar-links">
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="impact.html" class="sidebar-link">Impact</a>
+            <a href="resources.html" class="sidebar-link">Resources</a>
+            <a href="contact.html" class="sidebar-link">Contact</a>
+            <a href="get-involved.html" class="sidebar-link">Get Involved</a>
+            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-left: 0; text-align: center;">DONATE NOW</a>
+        </div>
+    </div>
 
     <main>
-        <!-- Page Header -->
-        <section class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
-            <div class="container hero-content">
-                <span class="hero-branding">Meer Foundation · Est. 2011 · Chhattisgarh</span>
-                <h1>Our Mission & Vision</h1>
-                <p>Rooted in Chhattisgarh, serving humanity.</p>
-            </div>
-        </section>
-
-        <!-- Mission Vision -->
-        <section class="container">
-            <div class="grid">
-                <div class="fade-in card" style="padding: var(--space-md); border-top: 5px solid var(--secondary);">
-                    <h3>Our Mission</h3>
-                    <p>“To empower rural communities through education, environmental restoration, and sustainable development.”</p>
-                </div>
-                <div class="fade-in card" style="padding: var(--space-md); border-top: 5px solid var(--primary);">
-                    <h3>Our Vision</h3>
-                    <p>“Self-reliant, resilient, and environmentally conscious communities.”</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Organization Intro -->
-        <section style="background: var(--white);">
+        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), center/cover;">
             <div class="container fade-in">
-                <div class="section-header">
-                    <h2>Organization Profile</h2>
-                </div>
-                <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                    <p>Meer Foundation is a nonprofit organization established in 2011, dedicated to fostering self-reliance among rural populations in Chhattisgarh. Our approach is holistic, integrating education, health, and conservation into a unified development model.</p>
-                    <p style="margin-top: 1.5rem;">We believe that the sustainability of a community is inextricably linked to the health of its natural environment. By restoring rivers and soil, we are not just helping nature—we are securing the livelihoods of future generations.</p>
-                    
-                    <div style="margin-top: 3rem; background: var(--bg-sand); padding: var(--space-md); border-radius: 15px;">
-                        <h4>Legal & Regulatory Compliance</h4>
-                        <ul style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 0.5rem;"></i> Reg: Chhattisgarh Society Registration Act 1973</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 0.5rem;"></i> 12A Certified</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 0.5rem;"></i> 80G Certified</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 0.5rem;"></i> CSR-1 Registered</li>
-                        </ul>
+                <h1>Our Story</h1>
+                <p>Founded in 2011, Meer Foundation is a registered nonprofit dedicated to ecological restoration, transformative education, and sustainable livelihoods across Chhattisgarh.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                    <div class="fade-in">
+                        <h2 style="margin-bottom: 25px;">Mission & Vision</h2>
+                        <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 30px;">At Meer Foundation, we believe that development and conservation are two sides of the same coin. Our vision is to create a Chhattisgarh where every citizen lives with dignity, every student has access to global-standard education, and every river flows free from pollution.</p>
+                        <p style="margin-bottom: 30px;">For over a decade, we have worked at the grassroots level, combining scientific research with community mobilization to drive systemic change. From our base in Dhamtari, we have expanded our reach across the state, impacting millions of lives through our diverse initiatives.</p>
+                        <div style="display: flex; gap: 40px; margin-top: 40px;">
+                            <div>
+                                <h4 style="color: var(--primary); margin-bottom: 5px;">2011</h4>
+                                <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Year Established</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary); margin-bottom: 5px;">CG/2018/0191949</h4>
+                                <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">NGO Darpan ID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in">
+                        <div style="background: var(--bg-light); padding: 50px; border-radius: 24px; box-shadow: var(--shadow-md);">
+                             <h4 style="margin-bottom: 25px;">Our Core Values</h4>
+                             <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
+                                 <li style="display: flex; gap: 15px;">
+                                     <i class="fas fa-check-circle" style="color: #3b82f6; font-size: 1.3rem;"></i>
+                                     <span><strong>Scientific Rigor:</strong> Every initiative is backed by local research and data-driven insights.</span>
+                                 </li>
+                                 <li style="display: flex; gap: 15px;">
+                                     <i class="fas fa-check-circle" style="color: #3b82f6; font-size: 1.3rem;"></i>
+                                     <span><strong>Community First:</strong> We don't just work for the community; we work with them as partners.</span>
+                                 </li>
+                                 <li style="display: flex; gap: 15px;">
+                                     <i class="fas fa-check-circle" style="color: #3b82f6; font-size: 1.3rem;"></i>
+                                     <span><strong>Radical Transparency:</strong> We are committed to complete openness in our operations and finances.</span>
+                                 </li>
+                                 <li style="display: flex; gap: 15px;">
+                                     <i class="fas fa-check-circle" style="color: #3b82f6; font-size: 1.3rem;"></i>
+                                     <span><strong>Sustainability:</strong> Our solutions are designed to outlast our presence and be self-sustaining.</span>
+                                 </li>
+                             </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Location -->
-        <section class="container">
-            <div class="fade-in" style="text-align: center;">
-                <h2>Find Us</h2>
-                <p>Housing Board Colony, Dhamtari, Chhattisgarh, India</p>
-                <div style="margin-top: 2rem; overflow: hidden; border-radius: 20px; box-shadow: var(--shadow-lg);">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14917.40428610565!2d81.5471933!3d20.710123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2ede13a52c3c9b%3A0x6b862e3d36b9e59!2sDhamtari%2C%20Chhattisgarh%2C%20India!5e0!3m2!1sen!2sus!4v1713000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Timeline Section -->
+        <section class="section-padding" style="background: #f8fafc;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px;">The Journey So Far</h2>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="display: flex; gap: 40px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative;">
+                        <div style="position: absolute; left: -10px; top: 0; width: 17px; height: 17px; background: #3b82f6; border-radius: 50%;"></div>
+                        <div style="min-width: 80px; font-weight: 800; color: var(--primary);">2011</div>
+                        <div>
+                            <h4>Founding</h4>
+                            <p style="font-size: 0.95rem; margin-top: 5px;">Meer Foundation is established with a focus on rural education and local livelihood support in Dhamtari.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 40px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative;">
+                        <div style="position: absolute; left: -10px; top: 0; width: 17px; height: 17px; background: #3b82f6; border-radius: 50%;"></div>
+                        <div style="min-width: 80px; font-weight: 800; color: var(--primary);">2016</div>
+                        <div>
+                            <h4>Launch of Bolti Nadi</h4>
+                            <p style="font-size: 0.95rem; margin-top: 5px;">Flagship river rejuvenation campaign begins, mapping the health of Chhattisgarh’s major river systems.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 400px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative; border-color: transparent;">
+                        <!-- Fixed margin-bottom and spacing -->
+                    </div>
+                    <!-- Combined 2018-2019 for space -->
+                    <div style="display: flex; gap: 40px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative;">
+                        <div style="position: absolute; left: -10px; top: 0; width: 17px; height: 17px; background: #3b82f6; border-radius: 50%;"></div>
+                        <div style="min-width: 80px; font-weight: 800; color: var(--primary);">2019</div>
+                        <div>
+                            <h4>Tiranga World Record</h4>
+                            <p style="font-size: 0.95rem; margin-top: 5px;">Organized a 15km human chain in Raipur to celebrate national unity. Successful Sakri River Walk (90km) completed.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 40px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative;">
+                        <div style="position: absolute; left: -10px; top: 0; width: 17px; height: 17px; background: #3b82f6; border-radius: 50%;"></div>
+                        <div style="min-width: 80px; font-weight: 800; color: var(--primary);">2024</div>
+                        <div>
+                            <h4>Global Scaling</h4>
+                            <p style="font-size: 0.95rem; margin-top: 5px;">Launching IJMEER journal and community radio; reaching over 20 million people with water security awareness.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
+                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Transparency</h4>
+                    <p>NGO Darpan ID: CG/2018/0191949</p>
+                    <p>PAN: AACAM4289J</p>
+                    <p>12A | 80G | CSR-1 Registered</p>
+                </div>
+                <div class="footer-col" style="padding-left: 20px;">
+                    <h4>Contact Details</h4>
+                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
+                    <p>meercare@live.com</p>
+                    <p>+91 98261 21177</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons" style="justify-content: center;">
+                    <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p style="margin-top: 20px; text-align: center;">&copy; 2026 Meer Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

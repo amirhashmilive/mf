@@ -4,96 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Impact | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="images/logo/LOGO%20-%20MEER%20FOUNDATION%201x1.png">
 </head>
 <body>
 
-    <div id="header-placeholder"></div>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img class="logo-header" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link">Initiatives <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="bolti-nadi.html" class="dropdown-link">Bolti Nadi</a>
+                        <a href="farmours.html" class="dropdown-link">Farmours</a>
+                        <a href="prayaas.html" class="dropdown-link">Prayaas</a>
+                        <a href="yoga-kutumb.html" class="dropdown-link">Yoga Kutumb</a>
+                        <a href="social-heritage-walk.html" class="dropdown-link">Social Heritage Walk</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Research <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="rivers-chhattisgarh.html" class="dropdown-link">Rivers of Chhattisgarh</a>
+                        <a href="edusuto-courses.html" class="dropdown-link">EduSuTo Courses</a>
+                        <a href="ijmeer.html" class="dropdown-link">IJMEER Journal</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Emerging <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="community-radio.html" class="dropdown-link">Community Radio</a>
+                        <a href="guriya-magazine.html" class="dropdown-link">Guriya Magazine</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm">DONATE NOW</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div class="mobile-sidebar">
+        <div class="sidebar-close"><i class="fas fa-times"></i></div>
+        <div class="sidebar-links">
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="impact.html" class="sidebar-link">Impact</a>
+            <a href="resources.html" class="sidebar-link">Resources</a>
+            <a href="contact.html" class="sidebar-link">Contact</a>
+            <a href="get-involved.html" class="sidebar-link">Get Involved</a>
+            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-left: 0; text-align: center;">DONATE NOW</a>
+        </div>
+    </div>
 
     <main>
-        <!-- Page Header -->
-        <section class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
-            <div class="container hero-content">
-                <span class="hero-branding">Meer Foundation · Est. 2011 · Chhattisgarh</span>
-                <h1>Stories of Change</h1>
-                <p>Quantifying the difference we make together.</p>
-            </div>
-        </section>
-
-        <!-- Stats Grid -->
-        <section class="container fade-in">
-            <div class="section-header">
-                <h2>Impact by the Numbers</h2>
-            </div>
-            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="card" style="text-align: center; padding: 3rem;">
-                    <h2 style="font-size: 3.5rem; color: var(--secondary);">12+</h2>
-                    <p>Years of Service</p>
-                </div>
-                <div class="card" style="text-align: center; padding: 3rem;">
-                    <h2 style="font-size: 3.5rem; color: var(--primary);">150+</h2>
-                    <p>Villages Empowered</p>
-                </div>
-                <div class="card" style="text-align: center; padding: 3rem;">
-                    <h2 style="font-size: 3.5rem; color: var(--accent);">25k+</h2>
-                    <p>Lives Impacted</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stories / Testimonials -->
-        <section style="background: var(--white);">
+        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.8), rgba(10,37,64,0.8)), center/cover;">
             <div class="container fade-in">
-                <div class="section-header">
-                    <h2>Voices from the Field</h2>
-                </div>
-                <div class="grid">
-                    <div class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
-                        <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 1.5rem;">"The Bolti Nadi program changed how we look at our village pond. We used to ignore the pollution, but now we protect it like our own family."</p>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd;"></div>
-                            <div>
-                                <h4 style="margin: 0;">Rajesh Kumar</h4>
-                                <p style="font-size: 0.8rem; color: var(--text-muted);">Village Head, Dhamtari</p>
-                            </div>
-                        </div>
+                <h1>Our Impact: A Decade of Change</h1>
+                <p>Since 2011, Meer Foundation has been at the forefront of social and ecological transformation in Chhattisgarh. Here is our story in numbers and milestones.</p>
+            </div>
+        </section>
+
+        <!-- Stats Counters -->
+        <section class="section-padding" style="background: var(--bg-light);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+                    <div class="initiative-card fade-in">
+                        <h2 class="stat-number" data-target="22000" style="font-size: 3.5rem; color: var(--primary);">0</h2>
+                        <p style="font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-top: 10px;">Students Taught</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Providing quality digital education through our Prayaas centers across rural blocks.</p>
                     </div>
-                    <div class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
-                        <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 1.5rem;">"My daughter is now the first in our family to use a computer, thanks to the Prayaas learning center. Her confidence has grown tremendously."</p>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd;"></div>
-                            <div>
-                                <h4 style="margin: 0;">Sita Sahu</h4>
-                                <p style="font-size: 0.8rem; color: var(--text-muted);">Farmer & Parent</p>
-                            </div>
-                        </div>
+                    <div class="initiative-card fade-in">
+                        <h2 class="stat-number" data-target="50000" style="font-size: 3.5rem; color: var(--primary);">0</h2>
+                        <p style="font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-top: 10px;">Trees Planted</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Reforesting Chhattisgarh's landscapes under the Bolti Nadi rejuvenation drive.</p>
+                    </div>
+                    <div class="initiative-card fade-in">
+                        <h2 class="stat-number" data-target="150" style="font-size: 3.5rem; color: var(--primary);">0</h2>
+                        <p style="font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-top: 10px;">Villages Impacted</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Working directly with communities to implement sustainable health and livelihood models.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Before/After Placeholder -->
-        <section class="container fade-in">
-            <div class="section-header">
-                <h2>Before & After: River Restoration</h2>
-            </div>
-            <div class="grid">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Polluted River" style="border-radius: 20px; filter: grayscale(100%);">
-                    <p style="text-align: center; margin-top: 1rem; font-weight: 600;">BEFORE: Polluted Banks</p>
+        <!-- Milestone: Tiranga World Record -->
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <div class="fade-in">
+                        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+                            <i class="fas fa-medal" style="font-size: 3rem; color: #eab308;"></i>
+                            <h2 style="margin-bottom: 0;">Tiranga World Record</h2>
+                        </div>
+                        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">On **11 August 2019**, Meer Foundation etched its name in history by organizing a massive **15km human chain** in Raipur. This historic event was organized to celebrate national unity and showcased the foundation's capability to mobilize thousands for a collective cause.</p>
+                        <p style="margin-bottom: 25px;">The event saw participation from students, professionals, and citizens from all walks of life, stretching across the heart of the capital city. It remains one of the largest civic mobilizations in the history of Chhattisgarh.</p>
+                        <div style="display: flex; gap: 20px;">
+                             <div style="text-align: center; background: #fef3c7; padding: 20px; border-radius: 12px; flex: 1;">
+                                 <h4 style="margin-bottom: 5px;">15 KM</h4>
+                                 <p style="font-size: 0.8rem; font-weight: 700; color: #92400e;">Distance Covered</p>
+                             </div>
+                             <div style="text-align: center; background: #fef3c7; padding: 20px; border-radius: 12px; flex: 1;">
+                                 <h4 style="margin-bottom: 5px;">Raipur</h4>
+                                 <p style="font-size: 0.8rem; font-weight: 700; color: #92400e;">Event Location</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="fade-in">
+                        <img src="images/world-record.jpg" alt="Tiranga World Record 15KM" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                    </div>
                 </div>
-                <div>
-                     <img src="assets/images/hero.png" alt="Clean River" style="border-radius: 20px;">
-                     <p style="text-align: center; margin-top: 1rem; font-weight: 600; color: var(--secondary);">AFTER: Restored Ecosystem</p>
+            </div>
+        </section>
+
+        <!-- Narrative Impact -->
+        <section class="section-padding" style="background: var(--primary); color: white;">
+            <div class="container fade-in">
+                <h2 style="color: white; text-align: center; margin-bottom: 60px;">Beyond the Numbers</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                    <div>
+                        <h4 style="color: white; margin-bottom: 20px;"><i class="fas fa-water" style="margin-right: 15px; color: #3b82f6;"></i> River Rejuvenation</h4>
+                        <p style="opacity: 0.8; font-size: 0.95rem;">Our Sakri River walk in 2019 led directly to the establishment of a 2-crore STP and desilting works across 59 villages, restoring year-round water access for farmers.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: white; margin-bottom: 20px;"><i class="fas fa-hand-holding-heart" style="margin-right: 15px; color: #3b82f6;"></i> Social Heritage</h4>
+                        <p style="opacity: 0.8; font-size: 0.95rem;">By highlighting overlooked archaeological sites, we've influenced local conservation policies and brought pride back to rural cultural roots.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: white; margin-bottom: 20px;"><i class="fas fa-graduation-cap" style="margin-right: 15px; color: #3b82f6;"></i> Digital Literacy</h4>
+                        <p style="opacity: 0.8; font-size: 0.95rem;">Thousands of rural students who had never seen a computer are now learning coding and digital skills, breaking the cycle of rural-urban educational inequality.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
+                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Transparency</h4>
+                    <p>NGO Darpan ID: CG/2018/0191949</p>
+                    <p>PAN: AACAM4289J</p>
+                    <p>12A | 80G | CSR-1 Registered</p>
+                </div>
+                <div class="footer-col" style="padding-left: 20px;">
+                    <h4>Contact Details</h4>
+                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
+                    <p>meercare@live.com</p>
+                    <p>+91 98261 21177</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons" style="justify-content: center;">
+                    <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p style="margin-top: 20px; text-align: center;">&copy; 2026 Meer Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
