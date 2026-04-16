@@ -6,10 +6,15 @@
     <title>Resources | Meer Foundation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/png" href="images/logo/LOGO%20-%20MEER%20FOUNDATION%201x1.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        .resource-card { background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid #f1f5f9; display: flex; align-items: center; gap: 20px; transition: transform 0.3s ease; }
+        .resource-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .resource-icon { width: 60px; height: 60px; background: #eff6ff; color: #3b82f6; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    </style>
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo-link">
@@ -51,108 +56,100 @@
         </div>
     </header>
 
+    <!-- Mobile Sidebar -->
     <div class="mobile-sidebar">
         <div class="sidebar-close"><i class="fas fa-times"></i></div>
         <div class="sidebar-links">
             <a href="index.html" class="sidebar-link">Home</a>
+            <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
+            <a href="farmours.html" class="sidebar-link">Farmours</a>
             <a href="impact.html" class="sidebar-link">Impact</a>
             <a href="resources.html" class="sidebar-link">Resources</a>
             <a href="contact.html" class="sidebar-link">Contact</a>
             <a href="get-involved.html" class="sidebar-link">Get Involved</a>
-            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-left: 0; text-align: center;">DONATE NOW</a>
+            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
         </div>
     </div>
 
     <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), center/cover;">
+        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('images/hero-home.png') center/cover;">
             <div class="container fade-in">
-                <h1>Resource Center</h1>
-                <p>Access our research data, initiative reports, and legal documentation. We believe in transparency and the open sharing of environmental data.</p>
+                <h1>Resources</h1>
+                <p>Access our annual reports, research publications, and educational kits.</p>
             </div>
         </section>
 
         <section class="section-padding">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-                    <!-- Research Reports -->
-                    <div class="fade-in" style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0;">
-                         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                             <i class="fas fa-file-chart-column" style="font-size: 2.5rem; color: #3b82f6;"></i>
-                             <h3 style="margin-bottom: 0;">Research Reports</h3>
-                         </div>
-                         <p style="margin-bottom: 30px; font-size: 0.95rem;">Detailed analysis of Chhattisgarh’s river basins, land use patterns, and water quality metrics derived from the Bolti Nadi mission.</p>
-                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
-                             <li><a href="rivers-chhattisgarh.html" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-download" style="margin-right: 10px;"></i> Mahanadi Basin Report 2025</a></li>
-                             <li><a href="rivers-chhattisgarh.html" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-download" style="margin-right: 10px;"></i> Sakri River Walk Impact Paper</a></li>
-                             <li><a href="rivers-chhattisgarh.html" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-download" style="margin-right: 10px;"></i> Pollution Assessment: Indravati</a></li>
-                         </ul>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 5px;">Annual Report 2023</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Summary of our initiatives, impact metrics, and financial transparency for the fiscal year.</p>
+                            <a href="#" class="btn-donate-sm" style="text-decoration: none;">Download PDF</a>
+                        </div>
                     </div>
-
-                    <!-- Legal & Transparency -->
-                    <div class="fade-in" style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0;">
-                         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                             <i class="fas fa-scale-balanced" style="font-size: 2.5rem; color: #3b82f6;"></i>
-                             <h3 style="margin-bottom: 0;">Transparency Docs</h3>
-                         </div>
-                         <p style="margin-bottom: 30px; font-size: 0.95rem;">Documentation regarding our registration, financial transparency, and annual compliance reports.</p>
-                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
-                             <li><a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-file-pdf" style="margin-right: 10px;"></i> 80G Tax Exemption Certificate</a></li>
-                             <li><a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-file-pdf" style="margin-right: 10px;"></i> CSR-1 Registration Letter</a></li>
-                             <li><a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-file-pdf" style="margin-right: 10px;"></i> NGO Darpan Profile Link</a></li>
-                         </ul>
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon"><i class="fas fa-flask"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 5px;">Bolti Nadi Expedition Data</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Detailed water quality and flow mapping data from the 2019-2023 river research.</p>
+                            <a href="#" class="btn-donate-sm" style="text-decoration: none;">View Research</a>
+                        </div>
                     </div>
-
-                    <!-- Educational Guides -->
-                    <div class="fade-in" style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0;">
-                         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                             <i class="fas fa-books" style="font-size: 2.5rem; color: #3b82f6;"></i>
-                             <h3 style="margin-bottom: 0;">Education Guides</h3>
-                         </div>
-                         <p style="margin-bottom: 30px; font-size: 0.95rem;">Curated guides from the EduSuTo initiative for schools and local bodies to implement sustainable practices.</p>
-                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
-                             <li><a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-book" style="margin-right: 10px;"></i> Rooftop Water Harvesting Guide</a></li>
-                             <li><a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-book" style="margin-right: 10px;"></i> Organic Farm-to-Fork Manual</a></li>
-                             <li><a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;"><i class="fas fa-book" style="margin-right: 10px;"></i> Heritage Site Stewardship Handbook</a></li>
-                         </ul>
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon"><i class="fas fa-book"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 5px;">EduSuTo Toolkit</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">A comprehensive guide for rural educators to implement modern hybrid learning.</p>
+                            <a href="#" class="btn-donate-sm" style="text-decoration: none;">Download Guide</a>
+                        </div>
+                    </div>
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon"><i class="fas fa-id-card"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 5px;">Press Kit & Media Assets</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Logos, brand guidelines, and official photographs for media use.</p>
+                            <a href="#" class="btn-donate-sm" style="text-decoration: none;">Access Kit</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-grid">
-                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
-                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                </div>
                 <div class="footer-col">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
+                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col" style="min-width: 300px;">
                     <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949</p>
-                    <p>PAN: AACAM4289J</p>
+                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
                     <p>12A | 80G | CSR-1 Registered</p>
                 </div>
-                <div class="footer-col" style="padding-left: 20px;">
+                <div class="footer-col">
                     <h4>Contact Details</h4>
                     <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>meercare@live.com</p>
-                    <p>+91 98261 21177</p>
+                    <p>Email: meercare@live.com | Phone: 9826121177</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="social-icons" style="justify-content: center;">
-                    <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p style="margin-top: 20px; text-align: center;">&copy; 2026 Meer Foundation. All rights reserved.</p>
+                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
 </body>
 </html>

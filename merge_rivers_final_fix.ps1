@@ -1,15 +1,53 @@
+$sourcePath = 'C:\Users\hashm\Desktop\Plan Mode\MF\Resources\rivers of chhattisgarh page.html'
+$destPath = 'c:\Users\hashm\Desktop\Workplace Meer Foundation\rivers-chhattisgarh.html'
+
+$content = Get-Content $sourcePath -Raw
+
+# 1. Extract External Libraries (Leaflet, Charts)
+$extStart = $content.IndexOf('<!-- Leaflet CSS -->')
+$extEnd = $content.IndexOf('</head>')
+$externalLibs = $content.Substring($extStart, $extEnd - $extStart)
+
+# 2. Extract Specific Style Block (Rivers Technical Style)
+$styleStart = $content.IndexOf('<style>')
+$styleEnd = $content.IndexOf('</style>') + 8
+$riversStyle = $content.Substring($styleStart, $styleEnd - $styleStart)
+
+# 3. Extract Technical Body Content (Everything inside body except their nav)
+$bodyStart = $content.IndexOf('<body>') + 6
+$bodyEnd = $content.IndexOf('<div class="nav-bar">') # Source has its own nav at bottom
+if ($bodyEnd -lt 0) { $bodyEnd = $content.LastIndexOf('</body>') }
+$technicalContent = $content.Substring($bodyStart, $bodyEnd - $bodyStart)
+
+# 4. Extract Technical Scripts (Logic for maps/charts)
+$scriptStart = $content.IndexOf('<!-- Leaflet JS -->')
+if ($scriptStart -lt 0) { $scriptStart = $content.IndexOf('<script src="https://unpkg.com/leaflet') }
+$scriptEnd = $content.LastIndexOf('</body>')
+$technicalScripts = $content.Substring($scriptStart, $scriptEnd - $scriptStart)
+
+$header = @"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerging Projects | Meer Foundation</title>
+    <title>Rivers of Chhattisgarh | Meer Foundation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    $externalLibs
+    $riversStyle
+    <style>
+        /* Resolve conflicts between technical layout and site footer */
+        body { padding-bottom: 0px !important; }
+        .section { scroll-margin-top: 100px; }
+        header { position: sticky !important; }
+        .footer-grid { border-top: 1px solid rgba(255,255,255,0.1); }
+        /* Ensure technical map doesn't overlap logo */
+        #map { z-index: 10 !important; }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo-link">
@@ -44,87 +82,56 @@
                 <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
                 <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
                 <li><a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm">DONATE NOW</a></li>
             </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
-    <!-- Mobile Sidebar -->
     <div class="mobile-sidebar">
         <div class="sidebar-close"><i class="fas fa-times"></i></div>
         <div class="sidebar-links">
             <a href="index.html" class="sidebar-link">Home</a>
-            <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
-            <a href="farmours.html" class="sidebar-link">Farmours</a>
             <a href="impact.html" class="sidebar-link">Impact</a>
             <a href="resources.html" class="sidebar-link">Resources</a>
             <a href="contact.html" class="sidebar-link">Contact</a>
-            <a href="get-involved.html" class="sidebar-link">Get Involved</a>
-            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
+            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-left: 0;">DONATE NOW</a>
         </div>
     </div>
 
-    <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('images/hero-home.png') center/cover;">
-            <div class="container fade-in">
-                <h1>Emerging Projects</h1>
-                <p>Innovating for the next generation of rural empowerment.</p>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div class="river-dashboard-grid">
-                    <div class="initiative-card fade-in">
-                        <i class="fas fa-radio" style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 20px;"></i>
-                        <h3>Community Radio</h3>
-                        <p>Bridging the digital divide with vernacular broadcasts on health, climate, and local culture for the last mile.</p>
-                        <a href="community-radio.html" style="font-weight: 700; text-decoration: none; color: #3b82f6; margin-top: 15px; display: block;">Learn More &rarr;</a>
-                    </div>
-                    <div class="initiative-card fade-in">
-                        <i class="fas fa-newspaper" style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 20px;"></i>
-                        <h3>Guriya Magazine</h3>
-                        <p>Our upcoming bilingual publication showcasing rural talent and traditional wisdom across Chhattisgarh.</p>
-                        <a href="guriya-magazine.html" style="font-weight: 700; text-decoration: none; color: #3b82f6; margin-top: 15px; display: block;">Learn More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main id="technical-rivers-content">
+        $technicalContent
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
                     <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                    <div class="social-icons">
-                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
                 </div>
-                <div class="footer-col" style="min-width: 300px;">
-                    <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
+                <div class="footer-col">
+                    <h4>Legitimacy</h4>
+                    <p>NGO Darpan ID: CG/2018/0191949</p>
+                    <p>PAN: AACAM4289J</p>
                     <p>12A | 80G | CSR-1 Registered</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Details</h4>
-                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>Email: meercare@live.com | Phone: 9826121177</p>
+                    <h4>Contact</h4>
+                    <p>Dhamtari, Chhattisgarh 493773</p>
+                    <p>meercare@live.com</p>
+                    <p>+91 98261 21177</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
+                <p>&copy; 2026 Meer Foundation. Research Division.</p>
             </div>
         </div>
     </footer>
+
     <script src="assets/js/main.js"></script>
+    $technicalScripts
 </body>
 </html>
+"@
+
+Set-Content -Path $destPath -Value $header

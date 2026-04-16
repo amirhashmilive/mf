@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="images/logo/LOGO%20-%20MEER%20FOUNDATION%201x1.png">
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo-link">
@@ -51,29 +51,37 @@
         </div>
     </header>
 
+    <!-- Mobile Sidebar -->
     <div class="mobile-sidebar">
         <div class="sidebar-close"><i class="fas fa-times"></i></div>
         <div class="sidebar-links">
             <a href="index.html" class="sidebar-link">Home</a>
+            <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
+            <a href="farmours.html" class="sidebar-link">Farmours</a>
             <a href="impact.html" class="sidebar-link">Impact</a>
             <a href="resources.html" class="sidebar-link">Resources</a>
             <a href="contact.html" class="sidebar-link">Contact</a>
             <a href="get-involved.html" class="sidebar-link">Get Involved</a>
-            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-left: 0; text-align: center;">DONATE NOW</a>
+            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
         </div>
     </div>
 
     <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), center/cover;">
+        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('images/hero-home.png') center/cover; padding: 80px 0 60px;">
             <div class="container fade-in">
-                <h1>Our Story</h1>
-                <p>Founded in 2011, Meer Foundation is a registered nonprofit dedicated to ecological restoration, transformative education, and sustainable livelihoods across Chhattisgarh.</p>
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif;">Meer Foundation · Est. 2011 · Chhattisgarh</p>
+                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 20px; font-weight: 800; text-transform: uppercase; color: white;">Our Story</h1>
+                <p style="font-size: 1.1rem; max-width: 800px; line-height: 1.8; opacity: 0.95; margin-bottom: 30px;">Founded in 2011, Meer Foundation is a registered nonprofit dedicated to ecological restoration, transformative education, and sustainable livelihoods across Chhattisgarh.</p>
+                <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+                    <a href="index.html#initiatives" class="btn-hero btn-primary" style="padding: 14px 30px; border-radius: 50px;">Explore Initiatives</a>
+                    <a href="get-involved.html" class="btn-hero" style="padding: 14px 30px; border-radius: 50px; background: transparent; border: 2px solid white; color: white;">Get Involved</a>
+                </div>
             </div>
         </section>
 
         <section class="section-padding">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 80px; align-items: center;">
                     <div class="fade-in">
                         <h2 style="margin-bottom: 25px;">Mission & Vision</h2>
                         <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 30px;">At Meer Foundation, we believe that development and conservation are two sides of the same coin. Our vision is to create a Chhattisgarh where every citizen lives with dignity, every student has access to global-standard education, and every river flows free from pollution.</p>
@@ -137,10 +145,6 @@
                             <p style="font-size: 0.95rem; margin-top: 5px;">Flagship river rejuvenation campaign begins, mapping the health of Chhattisgarh’s major river systems.</p>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 400px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative; border-color: transparent;">
-                        <!-- Fixed margin-bottom and spacing -->
-                    </div>
-                    <!-- Combined 2018-2019 for space -->
                     <div style="display: flex; gap: 40px; margin-bottom: 40px; border-left: 3px solid #e2e8f0; padding-left: 30px; position: relative;">
                         <div style="position: absolute; left: -10px; top: 0; width: 17px; height: 17px; background: #3b82f6; border-radius: 50%;"></div>
                         <div style="min-width: 80px; font-weight: 800; color: var(--primary);">2019</div>
@@ -162,39 +166,37 @@
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-grid">
-                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
-                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                </div>
                 <div class="footer-col">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
+                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col" style="min-width: 300px;">
                     <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949</p>
-                    <p>PAN: AACAM4289J</p>
+                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
                     <p>12A | 80G | CSR-1 Registered</p>
                 </div>
-                <div class="footer-col" style="padding-left: 20px;">
+                <div class="footer-col">
                     <h4>Contact Details</h4>
                     <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>meercare@live.com</p>
-                    <p>+91 98261 21177</p>
+                    <p>Email: meercare@live.com | Phone: 9826121177</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="social-icons" style="justify-content: center;">
-                    <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p style="margin-top: 20px; text-align: center;">&copy; 2026 Meer Foundation. All rights reserved.</p>
+                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
 </body>
 </html>

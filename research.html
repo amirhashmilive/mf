@@ -8,17 +8,20 @@
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
 
-    <div id="header-placeholder"></div>
-
-    <main>
+        param($m)
+        "body" + $m.Groups[1].Value + ">`n" + $headerTemplate + "`n" + $m.Groups[2].Value
+    >
         <!-- Page Header -->
-        <section class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/hero.png');">
-            <div class="container hero-content">
-                <span class="hero-branding">Meer Foundation · Est. 2011 · Chhattisgarh</span>
-                <h1>Evidence-Based Development</h1>
-                <p>Driving change through research, training, and data.</p>
+                <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('images/hero-home.png') center/cover; padding: 80px 0 60px;">
+            <div class="container fade-in">
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif;">Meer Foundation · Est. 2011 · Chhattisgarh</p>
+                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 20px; font-weight: 800; text-transform: uppercase; color: white;">Evidence-Based Development</h1>
+                <p style="font-size: 1.1rem; max-width: 800px; line-height: 1.8; opacity: 0.95; margin-bottom: 30px;">Driving change through research, training, and data.</p>
+                <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+                    <a href="index.html#initiatives" class="btn-modern active" style="padding: 14px 30px; border-radius: 50px; background: #3b82f6; color: white; text-decoration: none;">Explore Initiatives</a>
+                    <a href="get-involved.html" class="btn-modern" style="padding: 14px 30px; border-radius: 50px; background: transparent; border: 2px solid white; color: white; text-decoration: none;">Get Involved</a>
+                </div>
             </div>
         </section>
 
@@ -67,5 +70,43 @@
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/components.js"></script>
+    <!-- Footer Section -->
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
+                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Transparency</h4>
+                    <p>NGO Darpan ID: CG/2018/0191949</p>
+                    <p>PAN: AACAM4289J</p>
+                    <p>12A | 80G | CSR-1 Registered</p>
+                </div>
+                <div class="footer-col" style="padding-left: 20px;">
+                    <h4>Contact Details</h4>
+                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
+                    <p>meercare@live.com</p>
+                    <p>+91 98261 21177</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
+
+
+

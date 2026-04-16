@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Impact | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-</head>
-<body>
+
+$files = Get-ChildItem "*.html"
+
+foreach ($file in $files) {
+    Write-Host "Cleaning $($file.Name)..."
+    $content = Get-Content $file.FullName -Raw
+    
+    # 1. REMOVE STRAY SIDEBAR FRAGMENTS
+    # This regex looks for divs with class "sidebar-links" that are NOT inside a "mobile-sidebar" div
+    # OR it just aggressively removes any duplicate sidebar-links structures that appear outside the standard template.
+    
+    # First, let's remove ALL header/sidebar/footer blocks again to be sure
+    $content = $content -replace '(?s)<!-- Header Section -->.*?<!-- Mobile Sidebar -->', ""
+    $content = $content -replace '(?s)<header>.*?</header>', ""
+    $content = $content -replace '(?s)<div class="mobile-sidebar">.*?</div>', ""
+    $content = $content -replace '(?s)<footer>.*?</footer>', ""
+    
+    # Now remove the "naked" sidebar-links fragments that were left behind
+    $content = $content -replace '(?s)<div class="sidebar-links">.*?</div>\s*</div>', ""
+    
+    # 2. RE-INSERT THE CLEAN TEMPLATES
+    $header = @"
     <!-- Header Section -->
     <header>
         <div class="nav-container">
@@ -57,7 +68,6 @@
         <div class="sidebar-links">
             <a href="index.html" class="sidebar-link">Home</a>
             <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
-            <a href="farmours.html" class="sidebar-link">Farmours</a>
             <a href="impact.html" class="sidebar-link">Impact</a>
             <a href="resources.html" class="sidebar-link">Resources</a>
             <a href="contact.html" class="sidebar-link">Contact</a>
@@ -65,53 +75,16 @@
             <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
         </div>
     </div>
+"@
 
-    <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('images/hero-home.png') center/cover;">
-            <div class="container fade-in">
-                <h1>Our Impact</h1>
-                <p>Measurable changes in education, ecology, and livelihoods across Chhattisgarh.</p>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div class="stats-grid" style="margin-bottom: 80px;">
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">150+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">Villages Reached</span>
-                    </div>
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">22K+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">Students Empowered</span>
-                    </div>
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">1.2K+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">KM River Mapped</span>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Sustainable Development</h2>
-                        <p style="margin-bottom: 20px;">Our impact is deeply rooted in the Sustainable Development Goals (SDGs). By focusing on Clean Water (SDG 6), Quality Education (SDG 4), and Decent Work (SDG 8), we are creating a blueprint for rural transformation that can be replicated across India.</p>
-                    </div>
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Community-Led Change</h2>
-                        <p style="margin-bottom: 20px;">We believe that true impact is when communities take ownership of the solutions. From village water committees to women-led agricultural cooperatives, our role is to act as a catalyst for local leadership.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    $footer = @"
     <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
-                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
+                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
                     <div class="social-icons">
                         <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
                         <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -120,15 +93,17 @@
                         <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col" style="min-width: 300px;">
+                <div class="footer-col">
                     <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
+                    <p>NGO Darpan ID: CG/2018/0191949</p>
+                    <p>PAN: AACAM4289J</p>
                     <p>12A | 80G | CSR-1 Registered</p>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col" style="padding-left: 20px;">
                     <h4>Contact Details</h4>
                     <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>Email: meercare@live.com | Phone: 9826121177</p>
+                    <p>meercare@live.com</p>
+                    <p>+91 98261 21177</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -136,6 +111,19 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+"@
+
+    if ($content -match '<body.*?>') {
+        $content = $content -replace '(<body.*?>)', "`$1`n$header"
+    }
+    if ($content -match '</body>') {
+        $content = $content -replace '(</body>)', "$footer`n`$1"
+    }
+    
+    # 3. FIX HERO STANDARD PADDING (ensure no gap inside hero either)
+    $content = $content -replace 'padding: 100px 0;', 'padding: 80px 0 60px;'
+
+    Set-Content $file.FullName $content
+}
+
+Write-Host "Site Purge and Deep Clean Complete. White gap issue should be resolved."

@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Impact | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-</head>
-<body>
+
+$headerTemplate = @"
     <!-- Header Section -->
     <header>
         <div class="nav-container">
@@ -57,7 +48,6 @@
         <div class="sidebar-links">
             <a href="index.html" class="sidebar-link">Home</a>
             <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
-            <a href="farmours.html" class="sidebar-link">Farmours</a>
             <a href="impact.html" class="sidebar-link">Impact</a>
             <a href="resources.html" class="sidebar-link">Resources</a>
             <a href="contact.html" class="sidebar-link">Contact</a>
@@ -65,53 +55,16 @@
             <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
         </div>
     </div>
+"@
 
-    <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('images/hero-home.png') center/cover;">
-            <div class="container fade-in">
-                <h1>Our Impact</h1>
-                <p>Measurable changes in education, ecology, and livelihoods across Chhattisgarh.</p>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div class="stats-grid" style="margin-bottom: 80px;">
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">150+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">Villages Reached</span>
-                    </div>
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">22K+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">Students Empowered</span>
-                    </div>
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">1.2K+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">KM River Mapped</span>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Sustainable Development</h2>
-                        <p style="margin-bottom: 20px;">Our impact is deeply rooted in the Sustainable Development Goals (SDGs). By focusing on Clean Water (SDG 6), Quality Education (SDG 4), and Decent Work (SDG 8), we are creating a blueprint for rural transformation that can be replicated across India.</p>
-                    </div>
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Community-Led Change</h2>
-                        <p style="margin-bottom: 20px;">We believe that true impact is when communities take ownership of the solutions. From village water committees to women-led agricultural cooperatives, our role is to act as a catalyst for local leadership.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+$footerTemplate = @"
     <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
-                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
+                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
+                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
                     <div class="social-icons">
                         <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
                         <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -120,15 +73,17 @@
                         <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col" style="min-width: 300px;">
+                <div class="footer-col">
                     <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
+                    <p>NGO Darpan ID: CG/2018/0191949</p>
+                    <p>PAN: AACAM4289J</p>
                     <p>12A | 80G | CSR-1 Registered</p>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col" style="padding-left: 20px;">
                     <h4>Contact Details</h4>
                     <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>Email: meercare@live.com | Phone: 9826121177</p>
+                    <p>meercare@live.com</p>
+                    <p>+91 98261 21177</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -136,6 +91,56 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+"@
+
+$files = Get-ChildItem "*.html"
+
+foreach ($file in $files) {
+    if ($file.Name -eq "index.html") { continue } # Skip index, fixed manually
+    
+    Write-Host "Cleaning and standardizing $($file.Name)..."
+    $content = Get-Content $file.FullName -Raw
+    
+    # Robust removal of Header/Mobile Sidebar/Footer blocks
+    $content = $content -replace '(?s)<!-- Header Section -->.*?<!-- Mobile Sidebar -->', ""
+    $content = $content -replace '(?s)<header>.*?</header>', ""
+    $content = $content -replace '(?s)<div class="mobile-sidebar">.*?</div>', ""
+    $content = $content -replace '(?s)<footer>.*?</footer>', ""
+    
+    # Standardize Hero Section
+    # Extract existing Heading and Description
+    if ($content -match '(?s)<section class="hero".*?<h1>(.*?)</h1>.*?<p>(.*?)</p>.*?</div>\s*</section>') {
+        $title = $matches[1].Trim()
+        $desc = $matches[2].Trim()
+        
+        $newHero = @"
+        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('images/hero-home.png') center/cover; padding: 100px 0;">
+            <div class="container fade-in">
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif;">Meer Foundation · Est. 2011 · Chhattisgarh</p>
+                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 20px; font-weight: 800; text-transform: uppercase; color: white;">$title</h1>
+                <p style="font-size: 1.1rem; max-width: 800px; line-height: 1.8; opacity: 0.95; margin-bottom: 30px;">$desc</p>
+                <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+                    <a href="index.html#initiatives" class="btn-modern active" style="padding: 14px 30px; border-radius: 50px; background: #3b82f6; color: white; text-decoration: none;">Explore Initiatives</a>
+                    <a href="get-involved.html" class="btn-modern" style="padding: 14px 30px; border-radius: 50px; background: transparent; border: 2px solid white; color: white; text-decoration: none;">Get Involved</a>
+                </div>
+            </div>
+        </section>
+"@
+        $content = $content -replace '(?s)<section class="hero".*?</section>', $newHero
+    }
+    
+    # Re-insert Header/Footer
+    if ($content -match '<body.*?>') {
+        $content = $content -replace '(<body.*?>)', "`$1`n$headerTemplate"
+    }
+    if ($content -match '</body>') {
+        $content = $content -replace '(</body>)', "$footerTemplate`n`$1"
+    }
+    
+    # Final cleanup of stray buttons (outside header)
+    $content = $content -replace '(?s)<a href="https://pages\.razorpay\.com/.*?" target="_blank" class="btn-donate-sm".*?</a>', ""
+
+    Set-Content $file.FullName $content
+}
+
+Write-Host "Site-wide Repair and Hero Standardization Complete."
