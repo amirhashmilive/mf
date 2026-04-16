@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guriya Magazine: Voices of Rural Girls | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-</head>
-<body>
 
-    <header>
+$copySym = [char]169
+$copyText = "$copySym 2026 Meer Foundation. All rights reserved. | <a href=""terms.html"">Terms</a> | <a href=""privacy.html"">Privacy</a>"
+
+$header = @"
+<header>
     <div class="container nav-container">
         <a href="index.html" class="logo-link">
             <img class="logo-header" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation Logo">
@@ -49,7 +42,9 @@
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 </header>
+"@
 
+$mobileSidebarHtml = @"
 <div class="mobile-sidebar">
     <div class="sidebar-close"><i class="fas fa-times"></i></div>
     <div class="sidebar-links">
@@ -71,68 +66,10 @@
         <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center; display: block;">DONATE NOW</a>
     </div>
 </div>
+"@
 
-<main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.8), rgba(10,37,64,0.8)), center/cover;">
-            <div class="container fade-in">
-                <h1>Guriya Magazine</h1>
-                <p>A monthly digital platform amplifying the dreams, struggles, and creativity of rural girls in Chhattisgarh. Empowering through expression.</p>
-                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <span style="background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">Monthly Digital Edition</span>
-                    <span style="background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">SDG 5: Gender Equality</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: start;">
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Empowering Through Storytelling</h2>
-                        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">Guriya is Meer Foundation's dedicated space for rural girls to explore their creative potential. We believe that behind every pair of eyes in our villages is a unique story of resilience and hope. Guriya Magazine provides the language and the platform for these stories to be heard.</p>
-                        
-                        <p style="margin-bottom: 25px;">Every month, we curate poems, illustrations, essays, and photo-stories submitted by girls from across our operational blocks. By documenting their lived experiences, we are not only preserving local culture but also building the confidence of young women leaders.</p>
-
-                        <div style="background: #fff1f2; padding: 40px; border-radius: 12px; margin: 40px 0; border: 1px solid #fda4af;">
-                            <h4 style="color: #be123c; margin-bottom: 20px;">Magazine Content Units</h4>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                <div>
-                                    <h5 style="color: #be123c; margin-bottom: 5px;">Kavita-Kunj</h5>
-                                    <p style="font-size: 0.85rem; opacity: 0.8;">Traditional and modern poetry reflecting on nature and life.</p>
-                                </div>
-                                <div>
-                                    <h5 style="color: #be123c; margin-bottom: 5px;">Sapno Ki Udaan</h5>
-                                    <p style="font-size: 0.85rem; opacity: 0.8;">Career-oriented articles and interviews with successful rural women.</p>
-                                </div>
-                                <div>
-                                    <h5 style="color: #be123c; margin-bottom: 5px;">Kahani-varta</h5>
-                                    <p style="font-size: 0.85rem; opacity: 0.8;">Folk tales and oral histories narrated by the younger generation.</p>
-                                </div>
-                                <div>
-                                    <h5 style="color: #be123c; margin-bottom: 5px;">Humar Kala</h5>
-                                    <p style="font-size: 0.85rem; opacity: 0.8;">Showcase of traditional arts and digital crafts by rural girls.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="fade-in">
-                        <div style="background: #f8fafc; padding: 30px; border-radius: 16px; border: 1px solid #e2e8f0; text-align: center;">
-                            <h4 style="margin-bottom: 20px;">Latest issue</h4>
-                            <div style="background: #ddd; width: 100%; aspect-ratio: 2/3; margin-bottom: 20px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                            <h5 style="margin-bottom: 5px;">Spring 2026 Edition</h5>
-                            <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 20px;">Focus: Local Heritage & Future Careers</p>
-                            <a href="#" class="btn-donate-sm" style="display: block; text-align: center; margin-left: 0;">Read Online</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+$footerHtml = @"
+<footer>
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
@@ -167,12 +104,32 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Meer Foundation. All rights reserved. | <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a></p>
+            <p>$copyText</p>
         </div>
     </div>
 </footer>
+"@
 
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+$files = Get-ChildItem -Path . -Filter "*.html" | Where-Object { $_.Name -ne "unify_pages.ps1" }
 
+foreach ($file in $files) {
+    Write-Host "Repairing $($file.Name)..."
+    $content = [System.IO.File]::ReadAllText($file.FullName)
+
+    # 1. Standardize Head
+    $content = $content -replace '<link rel="icon".*?>', '<link rel="icon" type="image/svg+xml" href="favicon.svg">'
+
+    # 2. Aggressive Header + Sidebar Replacement
+    # Matches from the start of <header> to the start of <main>
+    $content = $content -replace '(?s)<header>.*?(?=<main>)', "$header`n`n$mobileSidebarHtml`n`n"
+
+    # 3. Footer Replacement
+    $content = $content -replace '(?s)<footer>.*?</footer>', $footerHtml
+
+    # Fix any potential encoding artifacts
+    $content = $content -replace "[Â]+$copySym", "$copySym"
+
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding($false)))
+}
+
+Write-Host "Ultra Robust repair complete!"
