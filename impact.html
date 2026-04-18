@@ -1,141 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Impact | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Impact | Meer Foundation Statistics and Data</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <style>
+    .impact-header { background: var(--bg-2); padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+    .data-card { background: #fff; padding: 40px; border-radius: var(--r-xl); border: 1px solid var(--border); transition: var(--t); }
+    .progress-wrap { margin-top: 30px; }
+    .progress-bar-bg { height: 10px; background: var(--bg-2); border-radius: 5px; overflow: hidden; margin-top: 10px; }
+    .progress-bar-fill { height: 100%; background: var(--grad-brand); border-radius: 5px; transition: width 1.5s ease-in-out; }
+    .stat-large { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 800; color: #1e40af; line-height: 1.1; margin-bottom: 10px;}
+    .stat-label-large { font-size: 1.1rem; color: var(--text-3); font-weight: 600; text-transform: uppercase;}
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img class="logo-header" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation Logo">
-            </a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a class="nav-link">Initiatives <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="bolti-nadi.html" class="dropdown-link">Bolti Nadi</a>
-                        <a href="farmours.html" class="dropdown-link">Farmours</a>
-                        <a href="prayaas.html" class="dropdown-link">Prayaas</a>
-                        <a href="yoga-kutumb.html" class="dropdown-link">Yoga Kutumb</a>
-                        <a href="social-heritage-walk.html" class="dropdown-link">Social Heritage Walk</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Research <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="rivers-chhattisgarh.html" class="dropdown-link">Rivers of Chhattisgarh</a>
-                        <a href="edusuto-courses.html" class="dropdown-link">EduSuTo Courses</a>
-                        <a href="ijmeer.html" class="dropdown-link">IJMEER Journal</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Emerging <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="community-radio.html" class="dropdown-link">Community Radio</a>
-                        <a href="guriya-magazine.html" class="dropdown-link">Guriya Magazine</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li><a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm">DONATE NOW</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
 
-    <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar">
-        <div class="sidebar-close"><i class="fas fa-times"></i></div>
-        <div class="sidebar-links">
-            <a href="index.html" class="sidebar-link">Home</a>
-            <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
-            <a href="farmours.html" class="sidebar-link">Farmours</a>
-            <a href="impact.html" class="sidebar-link">Impact</a>
-            <a href="resources.html" class="sidebar-link">Resources</a>
-            <a href="contact.html" class="sidebar-link">Contact</a>
-            <a href="get-involved.html" class="sidebar-link">Get Involved</a>
-            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
-        </div>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<section class="impact-header">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Measurable Change</div>
+      <h1 class="section-title">Our Impact in Chhattisgarh</h1>
+      <p class="section-subtitle">A data-driven look at our work across education, water conservation, healthcare, and livelihood since 2011. As the trusted implementing agency for major CSR partners (including HDFC Bank, GMR, Bhilai Steel Plant, NMDC, and SECL), we have executed high-impact projects reaching the state's most vulnerable populations.</p>
     </div>
 
-    <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('images/hero-home.png') center/cover;">
-            <div class="container fade-in">
-                <h1>Our Impact</h1>
-                <p>Measurable changes in education, ecology, and livelihoods across Chhattisgarh.</p>
-            </div>
-        </section>
+    <div class="grid-4" style="margin-top: 50px;">
+      <div class="stat-card reveal">
+        <div class="stat-num">400K+</div>
+        <div class="stat-label">Lives Impacted</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Districts Covered</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-num">₹170Cr+</div>
+        <div class="stat-label">CSR Funds Executed</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-num">14+</div>
+        <div class="stat-label">Years of Service</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section class="section-padding">
-            <div class="container">
-                <div class="stats-grid" style="margin-bottom: 80px;">
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">150+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">Villages Reached</span>
-                    </div>
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">22K+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">Students Empowered</span>
-                    </div>
-                    <div class="stat-card" style="background: white; padding: 40px; border-radius: 24px; text-align: center; box-shadow: var(--shadow-md);">
-                        <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 10px;">1.2K+</span>
-                        <span style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: var(--text-muted);">KM River Mapped</span>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Sustainable Development</h2>
-                        <p style="margin-bottom: 20px;">Our impact is deeply rooted in the Sustainable Development Goals (SDGs). By focusing on Clean Water (SDG 6), Quality Education (SDG 4), and Decent Work (SDG 8), we are creating a blueprint for rural transformation that can be replicated across India.</p>
-                    </div>
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 25px;">Community-Led Change</h2>
-                        <p style="margin-bottom: 20px;">We believe that true impact is when communities take ownership of the solutions. From village water committees to women-led agricultural cooperatives, our role is to act as a catalyst for local leadership.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
-                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                    <div class="social-icons">
-                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col" style="min-width: 300px;">
-                    <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
-                    <p>12A | 80G | CSR-1 Registered</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Details</h4>
-                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>Email: meercare@live.com | Phone: 9826121177</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
-            </div>
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <!-- Sectoral Spend -->
+      <div class="reveal">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 25px;">Sector-Wise CSR Execution</h2>
+        <p style="color: var(--text-2); margin-bottom: 30px;">Distribution of CSR funds and project focus executed by Meer Foundation across key developmental sectors in Chhattisgarh.</p>
+        
+        <div class="progress-wrap">
+          <div style="display: flex; justify-content: space-between; font-weight: 700;"><span>Education & Skill Development</span><span>36%</span></div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 36%;"></div></div>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+        <div class="progress-wrap">
+          <div style="display: flex; justify-content: space-between; font-weight: 700;"><span>Healthcare & Sanitation</span><span>25%</span></div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 25%;"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div style="display: flex; justify-content: space-between; font-weight: 700;"><span>Environment & Water (Bolti Nadi)</span><span>22%</span></div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 22%;"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div style="display: flex; justify-content: space-between; font-weight: 700;"><span>Livelihood & Women Empowerment</span><span>17%</span></div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 17%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Key Numbers -->
+      <div class="reveal reveal-delay-1">
+        <div style="background: var(--bg-2); padding: 40px; border-radius: var(--r-2xl); border: 1px solid var(--border);">
+          <h3 style="margin-bottom: 25px;">On-Ground Deliverables</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background:#fff; padding: 20px; border-radius: 12px; border-left: 4px solid #1e40af;">
+              <strong style="font-size:1.5rem; color:#1e40af;">500+</strong><br><span style="font-size: 0.85rem; color: var(--text-4);">Villages Reached</span>
+            </div>
+            <div style="background:#fff; padding: 20px; border-radius: 12px; border-left: 4px solid #1e40af;">
+              <strong style="font-size:1.5rem; color:#1e40af;">150+</strong><br><span style="font-size: 0.85rem; color: var(--text-4);">Schools Upgraded</span>
+            </div>
+            <div style="background:#fff; padding: 20px; border-radius: 12px; border-left: 4px solid #1e40af;">
+              <strong style="font-size:1.5rem; color:#1e40af;">35+</strong><br><span style="font-size: 0.85rem; color: var(--text-4);">Health Centers Built</span>
+            </div>
+            <div style="background:#fff; padding: 20px; border-radius: 12px; border-left: 4px solid #1e40af;">
+              <strong style="font-size:1.5rem; color:#1e40af;">20+</strong><br><span style="font-size: 0.85rem; color: var(--text-4);">Rivers Documented</span>
+            </div>
+             <div style="background:#fff; padding: 20px; border-radius: 12px; border-left: 4px solid #1e40af;">
+              <strong style="font-size:1.5rem; color:#1e40af;">50K+</strong><br><span style="font-size: 0.85rem; color: var(--text-4);">Trees Planted</span>
+            </div>
+             <div style="background:#fff; padding: 20px; border-radius: 12px; border-left: 4px solid #1e40af;">
+              <strong style="font-size:1.5rem; color:#1e40af;">12K+</strong><br><span style="font-size: 0.85rem; color: var(--text-4);">Youth Trained (EduSuTo)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Geographic Reach</div>
+      <h2 class="section-title">Districts of Operation</h2>
+      <p class="section-subtitle">We implement CSR and developmental projects across the most crucial districts of Chhattisgarh.</p>
+    </div>
+    <div class="grid-5" style="margin-top: 40px;">
+      <div class="feature-card reveal" style="text-align: center;">Dhamtari</div>
+      <div class="feature-card reveal" style="text-align: center;">Raipur</div>
+      <div class="feature-card reveal" style="text-align: center;">Bastar</div>
+      <div class="feature-card reveal" style="text-align: center;">Baloda Bazar</div>
+      <div class="feature-card reveal" style="text-align: center;">Kawardha</div>
+      <div class="feature-card reveal" style="text-align: center;">Balod</div>
+      <div class="feature-card reveal" style="text-align: center;">Bemetara</div>
+      <div class="feature-card reveal" style="text-align: center;">Kanker</div>
+      <div class="feature-card reveal" style="text-align: center;">Surguja</div>
+      <div class="feature-card reveal" style="text-align: center;">Raigarh</div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-inject"></div>
+
+<script src="assets/js/components.js?v=3"></script>
+<script src="assets/js/core.js?v=3"></script>
 </body>
 </html>

@@ -1,151 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolti Nadi – Save River Initiative | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolti Nadi | Flagship River Conservation Initiative</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <style>
+    .river-hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero-bg.png'); background-size: cover; background-position: center; padding: 160px 0 100px; color: #fff; text-align: center; }
+    .river-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: -60px; z-index: 10; position: relative; }
+    .river-stat-card { background: #fff; padding: 30px; border-radius: var(--r-xl); box-shadow: var(--shadow-lg); text-align: center; border: 1px solid var(--border); }
+    .timeline-node { border-left: 2px solid #1e40af; padding-left: 30px; position: relative; margin-bottom: 40px; }
+    .timeline-node::before { content: ''; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: #1e40af; border-radius: 50%; }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img class="logo-header" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation Logo">
-            </a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a class="nav-link">Initiatives <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="bolti-nadi.html" class="dropdown-link">Bolti Nadi</a>
-                        <a href="farmours.html" class="dropdown-link">Farmours</a>
-                        <a href="prayaas.html" class="dropdown-link">Prayaas</a>
-                        <a href="yoga-kutumb.html" class="dropdown-link">Yoga Kutumb</a>
-                        <a href="social-heritage-walk.html" class="dropdown-link">Social Heritage Walk</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Research <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="rivers-chhattisgarh.html" class="dropdown-link">Rivers of Chhattisgarh</a>
-                        <a href="edusuto-courses.html" class="dropdown-link">EduSuTo Courses</a>
-                        <a href="ijmeer.html" class="dropdown-link">IJMEER Journal</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Emerging <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="community-radio.html" class="dropdown-link">Community Radio</a>
-                        <a href="guriya-magazine.html" class="dropdown-link">Guriya Magazine</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li><a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm">DONATE NOW</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
 
-    <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar">
-        <div class="sidebar-close"><i class="fas fa-times"></i></div>
-        <div class="sidebar-links">
-            <a href="index.html" class="sidebar-link">Home</a>
-            <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
-            <a href="farmours.html" class="sidebar-link">Farmours</a>
-            <a href="impact.html" class="sidebar-link">Impact</a>
-            <a href="resources.html" class="sidebar-link">Resources</a>
-            <a href="contact.html" class="sidebar-link">Contact</a>
-            <a href="get-involved.html" class="sidebar-link">Get Involved</a>
-            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
-        </div>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<section class="river-hero">
+  <div class="container">
+    <div class="hero-badge" style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.3);">Flagship Initiative</div>
+    <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Bolti Nadi</h1>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">"Let the Rivers Speak" — A community-driven movement to restore, protect, and document the lifelines of Chhattisgarh.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="river-stat-grid">
+    <div class="river-stat-card">
+      <div class="stat-val" style="color:#1e40af;">90KM</div>
+      <div class="stat-label">On-Foot Expedition</div>
     </div>
+    <div class="river-stat-card">
+      <div class="stat-val" style="color:#1e40af;">5K+</div>
+      <div class="stat-label">Citizens Mobilized</div>
+    </div>
+    <div class="river-stat-card">
+      <div class="stat-val" style="color:#1e40af;">59</div>
+      <div class="stat-label">Villages Reached</div>
+    </div>
+    <div class="river-stat-card">
+      <div class="stat-val" style="color:#1e40af;">50+</div>
+      <div class="stat-label">Countries Screened</div>
+    </div>
+  </div>
+</div>
 
-    <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.95), rgba(10,37,64,0.95)), url('images/hero-home.png') center/cover;">
-            <div class="container fade-in">
-                <span class="calligraphy">SDG 6: Clean Water and Sanitation</span>
-                <h1>Bolti Nadi</h1>
-                <p>Protecting the lifelines of Chhattisgarh through community action and scientific monitoring.</p>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
-                    <div class="fade-in">
-                        <h2>The Initiative</h2>
-                        <p>Established in 2016, Bolti Nadi (The Talking River) is a flagship environmental initiative of Meer Foundation. Our mission is to protect the rivers and streams that provide drinking water for more than 20 million people across the state. Working across the basin to reduce pollution, protect headwaters and promote water-smart practices and policies.</p>
-                    </div>
-                    <div style="background: var(--bg-light); padding: 40px; border-radius: 20px;" class="fade-in">
-                        <h3>Key Objective</h3>
-                        <p>To make rural Chhattisgarh drought-free and prosperous by restoring the health of our natural water bodies through systematic research and community-led conservation.</p>
-                    </div>
-                </div>
-
-                <div class="fade-in" style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-md); margin-bottom: 60px;">
-                    <h2 style="margin-bottom: 30px;">Sakri River Walk (2019)</h2>
-                    <p style="margin-bottom: 20px;">The Bolti Nadi initiative undertook a comprehensive 90-kilometer on-foot expedition along the Sakri River, traversing from its origin in Kariyama Village to its confluence with the Half River in Darhi Village over four continuous days.</p>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-                        <div style="padding: 20px; border-left: 4px solid #3b82f6; background: #f8fafc;">
-                            <h4 style="margin-bottom: 10px;">Hydrological Assessment</h4>
-                            <p style="font-size: 0.9rem;">Collected water samples from villages along the banks, documenting quality parameters for drinking and agricultural use.</p>
-                        </div>
-                        <div style="padding: 20px; border-left: 4px solid #3b82f6; background: #f8fafc;">
-                            <h4 style="margin-bottom: 10px;">Community Consultation</h4>
-                            <p style="font-size: 0.9rem;">Direct consultations with community members in every village revealed location-specific challenges like bank erosion and flow decline.</p>
-                        </div>
-                        <div style="padding: 20px; border-left: 4px solid #3b82f6; background: #f8fafc;">
-                            <h4 style="margin-bottom: 10px;">Policy Impact</h4>
-                            <p style="font-size: 0.9rem;">Contributed to an integrated rejuvenation program including a ₹2 crore sewage treatment plant in Kawardha.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="text-align: center;" class="fade-in">
-                    <a href="rivers-chhattisgarh.html" class="btn-hero btn-primary">View River Dashboard</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
-                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                    <div class="social-icons">
-                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col" style="min-width: 300px;">
-                    <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
-                    <p>12A | 80G | CSR-1 Registered</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Details</h4>
-                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>Email: meercare@live.com | Phone: 9826121177</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
-            </div>
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 25px;">Sakri River Walk (2019)</h2>
+        <p style="color: var(--text-2); line-height: 1.8; margin-bottom: 20px;">
+          In 2019, the Bolti Nadi initiative undertook a historic 90-kilometer on-foot expedition along the Sakri River. Traversing from its origin in Kariyama Village to its confluence with the Half River in Darhi Village, the team spent four continuous days documenting the river's health.
+        </p>
+        <p style="color: var(--text-2); line-height: 1.8;">
+          The mission combined hydrological assessment, ecological documentation, and community consultation. We collected water samples, documented bank erosion at Rajanawagaon and Kodar villages, and visited 14th-century heritage sites like the Sherki Mahal and the 11th-century Bhoramdev Temple along the banks.
+        </p>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div style="background: var(--bg-2); padding: 40px; border-radius: var(--r-2xl); border: 1px solid var(--border);">
+          <h3 style="margin-bottom: 20px;">Measurable Impact</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+              <svg style="width:20px; color:#10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+              <span>₹2 Crore Sewage Treatment Plant established in Kawardha due to our policy submission.</span>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+              <svg style="width:20px; color:#10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+              <span>Large-scale tree plantation along banks approved under Mukhyamantri Vriksh Sampada Yojana.</span>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+              <svg style="width:20px; color:#10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+              <span>MGNREGA teams mobilized for desilting and check dam construction across 59 villages.</span>
+            </li>
+             <li style="display: flex; gap: 10px;">
+              <svg style="width:20px; color:#10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+              <span>Continuous monitoring of 3 major rivers established with local youth volunteers.</span>
+            </li>
+          </ul>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Timeline</div>
+      <h2 class="section-title">The Journey So Far</h2>
+    </div>
+    
+    <div style="max-width: 800px; margin: 50px auto 0;">
+      <div class="timeline-node reveal">
+        <h4 style="color:#1e40af;">2016: The Beginning</h4>
+        <p style="color: var(--text-3); font-size: 0.95rem;">Bolti Nadi launched as an environmental movement under Meer Foundation to address water scarcity in Dhamtari.</p>
+      </div>
+      <div class="timeline-node reveal reveal-delay-1">
+        <h4 style="color:#1e40af;">2019: Sakri River Walk</h4>
+        <p style="color: var(--text-3); font-size: 0.95rem;">90km research mission resulting in a comprehensive policy report submitted to district administrations of Kawardha and Bemetara.</p>
+      </div>
+      <div class="timeline-node reveal reveal-delay-2">
+        <h4 style="color:#1e40af;">2021: Global Recognition</h4>
+        <p style="color: var(--text-3); font-size: 0.95rem;">The initiative's documentary film screened at international festivals in over 50 countries, bringing global attention to local issues.</p>
+      </div>
+      <div class="timeline-node reveal reveal-delay-3">
+        <h4 style="color:#1e40af;">2024: Expansion</h4>
+        <p style="color: var(--text-3); font-size: 0.95rem;">Scaling monitoring systems to 20 major rivers across Chhattisgarh, creating the state's largest community-led water repository.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Let the Rivers Speak Through You</h2>
+      <p class="cta-desc">Become a water steward. Help us monitor river health, document local stories, and participate in our upcoming river walks.</p>
+      <div class="cta-actions">
+        <a href="volunteer.html" class="btn btn-primary btn-lg">Join as a Volunteer</a>
+        <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" class="btn btn-outline btn-lg" style="color:#fff; border-color:#fff;">Support River Rejuvenation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-inject"></div>
+
+<script src="assets/js/components.js?v=3"></script>
+<script src="assets/js/core.js?v=3"></script>
 </body>
 </html>

@@ -1,138 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guriya Magazine | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guriya Magazine – Cultural Publication | Meer Foundation</title>
+  <meta name="description" content="Culture · Heritage · SDG 11 — Meer Foundation, Chhattisgarh">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <style>
+    .page-hero{background:var(--bg-2);padding:140px 0 60px;border-bottom:1px solid var(--border);}
+    .check-list{list-style:none;padding:0;}
+    .check-list li{display:flex;gap:12px;margin-bottom:14px;color:var(--text-2);font-size:.95rem;line-height:1.6;}
+    .check-list li::before{content:"✓";color:#10b981;font-weight:800;flex-shrink:0;margin-top:2px;}
+    .stat-chip{display:inline-flex;flex-direction:column;align-items:center;background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);padding:24px 30px;text-align:center;}
+    .stat-chip .num{font-family:var(--font-serif);font-size:2.2rem;font-weight:800;color:#1e40af;line-height:1;}
+    .stat-chip .lbl{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-4);margin-top:6px;}
+    .sdg-badge{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;padding:4px 12px;border-radius:20px;background:rgba(30,64,175,.08);color:#1e40af;margin-bottom:14px;}
+    .blue-card{background:#1e40af;color:#fff;padding:40px;border-radius:var(--r-2xl);}
+    .blue-card h3{margin-bottom:16px;opacity:.9;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;}
+    .blue-card p,.blue-card li{opacity:.88;font-size:.95rem;line-height:1.7;}
+    .prog-bar{height:10px;background:var(--bg-2);border-radius:5px;overflow:hidden;margin-top:8px;margin-bottom:20px;}
+    .prog-fill{height:100%;background:linear-gradient(90deg,#1e40af,#3b82f6);border-radius:5px;}
+    
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img class="logo-header" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation Logo">
-            </a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a class="nav-link">Initiatives <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="bolti-nadi.html" class="dropdown-link">Bolti Nadi</a>
-                        <a href="farmours.html" class="dropdown-link">Farmours</a>
-                        <a href="prayaas.html" class="dropdown-link">Prayaas</a>
-                        <a href="yoga-kutumb.html" class="dropdown-link">Yoga Kutumb</a>
-                        <a href="social-heritage-walk.html" class="dropdown-link">Social Heritage Walk</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Research <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="rivers-chhattisgarh.html" class="dropdown-link">Rivers of Chhattisgarh</a>
-                        <a href="edusuto-courses.html" class="dropdown-link">EduSuTo Courses</a>
-                        <a href="ijmeer.html" class="dropdown-link">IJMEER Journal</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Emerging <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="community-radio.html" class="dropdown-link">Community Radio</a>
-                        <a href="guriya-magazine.html" class="dropdown-link">Guriya Magazine</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li><a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm">DONATE NOW</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar">
-        <div class="sidebar-close"><i class="fas fa-times"></i></div>
-        <div class="sidebar-links">
-            <a href="index.html" class="sidebar-link">Home</a>
-            <a href="bolti-nadi.html" class="sidebar-link">Bolti Nadi</a>
-            <a href="farmours.html" class="sidebar-link">Farmours</a>
-            <a href="impact.html" class="sidebar-link">Impact</a>
-            <a href="resources.html" class="sidebar-link">Resources</a>
-            <a href="contact.html" class="sidebar-link">Contact</a>
-            <a href="get-involved.html" class="sidebar-link">Get Involved</a>
-            <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" target="_blank" class="btn-donate-sm" style="margin-top: 20px; text-align: center;">DONATE NOW</a>
-        </div>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+<section class="page-hero">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="sdg-badge">Culture · Heritage · SDG 11</div>
+      <h1 class="section-title">Guriya: Chhattisgarh's Community Magazine</h1>
     </div>
+  </div>
+</section>
 
-    <main>
-        <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.9), rgba(10,37,64,0.9)), url('images/hero-home.png') center/cover;">
-            <div class="container fade-in">
-                <h1>Guriya Magazine</h1>
-                <p>Preserving regional stories and empowering local writers.</p>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
-                    <div class="fade-in">
-                        <div style="width: 100%; aspect-ratio: 3/4; background: #f0f4f8; border-radius: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0;">
-                            <i class="fas fa-book-open" style="font-size: 4rem; color: #3b82f6; opacity: 0.5;"></i>
-                        </div>
-                    </div>
-                    <div class="fade-in">
-                        <h2>Our Literary Mission</h2>
-                        <p style="margin-bottom: 25px;">Guriya is a community-driven magazine that showcases the diverse voices of Chhattisgarh. From folk tales passed down through generations to modern poetry from rural students, Guriya provides a platform for creative expression in both Hindi and Chhattisgarhi.</p>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
-                            <li style="display: flex; gap: 12px; align-items: flex-start;">
-                                <i class="fas fa-pen-nib" style="color: #3b82f6; margin-top: 5px;"></i>
-                                <span><strong>Creative Writing:</strong> Short stories and poems from budding village writers.</span>
-                            </li>
-                            <li style="display: flex; gap: 12px; align-items: flex-start;">
-                                <i class="fas fa-leaf" style="color: #3b82f6; margin-top: 5px;"></i>
-                                <span><strong>Eco-Wisdom:</strong> Articles on local conservation and traditional knowledge.</span>
-                            </li>
-                        </ul>
-                        <a href="contact.html" class="btn-hero btn-primary">Subscribe to Digital Edition</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation">
-                    <p>Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                    <div class="social-icons">
-                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col" style="min-width: 300px;">
-                    <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949 | PAN: AACAM4289J</p>
-                    <p>12A | 80G | CSR-1 Registered</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Details</h4>
-                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>Email: meercare@live.com | Phone: 9826121177</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
-            </div>
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div class="reveal">
+        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Guriya is a handwritten, hand-illustrated community magazine produced in the Chhattisgarhi language by Meer Foundation. It preserves regional folklore, celebrates local heroes, and empowers youth through participatory storytelling and artisan illustration.</p>
+        <ul class="check-list">
+          <li>Published periodically in Chhattisgarhi with Hindi translations</li>
+          <li>Handwritten and illustrated by community youth volunteers</li>
+          <li>Content covers: local heroes, folklore, recipes, health tips, environment, and women's stories</li>
+          <li>Distributed free across villages in Dhamtari and adjoining districts</li>
+          <li>Archives digitised and uploaded to Meer Foundation's digital library</li>
+          <li>Acts as a creative apprenticeship for aspiring rural writers and artists</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-2xl);padding:40px;">
+          <h3 style="margin-bottom:20px;font-family:var(--font-serif);">Why Guriya Matters</h3>
+          <p style="color:var(--text-2);line-height:1.8;margin-bottom:16px;">With rapid digitisation, Chhattisgarhi oral traditions and local dialects face existential risk. Guriya serves as a living archive — created by the community, for the community — ensuring that stories, recipes, and wisdom passed down for generations are not lost to time.</p>
+          <div style="background:#fff;border-left:4px solid #1e40af;padding:20px;border-radius:8px;">
+            <div style="font-style:italic;color:var(--text-2);">"When we write for Guriya, we feel our stories matter. They are not just village tales — they are Chhattisgarh's heritage."</div>
+            <div style="font-size:.85rem;font-weight:700;margin-top:10px;">Youth Contributor, Dhamtari</div>
+          </div>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js?v=3"></script>
+<script src="assets/js/core.js?v=3"></script>
 </body>
 </html>

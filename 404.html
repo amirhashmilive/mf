@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — IJMEER</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <style>
+    .notfound-section {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: calc(var(--header-h) + 36px + 40px) 0 80px;
+      background: var(--bg); position: relative; overflow: hidden;
+    }
+    .notfound-section::before {
+      content: '404';
+      position: absolute; font-size: clamp(180px,30vw,320px);
+      font-family: var(--font-serif); font-weight: 900;
+      color: var(--border); opacity: 0.4; top: 50%; left: 50%;
+      transform: translate(-50%,-50%); pointer-events: none;
+      user-select: none; line-height: 1;
+    }
+    .notfound-content {
+      position: relative; z-index: 1; text-align: center; max-width: 600px;
+      animation: fadeInUp 0.8s ease;
+    }
+    .notfound-icon {
+      width: 100px; height: 100px; border-radius: 50%;
+      background: rgba(37,99,235,0.08); border: 2px solid rgba(37,99,235,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px; animation: float 6s ease-in-out infinite;
+    }
+    .notfound-icon svg { width: 48px; height: 48px; color: var(--blue); }
+    .notfound-title {
+      font-family: var(--font-serif); font-size: clamp(1.8rem,4vw,2.8rem);
+      font-weight: 800; color: var(--navy); margin-bottom: 16px;
+    }
+    .notfound-desc { font-size: 1rem; color: var(--text-3); line-height: 1.75; margin-bottom: 36px; }
+    .notfound-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .quick-nav { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 12px; margin-top: 52px; max-width: 700px; }
+    .quick-nav-link {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      padding: 20px; background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); text-decoration: none; color: var(--text-2);
+      font-size: 0.85rem; font-weight: 600; transition: var(--t); text-align: center;
+    }
+    .quick-nav-link:hover { border-color: var(--blue); color: var(--blue); background: rgba(37,99,235,0.04); transform: translateY(-3px); }
+    .quick-nav-link svg { width: 22px; height: 22px; }
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<main id="main-content">
+  <section class="notfound-section" aria-labelledby="error-heading">
+    <div class="container">
+      <div class="notfound-content">
+        <div class="notfound-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="11" y1="16" x2="11.01" y2="16"/>
+          </svg>
+        </div>
+
+        <h1 class="notfound-title" id="error-heading">Page Not Found</h1>
+        <p class="notfound-desc">
+          The page you're looking for doesn't exist or may have been moved. Try searching for what you need, or navigate to one of the popular pages below.
+        </p>
+
+        <div class="notfound-links">
+          <a href="index.html" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Go to Homepage
+          </a>
+          <a href="archive.html" class="btn btn-outline btn-lg">Browse Archives</a>
+        </div>
+
+        <div class="quick-nav" role="navigation" aria-label="Quick navigation">
+          <a href="journal.html" class="quick-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            About
+          </a>
+          <a href="editorial-board.html" class="quick-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Editorial Board
+          </a>
+          <a href="archive.html" class="quick-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Archives
+          </a>
+          <a href="citations.html" class="quick-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/></svg>
+            Articles
+          </a>
+          <a href="fees-pricing.html" class="quick-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Fees
+          </a>
+          <a href="contact.html" class="quick-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js?v=3"></script>
+<script src="assets/js/core.js?v=3"></script>
+</body>
+</html>

@@ -1,174 +1,228 @@
-const components = {
-    header: `
-    <header id="main-header">
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="Meer Foundation Logo" style="height: 60px; width: auto;">
-                    <div class="logo-text">
-                        <h1 style="color: var(--secondary);">MEER <span style="color: var(--primary);">Foundation</span></h1>
-                        <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px; font-weight: 600;">Est. 2011 · Chhattisgarh</p>
-                    </div>
-                </a>
-                <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item has-dropdown">
-                        <a href="initiatives.html" class="nav-link">Initiatives</a>
-                        <div class="dropdown">
-                            <a href="initiatives.html#bolti-nadi" class="dropdown-item">Bolti Nadi</a>
-                            <a href="initiatives.html#farmours" class="dropdown-item">Farmours</a>
-                            <a href="initiatives.html#prayaas" class="dropdown-item">Prayaas</a>
-                            <a href="initiatives.html#yoga-kutumb" class="dropdown-item">Yoga Kutumb</a>
-                            <a href="initiatives.html#heritage" class="dropdown-item">Social Heritage Walk</a>
-                        </div>
-                    </li>
-                    <li class="nav-item has-dropdown">
-                        <a href="research.html" class="nav-link">Research</a>
-                        <div class="dropdown">
-                            <a href="research.html#rivers" class="dropdown-item">Rivers of Chhattisgarh</a>
-                            <a href="research.html#edusuto" class="dropdown-item">EduSuTo Courses</a>
-                            <a href="research.html#ijmeer" class="dropdown-item">IJMEER</a>
-                        </div>
-                    </li>
-                    <li class="nav-item has-dropdown">
-                        <a href="emerging.html" class="nav-link">Emerging</a>
-                        <div class="dropdown">
-                            <a href="emerging.html#radio" class="dropdown-item">Community Radio</a>
-                            <a href="emerging.html#guriya" class="dropdown-item">Guriya Magazine</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="get-involved.html" class="btn-cta">Get Involved</a></li>
-                </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+/* ============================================================
+   MEER FOUNDATION — components.js
+   Injects header + footer into all pages.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  const DONATE = 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view';
+
+  /* ────────────────────────────────────────────────────────────
+     HEADER
+  ──────────────────────────────────────────────────────────── */
+  const HEADER = `
+<header class="site-header" id="site-header" role="banner">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Meer Foundation Home">
+      <img src="assets/images/logo/logo-horizontal.png" alt="Meer Foundation" style="height: 50px; width: auto;">
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <div class="nav-item dropdown">
+        <a href="about.html" class="nav-link">About</a>
+        <div class="dropdown-content">
+          <a href="about.html">Our Story & Founder</a>
+          <a href="annual-report.html">Annual Reports</a>
+          <a href="five-pillars.html">Five Pillars Model</a>
         </div>
-        <div class="mobile-drawer" id="mobile-drawer">
-             <div class="drawer-header">
-                <h2>MEER</h2>
-                <span class="close-drawer">&times;</span>
-             </div>
-             <ul class="mobile-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="initiatives.html">Initiatives</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="emerging.html">Emerging</a></li>
-                <li><a href="impact.html">Impact</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="get-involved.html">Get Involved</a></li>
-             </ul>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="initiatives.html" class="nav-link">Initiatives</a>
+        <div class="dropdown-content">
+          <a href="bolti-nadi.html">Bolti Nadi</a>
+          <a href="farmours.html">Farmours</a>
+          <a href="prayaas.html">Prayaas</a>
+          <a href="yoga-kutumb.html">Yoga Kutumb</a>
+          <a href="social-heritage-walk.html">Social Heritage Walk</a>
         </div>
-    </header>
-    `,
-    footer: `
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="assets/images/logo.png" alt="Meer Foundation" style="height: 80px; margin-bottom: 1rem;">
-                    <h3>Meer Foundation</h3>
-                    <p>Empowering rural communities across Chhattisgarh through education, environmental conservation, and sustainable development since 2011.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="initiatives.html">Initiatives</a></li>
-                        <li><a href="impact.html">Our Impact</a></li>
-                        <li><a href="get-involved.html">Volunteer</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Legal</h3>
-                    <ul>
-                         <li><a href="#">Registration Act 1973</a></li>
-                         <li><a href="#">12A & 80G Certified</a></li>
-                         <li><a href="#">CSR-1 Compliant</a></li>
-                         <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <p>Housing Board Colony,<br>Dhamtari, Chhattisgarh</p>
-                    <p>Email: meercare@live.com</p>
-                    <p>Phone: +91 9826121177</p>
-                </div>
-            </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link">Research</a>
+        <div class="dropdown-content">
+          <a href="rivers.html">Rivers of Chhattisgarh</a>
+          <a href="edusuto-courses.html">EduSuTo Courses</a>
+          <a href="ijmeer-journal.html">IJMEER Journal</a>
+          <a href="publications.html">Publications</a>
+          <a href="csr-research.html">CSR Research</a>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2011–Present Meer Foundation. All Rights Reserved.</p>
-            </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link">Emerging</a>
+        <div class="dropdown-content">
+          <a href="community-radio.html">Community Radio</a>
+          <a href="guriya-magazine.html">Guriya Magazine</a>
+          <a href="media-gallery.html">Media Gallery</a>
+          <a href="news.html">News & Press</a>
+          <a href="blog.html">Field Notes Blog</a>
         </div>
-    </footer>
-    `
-};
+      </div>
+      <div class="nav-item dropdown">
+        <a href="impact.html" class="nav-link">Impact</a>
+        <div class="dropdown-content">
+          <a href="impact.html">Statistics</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="district-profiles.html">District Profiles</a>
+          <a href="project-gallery.html">Project Gallery</a>
+          <a href="testimonials.html">Testimonials</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link">Get Involved</a>
+        <div class="dropdown-content">
+          <a href="volunteer.html">Volunteer</a>
+          <a href="partner-with-us.html">CSR Partner</a>
+          <a href="internship.html">Internship</a>
+          <a href="donate.html">Donate</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    </nav>
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Inject Header
-    const headerPlaceholder = document.getElementById('header-placeholder');
-    if (headerPlaceholder) headerPlaceholder.innerHTML = components.header;
+    <div class="header-actions">
+      <a href="${DONATE}" class="btn-submit desktop-only" target="_blank" rel="noopener" id="nav-donate-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
 
-    // Inject Footer
-    const footerPlaceholder = document.getElementById('footer-placeholder');
-    if (footerPlaceholder) footerPlaceholder.innerHTML = components.footer;
+  <div class="overlay"></div>
 
-    // Active Link Highlighting
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
+  <nav class="mobile-nav">
+    <button class="close-menu" aria-label="Close menu">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="initiatives.html">All Initiatives</a></li>
+      <li><a href="bolti-nadi.html">Bolti Nadi</a></li>
+      <li><a href="farmours.html">Farmours</a></li>
+      <li><a href="prayaas.html">Prayaas</a></li>
+      <li><a href="yoga-kutumb.html">Yoga Kutumb</a></li>
+      <li><a href="social-heritage-walk.html">Heritage Walk</a></li>
+      <li><a href="five-pillars.html">Five Pillars</a></li>
+      <li><a href="rivers.html">Rivers of CG</a></li>
+      <li><a href="ijmeer-journal.html">IJMEER Journal</a></li>
+      <li><a href="edusuto-courses.html">EduSuTo</a></li>
+      <li><a href="community-radio.html">Community Radio</a></li>
+      <li><a href="guriya-magazine.html">Guriya Magazine</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="district-profiles.html">District Profiles</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="csr-research.html">CSR Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="partner-with-us.html">Partner With Us</a></li>
+      <li><a href="internship.html">Internship</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="annual-report.html">Annual Report</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li style="margin-top: 30px;"><a href="${DONATE}" class="submit-btn" target="_blank" rel="noopener">Donate Now</a></li>
+    </ul>
+  </nav>
+</header>`;
 
-    // Sticky Header Logic
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+  /* ────────────────────────────────────────────────────────────
+     FOOTER
+  ──────────────────────────────────────────────────────────── */
+  const FOOTER = `
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom:16px;" aria-label="Meer Foundation Home">
+          <img src="assets/images/logo/logo-1x1.png" alt="Meer Foundation" style="height: 60px; width: auto; margin-bottom: 10px;">
+          <div class="brand-text">
+            <span class="brand-name">Meer Foundation</span>
+            <span class="brand-sub">Empowering Communities</span>
+          </div>
+        </a>
+        <p class="footer-desc">A non-profit organization dedicated to sustainable community development, river conservation, and rural empowerment across Chhattisgarh.</p>
+        <div style="margin-top:20px;">
+          <div style="font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">
+            Registered Address
+          </div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
+            Sr. MIG 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
+          </div>
+        </div>
+      </div>
 
-    // Mobile Menu Logic
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const drawer = document.getElementById('mobile-drawer');
-    const closeBtn = document.querySelector('.close-drawer');
+      <!-- Quick Links column -->
+      <div>
+        <h3 class="footer-head">Explore</h3>
+        <nav class="footer-links">
+          <a href="about.html">Our Story</a>
+          <a href="five-pillars.html">Penta Model</a>
+          <a href="impact.html">Impact Data</a>
+          <a href="testimonials.html">Beneficiaries</a>
+          <a href="annual-report.html">Annual Reports</a>
+          <a href="rivers.html">Chhattisgarh Rivers</a>
+        </nav>
+      </div>
 
-    if (menuBtn && drawer) {
-        menuBtn.addEventListener('click', () => drawer.classList.add('active'));
-        closeBtn.addEventListener('click', () => drawer.classList.remove('active'));
-        
-        // Close drawer on link click
-        drawer.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => drawer.classList.remove('active'));
-        });
+      <!-- Initiatives column -->
+      <div>
+        <h3 class="footer-head">Initiatives</h3>
+        <nav class="footer-links">
+          <a href="bolti-nadi.html">Bolti Nadi</a>
+          <a href="prayaas.html">Prayaas</a>
+          <a href="yoga-kutumb.html">Yoga Kutumb</a>
+          <a href="guriya-magazine.html">Guriya Magazine</a>
+          <a href="community-radio.html">Radio Meer</a>
+          <a href="edusuto-courses.html">EduSuTo</a>
+        </nav>
+      </div>
+
+      <!-- Connect column -->
+      <div>
+        <h3 class="footer-head">Connect</h3>
+        <nav class="footer-links">
+          <a href="contact.html">Contact Us</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="partner-with-us.html">CSR Partner</a>
+          <a href="donate.html">Donate</a>
+          <a href="news.html">News & Blog</a>
+          <a href="mailto:info@meerfoundation.co.in">Email Us</a>
+        </nav>
+        <div class="social-links" style="margin-top:24px;">
+          <a href="https://facebook.com/meerfoundation" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://instagram.com/meerfoundations" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://x.com/meerfoundations" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span data-year></span> Meer Foundation. Registered under Chhattisgarh Society Registration Act 1973.</p>
+    </div>
+  </div>
+</footer>
+<div id="toast-container" class="toast-container"></div>
+<button id="scroll-top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>`;
+
+  function inject(id, html, position = 'before') {
+    const placeholder = document.getElementById(id);
+    if (!placeholder) return;
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const parent = placeholder.parentNode;
+    while (tmp.firstChild) {
+      if (position === 'before') parent.insertBefore(tmp.firstChild, placeholder);
+      else parent.insertBefore(tmp.firstChild, placeholder.nextSibling);
     }
+    placeholder.remove();
+  }
 
-    // Intersection Observer for animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-});
+  inject('site-header-inject', HEADER);
+  inject('site-footer-inject', FOOTER);
+  document.dispatchEvent(new CustomEvent('headerInjected'));
+})();

@@ -1,152 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Initiatives | Meer Foundation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Initiatives | Meer Foundation Programs</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <style>
+    .initiative-card { background: #fff; border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--border); transition: var(--t); display: flex; flex-direction: column; }
+    .initiative-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: #1e40af; }
+    .initiative-content { padding: 30px; flex: 1; }
+    .sdg-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #1e40af; background: rgba(30, 64, 175, 0.05); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
+  </style>
 </head>
+<body>
 
-        param($m)
-        "body" + $m.Groups[1].Value + ">`n" + $headerTemplate + "`n" + $m.Groups[2].Value
-    >
-        <!-- Page Header -->
-                <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('images/hero-home.png') center/cover; padding: 80px 0 60px;">
-            <div class="container fade-in">
-                <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif;">Meer Foundation · Est. 2011 · Chhattisgarh</p>
-                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 20px; font-weight: 800; text-transform: uppercase; color: white;">Transforming Lives</h1>
-                <p style="font-size: 1.1rem; max-width: 800px; line-height: 1.8; opacity: 0.95; margin-bottom: 30px;">Strategic initiatives aligned with UN Sustainable Development Goals.</p>
-                <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
-                    <a href="index.html#initiatives" class="btn-modern active" style="padding: 14px 30px; border-radius: 50px; background: #3b82f6; color: white; text-decoration: none;">Explore Initiatives</a>
-                    <a href="get-involved.html" class="btn-modern" style="padding: 14px 30px; border-radius: 50px; background: transparent; border: 2px solid white; color: white; text-decoration: none;">Get Involved</a>
-                </div>
-            </div>
-        </section>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
 
-        <!-- Initiatives List -->
-        <section class="container">
-            <!-- Bolti Nadi -->
-            <div id="bolti-nadi" class="grid fade-in" style="margin-bottom: var(--space-lg); align-items: center;">
-                <div class="card-img" style="height: 350px; border-radius: 20px;">
-                    <img src="assets/images/hero.png" alt="Bolti Nadi" style="border-radius: 20px;">
-                </div>
-                <div>
-                    <span class="sdg-badge">SDG 6: Clean Water & Sanitation</span>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Bolti Nadi</h2>
-                    <p>“Speaking Rivers” is our flagship water conservation initiative. We focus on protecting water bodies from pollution, promoting watershed awareness, and implementing rejuvenation projects for the rivers of Chhattisgarh.</p>
-                    <ul style="margin: 1.5rem 0; list-style: disc; padding-left: 1.5rem;">
-                        <li>Water quality testing and monitoring</li>
-                        <li>Riparian buffer zone restoration</li>
-                        <li>Community-led river cleaning drives</li>
-                    </ul>
-                </div>
-            </div>
+<section class="section" style="padding-top: 140px; background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Our Programs</div>
+      <h1 class="section-title">Sustainable Initiatives</h1>
+      <p class="section-subtitle">Meer Foundation implements diverse programs aligned with the UN Sustainable Development Goals (SDGs) to create a holistic impact in Chhattisgarh.</p>
+    </div>
 
-            <!-- Farmours -->
-            <div id="farmours" class="grid fade-in" style="margin-bottom: var(--space-lg); align-items: center;">
-                 <div style="order: 2;">
-                    <img src="assets/images/farmours.png" alt="Farmours" style="border-radius: 20px; box-shadow: var(--shadow-lg);">
-                </div>
-                <div style="order: 1;">
-                    <span class="sdg-badge" style="background: var(--secondary);">Livelihood & Sustainability</span>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Farmours</h2>
-                    <p>Empowering farmers through sustainable agriculture. Farmours combines traditional wisdom with modern eco-friendly techniques to improve yields while preserving soil health.</p>
-                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                        <div style="background: var(--white); padding: 1rem; border-radius: 10px; flex: 1;">
-                            <h4 style="color: var(--secondary);">1000+</h4>
-                            <p style="font-size: 0.8rem;">Farmers Trained</p>
-                        </div>
-                        <div style="background: var(--white); padding: 1rem; border-radius: 10px; flex: 1;">
-                            <h4 style="color: var(--secondary);">Organic</h4>
-                            <p style="font-size: 0.8rem;">Certification Support</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Prayaas -->
-            <div id="prayaas" class="grid fade-in" style="margin-bottom: var(--space-lg); align-items: center;">
-                <div class="card-img" style="height: 350px; border-radius: 20px;">
-                    <img src="assets/images/education.png" alt="Prayaas Education" style="border-radius: 20px;">
-                </div>
-                <div>
-                    <span class="sdg-badge" style="background: #D32F2F;">SDG 4: Quality Education</span>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Prayaas</h2>
-                    <p>Prayaas bridges the educational divide in rural Chhattisgarh. We provide support for high-quality education, access to digital tools, and scholarship programs for meritorious students from marginalized backgrounds.</p>
-                    <p style="margin-top: 1rem;">Our learning centers focus on cognitive development and skill training beyond traditional textbooks.</p>
-                </div>
-            </div>
-
-            <!-- Yoga Kutumb -->
-            <div id="yoga-kutumb" class="grid fade-in" style="margin-bottom: var(--space-lg); align-items: center;">
-                <div style="order: 2;">
-                    <img src="assets/images/yoga.png" alt="Yoga Kutumb" style="border-radius: 20px; box-shadow: var(--shadow-lg);">
-                </div>
-                <div style="order: 1;">
-                    <span class="sdg-badge" style="background: #4DB6AC;">SDG 3: Health & Wellness</span>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Yoga Kutumb</h2>
-                    <p>Promoting a culture of holistic health. Yoga Kutumb organizes community-wide yoga sessions, health check-ups, and awareness programs on nutrition and traditional wellness practices.</p>
-                    <p style="margin-top: 1rem;">We believe a healthy community is the foundation of a prosperous village.</p>
-                </div>
-            </div>
-
-            <!-- Social Heritage Walk -->
-            <div id="heritage" class="grid fade-in" style="margin-bottom: var(--space-lg); align-items: center;">
-                <div style="background: var(--primary); color: var(--white); padding: var(--space-md); border-radius: 20px;">
-                    <span class="sdg-badge" style="background: var(--accent);">SDG 11: Sustainable Cities & Communities</span>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--white);">Social Heritage Walk</h2>
-                    <p>Protecting Chhattisgarh's rich cultural legacy. Every World Heritage Day, we organize walks to raise awareness about local monuments, history, and the symbiotic relationship between culture and nature.</p>
-                </div>
-                <div>
-                     <img src="assets/images/heritage.png" alt="Heritage" style="border-radius: 20px;">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="footer-placeholder"></div>
-
-    <script src="assets/js/components.js"></script>
-    <!-- Footer Section -->
-    
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
-                    <img class="footer-logo" src="images/logo/LOGO_-_MEER_FOUNDATION%20transperent%20horizontal%20logo.png" alt="Meer Foundation" style="margin-left: 0;">
-                    <p style="text-align: left;">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
-                    <div class="social-icons">
-                        <a href="https://x.com/meerfoundations/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/meerfoundation/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/meerfoundations/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/meerfoundation/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@meerfoundations" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Transparency</h4>
-                    <p>NGO Darpan ID: CG/2018/0191949</p>
-                    <p>PAN: AACAM4289J</p>
-                    <p>12A | 80G | CSR-1 Registered</p>
-                </div>
-                <div class="footer-col" style="padding-left: 20px;">
-                    <h4>Contact Details</h4>
-                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
-                    <p>meercare@live.com</p>
-                    <p>+91 98261 21177</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Meer Foundation. All rights reserved.</p>
-            </div>
+    <div class="grid-3" style="margin-top: 60px;">
+      <!-- Bolti Nadi -->
+      <div class="initiative-card reveal">
+        <div class="initiative-content">
+          <div class="sdg-tag">SDG 6 & 14</div>
+          <h3 style="margin-bottom: 15px;">Bolti Nadi</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Our flagship river conservation campaign focused on restoring water bodies, documentation, and community stewardship across major rivers in Chhattisgarh.</p>
+          <a href="bolti-nadi.html" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
         </div>
-    </footer>
+      </div>
+
+      <!-- Prayaas -->
+      <div id="prayaas" class="initiative-card reveal reveal-delay-1">
+        <div class="initiative-content">
+          <div class="sdg-tag">SDG 4</div>
+          <h3 style="margin-bottom: 15px;">Prayaas</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">A transformative education initiative dedicated to reshaping the rural educational landscape through modern methodologies and infrastructure support.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Yoga Kutumb -->
+      <div id="yoga-kutumb" class="initiative-card reveal reveal-delay-2">
+        <div class="initiative-content">
+          <div class="sdg-tag">SDG 3</div>
+          <h3 style="margin-bottom: 15px;">Yoga Kutumb</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Promoting holistic well-being and health by integrating yoga into daily routines through community-led training and certified professionals.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Guriya -->
+      <div id="guriya" class="initiative-card reveal">
+        <div class="initiative-content">
+          <div class="sdg-tag">Culture & Livelihood</div>
+          <h3 style="margin-bottom: 15px;">Guriya Magazine</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">A community-driven, handwritten, and hand-illustrated magazine in Chhattisgarhi, empowering local youth and preserving regional heritage.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Radio Meer -->
+      <div id="radio-meer" class="initiative-card reveal reveal-delay-1">
+        <div class="initiative-content">
+          <div class="sdg-tag">Communication</div>
+          <h3 style="margin-bottom: 15px;">Radio Meer</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Our upcoming community radio station designed to be the voice of rural Chhattisgarh, broadcasting education, health, and local news.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- EduSuTo -->
+      <div id="edusuto" class="initiative-card reveal reveal-delay-2">
+        <div class="initiative-content">
+          <div class="sdg-tag">SDG 13</div>
+          <h3 style="margin-bottom: 15px;">EduSuTo</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Education for Sustainable Tomorrow — offering specialized certification courses in climate action, carbon capture, and sustainability.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Watershed -->
+      <div id="watershed" class="initiative-card reveal">
+        <div class="initiative-content">
+          <div class="sdg-tag">SDG 6</div>
+          <h3 style="margin-bottom: 15px;">Watershed Development</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Ridge-to-valley natural resource management in partnership with NABARD, including soil and water conservation projects.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Tiranga -->
+      <div class="initiative-card reveal reveal-delay-1">
+        <div class="initiative-content">
+          <div class="sdg-tag">SDG 16</div>
+          <h3 style="margin-bottom: 15px;">Tiranga World Record</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Achievement of a historic 15-kilometer long human chain tricolor world record in Raipur, fostering national unity and patriotism.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Medicinal Plants -->
+      <div id="medicinal" class="initiative-card reveal reveal-delay-2">
+        <div class="initiative-content">
+          <div class="sdg-tag">Livelihood</div>
+          <h3 style="margin-bottom: 15px;">Medicinal Plants Project</h3>
+          <p style="font-size: 0.9rem; color: var(--text-3); line-height: 1.6; margin-bottom: 20px;">Kanker-Narayanpur initiative training 200 farmers in the cultivation and value-addition of sacred and healing herbs like Tulsi and Brahmi.</p>
+          <a href="#" style="font-weight: 700; color: #1e40af; text-decoration: none; font-size: 0.85rem;">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-inject"></div>
+
+<script src="assets/js/components.js?v=3"></script>
+<script src="assets/js/core.js?v=3"></script>
 </body>
 </html>
-
-
-
-

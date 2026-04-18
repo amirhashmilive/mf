@@ -1,0 +1,70 @@
+{
+  "editors": [
+    {
+      "id": 1,
+      "role": "Editor-in-Chief",
+      "name": "Dr. Nusrat Ali Hashmi",
+      "affiliation": "",
+      "expertise": [],
+      "initials": "NH",
+      "color": "#2563EB",
+      "link": "https://in.linkedin.com/in/drnusrathashmi"
+    },
+    {
+      "id": 10,
+      "role": "Editorial Board Member",
+      "name": "Prof. (Dr.) Karuna Akshay Malviya",
+      "designation": "Director, D Y Patil University School of Law Navi Mumbai",
+      "affiliation": "D Y Patil University School of Law Navi Mumbai",
+      "email": "Karuna.malviya@dypatil.edu",
+      "expertise": ["Law", "Legal Education", "Academic Leadership"],
+      "experience": "15 years",
+      "initials": "KM",
+      "color": "#2563EB",
+      "link": "https://dypatil.edu/schools/school-of-law/dean"
+    },
+    {
+      "id": 2,
+      "role": "Managing Editor",
+      "name": "Sayed Amir Mustafa Hashmi",
+      "affiliation": "",
+      "expertise": [],
+      "initials": "SH",
+      "color": "#7C3AED",
+      "link": "https://scholar.google.com/citations?user=Y22LH5kAAAAJ&hl=en"
+    },
+
+    {
+      "id": 4,
+      "role": "Associate Editor",
+      "name": "Prof. (Dr.) Ashok L Sunatkari",
+      "affiliation": "",
+      "expertise": [],
+      "initials": "AS",
+      "color": "#F59E0B",
+      "link": "https://scholar.google.co.in/citations?user=ZJ7ntSgAAAAJ&hl=en"
+    },
+
+
+    {
+      "id": 8,
+      "role": "Advisory Board Member",
+      "name": "Hon. Prof. (Dr.) Mona Purohit",
+      "affiliation": "",
+      "expertise": [],
+      "initials": "MP",
+      "color": "#14B8A6",
+      "link": "https://scholar.google.co.in/citations?user=zIpc6nezhnMC"
+    },
+    {
+      "id": 9,
+      "role": "Advisory Board Member",
+      "name": "Hon. Prof. (Dr.) Ashok Yende",
+      "affiliation": "",
+      "expertise": [],
+      "initials": "AY",
+      "color": "#6366F1",
+      "link": "https://www.linkedin.com/in/adv-dr-ashok-yende-6379269/"
+    }
+  ]
+}

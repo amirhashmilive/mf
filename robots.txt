@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin/utility paths
+Disallow: /data/
+Disallow: /assets/js/
+
+# Sitemap
+Sitemap: https://www.ijmeer.com/sitemap.xml

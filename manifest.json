@@ -1,0 +1,51 @@
+{
+  "name": "IJMEER — International Journal of Multidisciplinary Research",
+  "short_name": "IJMEER",
+  "description": "Open-access, peer-reviewed quarterly journal across 70+ disciplines. Published by Meer Foundation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2563EB",
+  "orientation": "portrait-primary",
+  "categories": ["education", "research", "science"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/hero-bg.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Submit Manuscript",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeLAeEVTKRf18Qks4Z_QXDYWUPiNAZirDUKz_TWLBIiiMMPtw/viewform?usp=publish-editor",
+      "description": "Submit your research paper to IJMEER"
+    },
+    {
+      "name": "Browse Issues",
+      "url": "/issues.html",
+      "description": "Browse all published journal issues"
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contact.html",
+      "description": "Contact the IJMEER editorial team"
+    }
+  ]
+}
