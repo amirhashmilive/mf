@@ -1,13 +1,13 @@
 {
-  "name": "IJMEER — International Journal of Multidisciplinary Research",
-  "short_name": "IJMEER",
-  "description": "Open-access, peer-reviewed quarterly journal across 70+ disciplines. Published by Meer Foundation.",
+  "name": "Meer Foundation — Empowering Chhattisgarh",
+  "short_name": "Meer Foundation",
+  "description": "Non-profit organization dedicated to sustainable community development, river conservation, and rural empowerment across Chhattisgarh since 2011.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
-  "theme_color": "#2563EB",
+  "theme_color": "#1e40af",
   "orientation": "portrait-primary",
-  "categories": ["education", "research", "science"],
+  "categories": ["education", "non-profit", "community"],
   "lang": "en",
   "icons": [
     {
@@ -33,19 +33,19 @@
   ],
   "shortcuts": [
     {
-      "name": "Submit Manuscript",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeLAeEVTKRf18Qks4Z_QXDYWUPiNAZirDUKz_TWLBIiiMMPtw/viewform?usp=publish-editor",
-      "description": "Submit your research paper to IJMEER"
+      "name": "Donate",
+      "url": "https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view",
+      "description": "Support Meer Foundation with a donation"
     },
     {
-      "name": "Browse Issues",
-      "url": "/issues.html",
-      "description": "Browse all published journal issues"
+      "name": "Our Initiatives",
+      "url": "/initiatives.html",
+      "description": "Explore all Meer Foundation initiatives"
     },
     {
       "name": "Contact Us",
       "url": "/contact.html",
-      "description": "Contact the IJMEER editorial team"
+      "description": "Get in touch with Meer Foundation"
     }
   ]
 }
