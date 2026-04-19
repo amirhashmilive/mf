@@ -191,7 +191,7 @@ testimonials_body = """
 """
 
 with open('testimonials.html', 'w', encoding='utf-8') as f:
-    f.write(wp('Testimonials', 'Community voices from 200+ beneficiary interviews across Chhattisgarh.', '', testimonials_body))
+    f.write(wp('Testimonials', 'Community voices from 200+ beneficiary interviews across Chhattisgarh.', '', '', testimonials_body))
 print("OK testimonials.html")
 
 # ── RIVERS ─────────────────────────────────────────────────
@@ -273,7 +273,7 @@ rivers_body = f"""
 """
 
 with open('rivers.html', 'w', encoding='utf-8') as f:
-    f.write(wp('Rivers of Chhattisgarh', 'Comprehensive knowledge archive of 20 major rivers of Chhattisgarh by Meer Foundation.', '', rivers_body))
+    f.write(wp('Rivers of Chhattisgarh', 'Comprehensive knowledge archive of 20 major rivers of Chhattisgarh by Meer Foundation.', '', '', rivers_body))
 print("OK rivers.html")
 
 print("\nAll enhanced pages built successfully.")
