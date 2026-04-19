@@ -9,4 +9,3 @@ Disallow: /assets/js/
 
 # Sitemap
 Sitemap: https://meerfoundation.co.in/sitemap.xml
-Sitemap: https://www.meerfoundation.co.in/sitemap.xml

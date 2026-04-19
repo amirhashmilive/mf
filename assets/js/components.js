@@ -13,7 +13,7 @@
   const HEADER = `
 <header class="site-header" id="site-header" role="banner">
   <div class="container header-inner">
-    <a href="index.html" class="brand" aria-label="Meer Foundation Home">
+    <a href="/" class="brand" aria-label="Meer Foundation Home">
       <img src="assets/images/logo/logo-horizontal.png" alt="Meer Foundation" style="height: 50px; width: auto;">
     </a>
 
@@ -96,7 +96,7 @@
   <nav class="mobile-nav">
     <button class="close-menu" aria-label="Close menu">&times;</button>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="initiatives.html">All Initiatives</a></li>
       <li><a href="bolti-nadi.html">Bolti Nadi</a></li>
@@ -138,7 +138,7 @@
     <div class="footer-grid">
       <!-- Brand column -->
       <div class="footer-brand">
-        <a href="index.html" class="brand" style="margin-bottom:16px;" aria-label="Meer Foundation Home">
+        <a href="/" class="brand" style="margin-bottom:16px;" aria-label="Meer Foundation Home">
           <img src="assets/images/logo/logo-1x1.png" alt="Meer Foundation" style="height: 60px; width: auto; margin-bottom: 10px;">
           <div class="brand-text">
             <span class="brand-name">Meer Foundation</span>
