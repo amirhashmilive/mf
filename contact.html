@@ -65,31 +65,34 @@
 
       <!-- Form -->
       <div class="reveal reveal-delay-1">
-        <form style="background: #fff; padding: 40px; border-radius: var(--r-2xl); border: 1px solid var(--border); box-shadow: var(--shadow-xl);">
+        <!-- Success Message Notification -->
+        <div id="success-msg" style="display:none; background:#dcfce7; color:#166534; padding:20px; border-radius:var(--r-xl); margin-bottom:25px; border:1px solid #bbf7d0; font-weight:600; text-align:center;">
+          ✓ Thank you! Your message has been sent successfully. We will get back to you soon.
+        </div>
+        <script>
+          if (new URLSearchParams(window.location.search).get('success') === 'true') {
+            document.getElementById('success-msg').style.display = 'block';
+            window.history.replaceState({}, document.title, window.location.pathname);
+          }
+        </script>
+
+        <form action="https://formspree.io/f/xjgjrzyb" method="POST" style="background: #fff; padding: 40px; border-radius: var(--r-2xl); border: 1px solid var(--border); box-shadow: var(--shadow-xl);">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label class="form-label">Full Name</label>
-              <input type="text" class="form-input" placeholder="Your name">
+              <input type="text" name="name" class="form-input" placeholder="Your name" required>
             </div>
             <div class="form-group">
               <label class="form-label">Email Address</label>
-              <input type="email" class="form-input" placeholder="your@email.com">
+              <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Subject</label>
-            <select class="form-input">
-              <option>General Inquiry</option>
-              <option id="volunteer">Volunteer Opportunity</option>
-              <option id="csr">CSR Partnership</option>
-              <option>Media & Communication</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea class="form-input" style="min-height: 150px;" placeholder="How can we help?"></textarea>
+            <textarea name="message" class="form-input" style="min-height: 150px;" placeholder="How can we help?" required></textarea>
           </div>
+          <!-- Redirect after submission -->
+          <input type="hidden" name="_next" value="https://meerfoundation.co.in/contact.html?success=true">
           <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Send Message</button>
         </form>
       </div>
