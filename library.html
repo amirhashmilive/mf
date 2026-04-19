@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Access - IJMEER | Free Institutional Subscription by Meer Foundation</title>
+  <meta name="description" content="Register your library or institution for free access to all IJMEER issues. A non-profit initiative by Meer Foundation to empower academic libraries across India.">
+  <link rel="canonical" href="https://www.ijmeer.com/library.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWHDPZRK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FNJ68WF8J"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2FNJ68WF8J');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ── Library page styles ── */
+    .lib-hero {
+      background: linear-gradient(135deg, #0f2744 0%, #1a3a6a 60%, #0c3b5e 100%);
+      padding: 80px 0 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .lib-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+      pointer-events: none;
+    }
+    .lib-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(0,114,178,0.1);
+      pointer-events: none;
+    }
+    .lib-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50px;
+      padding: 6px 20px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 24px;
+    }
+    .lib-hero-title {
+      font-family: var(--font-serif, Georgia, serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .lib-hero-sub {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+    .lib-free-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16,185,129,0.15);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 50px;
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #34d399;
+      letter-spacing: 0.3px;
+    }
+    /* ── Benefits grid ── */
+    .lib-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 24px;
+      background: var(--bg, #fff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 16px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .lib-benefit:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.09); transform: translateY(-2px); }
+    .lib-benefit-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.4rem;
+    }
+    .lib-benefit-title { font-weight: 800; color: var(--navy, #0f2744); margin-bottom: 6px; font-size: 0.95rem; }
+    .lib-benefit-desc { color: var(--text-2, #6b7280); font-size: 0.85rem; line-height: 1.6; }
+    /* ── How it works steps ── */
+    .how-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .how-step-num {
+      width: 40px; height: 40px;
+      background: var(--blue, #0071e3);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .how-step-title { font-weight: 700; color: var(--navy, #0f2744); margin-bottom: 4px; }
+    .how-step-desc { color: var(--text-2, #6b7280); font-size: 0.88rem; line-height: 1.6; }
+    /* ── Register CTA card ── */
+    .register-card {
+      background: linear-gradient(135deg, #0f2744 0%, #1a3a6a 100%);
+      border-radius: 20px;
+      padding: 52px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(15,39,68,0.2);
+    }
+    .register-card::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
+    /* ── FAQ ── */
+    .faq-item {
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy, #0f2744);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+    .faq-q:hover { background: var(--bg-2, #f9fafb); }
+    .faq-a {
+      padding: 0 24px 20px;
+      color: var(--text-2, #6b7280);
+      font-size: 0.9rem;
+      line-height: 1.75;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+    .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    @media (max-width: 768px) {
+      .lib-hero { padding: 60px 0 52px; }
+      .register-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHDPZRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<main id="main-content">
+
+  <!-- ════════════════════════════════════════════════════════
+       HERO: Library Empowerment Initiative
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="lib-hero" aria-labelledby="lib-heading">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="lib-hero-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px;" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Library Empowerment Initiative &mdash; by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);">Meer Foundation</a>
+      </div>
+      <h1 class="lib-hero-title" id="lib-heading">
+        Free Library Access<br>to All IJMEER Issues
+      </h1>
+      <p class="lib-hero-sub">IJMEER is a non-profit academic initiative by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);font-weight:700;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);">Meer Foundation</a>. A portion of APC funds, after editorial costs, is allocated to library empowerment, academic services, and institutional enhancement across India.</p>
+      <div class="lib-free-badge" aria-label="Completely free for libraries">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        100% Free &mdash; No Cost to Libraries. Ever.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 1: About the Initiative
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="h-about-lib">
+    <div class="container">
+      <div class="with-sidebar">
+        <div>
+          <div class="section-header reveal" style="text-align:left;margin-bottom:32px;">
+            <div class="section-tag">Mission</div>
+            <h2 class="section-title" id="h-about-lib" style="text-align:left;">Why We Do This</h2>
+          </div>
+          <div class="card reveal" style="margin-bottom:24px;">
+            <div class="card-body">
+              <p style="color:var(--text-2);line-height:1.9;margin-bottom:16px;font-size:0.95rem;">
+                <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">Meer Foundation</a> established IJMEER not merely as a publishing venture, but as a mission-driven initiative to democratise access to academic knowledge. We believe that every library &mdash; whether at a tier-1 university or a small regional college &mdash; deserves access to quality open-access research.
+              </p>
+              <p style="color:var(--text-2);line-height:1.9;margin-bottom:16px;font-size:0.95rem;">
+                Revenue generated through Article Processing Charges (APC), after covering editorial, operational, and production costs, is deliberately reinvested into:
+              </p>
+              <div class="checklist" style="margin-bottom:16px;">
+                <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Library empowerment and institutional access programmes</div></div>
+                <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Academic services for students and early-career researchers</div></div>
+                <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Institutional enhancement and scholarly capacity building</div></div>
+              </div>
+              <p style="color:var(--text-2);line-height:1.9;font-size:0.95rem;">
+                Library subscription to IJMEER is <strong>completely free</strong>. There is no fee, no licence restriction, and no time limit. This is our commitment to open scholarship.
+              </p>
+            </div>
+          </div>
+
+          <div class="alert-box success reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span><strong>No catch, no conditions.</strong> Library access is free because it aligns with Our foundation&rsquo;s core mission: advancing education and academic empowerment. Registration takes less than 5 minutes.</span>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Library access sidebar">
+          <div class="sidebar-card" style="background:linear-gradient(135deg,rgba(15,39,68,0.03),rgba(26,58,106,0.05));border:2px solid rgba(15,39,68,0.1);">
+            <div class="sidebar-card-head" style="background:linear-gradient(135deg,#0f2744,#1a3a6a);color:#fff;">Register Your Library</div>
+            <div class="sidebar-card-body">
+              <p style="font-size:0.84rem;color:var(--text-2);line-height:1.7;margin-bottom:16px;">Complete the registration form to get institutional access to all IJMEER issues &mdash; completely free.</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDZelaiRxrEjtgnubhZdTVkiTmziZ_ue5_yJLWu8XH5kxbBg/viewform?usp=publish-editor"
+                 class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;"
+                 target="_blank" rel="noopener" id="lib-register-sidebar-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                Register Your Library (Free)
+              </a>
+              <div style="text-align:center;font-size:0.75rem;color:var(--text-4);margin-top:8px;">&#128274; No fee &middot; Takes 2&ndash;3 minutes</div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Publisher</div>
+            <div class="sidebar-card-body">
+              <div style="font-size:0.84rem;color:var(--text-2);line-height:1.8;">
+                <strong><a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:underline;">Meer Foundation</a></strong><br>
+                Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Contact IJMEER</div>
+            <div class="sidebar-card-body">
+              <div style="font-size:0.84rem;color:var(--text-2);line-height:1.8;">
+                Email: <a href="mailto:ijmeerj@gmail.com" style="color:var(--blue);">ijmeerj@gmail.com</a><br>
+                Email: <a href="mailto:editor@ijmeer.com" style="color:var(--blue);">editor@ijmeer.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Quick Links</div>
+            <div class="sidebar-card-body">
+              <nav class="sidebar-links" aria-label="Quick links">
+                <a href="journal.html">About IJMEER</a>
+                <a href="archive.html">Browse Issues</a>
+                <a href="authors.html">Author Instructions</a>
+                <a href="contact.html">Contact Us</a>
+              </nav>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 2: What Libraries Receive
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-2);" aria-labelledby="h-benefits">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Benefits</div>
+        <h2 class="section-title" id="h-benefits">What Libraries Receive</h2>
+        <p class="section-subtitle">A clear, honest set of benefits with no hidden conditions.</p>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="lib-benefit">
+          <div class="lib-benefit-icon" style="background:rgba(37,99,235,0.08);">🖥️</div>
+          <div>
+            <div class="lib-benefit-title">Digital Access to All Issues</div>
+            <div class="lib-benefit-desc">Full digital access to every published volume and issue of IJMEER, past and future. All articles are open access &mdash; readable and downloadable by anyone through your library portal.</div>
+          </div>
+        </div>
+        <div class="lib-benefit">
+          <div class="lib-benefit-icon" style="background:rgba(16,185,129,0.08);">📬</div>
+          <div>
+            <div class="lib-benefit-title">Print Copies (On Request)</div>
+            <div class="lib-benefit-desc">Libraries may request print copies of published issues, subject to availability and logistics. Contact the editorial office for details about print copy requests.</div>
+          </div>
+        </div>
+        <div class="lib-benefit">
+          <div class="lib-benefit-icon" style="background:rgba(124,58,237,0.08);">🏛️</div>
+          <div>
+            <div class="lib-benefit-title">Institutional Recognition</div>
+            <div class="lib-benefit-desc">Registered libraries and institutions are recognised on the IJMEER website as part of our Library Empowerment Network, showcasing your institution&rsquo;s commitment to open scholarship.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 3: Register Your Library
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="h-register">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Section 3</div>
+        <h2 class="section-title" id="h-register">Register Your Library</h2>
+        <p class="section-subtitle">Join IJMEER&rsquo;s Library Empowerment Network in under 5 minutes. No paperwork. No fees.</p>
+      </div>
+      <div class="reveal" style="max-width:680px;margin:0 auto;">
+        <div class="register-card">
+          <div style="font-size:3rem;margin-bottom:16px;" aria-hidden="true">🏛️</div>
+          <h3 style="font-family:var(--font-serif);font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-0.5px;">Ready to Register?</h3>
+          <p style="color:rgba(255,255,255,0.72);line-height:1.75;margin-bottom:32px;font-size:0.95rem;">Complete the institutional registration form. Our team will confirm your registration within 2&ndash;3 business days and provide access details.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDZelaiRxrEjtgnubhZdTVkiTmziZ_ue5_yJLWu8XH5kxbBg/viewform?usp=publish-editor"
+             class="btn btn-lg" id="lib-register-main-btn"
+             style="background:#fff;color:var(--navy);font-weight:800;width:100%;justify-content:center;border-radius:12px;font-size:1rem;"
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Register Your Library (Free) &rarr;
+          </a>
+          <p style="color:rgba(255,255,255,0.4);font-size:0.78rem;margin-top:16px;">No fee &middot; Confirmation in 2&ndash;3 business days &middot; Meer Foundation initiative</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 4: How It Works
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-2);" aria-labelledby="h-how">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Section 4</div>
+        <h2 class="section-title" id="h-how">How It Works</h2>
+        <p class="section-subtitle">A simple, transparent model built on a non-profit mission.</p>
+      </div>
+      <div style="max-width:620px;margin:0 auto;" class="reveal">
+        <div style="display:flex;flex-direction:column;gap:28px;">
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">1</div>
+            <div>
+              <div class="how-step-title">Authors Pay APC on Acceptance</div>
+              <div class="how-step-desc">Researchers whose papers are accepted pay a flat Article Processing Charge of &#8377;3,000 before publication. This sustains the editorial and production process.</div>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">2</div>
+            <div>
+              <div class="how-step-title">APC Surplus Funds Library Access</div>
+              <div class="how-step-desc">After editorial, production, and operational costs are covered, the remaining surplus is allocated by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;">Meer Foundation</a> specifically to library empowerment and academic services.</div>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">3</div>
+            <div>
+              <div class="how-step-title">No Cost to Libraries</div>
+              <div class="how-step-desc">Libraries register for free and receive institutional access credentials. There is no subscription fee, no renewal fee, and no restrictions &mdash; ever.</div>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">4</div>
+            <div>
+              <div class="how-step-title">Open Access for Readers Worldwide</div>
+              <div class="how-step-desc">All IJMEER articles are Open Access, meaning any reader anywhere in the world can read, download, and share them freely. Library access provides additional institutional benefits and recognition.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 5: FAQs
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="h-faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Section 5</div>
+        <h2 class="section-title" id="h-faq">Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width:720px;margin:0 auto;" class="reveal">
+
+        <div class="faq-item open">
+          <button class="faq-q" aria-expanded="true">
+            Is there any fee for library registration?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">No. Library registration and access to IJMEER is <strong>completely free</strong> &mdash; now and always. There is no subscription fee, no licence fee, and no renewal charge. This is a non-profit initiative by Meer Foundation.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            What is the catch?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">There is no catch. IJMEER is a <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;">Meer Foundation</a> non-profit academic initiative. Our mission is to advance education and open scholarship across India. Empowering libraries is central to that mission &mdash; not an afterthought.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How long does registration take?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">The registration form takes less than 5 minutes to complete. Our team will review your submission and confirm access within <strong>2&ndash;3 business days</strong>. You will receive a confirmation email once registration is approved.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Which types of institutions are eligible?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">All academic and research libraries are eligible &mdash; university libraries, college libraries, research institution libraries, public libraries, and professional organisation libraries. Both Indian and international institutions are welcome.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can students and researchers at registered institutions access the journal?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Yes. All articles are Open Access and freely available to everyone. Registered institutional libraries additionally receive formal recognition, print copy access (subject to availability), and direct communication from the IJMEER editorial team regarding new publications.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How is this funded if it&rsquo;s free?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Article Processing Charges paid by authors (&#8377;3,000 per accepted paper) cover editorial and production costs. The surplus from these charges is directed by Meer Foundation towards library empowerment, academic services, and institutional capacity building &mdash; at no cost to the libraries themselves.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cfp-section" aria-labelledby="cta-lib-heading">
+    <div class="container">
+      <div class="cfp-content reveal">
+        <div class="section-tag" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">Library Empowerment Initiative</div>
+        <h2 class="section-title" id="cta-lib-heading" style="color:#fff;margin-top:12px;">Register Your Institution Today</h2>
+        <p style="color:rgba(255,255,255,0.8);margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.8;">Free institutional access &middot; No paperwork &middot; Confirmation in 2&ndash;3 days &middot; A <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);font-weight:700;">Meer Foundation</a> initiative</p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDZelaiRxrEjtgnubhZdTVkiTmziZ_ue5_yJLWu8XH5kxbBg/viewform?usp=publish-editor"
+             class="btn btn-lg" style="background:#fff;color:var(--blue);font-weight:800;"
+             target="_blank" rel="noopener" id="cta-lib-btn">
+            Register Your Library (Free) &rarr;
+          </a>
+          <a href="mailto:editor@ijmeer.com" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:#fff;">
+            Ask a Question
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

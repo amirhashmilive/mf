@@ -1,0 +1,2344 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Portfolio — IJMEER</title>
+  <meta name="description" content="Meet the distinguished editorial leaders shaping IJMEER — detailed profiles of our Editor-in-Chief, Managing Editor, and core Editorial Board members with full biographies, achievements, and expertise.">
+  <link rel="canonical" href="https://www.ijmeer.com/editorial-portfolio.html">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWHDPZRK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FNJ68WF8J"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2FNJ68WF8J');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ── Portfolio Page Styles ── */
+
+    /* Hero bar */
+    .portfolio-hero {
+      padding: calc(var(--header-h) + 36px + 56px) 0 56px;
+      background: linear-gradient(135deg, #0A1628 0%, #0F2642 60%, #1A3A5C 100%);
+      position: relative; overflow: hidden;
+    }
+    .portfolio-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(37,99,235,0.25), transparent 65%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(124,58,237,0.2), transparent 60%);
+    }
+    .portfolio-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+    .portfolio-hero-inner {
+      position: relative; z-index: 2;
+    }
+    .portfolio-hero .breadcrumb a,
+    .portfolio-hero .breadcrumb { color: rgba(255,255,255,0.5); }
+    .portfolio-hero .breadcrumb a:hover { color: rgba(255,255,255,0.85); }
+    .portfolio-hero .breadcrumb-sep { color: rgba(255,255,255,0.25); }
+
+    .portfolio-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 18px; margin-bottom: 22px;
+      background: rgba(37,99,235,0.2);
+      border: 1px solid rgba(37,99,235,0.4);
+      border-radius: var(--r-full);
+      font-size: 0.72rem; font-weight: 700; color: #93C5FD;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .portfolio-hero-badge::before {
+      content: ''; width: 7px; height: 7px; border-radius: 50%;
+      background: #4ADE80; animation: pulse 2s infinite; flex-shrink: 0;
+    }
+
+    .portfolio-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.1; letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .portfolio-hero h1 span {
+      background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .portfolio-hero p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.7);
+      max-width: 600px; line-height: 1.75;
+    }
+
+    /* Quick-nav pills */
+    .portfolio-nav {
+      background: var(--bg-2); border-bottom: 1px solid var(--border);
+      position: sticky; top: var(--header-h); z-index: var(--z-sticky);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .portfolio-nav::-webkit-scrollbar { display: none; }
+    .portfolio-nav-inner {
+      display: flex; gap: 4px; padding: 10px 0;
+    }
+    .pnav-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px; border-radius: var(--r-full);
+      font-size: 0.78rem; font-weight: 700;
+      color: var(--text-3); background: transparent;
+      border: 1.5px solid transparent;
+      cursor: pointer; transition: var(--t); white-space: nowrap;
+      text-decoration: none;
+    }
+    .pnav-pill:hover {
+      color: var(--blue); background: rgba(37,99,235,0.07);
+      border-color: rgba(37,99,235,0.2);
+    }
+    .pnav-pill.active {
+      color: var(--blue); background: rgba(37,99,235,0.1);
+      border-color: rgba(37,99,235,0.3);
+    }
+    .pnav-pill .pnav-num {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--grad-brand); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: 800; flex-shrink: 0;
+    }
+
+    /* Overview stats strip */
+    .portfolio-stats-strip {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+      gap: 16px; margin-bottom: 64px;
+    }
+    .pstat {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-xl); padding: 24px;
+      display: flex; align-items: center; gap: 16px;
+      transition: var(--t); position: relative; overflow: hidden;
+    }
+    .pstat::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--grad-brand); opacity: 0; transition: opacity var(--t);
+    }
+    .pstat:hover { box-shadow: var(--sh); transform: translateY(-2px); }
+    .pstat:hover::before { opacity: 1; }
+    .pstat-icon {
+      width: 48px; height: 48px; border-radius: var(--r-lg);
+      background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(124,58,237,0.08));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+    }
+    .pstat-num {
+      font-family: var(--font-serif); font-size: 1.9rem; font-weight: 800;
+      background: var(--grad-brand); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
+    }
+    .pstat-label { font-size: 0.75rem; color: var(--text-3); font-weight: 600; margin-top: 3px; }
+
+    /* ── Profile Card ── */
+    .profile-section { margin-bottom: 80px; scroll-margin-top: calc(var(--header-h) + 90px); }
+
+    .profile-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-2xl); overflow: hidden;
+      box-shadow: var(--sh); transition: box-shadow var(--t);
+      position: relative;
+    }
+    .profile-card:hover { box-shadow: var(--sh-xl); }
+
+    /* Color accent bar per member */
+    .profile-card-accent { height: 5px; }
+    .accent-eic     { background: linear-gradient(90deg, #2563EB, #7C3AED, #2563EB); background-size: 200%; animation: shimmer 3s linear infinite; }
+    .accent-managing{ background: linear-gradient(90deg, #7C3AED, #E11D48, #7C3AED); background-size: 200%; animation: shimmer 3s linear infinite; }
+    .accent-intl    { background: linear-gradient(90deg, #059669, #0D9488, #059669); background-size: 200%; animation: shimmer 3s linear infinite; }
+    .accent-m1      { background: linear-gradient(90deg, #F59E0B, #F97316); }
+    .accent-m2      { background: linear-gradient(90deg, #E11D48, #7C3AED); }
+    .accent-m3      { background: linear-gradient(90deg, #2563EB, #059669); }
+    .accent-m4      { background: linear-gradient(90deg, #0D9488, #2563EB); }
+    @keyframes shimmer { 0%{background-position:0%} 100%{background-position:200%} }
+
+    .profile-body { padding: 40px 44px; }
+
+    /* Top row: photo + identity */
+    .profile-top {
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 36px; align-items: start; margin-bottom: 36px;
+    }
+
+    /* Photo */
+    .profile-photo-wrap {
+      position: relative; flex-shrink: 0;
+    }
+    .profile-photo {
+      width: 140px; height: 140px; border-radius: var(--r-xl);
+      object-fit: cover; object-position: top;
+      border: 4px solid #fff;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      display: block; transition: transform var(--t);
+    }
+    .profile-card:hover .profile-photo { transform: scale(1.02); }
+
+    .profile-photo-badge {
+      position: absolute; bottom: -8px; right: -8px;
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; border: 3px solid #fff;
+      box-shadow: var(--sh-sm);
+    }
+    .badge-eic { background: linear-gradient(135deg,#2563EB,#7C3AED); }
+    .badge-managing { background: linear-gradient(135deg,#7C3AED,#E11D48); }
+    .badge-intl { background: linear-gradient(135deg,#059669,#0D9488); }
+    .badge-member { background: linear-gradient(135deg,#F59E0B,#F97316); }
+
+    /* Identity */
+    .profile-identity {}
+    .profile-roles {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+    }
+    .profile-role-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 14px; border-radius: var(--r-full);
+      font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
+    }
+    .role-eic    { background: rgba(37,99,235,0.1);  color: var(--blue); border: 1px solid rgba(37,99,235,0.2); }
+    .role-managing { background: rgba(124,58,237,0.1); color: var(--violet); border: 1px solid rgba(124,58,237,0.2); }
+    .role-intl   { background: rgba(5,150,105,0.1);  color: var(--emerald); border: 1px solid rgba(5,150,105,0.2); }
+    .role-member { background: rgba(245,158,11,0.1); color: var(--amber);   border: 1px solid rgba(245,158,11,0.2); }
+
+    .profile-name {
+      font-family: var(--font-serif); font-size: 1.75rem; font-weight: 800;
+      color: var(--navy); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 10px;
+    }
+    .profile-designation {
+      font-size: 0.92rem; color: var(--text-2); font-weight: 500; line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .profile-institution {
+      display: flex; align-items: flex-start; gap: 7px;
+      font-size: 0.85rem; color: var(--text-3); line-height: 1.5;
+    }
+    .profile-institution svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; color: var(--text-4); }
+
+    /* Stats row */
+    .profile-stats {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px;
+    }
+    .prs {
+      display: flex; align-items: center; gap: 7px;
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 8px 14px;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-2);
+    }
+    .prs-num {
+      font-family: var(--font-serif); font-size: 1.2rem; font-weight: 800;
+      background: var(--grad-brand); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .prs-icon { font-size: 1rem; }
+
+    /* Divider */
+    .profile-divider {
+      height: 1px; background: var(--border);
+      margin: 28px 0;
+    }
+
+    /* Content area: tabs */
+    .profile-tab-bar {
+      display: flex; gap: 0; border-bottom: 2px solid var(--border);
+      margin-bottom: 28px; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .profile-tab-bar::-webkit-scrollbar { display: none; }
+    .ptab-btn {
+      padding: 11px 20px; font-size: 0.82rem; font-weight: 700;
+      color: var(--text-3); background: none; border: none;
+      cursor: pointer; transition: var(--t); white-space: nowrap;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      font-family: var(--font-sans);
+    }
+    .ptab-btn:hover { color: var(--blue); }
+    .ptab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .ptab-panel { display: none; }
+    .ptab-panel.active { display: block; }
+
+    /* Biography text */
+    .bio-text {
+      font-size: 0.92rem; color: var(--text-2); line-height: 1.85;
+    }
+    .bio-text p { margin-bottom: 16px; }
+    .bio-text p:last-child { margin-bottom: 0; }
+    .bio-section-head {
+      font-weight: 800; font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--text-3);
+      margin: 24px 0 10px; display: flex; align-items: center; gap: 10px;
+    }
+    .bio-section-head::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* Expertise tags */
+    .expertise-grid {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .exp-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 16px; font-size: 0.78rem; font-weight: 700;
+      border-radius: var(--r-full);
+      transition: var(--t); cursor: default;
+    }
+    .exp-tag:hover { transform: translateY(-2px); box-shadow: var(--sh-sm); }
+    .exp-blue   { background: rgba(37,99,235,0.08);  color: var(--blue);    border: 1.5px solid rgba(37,99,235,0.18); }
+    .exp-violet { background: rgba(124,58,237,0.08); color: var(--violet);  border: 1.5px solid rgba(124,58,237,0.18); }
+    .exp-emerald{ background: rgba(5,150,105,0.08);  color: var(--emerald); border: 1.5px solid rgba(5,150,105,0.18); }
+    .exp-amber  { background: rgba(217,119,6,0.08);  color: var(--amber);   border: 1.5px solid rgba(217,119,6,0.18); }
+    .exp-teal   { background: rgba(13,148,136,0.08); color: var(--teal);    border: 1.5px solid rgba(13,148,136,0.18); }
+    .exp-rose   { background: rgba(225,29,72,0.08);  color: var(--rose);    border: 1.5px solid rgba(225,29,72,0.18); }
+
+    /* Achievements panel */
+    .achievements-list {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .ach-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 20px; background: var(--bg-2);
+      border: 1px solid var(--border); border-radius: var(--r-lg);
+      transition: var(--t);
+    }
+    .ach-item:hover { border-color: rgba(37,99,235,0.25); background: rgba(37,99,235,0.03); }
+    .ach-icon {
+      width: 38px; height: 38px; border-radius: var(--r);
+      background: var(--grad-brand); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .ach-text { font-size: 0.875rem; color: var(--text-2); line-height: 1.6; }
+    .ach-text strong { color: var(--text-1); font-weight: 700; display: block; margin-bottom: 3px; }
+
+    /* Links panel */
+    .links-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .profile-link-card {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px; border-radius: var(--r-lg);
+      border: 1.5px solid var(--border); background: var(--bg);
+      transition: var(--t); text-decoration: none; color: var(--text-2);
+    }
+    .profile-link-card:hover {
+      border-color: var(--blue); color: var(--blue);
+      background: rgba(37,99,235,0.04);
+      transform: translateY(-2px); box-shadow: var(--sh);
+    }
+    .plc-icon {
+      width: 40px; height: 40px; border-radius: var(--r); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+    .plc-label { font-size: 0.7rem; color: var(--text-4); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .plc-value { font-size: 0.85rem; font-weight: 700; color: inherit; }
+
+    /* Section heading for EIC */
+    .pf-section-group {
+      margin-bottom: 32px;
+    }
+    .pf-group-title {
+      font-family: var(--font-serif); font-size: 1.1rem; font-weight: 800;
+      color: var(--navy); display: flex; align-items: center; gap: 14px;
+      margin-bottom: 24px;
+    }
+    .pf-group-title::after {
+      content: ''; flex: 1; height: 1.5px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* International spotlight banner */
+    .intl-spotlight {
+      background: linear-gradient(135deg, rgba(5,150,105,0.06), rgba(13,148,136,0.04));
+      border: 1.5px solid rgba(5,150,105,0.2);
+      border-radius: var(--r-lg); padding: 14px 20px;
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px; font-size: 0.85rem; color: var(--emerald); font-weight: 600;
+    }
+    .intl-spotlight .intl-flag { font-size: 1.4rem; }
+
+    /* Publications highlight */
+    .pub-mini {
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: var(--r); padding: 14px 18px;
+      margin-bottom: 10px; font-size: 0.855rem; color: var(--text-2); line-height: 1.6;
+    }
+    .pub-mini strong { color: var(--text-1); font-style: italic; }
+    .pub-mini .pub-year {
+      display: inline-block; padding: 2px 8px; border-radius: var(--r-sm);
+      background: rgba(37,99,235,0.08); color: var(--blue);
+      font-size: 0.7rem; font-weight: 700; margin-bottom: 6px;
+    }
+
+    /* Nav number indicator */
+    .member-number {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--grad-brand); color: #fff;
+      font-size: 0.72rem; font-weight: 800; flex-shrink: 0;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .profile-body { padding: 24px 20px; }
+      .profile-top { grid-template-columns: 1fr; gap: 20px; }
+      .profile-photo { width: 110px; height: 110px; }
+      .profile-name { font-size: 1.4rem; }
+      .portfolio-hero h1 { font-size: 1.8rem; }
+      .portfolio-hero p { font-size: 0.95rem; }
+      .profile-stats { gap: 8px; }
+      .prs { padding: 6px 10px; }
+      .portfolio-stats-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .links-grid { grid-template-columns: 1fr; }
+      .portfolio-stats-strip { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Reveal animation */
+    .portfolio-reveal {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .portfolio-reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHDPZRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<main id="main-content">
+
+  <!-- ── HERO ── -->
+  <section class="portfolio-hero" aria-labelledby="port-heading">
+    <div class="container">
+      <div class="portfolio-hero-inner">
+        <nav class="breadcrumb" aria-label="Page navigation">
+          <a href="/">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="editorial-board.html">Editorial Board</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page" style="color:rgba(255,255,255,0.7);">Detailed Portfolios</span>
+        </nav>
+        <div class="portfolio-hero-badge">Editorial Leadership Profiles</div>
+        <h1 id="port-heading">Meet the <span>Minds</span> Behind IJMEER</h1>
+        <p>Detailed biographies, achievements, and expertise profiles of the distinguished scholars, legal experts, and multidisciplinary practitioners who guide IJMEER's academic vision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STICKY NAV ── -->
+  <nav class="portfolio-nav" aria-label="Quick member navigation">
+    <div class="container">
+      <div class="portfolio-nav-inner">
+        <a href="#nusrat-hashmi" class="pnav-pill" id="pill-1">
+          <span class="pnav-num">1</span> Dr. Nusrat Ali Hashmi
+        </a>
+        <a href="#amir-hashmi" class="pnav-pill" id="pill-2">
+          <span class="pnav-num">2</span> Sayed Amir Mustafa Hashmi
+        </a>
+        <a href="#mary-frank" class="pnav-pill" id="pill-3">
+          <span class="pnav-num">3</span> Dr. Mary Lou Frank
+        </a>
+        <a href="#ashok-sunatkari" class="pnav-pill" id="pill-4">
+          <span class="pnav-num">4</span> Prof. Ashok Sunatkari
+        </a>
+        <a href="#ashok-yende" class="pnav-pill" id="pill-5">
+          <span class="pnav-num">5</span> Adv. Ashok Yende
+        </a>
+        <a href="#karuna-malviya" class="pnav-pill" id="pill-6">
+          <span class="pnav-num">6</span> Prof. Karuna Malviya
+        </a>
+        <a href="#salim-khan" class="pnav-pill" id="pill-7">
+          <span class="pnav-num">7</span> Dr. Mohammed Salim Khan
+        </a>
+        <a href="#momin-ali" class="pnav-pill" id="pill-8">
+          <span class="pnav-num">8</span> Dr. Momin Ali
+        </a>
+        <span style="display:inline-flex;align-items:center;padding:0 6px;color:var(--border);font-size:1.2rem;" aria-hidden="true">|</span>
+        <span style="display:inline-flex;align-items:center;padding:0 4px;font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--emerald);white-space:nowrap;">Intl. Board</span>
+        <a href="#jyotirmaya-thakur" class="pnav-pill" id="pill-9">
+          <span class="pnav-num" style="background:linear-gradient(135deg,#059669,#0D9488);">9</span> Prof. Jyotirmaya Thakur
+        </a>
+        <a href="#anupama-patel" class="pnav-pill" id="pill-10">
+          <span class="pnav-num" style="background:linear-gradient(135deg,#0D9488,#059669);">10</span> Dr. Anupama Patel
+        </a>
+        <span style="display:inline-flex;align-items:center;padding:0 6px;color:var(--border);font-size:1.2rem;" aria-hidden="true">|</span>
+        <span style="display:inline-flex;align-items:center;padding:0 4px;font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--amber);white-space:nowrap;">Advisory</span>
+        <a href="#mona-purohit" class="pnav-pill" id="pill-11">
+          <span class="pnav-num" style="background:linear-gradient(135deg,#F59E0B,#F97316);">11</span> Prof. Mona Purohit
+        </a>
+        <a href="#ranu-shukla" class="pnav-pill" id="pill-12">
+          <span class="pnav-num" style="background:linear-gradient(135deg,#F97316,#EF4444);">12</span> Dr. Ranu Shukla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:64px;">
+    <div class="container">
+
+      <!-- Stats strip -->
+      <div class="portfolio-stats-strip portfolio-reveal">
+        <div class="pstat">
+          <div class="pstat-icon">👥</div>
+          <div>
+            <div class="pstat-num">12</div>
+            <div class="pstat-label">Featured Members</div>
+          </div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-icon">🌍</div>
+          <div>
+            <div class="pstat-num">3</div>
+            <div class="pstat-label">Countries Represented</div>
+          </div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-icon">📚</div>
+          <div>
+            <div class="pstat-num">200+</div>
+            <div class="pstat-label">Combined Publications</div>
+          </div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-icon">🏛️</div>
+          <div>
+            <div class="pstat-num">250+</div>
+            <div class="pstat-label">Years Combined Experience</div>
+          </div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-icon">🎓</div>
+          <div>
+            <div class="pstat-num">11</div>
+            <div class="pstat-label">Doctoral Degrees</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           1. DR. NUSRAT ALI HASHMI
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="nusrat-hashmi">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-eic"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/drnusratalihashmi.png" alt="Dr. Nusrat Ali Hashmi — Editor-in-Chief, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-eic" title="Editor-in-Chief">👑</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-eic">✦ Editor-in-Chief</span>
+                </div>
+                <h2 class="profile-name">Dr. Nusrat Ali Hashmi</h2>
+                <div class="profile-designation">High Court Advocate · Ph.D. in Law · Author · Legal Academic</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Editor-in-Chief, IJMEER Journal · Legal Advisor, Meer Foundation · Former Principal, Shivajirao S. Jondhle Institute of Law and Research, Mumbai
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">📖</span>
+                    <div><span class="prs-num">25+</span><br><small>Research Papers</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">📕</span>
+                    <div><span class="prs-num">5+</span><br><small>Books Authored</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">⚖️</span>
+                    <div><span class="prs-num">30+</span><br><small>Yrs Experience</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Dr. Nusrat Ali Hashmi profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'nusrat','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'nusrat','pub')">Publications</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'nusrat','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'nusrat','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'nusrat','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="nusrat-bio">
+              <div class="bio-text">
+                <p>Dr. Nusrat Ali Hashmi is a distinguished legal scholar, High Court Advocate, and Editor-in-Chief of the <em>International Journal of Multidisciplinary Explication and Emerging Research</em> (IJMEER). Holding a Doctor of Philosophy (Ph.D.) in Law, she represents the gold standard of integrated legal professionalism — where scholarship informs practice, teaching shapes advocacy, and institutional leadership creates pathways for others to flourish.</p>
+
+                <div class="bio-section-head">Academic Career</div>
+                <p>Dr. Hashmi's academic pedigree includes a professorship at <strong>Government Law College, Mumbai</strong> — founded in 1855 and recognized as the oldest law school in Asia — a distinction that speaks to her extraordinary scholarly standing. She served as Principal at two institutions: the <strong>Shivajirao S. Jondhle Institute of Law and Research</strong> in Mumbai and <strong>Oriental College of Law</strong>, where she led curriculum design, faculty management, moot court programs, and academic event organization. She also served as Head of Department at both MATS University and ITM University, and as Assistant Professor and Guest Faculty at numerous leading law colleges across India.</p>
+
+                <div class="bio-section-head">Current Roles</div>
+                <p>As <strong>Editor-in-Chief of IJMEER</strong>, Dr. Hashmi oversees the entire publication pipeline — ensuring academic rigor in peer review, maintaining high editorial standards, and steering the journal's scholarly direction. As <strong>Legal Advisor to the Meer Foundation</strong>, she provides strategic legal counsel on matters ranging from constitutional compliance to social impact initiatives. She continues to practice as a <strong>Advocate at the Mumbai High Court</strong>, bringing her extensive jurisprudential knowledge directly to bear in complex legal proceedings.</p>
+
+                <div class="bio-section-head">Expertise and Research</div>
+                <p>Dr. Hashmi's research interests span criminal law, evidence law, procedural law, artificial intelligence and law, fraud and misrepresentation, women's rights, constitutional remedies, and legal services for marginalized communities. She has published more than <strong>25 research papers</strong> in refereed journals addressing critical areas including cyber laws, fraud, consumer rights, judicial reform, violence against women, and constitutional remedies. Her commitment to lifelong learning is evident through active participation in workshops and conferences organized by the UGC, UNICEF, and various international jurist conferences. She is proficient in <strong>English, Hindi, and Urdu</strong>, enabling effective engagement with diverse legal communities.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="nusrat-pub">
+              <div class="bio-section-head" style="margin-top:0;">Landmark Criminal Law Trilogy (2025)</div>
+              <div class="pub-mini">
+                <div class="pub-year">May 2025</div>
+                <strong>"New Criminal Laws: BHARATIYA SAKSHYA ADHINIYAM (BSA) with Comparative Table of the New Act with the Old Act"</strong>
+                — A comprehensive analysis of the new evidence law replacing the Indian Evidence Act of 1872, featuring comparative tables widely adopted in law institutions across India.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">May 2025</div>
+                <strong>"New Criminal Laws: BHARATIYA NYAYA SANHITA (BNS) with Comparative Table"</strong>
+                — Examines the substantive criminal code replacing the Indian Penal Code of 1860, analyzing new offense definitions and revised punishments.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">May 2025</div>
+                <strong>"New Criminal Laws: BHARATIYA NAGARIK SURKSHA SANHITA (BNSS) with Comparative Table"</strong>
+                — Addresses the procedural framework replacing CrPC 1973, covering arrest procedures, bail provisions, and newly introduced timelines.
+              </div>
+              <div class="bio-section-head">Other Major Publications</div>
+              <div class="pub-mini">
+                <div class="pub-year">2025</div>
+                <strong>"The Intersection of Law and Artificial Intelligence: Exploring Legal Challenges and Ethical Questions"</strong> (co-authored with Sayed Athar Ali Hashmi) — Addresses AI liability, data protection, algorithmic bias, and regulatory frameworks.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">2021</div>
+                <strong>"The Law of Fraud and Misrepresentation in India"</strong> — A comprehensive examination of legal frameworks governing fraudulent conduct and misrepresentation, widely used by legal practitioners and scholars.
+              </div>
+              <div class="bio-text" style="margin-top:16px;"><p>Her scholarly output further includes over <strong>25 research papers</strong> in refereed journals, addressing legal reform, constitutional remedies, judicial reform, cyber laws, consumer rights, and women's rights. A notable article: <em>"Justice beyond Death: The Compassionate Appointment Rule as a Constitutional Bridge"</em> (December 2020).</p></div>
+            </div>
+
+            <div class="ptab-panel" id="nusrat-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Criminal Law</span>
+                <span class="exp-tag exp-blue">Evidence Law</span>
+                <span class="exp-tag exp-violet">Constitutional Law</span>
+                <span class="exp-tag exp-violet">Artificial Intelligence & Law</span>
+                <span class="exp-tag exp-emerald">Cyber Laws</span>
+                <span class="exp-tag exp-emerald">Human Rights</span>
+                <span class="exp-tag exp-amber">Fraud & Misrepresentation</span>
+                <span class="exp-tag exp-amber">Commercial Law</span>
+                <span class="exp-tag exp-teal">Procedural Law</span>
+                <span class="exp-tag exp-teal">Consumer Rights</span>
+                <span class="exp-tag exp-rose">Women's Rights</span>
+                <span class="exp-tag exp-rose">Legal Education</span>
+                <span class="exp-tag exp-blue">Moot Court Design</span>
+                <span class="exp-tag exp-violet">Academic Leadership</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="nusrat-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏛️</div>
+                  <div class="ach-text">
+                    <strong>Oldest Law School Faculty — Government Law College, Mumbai (Est. 1855)</strong>
+                    Served as Professor at Asia's oldest law school, one of the most prestigious academic appointments in Indian legal education.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">📚</div>
+                  <div class="ach-text">
+                    <strong>Landmark Criminal Law Trilogy on India's New Laws</strong>
+                    Authored the definitive comparative-table trilogy on BSA, BNS & BNSS — adopted as essential coursework in law institutions across India, shaping a generation of legal practitioners navigating India's most significant criminal justice reform since independence.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌐</div>
+                  <div class="ach-text">
+                    <strong>International Conference of Jurists, New Delhi (2010)</strong>
+                    Invited as a delegate to this prestigious international forum, graced by the Vice-President of India as Chief Guest — recognition of her global standing in the legal community.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">✍️</div>
+                  <div class="ach-text">
+                    <strong>25+ Research Papers in Refereed Journals</strong>
+                    Prolific publication record spanning criminal law, constitutional remedies, cyber law, AI law, fraud, consumer rights, and women's rights.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">⚖️</div>
+                  <div class="ach-text">
+                    <strong>Advocate — Mumbai High Court</strong>
+                    Active practice as a High Court Advocate, combining scholarly rigor with frontline legal representation.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="nusrat-links">
+              <div class="links-grid">
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=659Q4RgAAAAJ" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(66,133,244,0.12);">🎓</div>
+                  <div>
+                    <div class="plc-label">Google Scholar</div>
+                    <div class="plc-value">View Publications →</div>
+                  </div>
+                </a>
+                <a href="https://orcid.org/0009-0009-0967-5200" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(166,206,57,0.15);">
+                    <svg viewBox="0 0 256 256" style="width:20px;height:20px;"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
+                  </div>
+                  <div>
+                    <div class="plc-label">ORCID iD</div>
+                    <div class="plc-value">0009-0009-0967-5200 →</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           2. SAYED AMIR MUSTAFA HASHMI
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="amir-hashmi">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-managing"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/sayedamirmustafahashmi.png" alt="Sayed Amir Mustafa Hashmi — Managing Editor, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-managing" title="Managing Editor">🎬</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-managing">✦ Managing Editor</span>
+                </div>
+                <h2 class="profile-name">Sayed Amir Mustafa Hashmi</h2>
+                <div class="profile-designation">National Award-Winning Filmmaker · Author · Social Entrepreneur · PhD Scholar · Founder & President, Meer Foundation</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Ph.D. Scholar, Dept. of Mass Communication, Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya, Raipur
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">🏅</span>
+                    <div><span class="prs-num">1</span><br><small>National Film Award</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🎭</span>
+                    <div><span class="prs-num">1000+</span><br><small>Workshops Conducted</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🌱</span>
+                    <div><span class="prs-num">1 lakh</span><br><small>Households Reached</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Sayed Amir Mustafa Hashmi profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'amir','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'amir','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'amir','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'amir','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="amir-bio">
+              <div class="bio-text">
+                <p>Sayed Amir Mustafa Hashmi, widely known as <strong>Amir Hashmi</strong>, is a National Award-winning filmmaker, author, singer-songwriter, actor, and social entrepreneur who serves as the <strong>President of Meer Foundation</strong> and the <strong>Founder and Managing Editor of IJMEER</strong>. His life's work represents a rare convergence of artistic expression, academic publishing, grassroots activism, and environmental restoration — all aligned with the United Nations Sustainable Development Goals (SDGs).</p>
+
+                <div class="bio-section-head">Early Life & Artistic Formation</div>
+                <p>Born into a family of government officers, Hashmi grew up immersed in the literary traditions of Persian and Urdu poetry inherited from his grandfather, alongside the dynamic energy of the Hindi film industry. He began performing at an early age, developing a holistic creative identity that would later manifest across filmmaking, songwriting, and social storytelling.</p>
+
+                <div class="bio-section-head">National Award-Winning Filmmaker</div>
+                <p>Hashmi's most distinguished achievement came through his short film <strong>"Mirror of the Clean India,"</strong> which received a <strong>National Film Excellence Award</strong> from the Ministry of Information and Broadcasting, Government of India — jointly awarded by the National Film Development Corporation of India and Doordarshan. His filmography is characterized by socially conscious storytelling: <em>"Culture of Silence"</em> addresses human trafficking, <em>"The Journalist"</em> exposes forced labor, and <em>"GANGREL – Across The Mahanadi River"</em> documents cultural landscapes of Chhattisgarh.</p>
+
+                <div class="bio-section-head">Environmental & Social Leadership</div>
+                <p>Hashmi's most remarkable environmental achievement is the <strong>Bolti Nadi (Save River Initiative)</strong>, launched in 2016. He personally walked the entire 90-kilometer stretch of the Sakri River, mobilizing communities, local governments, and organizations to restore a river that had died due to encroachment and pollution. Under SDG 1 (No Poverty), Meer Foundation's <strong>Farmour</strong> initiative has reached approximately <strong>1 lakh households across 12 districts</strong> in Chhattisgarh, empowering marginalized rural women through sustainable economic models.</p>
+
+                <div class="bio-section-head">IJMEER: Academic Publishing Vision</div>
+                <p>As an extension of Meer Foundation's commitment to education, Hashmi founded the International Journal of Multidisciplinary Explication and Emerging Research (IJMEER) in 2025 — a quarterly, open-access, peer-reviewed journal publishing groundbreaking research at the intersection of multiple disciplines. As Managing Editor, he oversees the journal's strategic direction, operational management, and global outreach initiatives.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="amir-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Mass Communication</span>
+                <span class="exp-tag exp-blue">Documentary Filmmaking</span>
+                <span class="exp-tag exp-violet">Academic Publishing</span>
+                <span class="exp-tag exp-violet">Social Entrepreneurship</span>
+                <span class="exp-tag exp-emerald">Environmental Restoration</span>
+                <span class="exp-tag exp-emerald">Community Development</span>
+                <span class="exp-tag exp-amber">Cultural Heritage</span>
+                <span class="exp-tag exp-amber">Songwriting & Music</span>
+                <span class="exp-tag exp-teal">UN Sustainable Development Goals</span>
+                <span class="exp-tag exp-teal">Rural Empowerment</span>
+                <span class="exp-tag exp-rose">Creative Storytelling</span>
+                <span class="exp-tag exp-blue">NGO Leadership</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="amir-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏅</div>
+                  <div class="ach-text">
+                    <strong>National Film Excellence Award — Ministry of Information & Broadcasting, Government of India</strong>
+                    For the short film "Mirror of the Clean India," jointly awarded by the National Film Development Corporation of India and Doordarshan.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌊</div>
+                  <div class="ach-text">
+                    <strong>Bolti Nadi — River Revival Initiative (2016)</strong>
+                    Walked 90 km along the Sakri River and mobilized communities and government bodies to revive a dead river — a landmark environmental restoration achievement in Chhattisgarh.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌍</div>
+                  <div class="ach-text">
+                    <strong>UN-Aligned SDG Initiatives</strong>
+                    Meer Foundation programs aligned with UNSDG goals — impacting 1 lakh+ households across 12 districts through the Farmour rural women empowerment initiative.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🎯</div>
+                  <div class="ach-text">
+                    <strong>World Record: 'Meri Jaan Tiranga Hai' Rally (August 2019)</strong>
+                    Played a pivotal role in organizing a 15-km human chain and tricolor flag rally in Raipur, achieving a world record in national unity celebration.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">📰</div>
+                  <div class="ach-text">
+                    <strong>Founded IJMEER Journal (2025)</strong>
+                    Established an international open-access, peer-reviewed academic journal bridging multidisciplinary research, giving emerging scholars a global platform.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="amir-links">
+              <div class="links-grid">
+                <a href="https://scholar.google.com/citations?user=Y22LH5kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(66,133,244,0.12);">🎓</div>
+                  <div>
+                    <div class="plc-label">Google Scholar</div>
+                    <div class="plc-value">View Profile →</div>
+                  </div>
+                </a>
+                <a href="https://www.amirhashmi.com" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(124,58,237,0.12);">🌐</div>
+                  <div>
+                    <div class="plc-label">Personal Website</div>
+                    <div class="plc-value">www.amirhashmi.com →</div>
+                  </div>
+                </a>
+                <a href="https://orcid.org/0000-0001-8764-5466" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(166,206,57,0.15);">
+                    <svg viewBox="0 0 256 256" style="width:20px;height:20px;"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
+                  </div>
+                  <div>
+                    <div class="plc-label">ORCID iD</div>
+                    <div class="plc-value">0000-0001-8764-5466 →</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           3. DR. MARY LOU FRANK (INTERNATIONAL)
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="mary-frank">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-intl"></div>
+          <div class="profile-body">
+
+            <div class="intl-spotlight" role="note">
+              <span class="intl-flag">🇺🇸</span>
+              <span><strong>International Editorial Member</strong> — Middle Georgia State University, Macon, GA, USA · Bringing global perspective to IJMEER's peer‐review framework</span>
+            </div>
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/DrMaryLouFrank.png" alt="Dr. Mary Lou Frank — International Editorial Board Member, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-intl" title="International Member">🌍</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-intl">🌍 International Editorial Member</span>
+                </div>
+                <h2 class="profile-name">Dr. Mary Lou Frank</h2>
+                <div class="profile-designation">Ph.D. in Psychology (Counseling) · Licensed Psychologist · Mediator · Author · Former President, International Academy for Dispute Resolution</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Part-Time Instructor, Middle Georgia State University, 100 University Parkway, Macon, GA 31206, USA
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">📗</span>
+                    <div><span class="prs-num">3rd Ed.</span><br><small>Textbook (2023)</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🏛️</span>
+                    <div><span class="prs-num">30+</span><br><small>Yrs in Academia</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🌏</span>
+                    <div><span class="prs-num">USA</span><br><small>Country</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Dr. Mary Lou Frank profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'frank','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'frank','pub')">Publications</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'frank','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'frank','ach')">Awards</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'frank','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="frank-bio">
+              <div class="bio-text">
+                <p>Dr. Mary Lou Frank is a distinguished psychologist, mediator, and educator whose career spans over three decades at the intersection of <strong>psychology, conflict resolution, and higher education leadership</strong>. Currently serving as Part-Time Instructor in Psychology at Middle Georgia State University, she is also the Co-founder of <strong>Transforming Mediation, LLC</strong> and former President of the <strong>International Academy for Dispute Resolution (2018–2020)</strong>.</p>
+
+                <div class="bio-section-head">Academic Credentials</div>
+                <p>Dr. Frank earned her <strong>Ph.D. in Psychology</strong> with a specialization in Counseling Psychology from Colorado State University, where she later completed a Master of Science (M.S.) in Psychology and a Master of Education (M.Ed.) in Counseling. Her clinical internship was completed at the University of Delaware. She also holds a <strong>Bachelor of Arts in Speech (Communication)</strong> with Distinction, and a <strong>Certificate from Harvard Advanced Negotiations for Executives</strong> at Harvard University.</p>
+
+                <div class="bio-section-head">Teaching & Academic Appointments</div>
+                <p>At Middle Georgia State University, Dr. Frank teaches <em>Abnormal Psychology</em>, <em>Theories of Counseling and Psychotherapy</em>, and <em>Neuroscience</em>. She holds concurrent appointments at <strong>Brenau University</strong> (Adjunct Faculty since 2013), <strong>Mercer Law School</strong> (Adjunct Faculty since 2021, teaching mediation), and previously served as Adjunct Faculty at <strong>Mykolas Romeris Law School, Vilnius, Lithuania</strong> (2022–2024), bringing U.S. mediation expertise to European graduate legal training. She is also a Fellow at the University of Georgia's McBee Institute for Higher Education.</p>
+
+                <div class="bio-section-head">Senior Leadership Career</div>
+                <p>Dr. Frank has served in multiple vice-presidential and dean-level roles in higher education, including Interim Vice President for Academic Affairs and College Dean at Middle Georgia State University (2011–2013), Associate Vice President for Academic Affairs at Gainesville State College (2006–2010), and Dean of Students at Valdosta State University (2001–2006). She was also Director of the Eating Disorders Program at Arizona State University (1988–1992) and served as CEO of the Athens Community Career Academy (2010–2011).</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="frank-pub">
+              <div class="pub-mini">
+                <div class="pub-year">2023 — 3rd Edition</div>
+                <strong>"The Mind of a Peacemaker: The Psychology of Mediation"</strong> (Kendall Hunt) — The definitive text integrating psychological research with mediation practice; now in its third edition.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">2026</div>
+                <strong>Chapter: "Mediation Tournaments"</strong> (co-authored with K.K. Frank) in <em>The Art of Advocacy: A Comprehensive Guide to ADR Competitions</em>, Routledge.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">Since 1995</div>
+                <strong>Chapter: "Existential Theory"</strong> — Contributed to every edition (1st–7th) of Capuzzi & Gross's landmark textbook <em>Counseling and Psychotherapy: Theories and Interventions</em>, Prentice Hall — a rare distinction reflecting her role as one of the field's defining voices.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">2024 (Spanish)</div>
+                <strong>"The Psychology of Mediation"</strong> — Published in Spanish in <em>Multidisciplines: Educational Research Journal</em>, demonstrating her international scholarly reach.
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="frank-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Clinical Psychology</span>
+                <span class="exp-tag exp-blue">Counseling Psychology</span>
+                <span class="exp-tag exp-violet">Mediation & Dispute Resolution</span>
+                <span class="exp-tag exp-violet">Conflict Resolution</span>
+                <span class="exp-tag exp-emerald">Neuroscience</span>
+                <span class="exp-tag exp-emerald">Psychopathology</span>
+                <span class="exp-tag exp-amber">Higher Education Leadership</span>
+                <span class="exp-tag exp-amber">ADR Competitions</span>
+                <span class="exp-tag exp-teal">Peace Education</span>
+                <span class="exp-tag exp-teal">International Law Programs</span>
+                <span class="exp-tag exp-rose">Women's Leadership</span>
+                <span class="exp-tag exp-blue">Mediation Training</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="frank-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏆</div>
+                  <div class="ach-text">
+                    <strong>Reflective Practice Award — Named in Her Honor</strong>
+                    The International Academy for Dispute Resolution named this award in Dr. Frank's honor — a rare distinction recognizing her foundational contributions to the mediation field.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🎓</div>
+                  <div class="ach-text">
+                    <strong>Honorary Doctorate — University of Georgia, Tbilisi</strong>
+                    Awarded for her exceptional contributions to mediation education and international dispute resolution.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🏛️</div>
+                  <div class="ach-text">
+                    <strong>Georgia Senate Commendation (SR 1389, 2010)</strong>
+                    Official commendation issued by the Senate of the State of Georgia for outstanding public service.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌐</div>
+                  <div class="ach-text">
+                    <strong>President, International Academy for Dispute Resolution (2018–2020)</strong>
+                    Led the global body governing international mediation competitions and dispute resolution education.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">📖</div>
+                  <div class="ach-text">
+                    <strong>Who's Who Lifetime Achievement Award & Multiple Who's Who Listings</strong>
+                    Listed in Who's Who in America, Who's Who in American Women, Who's Who in Science and Engineering, and Who's Who in the World.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🕊️</div>
+                  <div class="ach-text">
+                    <strong>Phi Beta Kappa — Elected Member</strong>
+                    Member of the oldest and most prestigious academic honor society in the United States, alongside Phi Kappa Phi and numerous other honorary societies.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="frank-links">
+              <div class="links-grid">
+                <a href="https://www.mga.edu/directory/people.php?name=frank-marylou" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(5,150,105,0.12);">🏫</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">Middle Georgia State Univ. →</div>
+                  </div>
+                </a>
+                <a href="mailto:marylou.frank@mga.edu" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">✉️</div>
+                  <div>
+                    <div class="plc-label">Institutional Email</div>
+                    <div class="plc-value">marylou.frank@mga.edu</div>
+                  </div>
+                </a>
+                <a href="https://orcid.org/0009-0005-5276-6504" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(166,206,57,0.15);">
+                    <svg viewBox="0 0 256 256" style="width:20px;height:20px;"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
+                  </div>
+                  <div>
+                    <div class="plc-label">ORCID iD</div>
+                    <div class="plc-value">0009-0005-5276-6504 →</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           4. PROF. (DR.) ASHOK L. SUNATKARI
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="ashok-sunatkari">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-m1"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/ProfDrAshokLSunatkari.png" alt="Prof. (Dr.) Ashok L. Sunatkari — Editorial Board Member, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Editorial Board Member">🔬</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">✦ Editorial Board Member</span>
+                </div>
+                <h2 class="profile-name">Prof. (Dr.) Ashok L. Sunatkari</h2>
+                <div class="profile-designation">I/C Principal · Professor & Head, Department of Physics · Ph.D. in Physics</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Siddharth College of Arts, Science and Commerce, Buddha Bhavan, P.T. Marg, Fort, Mumbai – 400001, Maharashtra, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">⏱️</span>
+                    <div><span class="prs-num">27+</span><br><small>Yrs Teaching</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🔬</span>
+                    <div><span class="prs-num">Nanotech</span><br><small>Research Focus</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">💰</span>
+                    <div><span class="prs-num">UGC</span><br><small>Research Grant</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Prof. Ashok Sunatkari profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'sunatkari','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'sunatkari','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'sunatkari','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'sunatkari','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="sunatkari-bio">
+              <div class="bio-text">
+                <p>Prof. (Dr.) Ashok L. Sunatkari is a distinguished physicist, academic administrator, and researcher who currently serves as the <strong>In-Charge Principal and Professor & Head of the Department of Physics</strong> at Siddharth College of Arts, Science and Commerce in Fort, Mumbai — an institution affiliated with the University of Mumbai that dates back nearly eight decades to Dr. Babasaheb Ambedkar's vision of education as the greatest equalizer.</p>
+
+                <div class="bio-section-head">Academic Credentials</div>
+                <p>Dr. Sunatkari holds an <strong>M.Sc. in Physics</strong>, a <strong>Bachelor of Education (B.Ed.)</strong>, has qualified the <strong>State Eligibility Test (SET)</strong>, and holds a <strong>Ph.D. in Physics</strong>. Since 1999, he has served as Associate Professor (now Professor) at Siddharth College, accumulating over <strong>27 years of teaching experience</strong> encompassing graduate and postgraduate curricula in physics, experimental laboratory design, and materials science.</p>
+
+                <div class="bio-section-head">Institutional Leadership</div>
+                <p>As In-Charge Principal, Dr. Sunatkari leads an institution that has achieved a <strong>NAAC "B+" Grade for 2024–2025</strong>, listed under Sections 2(f) and 12(B) of the UGC Act. He has championed continuous upgrading of facilities and the introduction of value-added courses meeting modern professional demands. As Head of the Department of Physics, he leads a team of four Assistant Professors and eight technical support staff.</p>
+
+                <div class="bio-section-head">Research & Innovation</div>
+                <p>Dr. Sunatkari's research specializes in <strong>synthesis of metal nanoparticles</strong> (gold, silver) by reduction methods and <strong>semiconductor nanoparticles</strong> (ZnS, CdS, ZnO, CuO) by chemical co-precipitation methods. He has received a <strong>UGC research grant of Rs. 1,50,000</strong> (File No. 47/1690/10) for a minor research project. He is a member of the <strong>Optical Society of America (OSA, 2013–2014)</strong> and holds lifetime membership in the <strong>Indian Physics Association</strong>. He serves as a reviewer for several prestigious international physics journals and has designed and fabricated experimental kits for B.Sc. practicals. He also served as an NSS Programme Officer (2005–2009), heading a group of 220 students in social activities.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="sunatkari-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Nanotechnology</span>
+                <span class="exp-tag exp-blue">Metal Nanoparticles Synthesis</span>
+                <span class="exp-tag exp-violet">Semiconductor Materials</span>
+                <span class="exp-tag exp-violet">Materials Science</span>
+                <span class="exp-tag exp-emerald">Experimental Physics</span>
+                <span class="exp-tag exp-emerald">Academic Administration</span>
+                <span class="exp-tag exp-amber">Graduate & PG Teaching</span>
+                <span class="exp-tag exp-amber">NAAC Accreditation</span>
+                <span class="exp-tag exp-teal">Journal Peer Review</span>
+                <span class="exp-tag exp-teal">Laboratory Design</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="sunatkari-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏛️</div>
+                  <div class="ach-text">
+                    <strong>In-Charge Principal — Siddharth College, Mumbai</strong>
+                    Leads one of Mumbai's historic institutions founded in the tradition of Dr. B.R. Ambedkar's vision for education — guiding a multidisciplinary arts, science & commerce college through NAAC accreditation.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🔬</div>
+                  <div class="ach-text">
+                    <strong>UGC Research Grant — Minor Research Project</strong>
+                    Recipient of a University Grants Commission research grant for nanoparticle synthesis research (File No. 47/1690/10), supporting advanced physics research at the undergraduate institution level.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌐</div>
+                  <div class="ach-text">
+                    <strong>Optical Society of America (OSA) Member & International Journal Reviewer</strong>
+                    Recognized as an international peer reviewer for prestigious physics publications — a distinction achieved by a select group of researchers globally.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">⭐</div>
+                  <div class="ach-text">
+                    <strong>27+ Years of Teaching Excellence</strong>
+                    Over two and a half decades of unbroken teaching service at Siddharth College — including experimental kit design for B.Sc. practicals and contributions to curriculum development.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="sunatkari-links">
+              <div class="links-grid">
+                <a href="https://siddharthasc.edu.in/principal-desk/" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(245,158,11,0.12);">🏫</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">Siddharth College →</div>
+                  </div>
+                </a>
+                <a href="mailto:principal@siddharthasc.edu.in" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">✉️</div>
+                  <div>
+                    <div class="plc-label">Institutional Email</div>
+                    <div class="plc-value">principal@siddharthasc.edu.in</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           5. ADV. (DR.) ASHOK YENDE
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="ashok-yende">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-m2"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/AdvDrAshokYende.png" alt="Adv. (Dr.) Ashok Yende — Editorial Board Member, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Editorial Board Member">⚖️</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">✦ Editorial Board Member</span>
+                </div>
+                <h2 class="profile-name">Adv. (Dr.) Ashok Yende</h2>
+                <div class="profile-designation">LL.B. · LL.M. · Ph.D. · D.Lit. in Law · Dean, School of Law · Supreme Court & Bombay High Court Mediator · Harvard Kennedy School Alumni</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  ATLAS School of Law, ATLAS SkillTech University, Equinox Business Park, Off BKC, Kurla West, Mumbai – 400070
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">⚖️</span>
+                    <div><span class="prs-num">44+</span><br><small>Yrs Experience</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">📚</span>
+                    <div><span class="prs-num">7</span><br><small>Books Authored</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🏛️</span>
+                    <div><span class="prs-num">D.Lit.</span><br><small>Highest Legal Degree</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Adv. Ashok Yende profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'yende','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'yende','pub')">Publications</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'yende','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'yende','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'yende','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="yende-bio">
+              <div class="bio-text">
+                <p>Adv. (Dr.) Ashok Yende is a distinguished legal academician, mediator, and practitioner whose career spans over <strong>44 years</strong> across administration, teaching, and the legal profession. Currently serving as <strong>Professor and Dean of the ATLAS School of Law</strong> at ATLAS SkillTech University in Mumbai, he represents the highest tier of integrated legal professionalism — combining academic leadership, Supreme Court mediation, and prolific scholarly output.</p>
+
+                <div class="bio-section-head">Exceptional Academic Credentials</div>
+                <p>Dr. Yende's educational qualifications are among the most distinguished in India's legal academia. He holds an <strong>LL.B. from Nagpur University</strong>, an <strong>LL.M. from the University of Mumbai</strong>, a <strong>Ph.D. in Law from the University of Pune</strong>, and a <strong>Doctor of Literature (D.Lit.) in Law</strong> — the highest possible academic qualification in law, demonstrating extraordinary contribution to legal scholarship. He has further enhanced his expertise through a <strong>Harvard Kennedy School Public Policy Designing</strong> program executive credential.</p>
+
+                <div class="bio-section-head">ATLAS School of Law</div>
+                <p>The ATLAS School of Law, approved by the Bar Council of India and part of India's first urban, multidisciplinary skills-based university, blends law with business, technology, and innovation. Under Dr. Yende's visionary leadership, the school emphasizes hands-on experiential learning, preparing graduates for emerging global industries at the intersection of law and emerging technologies.</p>
+
+                <div class="bio-section-head">Prior Role at University of Mumbai</div>
+                <p>Before joining ATLAS, Dr. Yende served as <strong>Professor and Head of the Department of Law at the University of Mumbai</strong> — one of India's oldest and most prestigious universities. During this tenure, he established a Pre-litigation Center and pioneered an ADR (Alternative Dispute Resolution) course in 2015, demonstrating his foresight in recognizing mediation as an essential skill for the next generation of lawyers.</p>
+
+                <div class="bio-section-head">Mediation Practice</div>
+                <p>Dr. Yende is an <strong>empanelled Mediator with the Supreme Court of India and the Bombay High Court</strong> — among the most selective rosters in Indian legal practice — and has successfully resolved complex disputes referred by the Bombay High Court and the Maharashtra State Consumer Dispute Redressal Commission. He also serves as <strong>Lokpal (Ombudsperson) of Maharashtra National Law University, Mumbai</strong>, and as Managing Partner of <strong>Yende Legal Associates</strong>.</p>
+
+                <div class="bio-section-head">International Leadership</div>
+                <p>Dr. Yende serves as <strong>President of the Global Vision India Foundation</strong>, an NGO with <strong>consultative status with the United Nations</strong>, placing him at the intersection of grassroots social action and global policy discourse. He is proficient in <strong>Hindi, English, and Marathi</strong>.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="yende-pub">
+              <div class="bio-text"><p>Dr. Yende has authored <strong>seven books</strong> on legal subjects, demonstrating prolific scholarly output across mediation, constitutional law, consumer law, and legal medicine:</p></div>
+              <div class="pub-mini">
+                <strong>"Medicine & the Law"</strong> — A landmark publication prefaced by Hon. Justice Bhushan Gavai (now a Judge of the Supreme Court of India), underscoring its jurisprudential significance at the highest levels.
+              </div>
+              <div class="bio-text" style="margin-top:16px;"><p>He has also participated in numerous national and international conferences and published extensively on alternative dispute resolution, arbitration, consumer law, constitutional law, and the intersection of law with medicine and public policy. He was featured in the Economic Times Initiative <em>"Leaders of Tomorrow."</em></p></div>
+            </div>
+
+            <div class="ptab-panel" id="yende-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Alternative Dispute Resolution</span>
+                <span class="exp-tag exp-blue">Mediation & Arbitration</span>
+                <span class="exp-tag exp-violet">Constitutional Law</span>
+                <span class="exp-tag exp-violet">Consumer Law</span>
+                <span class="exp-tag exp-emerald">Legal Education Leadership</span>
+                <span class="exp-tag exp-emerald">Public Policy</span>
+                <span class="exp-tag exp-amber">Law & Medicine</span>
+                <span class="exp-tag exp-amber">Pre-litigation Practice</span>
+                <span class="exp-tag exp-teal">Supreme Court Mediation</span>
+                <span class="exp-tag exp-teal">NGO & UN Engagement</span>
+                <span class="exp-tag exp-rose">Skills-Based Legal Education</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="yende-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">⚖️</div>
+                  <div class="ach-text">
+                    <strong>Empanelled Mediator — Supreme Court of India & Bombay High Court</strong>
+                    One of the most selective rosters in Indian legal practice — recognizing Dr. Yende's expertise and integrity in facilitating the resolution of complex disputes at the apex level.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🎓</div>
+                  <div class="ach-text">
+                    <strong>Doctor of Literature (D.Lit.) in Law — Highest Academic Qualification</strong>
+                    Rare achievement representing the pinnacle of scholarly contribution to legal literature in India.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🏛️</div>
+                  <div class="ach-text">
+                    <strong>Harvard Kennedy School — Public Policy Designing Program</strong>
+                    Completed executive education at one of the world's most prestigious policy schools, bringing global governance perspectives to Indian legal practice.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌍</div>
+                  <div class="ach-text">
+                    <strong>President, Global Vision India Foundation (UN Consultative Status)</strong>
+                    Leads an NGO with official consultative status with the United Nations, contributing to international conversations on justice, development, and rule of law.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">📰</div>
+                  <div class="ach-text">
+                    <strong>Economic Times — "Leaders of Tomorrow" Initiative</strong>
+                    Featured in this prestigious national program recognizing India's most impactful emerging leaders across professions.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="yende-links">
+              <div class="links-grid">
+                <a href="https://atlasuniversity.edu.in/schools/law/" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(225,29,72,0.1);">🏫</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">ATLAS School of Law →</div>
+                  </div>
+                </a>
+                <a href="mailto:ashok.yende@atlasuniversity.edu.in" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">✉️</div>
+                  <div>
+                    <div class="plc-label">Institutional Email</div>
+                    <div class="plc-value">ashok.yende@atlasuniversity.edu.in</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           6. PROF. (DR.) KARUNA AKSHAY MALVIYA
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="karuna-malviya">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-m3"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/ProfDrKarunaAkshayMalviya.png" alt="Prof. (Dr.) Karuna Akshay Malviya — Editorial Board Member, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Editorial Board Member">🏛️</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">✦ Editorial Board Member</span>
+                </div>
+                <h2 class="profile-name">Prof. (Dr.) Karuna Akshay Malviya</h2>
+                <div class="profile-designation">Director, D Y Patil University School of Law · Ph.D. in Law (UGC Senior Research Fellow) · Certified Mediator</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  D Y Patil University School of Law (DYPSOL), D Y Patil Deemed to be University, Navi Mumbai, Maharashtra, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">🎓</span>
+                    <div><span class="prs-num">4</span><br><small>Ph.D. Scholars Guided</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">📋</span>
+                    <div><span class="prs-num">20+</span><br><small>Ph.D. Theses Appraised</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">⏱️</span>
+                    <div><span class="prs-num">15+</span><br><small>Yrs Experience</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Prof. Karuna Malviya profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'karuna','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'karuna','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'karuna','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'karuna','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="karuna-bio">
+              <div class="bio-text">
+                <p>Prof. (Dr.) Karuna Akshay Malviya is an eminent legal academician, researcher, and institutional leader who serves as the <strong>Director of the D Y Patil University School of Law (DYPSOL)</strong> at D Y Patil Deemed to be University, Navi Mumbai — a premier legal institution under the leadership of Chancellor Dr. Vijay D. Patil. A certified mediator and holder of a <strong>Ph.D. in Law awarded with a UGC Senior Research Fellowship</strong>, she brings a rare combination of doctoral excellence, institutional administration, international exposure, and clinical legal education expertise to IJMEER's editorial leadership.</p>
+
+                <div class="bio-section-head">Career at DYPSOL</div>
+                <p>As Director of DYPSOL, Dr. Karuna leads a dynamic law school at the forefront of medico-legal education in India. In January 2026, under her leadership, DYPSOL entered into a <strong>strategic academic partnership with the Institute of Medicine & Law (IML)</strong> to advance medico-legal education, research, and patient advocacy — a pioneering initiative bridging medicine and law.</p>
+
+                <div class="bio-section-head">Prior Roles at Maharashtra National Law University (MNLU)</div>
+                <p>Before joining DYPSOL, Dr. Karuna held several key positions at MNLU Mumbai, one of India's premier national law universities. She served as <strong>Director of Clinical Legal Education</strong> — supervising the integration of real-world legal practice into the curriculum, preparing students for frontline legal service. She served as <strong>Head of the Department for Research</strong>, overseeing doctoral programs and scholarly publications. She was also appointed as <strong>Principal Investigator for Maharashtra</strong> in a Pan India Project on Prison Reforms by the Centre for Research in Criminal Justice at MNLU Mumbai — a landmark study shaping national criminal justice policy.</p>
+
+                <div class="bio-section-head">International Exposure & Research Mentorship</div>
+                <p>Dr. Karuna demonstrated her commitment to global legal education by taking <strong>40 students to the International Court of Justice (ICJ)</strong> in The Hague, Netherlands — a transformative academic initiative bridging national and international legal spheres. She has successfully guided <strong>four research scholars to doctoral completion</strong> and appraised over <strong>20 Law Ph.D. theses</strong> across multiple specializations — a remarkable contribution to building India's next generation of legal scholars.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="karuna-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Criminal Law</span>
+                <span class="exp-tag exp-blue">Prison Reforms</span>
+                <span class="exp-tag exp-violet">Constitutional Law</span>
+                <span class="exp-tag exp-violet">Medico-Legal Studies</span>
+                <span class="exp-tag exp-emerald">Clinical Legal Education</span>
+                <span class="exp-tag exp-emerald">Gender Justice</span>
+                <span class="exp-tag exp-amber">Academic Leadership</span>
+                <span class="exp-tag exp-amber">Doctoral Research Supervision</span>
+                <span class="exp-tag exp-teal">Mediation (Certified)</span>
+                <span class="exp-tag exp-teal">International Law</span>
+                <span class="exp-tag exp-rose">Legal Research</span>
+                <span class="exp-tag exp-blue">Criminology</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="karuna-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏅</div>
+                  <div class="ach-text">
+                    <strong>Ph.D. Awarded with UGC Senior Research Fellowship</strong>
+                    The prestigious UGC SRF is awarded to only the most exceptional doctoral candidates in India — recognizing outstanding research potential at the national level.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌍</div>
+                  <div class="ach-text">
+                    <strong>International Court of Justice (ICJ) Student Delegation, The Hague</strong>
+                    Led 40 law students to the ICJ in the Netherlands — an exceptional initiative bridging Indian legal education with international jurisprudence.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🔬</div>
+                  <div class="ach-text">
+                    <strong>Principal Investigator — Pan India Prison Reforms Project (MNLU Mumbai)</strong>
+                    Led the state of Maharashtra in a landmark national study on prison reforms, producing research with real-world criminal justice policy impact.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🎓</div>
+                  <div class="ach-text">
+                    <strong>Guided 4 Doctoral Scholars to Completion & Appraised 20+ Ph.D. Theses</strong>
+                    Exceptional contribution to Ph.D. mentorship across multiple legal disciplines — shaping a new generation of Indian legal scholars.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🤝</div>
+                  <div class="ach-text">
+                    <strong>Strategic MOU — DYPSOL & Institute of Medicine & Law (IML), January 2026</strong>
+                    Forged a forward-looking partnership advancing medico-legal education, research, and patient advocacy under her leadership as Director.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="karuna-links">
+              <div class="links-grid">
+                <a href="https://dypatil.edu/schools/school-of-law/dean" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">🏫</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">DY Patil School of Law →</div>
+                  </div>
+                </a>
+                <a href="mailto:karuna.malviya@dypatil.edu" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(5,150,105,0.12);">✉️</div>
+                  <div>
+                    <div class="plc-label">Institutional Email</div>
+                    <div class="plc-value">karuna.malviya@dypatil.edu</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           7. DR. MOHAMMED SALIM KHAN
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="salim-khan">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-m4"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/DrMohammedSalimKhan.png" alt="Dr. Mohammed Salim Khan — Editorial Board Member, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Editorial Board Member">🏅</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">✦ Editorial Board Member</span>
+                </div>
+                <h2 class="profile-name">Dr. Mohammed Salim Khan</h2>
+                <div class="profile-designation">Assistant Professor – Senior Scale · Ph.D. in Law · M.Phil. (Gold Medal) · MBA · Patent Holder · Author & ADR Practitioner</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Presidency School of Law, Presidency University, At Post Itgalpur, Rajanekunthe, Bangalore – 560064, Karnataka, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">🔒</span>
+                    <div><span class="prs-num">4</span><br><small>Patents Registered</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">📚</span>
+                    <div><span class="prs-num">5</span><br><small>Books Edited</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">⏱️</span>
+                    <div><span class="prs-num">25+</span><br><small>Yrs Experience</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Dr. Mohammed Salim Khan profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'khan','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'khan','pub')">Publications & Patents</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'khan','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'khan','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'khan','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="khan-bio">
+              <div class="bio-text">
+                <p>Dr. Mohammed Salim Khan is a distinguished legal academician, researcher, and ADR practitioner who currently serves as <strong>Assistant Professor – Senior Scale at the Presidency School of Law, Presidency University</strong> in Bangalore. With over <strong>25 years of combined academic and professional experience</strong> — including significant corporate exposure alongside academic appointments — he represents a new generation of interdisciplinary legal scholars who seamlessly bridge theory and practice.</p>
+
+                <div class="bio-section-head">Exceptional Academic Credentials</div>
+                <p>Dr. Khan holds a <strong>Ph.D. in Law</strong> and an <strong>M.Phil. in Law awarded with a Gold Medal</strong> — the highest distinction for academic excellence at the postgraduate research level, reflecting his mastery of advanced legal research methodologies. Beyond law, he holds an <strong>MBA in Operations Management</strong> and an <strong>MA in Rural Development</strong> — a unique combination enabling him to approach legal problems from multiple disciplinary perspectives, enriching both research and teaching with insights from business realities, rural governance, and development economics.</p>
+
+                <div class="bio-section-head">Teaching & Research at Presidency University</div>
+                <p>At Presidency School of Law, Dr. Khan teaches <strong>Sports Law, Intellectual Property Rights, Business Law</strong>, and <strong>Constitutional Law</strong> — courses at the cutting edge of emerging legal fields. His research interests are broad and contemporary, encompassing <strong>Arbitration, Mediation, Constitutional Law, Sports Law, Animal Law, and Intellectual Property Rights</strong>. His specialization in <strong>Sports Law</strong> examines legal frameworks governing sports organizations, athlete rights, doping disputes, contract negotiations, and arbitration. His work in <strong>Animal Law</strong> addresses wildlife conservation statutes, the legal status of animals as sentient beings, and intersections with environmental and criminal law.</p>
+
+                <div class="bio-section-head">ADR Practitioner & Global Publishing</div>
+                <p>Dr. Khan is an active <strong>arbitrator, mediator, and trainer</strong>, bringing dispute resolution expertise to both academic and professional settings. His scholarly work has been published by major international publishers including <strong>IGI Global Scientific Publishing</strong> (with offices in the USA, UK, and China), <strong>Routledge</strong>, and prominent Indian publishers — making his research available to global legal academia.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="khan-pub">
+              <div class="bio-section-head" style="margin-top:0;">Authored Textbook</div>
+              <div class="pub-mini">
+                <div class="pub-year">2023</div>
+                <strong>"Constitutional Laws of India"</strong> (AG Publishing House) — co-authored with K.P. Vora, S. Chaturvedi, and S. Sarkar. A comprehensive foundational resource for students and practitioners.
+              </div>
+              <div class="bio-section-head">Recent Research Chapters</div>
+              <div class="pub-mini">
+                <div class="pub-year">2025</div>
+                <strong>"A Holistic Model for Digital Resilience: Bridging Cybersecurity, Governance, and Risk Management"</strong> in <em>Building Resilient Digital Ecosystems: Security, Governance, and Risk</em>.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">2025</div>
+                <strong>"Artificial Intelligence and the Evolving Landscape of Legal Accountability: Ethical, Legal, and Regulatory Issues"</strong> (IGI Global) — examining AI liability, regulatory frameworks, and ethical governance.
+              </div>
+              <div class="bio-section-head">Patents Registered</div>
+              <div class="pub-mini">
+                <div class="pub-year">2022</div>
+                <strong>"An Innovative Paradigm in Risk Management in Banking Institutions"</strong> — Indian Patent Application No. 202241032666.
+              </div>
+              <div class="pub-mini">
+                <strong>"Blockchain-Enabled" Innovation</strong> — Among 4 registered patents and 2 registered designs, reflecting Dr. Khan's contributions to technology-law intersections.
+              </div>
+              <div class="bio-text" style="margin-top:16px;"><p>He has also edited <strong>5 academic books</strong>, authored articles on e-banking fraud, cyber law, wildlife smuggling, and refugee rights, and has forthcoming chapters on AI authorship and blockchain in HR management.</p></div>
+            </div>
+
+            <div class="ptab-panel" id="khan-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Sports Law</span>
+                <span class="exp-tag exp-blue">Intellectual Property Rights</span>
+                <span class="exp-tag exp-violet">Constitutional Law</span>
+                <span class="exp-tag exp-violet">Business Law</span>
+                <span class="exp-tag exp-emerald">Animal Law</span>
+                <span class="exp-tag exp-emerald">Environmental Law</span>
+                <span class="exp-tag exp-amber">Arbitration & Mediation</span>
+                <span class="exp-tag exp-amber">Cyber Law</span>
+                <span class="exp-tag exp-teal">AI & Legal Technology</span>
+                <span class="exp-tag exp-teal">Blockchain & Law</span>
+                <span class="exp-tag exp-rose">Banking & Financial Law</span>
+                <span class="exp-tag exp-blue">Rural Development Law</span>
+                <span class="exp-tag exp-violet">Operations Management</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="khan-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🥇</div>
+                  <div class="ach-text">
+                    <strong>M.Phil. in Law — Gold Medal Award</strong>
+                    Awarded the highest academic distinction at the M.Phil. level, recognizing exceptional scholarly capabilities and mastery of advanced legal research methodologies.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🔒</div>
+                  <div class="ach-text">
+                    <strong>4 Patents Registered + 2 Designs Registered</strong>
+                    Registered four Indian patents including innovations in banking risk management and blockchain technology — a remarkable achievement for a legal scholar demonstrating boundary-crossing interdisciplinary innovation.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌐</div>
+                  <div class="ach-text">
+                    <strong>Published by IGI Global Scientific Publishing (USA/UK/China)</strong>
+                    Research published by one of the world's leading international academic publishers, with global distribution across North America, Europe, and Asia.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">📚</div>
+                  <div class="ach-text">
+                    <strong>5 Edited Academic Books & 1 Authored Textbook</strong>
+                    Significant contribution to legal scholarly infrastructure as both author and editor across multiple legal disciplines.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">⚖️</div>
+                  <div class="ach-text">
+                    <strong>25 Years Combined Academic & Professional Experience</strong>
+                    Unique blend of corporate exposure and academic service — bringing real-world business insights to legal education and research.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="khan-links">
+              <div class="links-grid">
+                <a href="https://presidencyuniversity.in/faculty-staff/mohammed-salim-khan" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(13,148,136,0.12);">🏫</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">Presidency University →</div>
+                  </div>
+                </a>
+                <a href="mailto:mohammed.salim@presidencyuniversity.in" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">✉️</div>
+                  <div>
+                    <div class="plc-label">Institutional Email</div>
+                    <div class="plc-value">mohammed.salim@presidencyuniversity.in</div>
+                  </div>
+                </a>
+                <a href="https://orcid.org/0000-0003-1506-2450" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(166,206,57,0.15);">
+                    <svg viewBox="0 0 256 256" style="width:20px;height:20px;"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
+                  </div>
+                  <div>
+                    <div class="plc-label">ORCID iD</div>
+                    <div class="plc-value">0000-0003-1506-2450 →</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           8. DR. MOMIN ALI
+           ═══════════════════════════════════════ -->
+      <div class="profile-section portfolio-reveal" id="momin-ali">
+        <div class="profile-card">
+          <div class="profile-card-accent" style="background: linear-gradient(90deg, #10B981, #3B82F6);"></div>
+          <div class="profile-body">
+
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/editorial/drmominali.png" alt="Dr. Momin Ali — Editorial Board Member, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Editorial Board Member">🎓</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">✦ Editorial Board Member</span>
+                </div>
+                <h2 class="profile-name">Dr. Momin Ali</h2>
+                <div class="profile-designation">Assistant Professor of English · Ph.D. in ELT · TS-SET Qualified · Director of Collaborations & International Partnerships</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Department of Humanities and Sciences, MLR Institute of Technology, Dundigal, Hyderabad, Telangana — 500043, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">🏫</span>
+                    <div><span class="prs-num">MLRIT</span><br><small>Affiliation</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">📜</span>
+                    <div><span class="prs-num">TS-SET</span><br><small>Linguistics</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🌐</span>
+                    <div><span class="prs-num">2</span><br><small>GIAN Courses</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-tab-bar" role="tablist" aria-label="Dr. Momin Ali profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'momin','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'momin','pub')">Publications</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'momin','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'momin','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'momin','links')">Profile Links</button>
+            </div>
+
+            <div class="ptab-panel active" id="momin-bio">
+              <div class="bio-text">
+                <p>Dr. Momin Ali serves as an Assistant Professor of English at the Department of Humanities and Sciences, MLR Institute of Technology, Hyderabad, India. With a strong academic foundation from Aligarh Muslim University (AMU) and specialized training from The English and Foreign Languages University (EFLU), Hyderabad, Dr. Ali represents a new generation of language educators who bridge traditional English Language Teaching (ELT) with contemporary applied linguistics, curriculum innovation, and international research collaborations. His scholarly work addresses the intersections of language pedagogy, teacher education, inclusive classrooms, and the role of English in shaping academic progression for rural learners.</p>
+
+                <div class="bio-section-head">Academic Credentials</div>
+                <p>Dr. Ali earned his <strong>Doctor of Philosophy (Ph.D.) in English Language Teaching</strong> from the Department of English at Aligarh Muslim University, one of India's most prestigious central universities. His doctoral research contributed original insights to the field of ELT, examining pedagogical practices and learner outcomes in the Indian context. He holds a <strong>Bachelor of Arts (BA) in Communicative English (Honours)</strong> and a <strong>Master of Arts (MA) in English Language Teaching</strong>, both from AMU.</p>
+                <p>He has obtained a <strong>Post Graduate Diploma in Linguistics</strong> from the Department of Linguistics at AMU, broadening his understanding of language structure, phonetics, syntax, semantics, and sociolinguistics. He also holds a <strong>Post Graduate Certificate in the Teaching of English (PGCTE)</strong> and a <strong>Post Graduate Diploma in the Teaching of English (PGDTE)</strong> from The English and Foreign Languages University (EFLU), Hyderabad, India's premier institution for English language teacher training.</p>
+
+                <div class="bio-section-head">Current Academic Appointment</div>
+                <p>Dr. Ali joined MLR Institute of Technology on February 10, 2024, as a Regular Assistant Professor. In this role, he teaches English language and communication skills to engineering students, emphasizing English for Academic Purposes (EAP) and English for Specific Purposes (ESP). His commitment to professional development ensures his teaching remains informed by the latest theoretical insights and empirical findings.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="momin-pub">
+              <div class="bio-section-head" style="margin-top:0;">Selected Research Papers</div>
+              <div class="pub-mini">
+                <strong>"Theatre for Teacher Education to Prepare Teachers in an Inclusive Classroom: A Historical Perspective of India and Southeast Asia"</strong>
+                — Examines the use of drama-based pedagogies in teacher preparation programs, exploring how experiential learning through theatre can help teachers develop inclusive classroom strategies.
+              </div>
+              <div class="pub-mini">
+                <strong>"Is English a nemesis to learners' academic progression? A case study of the rural college entrants in Medinipur"</strong>
+                — Investigates whether English serves as a barrier or enabler of academic success for rural students entering higher education.
+              </div>
+              <div class="bio-text" style="margin-top:16px;">
+                <p>Dr. Ali's work has also been published in public forums such as <em>HeadlinesBeyond</em>, <em>The Wire</em>, and <em>The Times of India</em>, reflecting his commitment to public scholarship and community engagement.</p>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="momin-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">English Language Teaching (ELT)</span>
+                <span class="exp-tag exp-blue">Applied Linguistics</span>
+                <span class="exp-tag exp-violet">Curriculum Designing & Planning</span>
+                <span class="exp-tag exp-violet">Teacher Education</span>
+                <span class="exp-tag exp-emerald">English for Academic Purposes (EAP)</span>
+                <span class="exp-tag exp-emerald">English for Specific Purposes (ESP)</span>
+                <span class="exp-tag exp-amber">Inclusive Classrooms</span>
+                <span class="exp-tag exp-amber">Digital Humanities</span>
+                <span class="exp-tag exp-teal">Artificial Intelligence & ELT</span>
+                <span class="exp-tag exp-teal">Audio-Visual Translation</span>
+                <span class="exp-tag exp-rose">Phonetics & Phonology</span>
+                <span class="exp-tag exp-blue">International Partnerships</span>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="momin-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🔬</div>
+                  <div class="ach-text">
+                    <strong>Global Initiative of Academic Networks (GIAN) Courses</strong>
+                    Successfully completed two Government of India-approved courses: "Electronic Literature and Artificial Intelligence" and "Subtitling Screened Dialogue," bridging technology with linguistics.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🏅</div>
+                  <div class="ach-text">
+                    <strong>TS-SET Qualified (Linguistics)</strong>
+                    Qualified the Telangana State-State Eligibility Test in July 2019, demonstrating mastery in the scientific study of language structure and use.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌍</div>
+                  <div class="ach-text">
+                    <strong>Director of Collaborations & International Partnerships — MLRIT</strong>
+                    Establishes international academic linkages and global partnership agreements, enriching institutional capacity.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🧹</div>
+                  <div class="ach-text">
+                    <strong>Swachh Bharat Awardee</strong>
+                    Recognized for contributions to the Government of India's cleanliness campaign, reflecting social responsibility beyond academic work.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🩹</div>
+                  <div class="ach-text">
+                    <strong>Founder of InstantHelpCo19</strong>
+                    An initiative emerged during the COVID-19 pandemic to provide community assistance, demonstrating leadership in crisis management.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ptab-panel" id="momin-links">
+              <div class="links-grid">
+                <a href="https://mlrit.ac.in/faculty/mr-momin-ali/" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">🏫</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">MLR Institute of Technology →</div>
+                  </div>
+                </a>
+                <a href="mailto:mominali@mlrit.ac.in" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(37,99,235,0.12);">✉️</div>
+                  <div>
+                    <div class="plc-label">Institutional Email</div>
+                    <div class="plc-value">mominali@mlrit.ac.in</div>
+                  </div>
+                </a>
+                <a href="https://orcid.org/0009-0003-5143-7106" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(166,206,57,0.15);">
+                    <svg viewBox="0 0 256 256" style="width:20px;height:20px;"><path d="M256,128c0,70.7-57.3,128-128,128S0,198.7,0,128,57.3,0,128,0,256,57.3,256,128Z" fill="#a6ce39"/><path d="M86.3,186.2H70.9V79.1h15.4V186.2z M108.9,79.1h36.6c33.6,0,52.8,24,52.8,53.5c0,29.7-19.2,53.6-52.8,53.6h-36.6V79.1z M124.3,171.3h22.6c24.5,0,38.1-15.8,38.1-38.6c0-22.6-13.6-38.6-38.1-38.6h-22.6V171.3z M88.8,61.6c0,5.7-4.6,10.3-10.3,10.3c-5.7,0-10.3-4.6-10.3-10.3c0-5.7,4.6-10.3,10.3-10.3C84.2,51.3,88.8,55.9,88.8,61.6z" fill="#fff"/></svg>
+                  </div>
+                  <div>
+                    <div class="plc-label">ORCID iD</div>
+                    <div class="plc-value">0009-0003-5143-7106 →</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           INTERNATIONAL & SPECIAL EDITORIAL BOARD
+           ═══════════════════════════════════════ -->
+      <div class="portfolio-reveal" style="margin:24px 0 40px;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="font-family:var(--font-serif);font-size:1.4rem;font-weight:800;color:var(--navy);white-space:nowrap;">🌍 International &amp; Special Editorial Board</div>
+          <div style="flex:1;height:2px;background:linear-gradient(90deg,rgba(5,150,105,0.3),transparent);"></div>
+        </div>
+        <p style="color:var(--text-3);font-size:0.85rem;margin-top:8px;">Internationally recognized scholars and practitioners contributing global perspectives to IJMEER's academic mission.</p>
+      </div>
+
+      <!-- 9. PROF. JYOTIRMAYA THAKUR -->
+      <div class="profile-section portfolio-reveal" id="jyotirmaya-thakur">
+        <div class="profile-card">
+          <div class="profile-card-accent accent-intl"></div>
+          <div class="profile-body">
+            <div class="intl-spotlight" role="note">
+              <span class="intl-flag">🇬🇧</span>
+              <span><strong>International &amp; Special Editorial Board Member</strong> — Retired Principal · United Kingdom · 34+ Years of Academic Excellence</span>
+            </div>
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/international_&_special_editorial_board/ProfDrJyotirmayaThakur.png" alt="Prof. (Dr.) Jyotirmaya Thakur — International &amp; Special Editorial Board, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-intl" title="International Board">🌍</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-intl">🌍 International &amp; Special Board</span>
+                </div>
+                <h2 class="profile-name">Prof. (Dr.) Jyotirmaya Thakur</h2>
+                <div class="profile-designation">Retired Principal · Poet · Author · Editor · Academician · Reiki Grand Master · Motivational Speaker · Social Activist</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Former Principal, Educational Institution · United Kingdom
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">📗</span>
+                    <div><span class="prs-num">23</span><br><small>Books Authored</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🏆</span>
+                    <div><span class="prs-num">200+</span><br><small>Awards Received</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">⏳</span>
+                    <div><span class="prs-num">34+</span><br><small>Years Experience</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-divider"></div>
+            <div class="profile-tab-bar" role="tablist" aria-label="Prof. Jyotirmaya Thakur profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'jyoti','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'jyoti','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'jyoti','ach')">Achievements</button>
+            </div>
+            <div class="ptab-panel active" id="jyoti-bio">
+              <div class="bio-text">
+                <p>Prof. (Dr.) Jyotirmaya Thakur is a distinguished poet, author, editor, academician, and social activist with over <strong>34 years of professional experience</strong> in education, administration, curriculum development, and literary mentorship. A retired Principal who has dedicated her life to the empowerment of students, women, and marginalized communities through education, literature, and humanitarian service, she is a globally recognized literary figure with more than <strong>200 awards</strong> to her credit.</p>
+                <div class="bio-section-head">Academic &amp; Professional Expertise</div>
+                <p>Prof. Thakur's expertise spans English literature, poetry, creative writing, linguistics, and communication skills. Her specializations include curriculum design and management across CBSE, ICSE, and IGCSE boards, academic administration, educational outreach, personal development, student empowerment, strategic planning, psychological counseling, creative writing, and public speech training. She is a certified <strong>Grand Reiki Master, Karuna Reiki Master</strong>, and HFHE (Holy Fire III Healing) Master, reflecting her holistic approach to personal development and well-being.</p>
+                <div class="bio-section-head">Literary Career</div>
+                <p>Prof. Thakur is the author of <strong>twenty-three books</strong>, with many more awaiting publication. Her works have been translated into multiple languages and featured in international anthologies. She serves as a reviewer, columnist, and editor for various literary publications, contributing to global literary discourse on poetry, prose, and contemporary social issues. Her poetry explores themes of human existence, spirituality, nature, women's empowerment, social justice, and peace.</p>
+                <div class="bio-section-head">Philosophy on Literature</div>
+                <p>She holds that literature and poetry are essential to human life as a means of expressing emotions, providing a link with intelligent culture, and serving as a vessel of revolt against mainstream society for marginalized groups. She emphasizes that poets and writers have a responsibility to give hope in a world marked by wars, poverty, and the absence of empathy.</p>
+                <div class="bio-section-head">Humanitarian Work</div>
+                <p>Beyond her literary contributions, Prof. Thakur is a committed philanthropist and social activist who works with NGOs to address the physical and mental needs of people affected by conflict, poverty, and displacement. She advocates for peaceful means to promote individual liberty, equality, and human rights, using her voice as a poet and writer to champion these causes globally.</p>
+              </div>
+            </div>
+            <div class="ptab-panel" id="jyoti-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-emerald">English Literature &amp; Poetry</span>
+                <span class="exp-tag exp-emerald">Creative Writing</span>
+                <span class="exp-tag exp-blue">Curriculum Design (CBSE/ICSE/IGCSE)</span>
+                <span class="exp-tag exp-blue">Academic Administration</span>
+                <span class="exp-tag exp-violet">Communication Skills Training</span>
+                <span class="exp-tag exp-violet">Psychological Counseling</span>
+                <span class="exp-tag exp-amber">Motivational Speaking</span>
+                <span class="exp-tag exp-amber">Student Empowerment</span>
+                <span class="exp-tag exp-teal">Reiki Healing Mastery</span>
+                <span class="exp-tag exp-teal">Humanitarian Service</span>
+                <span class="exp-tag exp-rose">Social Activism</span>
+                <span class="exp-tag exp-blue">Women's Empowerment</span>
+              </div>
+            </div>
+            <div class="ptab-panel" id="jyoti-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏆</div>
+                  <div class="ach-text">
+                    <strong>200+ International Awards</strong>
+                    A multi-genre award winner recognized globally for literary excellence, educational leadership, and humanitarian service across multiple countries.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">📗</div>
+                  <div class="ach-text">
+                    <strong>23 Published Books</strong>
+                    Author of twenty-three books spanning poetry, prose, and academic works — translated into multiple languages and featured in international anthologies.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌍</div>
+                  <div class="ach-text">
+                    <strong>International Literary Recognition — OPA International (2020)</strong>
+                    Featured in OPA International literary platform, sharing profound insights on poetry, contemporary Indian writing, technology's impact on literature, and writers' role in promoting peace.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🧘</div>
+                  <div class="ach-text">
+                    <strong>Grand Reiki Master Certification</strong>
+                    Certified Grand Reiki Master, Karuna Reiki Master, and HFHE (Holy Fire III Healing) Master — integrating holistic well-being into her educational philosophy.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🕊️</div>
+                  <div class="ach-text">
+                    <strong>Humanitarian &amp; Peace Advocacy</strong>
+                    Active supporter of International Peace Councils and United Nations peace initiatives, advocating for global peace, equality, and human rights through literature and humanitarian activism.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. DR. ANUPAMA PATEL -->
+      <div class="profile-section portfolio-reveal" id="anupama-patel">
+        <div class="profile-card">
+          <div class="profile-card-accent" style="background:linear-gradient(90deg,#0D9488,#059669);"></div>
+          <div class="profile-body">
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/international_&_special_editorial_board/DrAnupamaPatel.png" alt="Dr. Anupama Patel" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-intl" title="International Board Member">🌏</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-intl">🌏 International &amp; Special Board</span>
+                </div>
+                <h2 class="profile-name">Dr. Anupama Patel</h2>
+                <div class="profile-designation">Assistant Professor, Department of Law · Ph.D. in Law</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Bhanupratap Dev Government PG College Kanker, Chhattisgarh, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">⚖️</span>
+                    <div><span class="prs-num">4</span><br><small>Years Teaching</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🎓</span>
+                    <div><span class="prs-num">Ph.D.</span><br><small>In Law</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-divider"></div>
+            <div class="profile-tab-bar" role="tablist" aria-label="Dr. Anupama Patel profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'anupama','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'anupama','exp')">Expertise</button>
+            </div>
+            <div class="ptab-panel active" id="anupama-bio">
+              <div class="bio-text">
+                <p>Dr. Anupama Patel is an Assistant Professor in the Department of Law at Bhanupratap Dev Government PG College Kanker, Chhattisgarh, India. Holding a Doctor of Philosophy (Ph.D.) in Law, she brings 4 years of dedicated teaching experience to the IJMEER editorial team as a member of the International &amp; Special Editorial Board.</p>
+                <div class="bio-section-head">Academic Role</div>
+                <p>Dr. Patel teaches law at the post-graduate level, contributing to legal education in the Chhattisgarh region of central India. Her position at a government institution reflects her commitment to accessible legal education and scholarship, ensuring that quality legal training reaches students across diverse socioeconomic backgrounds.</p>
+                <div class="bio-section-head">Editorial Contribution</div>
+                <p>As a member of IJMEER's International &amp; Special Editorial Board, Dr. Patel contributes her expertise in legal scholarship to the journal's peer review and quality assurance processes, strengthening the journal's coverage of legal and socio-legal research domains.</p>
+              </div>
+            </div>
+            <div class="ptab-panel" id="anupama-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Law</span>
+                <span class="exp-tag exp-blue">Legal Education</span>
+                <span class="exp-tag exp-violet">Chhattisgarh Legal Studies</span>
+                <span class="exp-tag exp-emerald">Academic Research</span>
+                <span class="exp-tag exp-amber">Post-Graduate Teaching</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           ADVISORY BOARD
+           ═══════════════════════════════════════ -->
+      <div class="portfolio-reveal" style="margin:24px 0 40px;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="font-family:var(--font-serif);font-size:1.4rem;font-weight:800;color:var(--navy);white-space:nowrap;">🏛️ Advisory Board</div>
+          <div style="flex:1;height:2px;background:linear-gradient(90deg,rgba(245,158,11,0.35),transparent);"></div>
+        </div>
+        <p style="color:var(--text-3);font-size:0.85rem;margin-top:8px;">Senior academics and distinguished scholars who provide strategic guidance, mentorship, and institutional wisdom to IJMEER's editorial direction.</p>
+      </div>
+
+      <!-- 11. PROF. (DR.) MONA PUROHIT -->
+      <div class="profile-section portfolio-reveal" id="mona-purohit">
+        <div class="profile-card">
+          <div class="profile-card-accent" style="background:linear-gradient(90deg,#F59E0B,#F97316,#F59E0B);background-size:200%;animation:shimmer 3s linear infinite;"></div>
+          <div class="profile-body">
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/advisory_board/drmonapurohit.png" alt="Prof. (Dr.) Mona Purohit — Advisory Board, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Advisory Board Member">🏛️</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">🏛️ Advisory Board Member</span>
+                </div>
+                <h2 class="profile-name">Prof. (Dr.) Mona Purohit</h2>
+                <div class="profile-designation">Dean &amp; Head, Department of Legal Studies and Research · LL.D. (Post-Doctorate) · Ph.D. in Law</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Barkatullah Vishwavidyalaya, Hoshangabad Road, Bhopal — 462026, Madhya Pradesh, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">📖</span>
+                    <div><span class="prs-num">30+</span><br><small>Research Papers</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">📕</span>
+                    <div><span class="prs-num">4</span><br><small>Books Authored</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🎓</span>
+                    <div><span class="prs-num">14</span><br><small>Ph.D. Supervised</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">⏳</span>
+                    <div><span class="prs-num">30+</span><br><small>Years Experience</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-divider"></div>
+            <div class="profile-tab-bar" role="tablist" aria-label="Prof. Mona Purohit profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'mona','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'mona','pub')">Publications</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'mona','exp')">Expertise</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'mona','ach')">Achievements</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'mona','links')">Profile Links</button>
+            </div>
+            <div class="ptab-panel active" id="mona-bio">
+              <div class="bio-text">
+                <p>Prof. (Dr.) Mona Purohit is a distinguished legal academician, researcher, and author who serves as the <strong>Dean and Head of the Department of Legal Studies and Research at Barkatullah Vishwavidyalaya, Bhopal</strong>. With over three decades of experience in legal education, she has established herself as a transformative figure in curriculum development, legal research methodology, intellectual property law, environmental law, cyber law, and judicial process. She holds the remarkable distinction of being recognized as the <strong>youngest person to attain an LL.D. (post-doctorate) in Central India</strong>.</p>
+                <div class="bio-section-head">Academic Credentials</div>
+                <p>Dr. Purohit holds a <strong>Doctor of Laws (LL.D.)</strong>, a post-doctorate degree awarded in 2020 for her thesis titled <em>"Patenting of Biotechnological Products in India: Challenges in Harmonisation of the Conflicting Interests."</em> She earned her <strong>Ph.D. in Law</strong> in 2004 for her thesis <em>"Critical Study of Wildlife Laws and Its Impact on Tribes."</em> She holds an LL.M. in Modern Legal Studies (1998), an LL.B. (1996), and a B.Sc. (1993). She also holds a Certificate in Computer Education from the State Council of Education Research &amp; Training, Madhya Pradesh.</p>
+                <div class="bio-section-head">Leadership at Barkatullah University</div>
+                <p>As Dean and Head of the Department of Legal Studies and Research — established in 1982 and offering B.A. LL.B. (Hons.), LL.M., Ph.D., and LL.D. degrees — Dr. Purohit has lead curriculum modernization, mandatory weekly presentations, legal literacy camps, moot court competitions, and placement assistance. She has served as Head of Department (April 2010–December 2013; April–December 2014; since June 2019), Dean of the Faculty of Law (since June 2019), and Member of the Executive Council of Barkatullah University (since August 2020). She also served as Consultant for a two-year NLIU and UNFPA project on the PCPNDT Act.</p>
+                <div class="bio-section-head">Research Supervision &amp; International Conferences</div>
+                <p>Dr. Purohit has supervised <strong>14 Ph.D. candidates</strong>, with five additional scholars currently under her guidance. She also supervised an ICSSR post-doctoral fellowship on <em>"Legal Study of Sexual Harassment at Workplace."</em> She has presented at international conferences including the XIX ISA World Congress of Sociology in Toronto (2018), the 5th International Congress of Environmental Research in Malaysia (2012), and the 2nd International Conference in Goa (2015).</p>
+              </div>
+            </div>
+            <div class="ptab-panel" id="mona-pub">
+              <div class="bio-section-head" style="margin-top:0;">Major Books</div>
+              <div class="pub-mini">
+                <div class="pub-year">2024 — 4th Edition</div>
+                <strong>"Legal Education and Research Methodology"</strong>
+                — A key textbook for the LL.M. curriculum as prescribed by the UGC, covering legal teaching methods, seminars, clinical methods, research design, hypothesis formulation, and report writing. Widely adopted across law institutions in India.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">2024 Edition</div>
+                <strong>"Judicial Process"</strong>
+                — Addresses theories of attaining justice, judicial discretion, judicial activism, and the relationship between law and justice. Features a chapter on emerging trends and landmark case laws shaping Indian jurisprudence.
+              </div>
+              <div class="pub-mini">
+                <div class="pub-year">2007</div>
+                <strong>"Wild Life Laws and its Impact on Tribes"</strong>
+                — Critically analyzes the Wildlife Protection Act, forest rights legislation, and constitutional safeguards for tribal populations at the intersection of wildlife conservation and social justice.
+              </div>
+              <div class="bio-section-head">Research Papers</div>
+              <div class="bio-text">
+                <p>Dr. Purohit has published over <strong>30 research papers</strong> in national and international journals addressing intellectual property law, environmental law, cyber law, constitutional remedies, gender justice, judicial reform, and wildlife law.</p>
+              </div>
+            </div>
+            <div class="ptab-panel" id="mona-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Intellectual Property Laws</span>
+                <span class="exp-tag exp-blue">Cyber Law</span>
+                <span class="exp-tag exp-violet">Environmental Laws</span>
+                <span class="exp-tag exp-violet">Public Laws</span>
+                <span class="exp-tag exp-emerald">Jurisprudence</span>
+                <span class="exp-tag exp-emerald">Research Methodology</span>
+                <span class="exp-tag exp-amber">Judicial Process</span>
+                <span class="exp-tag exp-amber">Interpretation of Statutes</span>
+                <span class="exp-tag exp-teal">Gender Justice</span>
+                <span class="exp-tag exp-teal">Curriculum Development</span>
+                <span class="exp-tag exp-rose">Wildlife Laws</span>
+                <span class="exp-tag exp-blue">Legal Education Reform</span>
+              </div>
+            </div>
+            <div class="ptab-panel" id="mona-ach">
+              <div class="achievements-list">
+                <div class="ach-item">
+                  <div class="ach-icon">🏆</div>
+                  <div class="ach-text">
+                    <strong>Youngest LL.D. Recipient in Central India (2020)</strong>
+                    Recognized as the youngest person to be awarded the Doctor of Laws (LL.D.) post-doctorate degree in Central India — an extraordinary scholarly achievement.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🥇</div>
+                  <div class="ach-text">
+                    <strong>Lifetime Golden Achievement Award — Social &amp; Legal Research Foundation, Varanasi (2020)</strong>
+                    Honoring decades of transformative contribution to legal education, research, and institution building.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🎖️</div>
+                  <div class="ach-text">
+                    <strong>"Best Law Teacher 2020-21" — University of Allahabad</strong>
+                    Recognized for exceptional dedication and innovation in legal pedagogy at the national level.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🏅</div>
+                  <div class="ach-text">
+                    <strong>"Vidhi Gaurav Award" (2021) &amp; "Shiksha Ratan Puraskar" (2011)</strong>
+                    Multiple prestigious honours recognizing her contributions to law education and social service from national organizations.
+                  </div>
+                </div>
+                <div class="ach-item">
+                  <div class="ach-icon">🌍</div>
+                  <div class="ach-text">
+                    <strong>International Conference Speaker — Toronto, Malaysia, Goa</strong>
+                    Presented at the XIX ISA World Congress of Sociology (Toronto, 2018), 5th International Congress of Environmental Research (Malaysia, 2012), and multiple national and international forums.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ptab-panel" id="mona-links">
+              <div class="links-grid">
+                <a href="https://bubhopal.ac.in/Site/Upload/Menu/1119_1133_Legal-Studies-And-Research_co.pdf" target="_blank" rel="noopener noreferrer" class="profile-link-card">
+                  <div class="plc-icon" style="background:rgba(245,158,11,0.12);">🏛️</div>
+                  <div>
+                    <div class="plc-label">Institutional Profile</div>
+                    <div class="plc-value">Barkatullah Vishwavidyalaya →</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. DR. RANU SHUKLA -->
+      <div class="profile-section portfolio-reveal" id="ranu-shukla">
+        <div class="profile-card">
+          <div class="profile-card-accent" style="background:linear-gradient(90deg,#F97316,#EF4444);"></div>
+          <div class="profile-body">
+            <div class="profile-top">
+              <div class="profile-photo-wrap">
+                <img src="images/advisory_board/drranushkla.png" alt="Dr. Ranu Shukla — Advisory Board, IJMEER" class="profile-photo" loading="lazy">
+                <div class="profile-photo-badge badge-member" title="Advisory Board Member">🏛️</div>
+              </div>
+              <div class="profile-identity">
+                <div class="profile-roles">
+                  <span class="profile-role-badge role-member">🏛️ Advisory Board Member</span>
+                </div>
+                <h2 class="profile-name">Dr. Ranu Shukla</h2>
+                <div class="profile-designation">Former Project Officer, Adult and Continuing Education · Ph.D. in Economics</div>
+                <div class="profile-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Guru Ghasidas Vishwavidyalaya, Bilaspur, Chhattisgarh, India
+                </div>
+                <div class="profile-stats">
+                  <div class="prs">
+                    <span class="prs-icon">📊</span>
+                    <div><span class="prs-num">Ph.D.</span><br><small>Economics</small></div>
+                  </div>
+                  <div class="prs">
+                    <span class="prs-icon">🎓</span>
+                    <div><span class="prs-num">Adult</span><br><small>Education Expert</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-divider"></div>
+            <div class="profile-tab-bar" role="tablist" aria-label="Dr. Ranu Shukla profile">
+              <button class="ptab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'ranu','bio')">Biography</button>
+              <button class="ptab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'ranu','exp')">Expertise</button>
+            </div>
+            <div class="ptab-panel active" id="ranu-bio">
+              <div class="bio-text">
+                <p>Dr. Ranu Shukla is an economics-trained academic professional who served as a <strong>Project Officer in the domain of Adult and Continuing Education</strong> at Guru Ghasidas Vishwavidyalaya, Bilaspur, Chhattisgarh. She voluntarily retired from her position in April 2019 after a period of dedicated service. Her work connects economic understanding with community development, literacy, and capacity-building initiatives, reflecting a commitment to university-led social responsibility and community engagement.</p>
+                <div class="bio-section-head">Academic Background</div>
+                <p>Dr. Shukla holds a <strong>Ph.D. in Economics</strong>, equipping her with analytical tools for understanding complex developmental challenges, evaluating policy interventions, and designing evidence-based programmes for socio-economic upliftment. Her academic orientation is situated within development-linked domains such as education outreach, socio-economic empowerment, and institutional programme implementation.</p>
+                <div class="bio-section-head">Professional Contributions</div>
+                <p>As Project Officer in Adult and Continuing Education, Dr. Shukla administered adult and continuing education programmes, facilitating educational outreach for non-traditional learners — including neo-literates, school dropouts, women, rural populations, and other marginalized groups. These initiatives aligned with national priorities on literacy, lifelong learning, and inclusive education.</p>
+                <div class="bio-section-head">Socio-Economic Engagement</div>
+                <p>Dr. Shukla contributed to programmes intersecting education with economic empowerment, particularly in regional and community contexts. By integrating economic perspectives into educational programming, she helped design interventions addressing both the supply side (educational opportunities) and the demand side (economic incentives for participation). Her project coordination encompassed field-level work, documentation, monitoring and evaluation, and stakeholder engagement with government agencies, NGOs, and community leaders.</p>
+              </div>
+            </div>
+            <div class="ptab-panel" id="ranu-exp">
+              <div class="expertise-grid">
+                <span class="exp-tag exp-blue">Economics</span>
+                <span class="exp-tag exp-blue">Academic Research</span>
+                <span class="exp-tag exp-violet">Adult &amp; Continuing Education</span>
+                <span class="exp-tag exp-violet">Programme Administration</span>
+                <span class="exp-tag exp-emerald">Community Development</span>
+                <span class="exp-tag exp-emerald">Socio-Economic Analysis</span>
+                <span class="exp-tag exp-amber">Literacy Outreach</span>
+                <span class="exp-tag exp-amber">Rural Empowerment</span>
+                <span class="exp-tag exp-teal">Policy Evaluation</span>
+                <span class="exp-tag exp-teal">University Extension Services</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="portfolio-reveal" style="text-align:center;padding:40px 0 20px;">
+        <div class="section-tag">Editorial Board</div>
+        <h2 class="section-title" style="margin-top:12px;">View the Full Editorial Board</h2>
+        <p class="section-subtitle" style="margin-bottom:32px;">Explore all members, international board, and advisory board of IJMEER.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <a href="editorial-board.html" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Full Editorial Board
+          </a>
+          <a href="peer-review.html" class="btn btn-outline btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Join as Reviewer
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/core.js"></script>
+
+<script>
+/* ── Tab switching ── */
+function switchTab(btn, member, panel) {
+  // Deactivate all tabs in this member's tab-bar
+  const tabBar = btn.closest('.profile-tab-bar');
+  tabBar.querySelectorAll('.ptab-btn').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-selected', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
+
+  // Deactivate all panels for this member
+  const card = btn.closest('.profile-card');
+  card.querySelectorAll('.ptab-panel').forEach(p => p.classList.remove('active'));
+
+  // Activate target panel
+  const target = document.getElementById(member + '-' + panel);
+  if (target) target.classList.add('active');
+}
+
+/* ── Scroll-spy for nav pills ── */
+(function() {
+  const sections = [
+    { id: 'nusrat-hashmi',     pill: 'pill-1' },
+    { id: 'amir-hashmi',       pill: 'pill-2' },
+    { id: 'mary-frank',        pill: 'pill-3' },
+    { id: 'ashok-sunatkari',   pill: 'pill-4' },
+    { id: 'ashok-yende',       pill: 'pill-5' },
+    { id: 'karuna-malviya',    pill: 'pill-6' },
+    { id: 'salim-khan',        pill: 'pill-7' },
+    { id: 'momin-ali',         pill: 'pill-8' },
+    { id: 'jyotirmaya-thakur', pill: 'pill-9' },
+    { id: 'anupama-patel',     pill: 'pill-10' },
+    { id: 'mona-purohit',      pill: 'pill-11' },
+    { id: 'ranu-shukla',       pill: 'pill-12' }
+  ];
+
+  function updatePills() {
+    let current = null;
+    sections.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= 160) current = s;
+    });
+    sections.forEach(s => {
+      const pill = document.getElementById(s.pill);
+      if (pill) pill.classList.toggle('active', s === current);
+    });
+  }
+
+  window.addEventListener('scroll', updatePills, { passive: true });
+  updatePills();
+})();
+
+/* ── Reveal on scroll ── */
+(function() {
+  const reveals = document.querySelectorAll('.portfolio-reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  reveals.forEach(r => obs.observe(r));
+})();
+</script>
+</body>
+</html>

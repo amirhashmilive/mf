@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal Information - IJMEER | About, Indexing, Metrics & Book Reviews</title>
+  <meta name="description" content="Complete journal information for IJMEER: aims & scope, abstracting & indexing, journal metrics, and book review policy. Published by Meer Foundation.">
+  <link rel="canonical" href="https://www.ijmeer.com/journal.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWHDPZRK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FNJ68WF8J"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2FNJ68WF8J');</script>
+  <meta name="citation_journal_title" content="International Journal of Multidisciplinary Explication and Emerging Research">
+  <meta name="citation_issn" content="XXXX-XXXX">
+  <meta name="citation_language" content="en">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ── Journal page: sticky section nav ── */
+    .journal-nav {
+      position: sticky;
+      top: 64px;
+      z-index: 90;
+      background: #fff;
+      border-bottom: 1px solid var(--border, #e5e7eb);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+    .journal-nav-inner {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 0;
+    }
+    .journal-nav-inner::-webkit-scrollbar { display: none; }
+    .journal-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-2, #6b7280);
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .journal-nav-link:hover { color: var(--blue, #0071e3); border-bottom-color: var(--blue, #0071e3); }
+    .journal-nav-link.active { color: var(--blue, #0071e3); border-bottom-color: var(--blue, #0071e3); }
+    .journal-section { scroll-margin-top: 130px; }
+    /* ── Index cards ── */
+    .index-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .index-card {
+      background: var(--bg, #fff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .index-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .index-card-logo {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 12px;
+      font-size: 1.5rem;
+    }
+    .index-card-name { font-weight: 800; font-size: 0.9rem; color: var(--navy, #0f2744); margin-bottom: 6px; }
+    .index-card-desc { font-size: 0.75rem; color: var(--text-3, #9ca3af); line-height: 1.5; }
+    .index-card-badge { display: inline-block; margin-top: 10px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 50px; }
+    .badge-active { background: rgba(16,185,129,0.1); color: #059669; }
+    .badge-pending { background: rgba(245,158,11,0.1); color: #d97706; }
+    /* ── Metrics stat cards ── */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 52px;
+    }
+    /* ── Book review ── */
+    .book-review-card {
+      background: linear-gradient(135deg, #0f2744 0%, #1a3a6a 100%);
+      border-radius: 20px;
+      padding: 48px 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .book-review-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .journal-nav-link { padding: 12px 14px; font-size: 0.8rem; }
+      .index-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-row { grid-template-columns: 1fr 1fr; }
+      .book-review-card { padding: 32px 24px; }
+    }
+    @media (max-width: 480px) {
+      .index-grid { grid-template-columns: 1fr; }
+      .metrics-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHDPZRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<main id="main-content">
+
+  <!-- Page Header -->
+  <section class="page-header" aria-labelledby="page-heading">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Page navigation">
+        <a href="/">Home</a><span class="breadcrumb-sep">&gt;</span>
+        <span aria-current="page">Journal Information</span>
+      </nav>
+      <h1 class="page-title" id="page-heading">Journal Information</h1>
+      <p class="page-subtitle">Everything about IJMEER &mdash; aims &amp; scope, indexing, metrics, and book reviews &mdash; in one place.</p>
+    </div>
+  </section>
+
+  <!-- Sticky Section Navigation -->
+  <nav class="journal-nav" id="journal-sticky-nav" aria-label="Jump to section">
+    <div class="container">
+      <div class="journal-nav-inner">
+        <a href="#about" class="journal-nav-link active" id="jnav-about">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          About the Journal
+        </a>
+        <a href="#indexing" class="journal-nav-link" id="jnav-indexing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Abstracting &amp; Indexing
+        </a>
+        <a href="#metrics" class="journal-nav-link" id="jnav-metrics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Journal Metrics
+        </a>
+        <a href="#book-reviews" class="journal-nav-link" id="jnav-book-reviews">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Book Reviews
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 1: ABOUT THIS JOURNAL
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="about" class="section journal-section" aria-labelledby="h-about">
+    <div class="container">
+      <div class="with-sidebar">
+        <div>
+          <div class="section-header reveal" style="text-align:left;margin-bottom:36px;">
+            <div class="section-tag">Section 1</div>
+            <h2 class="section-title" id="h-about" style="text-align:left;">About This Journal</h2>
+            <p class="section-subtitle" style="text-align:left;">IJMEER is an Open Access multidisciplinary research journal published by <a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">Meer Foundation</a>, dedicated to advancing scholarly knowledge across disciplines.</p>
+          </div>
+
+          <!-- Aims & Scope -->
+          <div class="card reveal" style="margin-bottom:24px;">
+            <div class="card-body">
+              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;color:var(--blue);" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Aims &amp; Scope
+              </h3>
+              <p style="color:var(--text-2);line-height:1.85;margin-bottom:16px;">The <strong>International Journal of Multidisciplinary Explication and Emerging Research (IJMEER)</strong> is a peer-reviewed, Open Access journal committed to publishing original, high-quality research across a broad spectrum of academic disciplines. IJMEER provides a platform for scholars, researchers, and practitioners to share their findings with the global academic community.</p>
+              <p style="color:var(--text-2);line-height:1.85;margin-bottom:16px;">The journal welcomes theoretical, empirical, applied, and review articles that contribute meaningfully to the advancement of knowledge. IJMEER embraces interdisciplinary and multidisciplinary perspectives, recognising that the most innovative research often emerges at the intersection of traditional fields.</p>
+              <p style="color:var(--text-2);line-height:1.85;">We particularly encourage submissions that address emerging trends, novel methodologies, contemporary challenges, and cross-disciplinary solutions relevant to today&rsquo;s dynamic research landscape.</p>
+            </div>
+          </div>
+
+          <!-- Subject Areas -->
+          <div class="section-header reveal" style="text-align:left;margin:40px 0 20px;">
+            <h3 style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--navy);">Subject Areas (70+ Disciplines)</h3>
+          </div>
+          <div class="grid-3 reveal" style="gap:14px;margin-bottom:36px;">
+            <div class="feature-card" style="padding:18px 16px;">
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">🔬</div>
+              <div class="feature-title" style="font-size:0.9rem;">Sciences &amp; Technology</div>
+              <div class="feature-desc" style="font-size:0.78rem;">Biology, Chemistry, Physics, Computer Science, Engineering, Biotechnology, Environmental Science</div>
+            </div>
+            <div class="feature-card" style="padding:18px 16px;">
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">🏥</div>
+              <div class="feature-title" style="font-size:0.9rem;">Health &amp; Medicine</div>
+              <div class="feature-desc" style="font-size:0.78rem;">Public Health, Nursing, Pharmacy, Medical Research, Clinical Studies, Allied Health Sciences</div>
+            </div>
+            <div class="feature-card" style="padding:18px 16px;">
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">⚙️</div>
+              <div class="feature-title" style="font-size:0.9rem;">Engineering</div>
+              <div class="feature-desc" style="font-size:0.78rem;">Mechanical, Civil, Electrical, Chemical, Industrial, Software, and Systems Engineering</div>
+            </div>
+            <div class="feature-card" style="padding:18px 16px;">
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">⚖️</div>
+              <div class="feature-title" style="font-size:0.9rem;">Law &amp; Social Sciences</div>
+              <div class="feature-desc" style="font-size:0.78rem;">Law, Political Science, Sociology, Anthropology, Psychology, Social Work, Public Policy</div>
+            </div>
+            <div class="feature-card" style="padding:18px 16px;">
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">💼</div>
+              <div class="feature-title" style="font-size:0.9rem;">Business &amp; Economics</div>
+              <div class="feature-desc" style="font-size:0.78rem;">Management, Finance, Marketing, Economics, Entrepreneurship, HRM, International Business</div>
+            </div>
+            <div class="feature-card" style="padding:18px 16px;">
+              <div class="feature-icon" style="width:38px;height:38px;" aria-hidden="true">🎨</div>
+              <div class="feature-title" style="font-size:0.9rem;">Arts, Humanities &amp; Education</div>
+              <div class="feature-desc" style="font-size:0.78rem;">Literature, History, Philosophy, Linguistics, Education, Cultural Studies, Fine Arts</div>
+            </div>
+          </div>
+
+          <!-- Open Access Commitment -->
+          <div class="feature-card reveal" style="background:linear-gradient(135deg,rgba(37,99,235,0.04),rgba(124,58,237,0.03));margin-bottom:24px;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="feature-title" style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:10px;">Open Access Commitment</div>
+            <p style="color:var(--text-2);line-height:1.85;font-size:0.95rem;">All IJMEER articles are immediately and permanently free for everyone to read, download, and distribute under an open licence. We believe that knowledge should have no barriers &mdash; economic, geographic, or institutional.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+              <span class="badge badge-emerald" style="font-size:0.78rem;padding:5px 12px;">Free to Read</span>
+              <span class="badge badge-blue" style="font-size:0.78rem;padding:5px 12px;">Free to Download</span>
+              <span class="badge badge-violet" style="font-size:0.78rem;padding:5px 12px;">Open Access</span>
+              <span class="badge badge-gold" style="font-size:0.78rem;padding:5px 12px;">CC BY-NC-SA 4.0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Journal information sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Journal Details</div>
+            <div class="sidebar-card-body">
+              <table style="width:100%;font-size:0.82rem;border-collapse:collapse;">
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);font-weight:500;width:44%;">Full Name</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;font-size:0.74rem;line-height:1.4;">INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY EXPLICATION AND EMERGING RESEARCH</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Abbreviation</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:800;color:var(--blue);">IJMEER</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">ISSN (Print)</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:800;font-family:var(--font-mono);color:var(--amber);">XXXX-XXXX</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">ISSN (Online)</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:800;font-family:var(--font-mono);color:var(--amber);">XXXX-XXXX<br><span style="font-size:0.68rem;color:var(--text-4);font-weight:400;">Application under process</span></td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Starting Year</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;">2025</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Frequency</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;">Quarterly (4 issues/year)</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Language</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;">English</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Format</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;">Online + Print</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Subject Area</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;">Multidisciplinary (70+)</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Access Type</td><td style="padding:9px 0;border-bottom:1px solid var(--border);"><span class="badge badge-emerald" style="font-size:0.7rem;">Open OA</span></td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);border-bottom:1px solid var(--border);">Review Type</td><td style="padding:9px 0;border-bottom:1px solid var(--border);font-weight:700;">Double-Blind</td></tr>
+                <tr><td style="padding:9px 0;color:var(--text-4);">Publisher</td><td style="padding:9px 0;"><a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="font-weight:700;">Meer Foundation</a></td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Publisher</div>
+            <div class="sidebar-card-body">
+              <div style="font-size:0.84rem;color:var(--text-2);line-height:1.8;">
+                <strong><a href="https://www.meerfoundation.co.in/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:underline;">Meer Foundation</a></strong><br>
+                Address: House No. 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Contact IJMEER</div>
+            <div class="sidebar-card-body">
+              <div style="font-size:0.84rem;color:var(--text-2);line-height:1.8;">
+                Email: <a href="mailto:ijmeerj@gmail.com" style="color:var(--blue);">ijmeerj@gmail.com</a><br>
+                Email: <a href="mailto:editor@ijmeer.com" style="color:var(--blue);">editor@ijmeer.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Quick Links</div>
+            <div class="sidebar-card-body">
+              <nav class="sidebar-links" aria-label="Journal quick links">
+                <a href="editorial-board.html">Editorial Board</a>
+                <a href="archive.html">Archives</a>
+                <a href="citations.html">Citation Index</a>
+                <a href="authors.html#fees">Fees &amp; Pricing</a>
+                <a href="peer-review.html">Peer Review Policy</a>
+                <a href="contact.html">Contact Us</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-head">Submit to IJMEER</div>
+            <div class="sidebar-card-body">
+              <p style="font-size:0.82rem;color:var(--text-3);line-height:1.6;margin-bottom:14px;">Open for submissions. Review in 4&ndash;6 weeks.</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLAeEVTKRf18Qks4Z_QXDYWUPiNAZirDUKz_TWLBIiiMMPtw/viewform?usp=publish-editor"
+                 class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;"
+                 target="_blank" rel="noopener" id="sidebar-submit-btn">Submit Manuscript</a>
+              <a href="authors.html" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.8rem;">Author Instructions</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 2: ABSTRACTING & INDEXING
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="indexing" class="section journal-section" style="background:var(--bg-2);" aria-labelledby="h-indexing">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Section 2</div>
+        <h2 class="section-title" id="h-indexing">Abstracting &amp; Indexing</h2>
+        <p class="section-subtitle">IJMEER is indexed and discoverable in key academic databases and search engines worldwide.</p>
+      </div>
+
+      <div class="index-grid reveal" style="margin-bottom:48px;">
+
+        <div class="index-card">
+          <div class="index-card-logo" style="background:rgba(66,133,244,0.1);">🔍</div>
+          <div class="index-card-name">Google Scholar</div>
+          <div class="index-card-desc">Freely indexed and fully searchable in Google&#39;s academic search engine. All articles discoverable via title, author, and keyword.</div>
+          <span class="index-card-badge badge-active">Active</span>
+        </div>
+
+        <div class="index-card">
+          <div class="index-card-logo" style="background:rgba(245,158,11,0.1);">📋</div>
+          <div class="index-card-name">UGC CARE</div>
+          <div class="index-card-desc">Application submitted under UGC-CARE List. ISSN registration currently under process; listing expected upon confirmation.</div>
+          <span class="index-card-badge badge-pending">Pending ISSN</span>
+        </div>
+
+        <div class="index-card">
+          <div class="index-card-logo" style="background:rgba(124,58,237,0.1);">🌐</div>
+          <div class="index-card-name">Index Copernicus International</div>
+          <div class="index-card-desc">Listed with ICI Journals Master List, providing broad international visibility and quality-based indexing for multidisciplinary journals.</div>
+          <span class="index-card-badge badge-pending">Pending Submission</span>
+        </div>
+
+        <div class="index-card">
+          <div class="index-card-logo" style="background:rgba(16,185,129,0.1);">📖</div>
+          <div class="index-card-name">Indian Citation Index (ICI)</div>
+          <div class="index-card-desc">Indexed in the Indian Citation Index, supporting visibility within the Indian academic publishing ecosystem.</div>
+          <span class="index-card-badge badge-pending">Pending Submission</span>
+        </div>
+
+        <div class="index-card">
+          <div class="index-card-logo" style="background:rgba(239,68,68,0.1);">🗃️</div>
+          <div class="index-card-name">EBSCO Discovery Service</div>
+          <div class="index-card-desc">Accessible via EBSCO&rsquo;s global discovery platform, enabling library users worldwide to find IJMEER content through institutional subscriptions.</div>
+          <span class="index-card-badge badge-pending">Pending Submission</span>
+        </div>
+
+        <div class="index-card">
+          <div class="index-card-logo" style="background:rgba(14,116,144,0.1);">🗄️</div>
+          <div class="index-card-name">Zenodo Archive</div>
+          <div class="index-card-desc">Permanently archived on Zenodo (Journal DOI: 10.5281/zenodo.19565393), ensuring long-term open access preservation.</div>
+          <span class="index-card-badge badge-active">Active</span>
+        </div>
+
+      </div>
+
+      <div class="alert-box reveal" style="max-width:720px;margin:0 auto;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>IJMEER is actively pursuing indexing in additional databases including Scopus and Web of Science. Our commitment to quality peer review and open access positions the journal well for these prestigious indices. Updates will be reflected here as they are confirmed.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 3: JOURNAL METRICS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="metrics" class="section journal-section" aria-labelledby="h-metrics">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Section 3</div>
+        <h2 class="section-title" id="h-metrics">Journal Metrics</h2>
+        <p class="section-subtitle">Transparent performance indicators. As a new journal, metrics will evolve with a growing volume of submissions.</p>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="metrics-row reveal">
+        <div class="stat-card">
+          <div class="stat-num">~90%</div>
+          <div class="stat-label">Acceptance Rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">4&ndash;6 <span style="font-size:1.1rem;font-weight:600;">wk</span></div>
+          <div class="stat-label">First Decision</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Issues per Year</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2025</div>
+          <div class="stat-label">Launch Year</div>
+        </div>
+      </div>
+
+      <!-- Notes on metrics -->
+      <div class="alert-box success reveal" style="max-width:720px;margin:0 auto 40px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span><strong>Note on Acceptance Rate:</strong> The current ~90% acceptance rate reflects IJMEER&rsquo;s early-stage launch phase. This rate is subject to change as the journal matures, the volume of submissions increases, and quality benchmarks are refined.</span>
+      </div>
+
+      <div class="grid-2 reveal" style="max-width:860px;margin:0 auto;">
+        <div class="card">
+          <div class="card-body">
+            <h3 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Editorial Quality Standards</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;"></div>
+                <div><strong style="color:var(--text-1);">Double-Blind Peer Review:</strong> <span style="color:var(--text-3);font-size:0.88rem;">All submissions reviewed by minimum 2 independent field experts</span></div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--emerald);flex-shrink:0;margin-top:6px;"></div>
+                <div><strong style="color:var(--text-1);">Open Access:</strong> <span style="color:var(--text-3);font-size:0.88rem;">All articles freely accessible worldwide upon publication</span></div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--violet);flex-shrink:0;margin-top:6px;"></div>
+                <div><strong style="color:var(--text-1);">Plagiarism Screening:</strong> <span style="color:var(--text-3);font-size:0.88rem;">All manuscripts screened &lt;15% similarity (UGC compliant)</span></div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:6px;"></div>
+                <div><strong style="color:var(--text-1);">COPE Compliant:</strong> <span style="color:var(--text-3);font-size:0.88rem;">Publication ethics aligned with Committee on Publication Ethics</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Publication Frequency</h3>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div style="background:var(--bg-2);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-4);margin-bottom:4px;">Issue 1</div>
+                <div style="font-weight:700;color:var(--navy);">January &ndash; March</div>
+              </div>
+              <div style="background:var(--bg-2);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-4);margin-bottom:4px;">Issue 2</div>
+                <div style="font-weight:700;color:var(--navy);">April &ndash; June</div>
+              </div>
+              <div style="background:var(--bg-2);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-4);margin-bottom:4px;">Issue 3</div>
+                <div style="font-weight:700;color:var(--navy);">July &ndash; September</div>
+              </div>
+              <div style="background:var(--bg-2);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-4);margin-bottom:4px;">Issue 4</div>
+                <div style="font-weight:700;color:var(--navy);">October &ndash; December</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 4: BOOK REVIEWS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="book-reviews" class="section journal-section" style="background:var(--bg-2);" aria-labelledby="h-book-reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Section 4</div>
+        <h2 class="section-title" id="h-book-reviews">Book Reviews</h2>
+        <p class="section-subtitle">IJMEER welcomes critical book reviews that contribute to scholarly discourse across our areas of coverage.</p>
+      </div>
+
+      <!-- Main CTA card -->
+      <div class="reveal" style="max-width:760px;margin:0 auto 40px;">
+        <div class="book-review-card">
+          <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.6);margin-bottom:16px;">Submit a Book Review</div>
+          <h3 style="font-family:var(--font-serif);font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:16px;line-height:1.2;">Share Your Critical Perspective</h3>
+          <p style="color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:32px;font-size:0.95rem;">IJMEER publishes scholarly book reviews that critically evaluate academic works relevant to our multidisciplinary scope. Reviews provide an invaluable service to the research community by helping scholars identify significant publications in their fields.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7HcOQs74Pk51jG0y-XC7K-vK2Je8A9j6Tp2xSvq9TduPZsw/viewform?usp=header"
+             class="btn btn-lg" id="book-review-submit-btn"
+             style="background:#fff;color:var(--navy);font-weight:800;border-radius:12px;"
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Submit a Book Review &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Policy details -->
+      <div class="grid-2 reveal" style="max-width:860px;margin:0 auto;">
+        <div class="card">
+          <div class="card-body">
+            <h3 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Review Policy</h3>
+            <div class="checklist">
+              <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Reviews must be of academic books relevant to IJMEER&rsquo;s multidisciplinary scope</div></div>
+              <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Length: 800&ndash;1,500 words (structured critical analysis, not merely descriptive)</div></div>
+              <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Must include full bibliographic details of the reviewed book</div></div>
+              <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Reviewer must disclose any conflict of interest with the author or publisher</div></div>
+              <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Reviews undergo editorial assessment before acceptance</div></div>
+              <div class="check-item"><div class="check-icon" aria-hidden="true">&#10003;</div><div>Published open access alongside regular research articles</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;">What to Include</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="background:var(--bg-2);border-radius:10px;padding:12px 14px;">
+                <div style="font-weight:700;font-size:0.85rem;color:var(--navy);margin-bottom:4px;">1. Reviewer Information</div>
+                <div style="font-size:0.8rem;color:var(--text-3);">Full name, affiliation, email address, and brief bio</div>
+              </div>
+              <div style="background:var(--bg-2);border-radius:10px;padding:12px 14px;">
+                <div style="font-weight:700;font-size:0.85rem;color:var(--navy);margin-bottom:4px;">2. Book Details</div>
+                <div style="font-size:0.8rem;color:var(--text-3);">Title, author(s), publisher, year, ISBN, and edition</div>
+              </div>
+              <div style="background:var(--bg-2);border-radius:10px;padding:12px 14px;">
+                <div style="font-weight:700;font-size:0.85rem;color:var(--navy);margin-bottom:4px;">3. Critical Analysis</div>
+                <div style="font-size:0.8rem;color:var(--text-3);">Summary, evaluation of arguments, contribution to field, strengths and limitations</div>
+              </div>
+              <div style="background:var(--bg-2);border-radius:10px;padding:12px 14px;">
+                <div style="font-weight:700;font-size:0.85rem;color:var(--navy);margin-bottom:4px;">4. Recommendation</div>
+                <div style="font-size:0.8rem;color:var(--text-3);">Target audience and overall recommendation for the scholarly community</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cfp-section" aria-labelledby="cta-journal-heading">
+    <div class="container">
+      <div class="cfp-content reveal">
+        <div class="section-tag" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">Ready to Publish?</div>
+        <h2 class="section-title" id="cta-journal-heading" style="color:#fff;margin-top:12px;">Submit Your Research to IJMEER</h2>
+        <p style="color:rgba(255,255,255,0.8);margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.8;">Open Access &middot; Double-blind peer review &middot; APC: &#8377;3,000 (Pay before publication)</p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLAeEVTKRf18Qks4Z_QXDYWUPiNAZirDUKz_TWLBIiiMMPtw/viewform?usp=publish-editor"
+             class="btn btn-lg" style="background:#fff;color:var(--blue);font-weight:800;"
+             target="_blank" rel="noopener" id="cta-submit-btn">Submit Manuscript &rarr;</a>
+          <a href="editorial-board.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:#fff;">
+            Editorial Board
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+/* Sticky nav active state on scroll */
+(function () {
+  var sections = ['about','indexing','metrics','book-reviews'];
+  var links = { 'about': document.getElementById('jnav-about'), 'indexing': document.getElementById('jnav-indexing'), 'metrics': document.getElementById('jnav-metrics'), 'book-reviews': document.getElementById('jnav-book-reviews') };
+  function updateActive() {
+    var current = 'about';
+    var offset = 150;
+    sections.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - offset) current = id;
+    });
+    sections.forEach(function(id) {
+      if (links[id]) links[id].classList.toggle('active', id === current);
+    });
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
+</script>
+</body>
+</html>

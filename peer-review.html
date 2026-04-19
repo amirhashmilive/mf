@@ -1,0 +1,913 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Review — Policy, Process & Reviewer Guide | IJMEER</title>
+  <meta name="description" content="IJMEER's comprehensive peer review hub: ISSN-compliant peer review policy, double-blind process, reviewer instructions, benefits, and application to join as a reviewer.">
+  <link rel="canonical" href="https://www.ijmeer.com/peer-review.html">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWHDPZRK');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FNJ68WF8J"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2FNJ68WF8J');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ── Page-level sticky nav ──────────────────────────── */
+    .pr-sticky-nav {
+      position: sticky; top: var(--header-h, 72px); z-index: 90;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .pr-sticky-inner {
+      display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+    }
+    .pr-sticky-inner::-webkit-scrollbar { display: none; }
+    .pr-nav-link {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px 22px; font-size: 0.8rem; font-weight: 700;
+      color: var(--text-3); white-space: nowrap; border-bottom: 3px solid transparent;
+      transition: var(--t); text-decoration: none; flex-shrink: 0;
+    }
+    .pr-nav-link svg { width: 16px; height: 16px; }
+    .pr-nav-link:hover { color: var(--blue); border-bottom-color: rgba(37,99,235,0.3); }
+    .pr-nav-link.active { color: var(--blue); border-bottom-color: var(--blue); }
+
+    /* ── Stat badges strip ──────────────────────────────── */
+    .pr-stats-strip {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px; margin-bottom: 56px;
+    }
+    .pr-stat {
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: var(--r-xl); padding: 24px 20px; text-align: center;
+      transition: var(--t);
+    }
+    .pr-stat:hover { box-shadow: var(--sh-lg); transform: translateY(-3px); }
+    .pr-stat-val {
+      font-family: var(--font-serif); font-size: 2rem; font-weight: 900;
+      background: var(--grad-brand); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .pr-stat-label { font-size: 0.75rem; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.6px; }
+
+    /* ── Section title style ────────────────────────────── */
+    .pr-section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--grad-brand); color: #fff;
+      padding: 5px 16px; border-radius: var(--r-full);
+      font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 12px;
+    }
+
+    /* ── Policy blocks ──────────────────────────────────── */
+    .policy-accordion { display: flex; flex-direction: column; gap: 12px; }
+    .pol-item {
+      border: 1px solid var(--border); border-radius: var(--r-xl);
+      overflow: hidden; transition: var(--t);
+    }
+    .pol-item:hover { border-color: rgba(37,99,235,0.25); }
+    .pol-header {
+      display: flex; align-items: center; gap: 16px;
+      padding: 20px 24px; cursor: pointer; background: var(--bg);
+      border: none; width: 100%; text-align: left; font-family: var(--font-sans);
+      transition: var(--t);
+    }
+    .pol-header:hover { background: var(--bg-2); }
+    .pol-icon {
+      width: 40px; height: 40px; border-radius: var(--r-lg); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pol-icon svg { width: 20px; height: 20px; }
+    .pol-title { font-weight: 800; font-size: 0.95rem; color: var(--text-1); flex: 1; }
+    .pol-chevron { width: 20px; height: 20px; color: var(--text-3); transition: transform 0.3s ease; flex-shrink: 0; }
+    .pol-item.open .pol-chevron { transform: rotate(180deg); }
+    .pol-body {
+      padding: 0 24px; max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      font-size: 0.9rem; color: var(--text-2); line-height: 1.85;
+      background: var(--bg-2);
+    }
+    .pol-item.open .pol-body { max-height: 800px; padding: 20px 24px; }
+
+    /* ── Vertical timeline ──────────────────────────────── */
+    .timeline-v { position: relative; padding-left: 52px; border-left: 3px solid var(--border); margin-left: 20px; }
+    .timeline-v-item { position: relative; margin-bottom: 40px; }
+    .timeline-v-item:last-child { margin-bottom: 0; }
+    .timeline-v-dot {
+      position: absolute; left: -67px; top: 0;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--grad-brand); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 0.9rem; box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+      flex-shrink: 0; border: 3px solid var(--bg);
+    }
+    .timeline-v-title { font-weight: 800; font-size: 1rem; color: var(--text-1); margin-bottom: 4px; }
+    .timeline-v-meta { font-size: 0.75rem; font-weight: 700; color: var(--blue); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .timeline-v-desc { font-size: 0.9rem; color: var(--text-2); line-height: 1.75; }
+
+    /* ── Decision cards ─────────────────────────────────── */
+    .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .decision-card { padding: 22px; border-radius: var(--r-lg); border: 2px solid; }
+    .decision-card.accept { border-color: rgba(5,150,105,0.3); background: rgba(5,150,105,0.05); }
+    .decision-card.minor  { border-color: rgba(37,99,235,0.25); background: rgba(37,99,235,0.04); }
+    .decision-card.major  { border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.05); }
+    .decision-card.reject { border-color: rgba(225,29,72,0.2);  background: rgba(225,29,72,0.04); }
+    .decision-label { font-weight: 800; font-size: 0.875rem; margin-bottom: 8px; }
+    .decision-card.accept .decision-label { color: var(--emerald); }
+    .decision-card.minor  .decision-label { color: var(--blue); }
+    .decision-card.major  .decision-label { color: var(--amber); }
+    .decision-card.reject .decision-label { color: var(--rose); }
+    .decision-desc { font-size: 0.82rem; color: var(--text-3); line-height: 1.6; }
+
+    /* ── Benefits grid ──────────────────────────────────── */
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .benefit-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-xl); padding: 28px; transition: var(--t);
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .benefit-card:hover { box-shadow: var(--sh-lg); transform: translateY(-4px); border-color: rgba(37,99,235,0.2); }
+    .benefit-icon {
+      width: 52px; height: 52px; border-radius: var(--r-lg); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .benefit-icon svg { width: 26px; height: 26px; }
+    .benefit-title { font-weight: 800; font-size: 1rem; color: var(--text-1); }
+    .benefit-desc { font-size: 0.875rem; color: var(--text-3); line-height: 1.7; }
+
+    /* ── Checklist ──────────────────────────────────────── */
+    .check-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-2); }
+    .check-item:last-child { border-bottom: none; }
+    .check-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--emerald); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── Tag cloud ──────────────────────────────────────── */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 5px 14px; background: rgba(37,99,235,0.07); color: var(--blue); border: 1px solid rgba(37,99,235,0.15); border-radius: var(--r-full); font-size: 0.78rem; font-weight: 700; }
+
+    /* ── Review criteria table ──────────────────────────── */
+    .criteria-table { width: 100%; border-collapse: collapse; font-size: 0.87rem; }
+    .criteria-table th { background: var(--bg-2); padding: 12px 16px; text-align: left; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-3); border-bottom: 2px solid var(--border); }
+    .criteria-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: top; }
+    .criteria-table tr:last-child td { border-bottom: none; }
+    .criteria-table tr:hover td { background: var(--bg-2); }
+    .criteria-weight { font-weight: 800; color: var(--navy); font-size: 0.93rem; }
+
+    /* ── CTA join strip ─────────────────────────────────── */
+    .join-hero {
+      background: var(--grad-brand); border-radius: var(--r-2xl);
+      padding: 48px; text-align: center; position: relative; overflow: hidden;
+    }
+    .join-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .join-hero h2 { font-family: var(--font-serif); font-size: clamp(1.5rem,3vw,2rem); font-weight: 800; color: #fff; margin-bottom: 12px; position: relative; }
+    .join-hero p { color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 28px; line-height: 1.75; position: relative; }
+    .join-hero .cta-actions { position: relative; }
+
+    /* ── Scroll offset for anchors ──────────────────────── */
+    [id] { scroll-margin-top: calc(var(--header-h, 72px) + 48px); }
+
+    @media (max-width: 640px) {
+      .pr-sticky-inner { gap: 0; }
+      .pr-nav-link { padding: 12px 14px; font-size: 0.72rem; }
+      .join-hero { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHDPZRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="progress-bar"></div>
+<div id="site-header-inject"></div>
+
+<main id="main-content">
+
+  <!-- ══ PAGE HEADER ══ -->
+  <section class="page-header" aria-labelledby="page-heading">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Page navigation">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Peer Review</span>
+      </nav>
+      <h1 class="page-title" id="page-heading">Peer Review</h1>
+      <p class="page-subtitle">IJMEER's complete peer review hub — policy, process, reviewer guidelines, benefits, and application. All in one place.</p>
+    </div>
+  </section>
+
+  <!-- ══ STICKY IN-PAGE NAV ══ -->
+  <nav class="pr-sticky-nav" aria-label="Page sections">
+    <div class="container pr-sticky-inner">
+      <a href="#policy"       class="pr-nav-link active" id="nav-policy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Policy
+      </a>
+      <a href="#process"      class="pr-nav-link" id="nav-process">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Process
+      </a>
+      <a href="#instructions" class="pr-nav-link" id="nav-instructions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Instructions
+      </a>
+      <a href="#benefits"     class="pr-nav-link" id="nav-benefits">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Benefits
+      </a>
+      <a href="#join"         class="pr-nav-link" id="nav-join">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        Join as Reviewer
+      </a>
+    </div>
+  </nav>
+
+  <!-- ══ STATS STRIP ══ -->
+  <section style="background:var(--bg-2);padding:40px 0;" aria-label="Key metrics">
+    <div class="container">
+      <div class="pr-stats-strip">
+        <div class="pr-stat reveal">
+          <div class="pr-stat-val">Double<br>Blind</div>
+          <div class="pr-stat-label">Review Model</div>
+        </div>
+        <div class="pr-stat reveal reveal-delay-1">
+          <div class="pr-stat-val">2–3</div>
+          <div class="pr-stat-label">Reviewers / Paper</div>
+        </div>
+        <div class="pr-stat reveal reveal-delay-2">
+          <div class="pr-stat-val">4–6<span style="font-size:1rem"> wk</span></div>
+          <div class="pr-stat-label">First Decision</div>
+        </div>
+        <div class="pr-stat reveal reveal-delay-3">
+          <div class="pr-stat-val">15%</div>
+          <div class="pr-stat-label">Max Similarity</div>
+        </div>
+        <div class="pr-stat reveal">
+          <div class="pr-stat-val">Free</div>
+          <div class="pr-stat-label">To Join as Reviewer</div>
+        </div>
+        <div class="pr-stat reveal reveal-delay-1">
+          <div class="pr-stat-val">COPE</div>
+          <div class="pr-stat-label">Ethics Standard</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 1 — PEER REVIEW POLICY
+  ══════════════════════════════════════════════ -->
+  <section class="section" id="policy" style="background:var(--bg);" aria-labelledby="policy-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
+        <div class="pr-section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Section 1
+        </div>
+        <h2 class="section-title" id="policy-heading" style="text-align:left;">Peer Review Policy</h2>
+        <p class="section-subtitle" style="text-align:left;">Formal policy statement compliant with ISSN India and international academic publishing standards (2025 edition).</p>
+      </div>
+
+      <!-- ISSN compliance badge -->
+      <div class="reveal" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(5,150,105,0.08);border:1px solid rgba(5,150,105,0.25);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--emerald);">✓ ISSN India Compliant</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(37,99,235,0.07);border:1px solid rgba(37,99,235,0.2);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--blue);">✓ COPE Guidelines Aligned</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.2);border-radius:var(--r-full);font-size:0.78rem;font-weight:800;color:var(--violet);">✓ UGC Requirements Met</div>
+      </div>
+
+      <div class="policy-accordion reveal">
+
+        <div class="pol-item open">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="true">
+            <span class="pol-icon" style="background:rgba(37,99,235,0.1);color:var(--blue);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <span class="pol-title">1. Commitment to Double-Blind Peer Review</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>IJMEER — International Journal of Multidisciplinary Explication and Emerging Research — is unequivocally committed to double-blind peer review as the cornerstone of its publication process. In this model, the identity of all submitting authors is concealed from reviewers, and the identity of all reviewers is concealed from authors throughout the review cycle.</p>
+            <p style="margin-top:12px;">This commitment ensures that all manuscript evaluations are conducted solely on the basis of scientific merit, novelty, methodological rigour, and scholarly contribution — without bias arising from the identity, institutional affiliation, nationality, gender, or seniority of the authors. IJMEER considers this policy non-negotiable and fundamental to its integrity as an academic publication.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(5,150,105,0.1);color:var(--emerald);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="pol-title">2. Review Timeline Commitments</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>IJMEER commits to the following timelines as standard targets:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li><strong>Acknowledgement of receipt:</strong> Within 3 business days</li>
+              <li><strong>Initial screening decision:</strong> Within 7 days</li>
+              <li><strong>First peer review decision:</strong> 4–6 weeks from submission</li>
+              <li><strong>Standard review decision:</strong> 4&#8211;6 weeks</li>
+              <li><strong>Revision resubmission window:</strong> 2 weeks (minor), 4 weeks (major)</li>
+              <li><strong>Final decision after revision:</strong> 1–2 weeks</li>
+            </ul>
+            <p style="margin-top:12px;">Where reviewer delays are unavoidable, authors will be notified with an updated expected timeline. IJMEER actively monitors reviewer responsiveness and maintains a pool of backup reviewers to minimise delays.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(245,158,11,0.1);color:var(--amber);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <span class="pol-title">3. Reviewer Selection Criteria & Process</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>All peer reviewers for IJMEER are selected based on:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li>Demonstrated expertise in the subject area of the manuscript</li>
+              <li>Minimum qualification of a Master's degree; PhD holders preferred</li>
+              <li>At least one peer-reviewed publication in a relevant field</li>
+              <li>Prior successful review history with IJMEER or verifiable experience elsewhere</li>
+              <li>No active conflicts of interest with submitted work</li>
+            </ul>
+            <p style="margin-top:12px;">Each manuscript is assigned to 2–3 independent expert reviewers. The Subject Area Editor identifies candidates from IJMEER's registered reviewer panel, academic networks, and editorial board recommendations. Reviewers may accept or decline invitations and must complete a conflict-of-interest declaration before accessing any manuscript.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(124,58,237,0.1);color:var(--violet);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <span class="pol-title">4. Confidentiality Requirements</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>All manuscripts submitted to IJMEER are treated as confidential documents. Reviewers must:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li>Not share, discuss, or cite the manuscript or its contents with any third party without explicit written permission from the Editor-in-Chief</li>
+              <li>Not use information from an unpublished manuscript for their own research without the authors' written consent</li>
+              <li>Return or destroy all manuscript materials upon completion of the review</li>
+              <li>Immediately notify the editorial office if they identify themselves or the authors through internal evidence</li>
+            </ul>
+            <p style="margin-top:12px;">Breach of confidentiality is grounds for permanent removal from IJMEER's reviewer panel and may be reported to the reviewer's institution.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(225,29,72,0.1);color:var(--rose);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <span class="pol-title">5. Conflicts of Interest Policy</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>IJMEER defines a conflict of interest as any relationship or competing interest that could impair — or be perceived as impairing — a reviewer's ability to provide an objective, unbiased assessment. This includes:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li>Personal, professional, or financial relationships with any author</li>
+              <li>Co-authorship with any author in the past 5 years</li>
+              <li>Employment at the same institution as an author</li>
+              <li>Ongoing or competing research on the same topic</li>
+              <li>Any financial stake in the outcome of the manuscript</li>
+            </ul>
+            <p style="margin-top:12px;">Reviewers must decline any assignment where a conflict exists and must disclose any potential conflict proactively to the Editor. IJMEER editors are similarly bound by this policy. Where editor conflicts arise, manuscripts are reassigned to an independent editorial board member.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(249,115,22,0.1);color:var(--orange, #F97316);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <span class="pol-title">6. Plagiarism Policy & Originality Requirements</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>IJMEER is committed to publishing only original, unpublished research. All submissions are subject to anti-plagiarism screening prior to external peer review. The following rules apply:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li><strong>Maximum acceptable similarity index: 15%</strong> (UGC compliant threshold)</li>
+              <li>Self-plagiarism, duplicate submission, and text recycling without attribution are prohibited</li>
+              <li>Manuscripts exceeding the similarity threshold are returned to authors without review</li>
+              <li>Authors may be asked to provide a plagiarism report (Turnitin, iThenticate, or equivalent)</li>
+              <li>Any post-publication discovery of plagiarism will result in retraction and institutional notification</li>
+            </ul>
+            <p style="margin-top:12px;">Reviewers are invited to flag any suspected plagiarism from sources not detected by automated tools, including data fabrication and figure manipulation.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(20,184,166,0.1);color:#14B8A6;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span class="pol-title">7. Appeals, Complaints & Misconduct Process</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p><strong>Appeals:</strong> Authors who believe a rejection decision was based on a misunderstanding of their work may submit a formal appeal to <a href="mailto:editor@ijmeer.com" style="color:var(--blue);">editor@ijmeer.com</a> within 30 days of the decision letter. The appeal must specifically address the reviewers' concerns and should not simply re-state the original arguments. The Editor-in-Chief's decision on appeals is final.</p>
+            <p style="margin-top:12px;"><strong>Complaints:</strong> Any complaint regarding the conduct of the peer review process should be submitted in writing to the editorial office. IJMEER will acknowledge all formal complaints within 5 business days and investigate within 30 days.</p>
+            <p style="margin-top:12px;"><strong>Misconduct:</strong> Allegations of research misconduct — including fabrication, falsification, plagiarism, authorship disputes, or undisclosed conflicts of interest — are treated with utmost seriousness. IJMEER follows COPE's guidelines for handling such cases, including potential retraction, correction, and institutional notification.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(37,99,235,0.1);color:var(--blue);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+            </span>
+            <span class="pol-title">8. Reviewer Code of Conduct</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>Reviewers acting on behalf of IJMEER are expected to:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li>Accept only reviews within their genuine area of expertise</li>
+              <li>Provide constructive, objective, and evidence-based evaluations</li>
+              <li>Maintain a respectful, professional tone — even in rejection recommendations</li>
+              <li>Submit reviews on time, or notify the editor promptly if an extension is needed</li>
+              <li>Not attempt to identify the authors through the text, references, or internal evidence</li>
+              <li>Not contact authors directly, either during or after review, without editorial approval</li>
+              <li>Declare all potential conflicts of interest honestly</li>
+              <li>Not use competitor's manuscript data for personal academic advantage</li>
+            </ul>
+            <p style="margin-top:12px;">Failure to adhere to this code may result in exclusion from IJMEER's reviewer panel and a formal complaint to the reviewer's institution.</p>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(5,150,105,0.1);color:var(--emerald);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </span>
+            <span class="pol-title">9. Multidisciplinary Submission Policy</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>IJMEER covers 70+ academic disciplines and actively welcomes interdisciplinary and cross-disciplinary research. For submissions spanning multiple fields:</p>
+            <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+              <li>Two or more reviewers will be assigned from each primary discipline represented</li>
+              <li>At least one reviewer will have crossover expertise in the intersecting domains</li>
+              <li>Authors are encouraged to state in the cover letter which disciplines intersect in their work</li>
+              <li>Interdisciplinary manuscripts are evaluated on contribution to each field independently</li>
+              <li>The methodology chosen is evaluated in context of its appropriateness for the specific combination of disciplines</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pol-item">
+          <button class="pol-header" onclick="togglePol(this)" aria-expanded="false">
+            <span class="pol-icon" style="background:rgba(245,158,11,0.1);color:var(--amber);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+            </span>
+            <span class="pol-title">10. Transparency & Data Sharing</span>
+            <svg class="pol-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="pol-body">
+            <p>In the interest of academic transparency, IJMEER publishes aggregated (non-identifying) peer review statistics annually, including acceptance rate, average review time, and reviewer completion rates.</p>
+            <p style="margin-top:12px;">Authors are encouraged — though not required — to make research data, analysis code, and supplementary materials available in a publicly accessible repository. Where data sharing is relevant, reviewers may request access to raw data to verify results, routed through the editorial office to preserve anonymity.</p>
+            <p style="margin-top:12px;">IJMEER does not publish individual reviewer reports without explicit consent from the reviewer. Reviewer identities are never disclosed post-publication without consent.</p>
+          </div>
+        </div>
+
+      </div><!-- /policy-accordion -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 2 — PEER REVIEW PROCESS
+  ══════════════════════════════════════════════ -->
+  <section class="section" id="process" style="background:var(--bg-2);" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
+        <div class="pr-section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Section 2
+        </div>
+        <h2 class="section-title" id="process-heading" style="text-align:left;">Review Process — Step by Step</h2>
+        <p class="section-subtitle" style="text-align:left;">From submission to publication, our editorial workflow is designed for transparency, speed, and scholarly rigour.</p>
+      </div>
+
+      <!-- Key principles -->
+      <div class="grid-3 reveal" style="margin-bottom:52px;">
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+          <div class="feature-title">Double-Blind Anonymous</div>
+          <div class="feature-desc">Authors and reviewers remain anonymous to each other. Evaluation is based purely on scientific merit — no institutional or personal bias.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="feature-title">Timely — 4 to 6 Weeks</div>
+          <div class="feature-desc">We commit to first decisions within 4–6 weeks, respecting both authors' time and reviewers' schedules. Decisions communicated promptly with detailed reviewer feedback.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="feature-title">Transparent & Constructive</div>
+          <div class="feature-desc">Authors always receive full reviewer feedback — detailed reasoning for every decision, with clear guidance for revision or rejection.</div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="section-header reveal" style="text-align:left;margin-bottom:32px;">
+        <div class="section-tag">Workflow</div>
+        <h3 class="section-title" style="text-align:left;font-size:clamp(1.3rem,2.5vw,1.75rem);">Editorial Workflow Timeline</h3>
+      </div>
+      <div class="timeline-v reveal" style="margin-bottom:60px;">
+        <div class="timeline-v-item">
+          <div class="timeline-v-dot" aria-hidden="true">1</div>
+          <div class="timeline-v-meta">Days 1–3</div>
+          <div class="timeline-v-title">Submission & Initial Screening</div>
+          <div class="timeline-v-desc">Author submits via Google Form. Editorial team performs initial quality checks: scope fit, formatting compliance, and anti-plagiarism screening (15% maximum similarity, UGC compliant). Acknowledgement email sent within 3 business days. Manuscripts failing screening are returned with feedback.</div>
+        </div>
+        <div class="timeline-v-item">
+          <div class="timeline-v-dot" aria-hidden="true">2</div>
+          <div class="timeline-v-meta">Days 3–7</div>
+          <div class="timeline-v-title">Editor Assignment</div>
+          <div class="timeline-v-desc">Managing Editor assigns manuscript to a Subject Area Editor with relevant domain expertise. Editor assesses disciplinary fit and identifies 2–3 qualified peer reviewers from IJMEER's expert panel, checking for conflicts of interest before invitation.</div>
+        </div>
+        <div class="timeline-v-item">
+          <div class="timeline-v-dot" aria-hidden="true">3</div>
+          <div class="timeline-v-meta">Weeks 2–5</div>
+          <div class="timeline-v-title">Double-Blind Peer Review</div>
+          <div class="timeline-v-desc">Reviewers evaluate the manuscript under the double-blind protocol across all key dimensions: originality and novelty, theoretical framework, methodological soundness, validity of results, clarity of writing, and completeness of references. Each reviewer submits a structured report with a quantitative score and a publication recommendation.</div>
+        </div>
+        <div class="timeline-v-item">
+          <div class="timeline-v-dot" aria-hidden="true">4</div>
+          <div class="timeline-v-meta">Week 5–6</div>
+          <div class="timeline-v-title">Editorial Decision</div>
+          <div class="timeline-v-desc">Subject Editor consolidates all reviewer reports and reaches one of four decisions (see below). Decision communicated to authors with the full anonymised reviewer feedback. Authors rejecting major revision decisions may request a single round of appeal.</div>
+        </div>
+        <div class="timeline-v-item">
+          <div class="timeline-v-dot" aria-hidden="true">5</div>
+          <div class="timeline-v-meta">Week 6–8</div>
+          <div class="timeline-v-title">Revision & Final Acceptance</div>
+          <div class="timeline-v-desc">Authors address reviewer comments and resubmit with a point-by-point response document. Revised manuscript reviewed by handling editor and, where necessary, original reviewers. Upon final acceptance, production begins: galley proof, copyright transfer, and publication scheduling.</div>
+        </div>
+      </div>
+
+      <!-- Decision types -->
+      <div class="section-header reveal" style="text-align:left;margin-bottom:28px;">
+        <div class="section-tag">Outcomes</div>
+        <h3 class="section-title" style="text-align:left;font-size:clamp(1.3rem,2.5vw,1.75rem);">Possible Editorial Decisions</h3>
+      </div>
+      <div class="decision-grid reveal">
+        <div class="decision-card accept">
+          <div class="decision-label">✓ Accept</div>
+          <div class="decision-desc">Manuscript accepted as-is or with only minor typographical corrections. Proceeds directly to production. APC: &#8377;3,000 (Pay before publication).</div>
+        </div>
+        <div class="decision-card minor">
+          <div class="decision-label">⟳ Minor Revision</div>
+          <div class="decision-desc">Small, specific improvements required. Author responds within 2 weeks. Re-review by original reviewers is typically not required.</div>
+        </div>
+        <div class="decision-card major">
+          <div class="decision-label">⚠ Major Revision</div>
+          <div class="decision-desc">Significant rework required — methodology, analysis, or framing. Author responds within 4 weeks. Second peer review by original reviewers may be required.</div>
+        </div>
+        <div class="decision-card reject">
+          <div class="decision-label">✕ Reject</div>
+          <div class="decision-desc">Manuscript does not meet IJMEER's standards. No APC is charged. Detailed reviewer feedback provided. Author may appeal within 30 days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 3 — INSTRUCTIONS FOR REVIEWERS
+  ══════════════════════════════════════════════ -->
+  <section class="section" id="instructions" style="background:var(--bg);" aria-labelledby="instructions-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
+        <div class="pr-section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Section 3
+        </div>
+        <h2 class="section-title" id="instructions-heading" style="text-align:left;">Instructions for Peer Reviewers</h2>
+        <p class="section-subtitle" style="text-align:left;">A comprehensive guide to conducting fair, constructive, and timely manuscript evaluations for IJMEER.</p>
+      </div>
+
+      <!-- Reviewer's Role -->
+      <div class="card reveal mb-lg" style="margin-bottom:24px;">
+        <div class="card-body">
+          <h3 style="font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:14px;">The Reviewer's Role</h3>
+          <p style="color:var(--text-2);line-height:1.8;margin-bottom:12px;">Peer reviewers are independent subject experts who assess whether a submitted manuscript is scientifically sound, original, and appropriate for publication in IJMEER. Your role is advisory — you provide expert guidance to the Editor-in-Chief, who makes the final publication decision.</p>
+          <p style="color:var(--text-2);line-height:1.8;">IJMEER uses <strong>double-blind peer review</strong>: author identity is hidden from you, and your identity is hidden from the author. This promotes unbiased, merit-based evaluation.</p>
+        </div>
+      </div>
+
+      <!-- Before accepting -->
+      <div class="card reveal" style="margin-bottom:24px;">
+        <div class="card-body">
+          <h3 style="font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Before You Accept a Review Invitation</h3>
+          <p style="color:var(--text-2);margin-bottom:16px;">When you receive a review invitation, confirm all four points below before accepting:</p>
+          <div class="checklist">
+            <div class="check-item"><div class="check-icon">✓</div>The manuscript is within your genuine area of subject expertise</div>
+            <div class="check-item"><div class="check-icon">✓</div>You have no conflict of interest with the authors or the research</div>
+            <div class="check-item"><div class="check-icon">✓</div>You can meet the review deadline (typically 2–3 weeks from receipt)</div>
+            <div class="check-item"><div class="check-icon">✓</div>You can provide a thorough, unbiased, and constructive evaluation</div>
+          </div>
+          <div style="margin-top:16px;padding:14px 18px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:var(--r-lg);display:flex;gap:12px;font-size:0.875rem;color:var(--text-2);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;margin-top:1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>If you have a conflict of interest (know the authors, have competing publication, or financial ties), <strong>decline the invitation</strong> and notify the editor immediately. Do not attempt to identify authors through internal evidence.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evaluation criteria table -->
+      <div class="card reveal" style="margin-bottom:24px;">
+        <div class="card-body">
+          <h3 style="font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:20px;">Manuscript Evaluation Criteria</h3>
+          <div style="overflow-x:auto;">
+            <table class="criteria-table">
+              <thead>
+                <tr>
+                  <th>Criterion</th>
+                  <th>What to Assess</th>
+                  <th>Weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Originality & Novelty</strong></td>
+                  <td>Does this advance existing knowledge? Is the research question new or does it extend established questions in meaningful ways?</td>
+                  <td class="criteria-weight">High</td>
+                </tr>
+                <tr>
+                  <td><strong>Research Objectives</strong></td>
+                  <td>Are the research questions/hypotheses clearly stated and appropriately focused? Do they logically follow from the literature review?</td>
+                  <td class="criteria-weight">High</td>
+                </tr>
+                <tr>
+                  <td><strong>Methodology</strong></td>
+                  <td>Is the research design appropriate for the objectives? Is the methodology described in sufficient reproducible detail? Are the sample/data adequate?</td>
+                  <td class="criteria-weight">High</td>
+                </tr>
+                <tr>
+                  <td><strong>Results & Analysis</strong></td>
+                  <td>Are the results accurately presented? Is the statistical analysis (where applicable) correct and appropriate? Are tables and figures clear?</td>
+                  <td class="criteria-weight">High</td>
+                </tr>
+                <tr>
+                  <td><strong>Discussion & Conclusions</strong></td>
+                  <td>Do conclusions follow from the data? Are limitations acknowledged? Is the significance of findings contextualised appropriately?</td>
+                  <td class="criteria-weight">Medium</td>
+                </tr>
+                <tr>
+                  <td><strong>References & Citations</strong></td>
+                  <td>Are references current and relevant? Are key sources cited? Is citation formatting consistent and complete?</td>
+                  <td class="criteria-weight">Medium</td>
+                </tr>
+                <tr>
+                  <td><strong>Writing Quality</strong></td>
+                  <td>Is the manuscript clear, well-structured, and professionally written? Are language and formatting appropriate for an academic journal?</td>
+                  <td class="criteria-weight">Low–Medium</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- How to write the report -->
+      <div class="card reveal" style="margin-bottom:24px;">
+        <div class="card-body">
+          <h3 style="font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:20px;">How to Write Your Review Report</h3>
+          <div style="display:grid;gap:16px;">
+            <div style="padding:16px 20px;border-left:4px solid var(--blue);background:rgba(37,99,235,0.04);border-radius:0 var(--r-lg) var(--r-lg) 0;">
+              <strong style="color:var(--blue);display:block;margin-bottom:6px;">Step 1 — First Read</strong>
+              Read the abstract and conclusions first. Ask: Is this within IJMEER's scope? Does it appear novel and significant? If clearly unsuitable, notify the editor promptly rather than completing a full review.
+            </div>
+            <div style="padding:16px 20px;border-left:4px solid var(--violet);background:rgba(124,58,237,0.04);border-radius:0 var(--r-lg) var(--r-lg) 0;">
+              <strong style="color:var(--violet);display:block;margin-bottom:6px;">Step 2 — Detailed Assessment</strong>
+              Read the full manuscript carefully. Take notes on: (a) originality; (b) clarity of research questions; (c) appropriateness of methodology; (d) reliability of results; (e) validity of conclusions; (f) quality of writing and figures; (g) completeness of references.
+            </div>
+            <div style="padding:16px 20px;border-left:4px solid var(--emerald);background:rgba(5,150,105,0.04);border-radius:0 var(--r-lg) var(--r-lg) 0;">
+              <strong style="color:var(--emerald);display:block;margin-bottom:6px;">Step 3 — Write Your Report</strong>
+              Your report must include: (1) Brief Summary of the paper's aims and approach (2–3 sentences); (2) Major Concerns — issues that <em>must</em> be addressed; (3) Minor Concerns — suggestions for improvement; (4) Your Recommendation. Reference specific page/line numbers throughout. Be constructive, specific, and evidence-based.
+            </div>
+            <div style="padding:16px 20px;border-left:4px solid var(--amber);background:rgba(245,158,11,0.04);border-radius:0 var(--r-lg) var(--r-lg) 0;">
+              <strong style="color:var(--amber);display:block;margin-bottom:6px;">What Makes a Good Review</strong>
+              <strong>Specific</strong> (cite page/line numbers) · <strong>Constructive</strong> (suggest improvements) · <strong>Balanced</strong> (acknowledge strengths) · <strong>Respectful</strong> (professional tone always) · <strong>Objective</strong> (based on science, not preference) · <strong>Timely</strong> (submitted by deadline).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation guide -->
+      <div class="card reveal" style="margin-bottom:0;">
+        <div class="card-body">
+          <h3 style="font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Recommendation Guide</h3>
+          <div style="display:grid;gap:10px;">
+            <div style="padding:14px 18px;border-left:3px solid var(--emerald);background:rgba(5,150,105,0.05);border-radius:0 var(--r) var(--r) 0;font-size:0.87rem;"><strong style="color:var(--emerald);">Accept</strong> — Minor language or formatting corrections only. Scientific content is sound and complete.</div>
+            <div style="padding:14px 18px;border-left:3px solid var(--blue);background:rgba(37,99,235,0.05);border-radius:0 var(--r) var(--r) 0;font-size:0.87rem;"><strong style="color:var(--blue);">Minor Revision</strong> — A few specific, addressable improvements needed. No new experiments or major restructuring required.</div>
+            <div style="padding:14px 18px;border-left:3px solid var(--amber);background:rgba(245,158,11,0.05);border-radius:0 var(--r) var(--r) 0;font-size:0.87rem;"><strong style="color:var(--amber);">Major Revision</strong> — Significant issues with methodology, analysis, or framing. Re-review after revision will likely be required.</div>
+            <div style="padding:14px 18px;border-left:3px solid var(--rose);background:rgba(225,29,72,0.05);border-radius:0 var(--r) var(--r) 0;font-size:0.87rem;"><strong style="color:var(--rose);">Reject</strong> — Fatal methodological flaws, not novel, out of scope, or unresolvable ethical issues. No revision can salvage the manuscript.</div>
+          </div>
+
+          <!-- Key deadlines -->
+          <div style="margin-top:24px;padding:20px;background:var(--bg-2);border-radius:var(--r-lg);border:1px solid var(--border);">
+            <div style="font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:14px;">Key Reviewer Deadlines</div>
+            <div style="display:flex;flex-wrap:wrap;gap:20px;">
+              <div>⏱ <strong>Invitation response:</strong> 48 hours</div>
+              <div>📋 <strong>Review submission:</strong> 2–3 weeks</div>
+              <div>📝 <strong>Revised manuscript review:</strong> 1 week</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 4 — REVIEWER BENEFITS
+  ══════════════════════════════════════════════ -->
+  <section class="section" id="benefits" style="background:var(--bg-2);" aria-labelledby="benefits-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
+        <div class="pr-section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Section 4
+        </div>
+        <h2 class="section-title" id="benefits-heading" style="text-align:left;">Reviewer Benefits</h2>
+        <p class="section-subtitle" style="text-align:left;">IJMEER values your time and expertise. Here's what every reviewer receives for contributing to academic excellence.</p>
+      </div>
+
+      <div class="benefits-grid reveal">
+        <div class="benefit-card">
+          <div class="benefit-icon" style="background:rgba(245,158,11,0.1);color:var(--amber);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <div class="benefit-title">Official Reviewer Certificate</div>
+          <div class="benefit-desc">Receive a signed digital certificate from the IJMEER Editor-in-Chief for every completed review. An outstanding credential for academic CVs, promotion applications, and research funding proposals.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" style="background:rgba(37,99,235,0.1);color:var(--blue);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+          </div>
+          <div class="benefit-title">Editorial Board Invitation</div>
+          <div class="benefit-desc">Outstanding reviewers who demonstrate consistent quality and reliability are invited to join IJMEER's Editorial Board as Associate Editors or Board Members — building editorial credentials and academic influence.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" style="background:rgba(5,150,105,0.1);color:var(--emerald);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="benefit-title">APC Publication Discount</div>
+          <div class="benefit-desc">Active reviewers who complete ≥2 reviews per year are eligible for a discount on Article Processing Charges when they submit their own research to IJMEER. Applied automatically on request.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" style="background:rgba(124,58,237,0.1);color:var(--violet);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="benefit-title">Exclusive Reviewer Community</div>
+          <div class="benefit-desc">Access IJMEER's private reviewer WhatsApp community — network with researchers across 50+ disciplines, discuss trends, receive early call-for-paper notifications, and connect with fellow scholars worldwide.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" style="background:rgba(249,115,22,0.1);color:#F97316;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          </div>
+          <div class="benefit-title">Early Research Access</div>
+          <div class="benefit-desc">Reviewers gain early access to cutting-edge multidisciplinary research before publication — keeping you at the forefront of your field and related disciplines.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" style="background:rgba(20,184,166,0.1);color:#14B8A6;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="benefit-title">Public Acknowledgement</div>
+          <div class="benefit-desc">All active reviewers are publicly acknowledged in each quarterly issue of IJMEER and listed in our annual reviewer recognition section. Your contribution to academic quality is credited and celebrated.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 5 — JOIN AS A REVIEWER
+  ══════════════════════════════════════════════ -->
+  <section class="section" id="join" style="background:var(--bg);" aria-labelledby="join-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;margin-bottom:12px;">
+        <div class="pr-section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          Section 5
+        </div>
+        <h2 class="section-title" id="join-heading" style="text-align:left;">Join as a Peer Reviewer</h2>
+        <p class="section-subtitle" style="text-align:left;">Contribute your expertise to advancing multidisciplinary research. Joining IJMEER's reviewer panel is completely free.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;">
+
+        <!-- Eligibility -->
+        <div class="card reveal" style="height:fit-content;">
+          <div class="card-body">
+            <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Who Can Apply?</h3>
+            <p style="color:var(--text-2);line-height:1.8;font-size:0.9rem;margin-bottom:16px;">IJMEER welcomes applications from qualified academics, researchers, and subject-matter experts in any of our 70+ covered disciplines. Expertise and academic integrity matter most.</p>
+            <div class="checklist">
+              <div class="check-item"><div class="check-icon">✓</div>Minimum Master's degree or equivalent in a relevant field</div>
+              <div class="check-item"><div class="check-icon">✓</div>At least one peer-reviewed publication in your area of expertise</div>
+              <div class="check-item"><div class="check-icon">✓</div>Committed to timely, constructive, and unbiased reviews</div>
+              <div class="check-item"><div class="check-icon">✓</div>PhD scholars, faculty, industry researchers, and independent experts welcome</div>
+              <div class="check-item"><div class="check-icon">✓</div>International reviewers especially encouraged to apply</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What's involved -->
+        <div class="card reveal" style="height:fit-content;">
+          <div class="card-body">
+            <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:16px;">What Does Reviewing Involve?</h3>
+            <div class="process-steps">
+              <div class="process-step"><div class="process-step-num">1</div><div class="process-step-content"><div class="process-step-title">Invitation by Email</div><div class="process-step-desc">Receive an invitation when a manuscript in your area needs review. Accept or decline — no obligation.</div></div></div>
+              <div class="process-step"><div class="process-step-num">2</div><div class="process-step-content"><div class="process-step-title">Access Anonymised Manuscript</div><div class="process-step-desc">On accepting, receive the anonymised manuscript (author identity hidden under double-blind protocol).</div></div></div>
+              <div class="process-step"><div class="process-step-num">3</div><div class="process-step-content"><div class="process-step-title">Submit Structured Feedback</div><div class="process-step-desc">Evaluate originality, methodology, presentation, and significance. Submit your structured report within 2–3 weeks.</div></div></div>
+              <div class="process-step"><div class="process-step-num">4</div><div class="process-step-content"><div class="process-step-title">Receive Recognition</div><div class="process-step-desc">Receive a Reviewer Certificate. Outstanding reviewers are acknowledged publicly and invited to the Editorial Board.</div></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Subject areas -->
+      <div class="card reveal" style="margin-top:28px;">
+        <div class="card-body">
+          <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:12px;">Disciplines We Need Reviewers In</h3>
+          <p style="color:var(--text-2);font-size:0.87rem;margin-bottom:18px;">We need reviewers across all 70+ disciplines. Our application form will ask you to select your areas of expertise.</p>
+          <div class="tag-cloud">
+            <span class="tag">Biology</span><span class="tag">Physics</span><span class="tag">Chemistry</span><span class="tag">Mathematics</span><span class="tag">Environmental Science</span><span class="tag">Nano Technology</span><span class="tag">Biotechnology</span><span class="tag">Genetic Engineering</span><span class="tag">Microbiology</span><span class="tag">Food Technology</span><span class="tag">Clinical Medicine</span><span class="tag">Public Health</span><span class="tag">Pharmaceuticals</span><span class="tag">Nursing</span><span class="tag">Dental Sciences</span><span class="tag">Computer Sciences</span><span class="tag">Civil Engineering</span><span class="tag">Mechanical Engineering</span><span class="tag">Aerospace Engineering</span><span class="tag">Remote Sensing &amp; GIS</span><span class="tag">Economics</span><span class="tag">Law</span><span class="tag">Political Sciences</span><span class="tag">Sociology</span><span class="tag">Psychology</span><span class="tag">Education</span><span class="tag">Social Work</span><span class="tag">Management</span><span class="tag">History</span><span class="tag">Languages</span><span class="tag">Library Science</span><span class="tag">Agriculture</span><span class="tag">Aquaculture</span><span class="tag">Marine Science</span><span class="tag">Architecture</span><span class="tag">Gender Studies</span><span class="tag">Forensic Science</span><span class="tag">Media Studies</span><span class="tag">International Relations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application CTA -->
+      <div class="join-hero reveal" style="margin-top:48px;">
+        <h2>Apply Today — It's Completely Free</h2>
+        <p>Join IJMEER's growing global reviewer community. Applications are reviewed within 5 business days. No obligation per invitation.</p>
+        <div class="cta-actions" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKhqIGQ4-8LwfL_ZvgfklPzfLXUIVOsKAI9UWt_X5jvTa1iA/viewform?usp=publish-editor"
+             class="btn btn-lg" style="background:#fff;color:var(--blue);font-weight:800;"
+             target="_blank" rel="noopener" id="apply-reviewer-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            Apply to Become a Reviewer
+          </a>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="mailto:editor@ijmeer.com" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:#fff;width:100%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              editor@ijmeer.com
+            </a>
+            <a href="mailto:ijmeerj@gmail.com" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:#fff;width:100%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              ijmeerj@gmail.com
+            </a>
+          </div>
+          <a href="https://wa.me/919826121177" class="btn btn-lg" style="background:rgba(37,211,102,0.15);color:#25D366;border:1px solid rgba(37,211,102,0.35);height:fit-content;"
+             target="_blank" rel="noopener">
+            💬 WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer-inject"></div>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+/* ── In-page sticky nav active state ──────────────── */
+(function () {
+  const sections = ['policy','process','instructions','benefits','join'];
+  const links = {};
+  sections.forEach(id => { links[id] = document.getElementById('nav-' + id); });
+
+  function onScroll() {
+    let current = sections[0];
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 160) current = id;
+    });
+    sections.forEach(id => {
+      if (links[id]) links[id].classList.toggle('active', id === current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+/* ── Policy accordion toggle ──────────────────────── */
+function togglePol(btn) {
+  const item = btn.closest('.pol-item');
+  const wasOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.pol-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.pol-header').setAttribute('aria-expanded','false');
+  });
+  // Open clicked if it was closed
+  if (!wasOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+</script>
+</body>
+</html>
