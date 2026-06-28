@@ -1,0 +1,5 @@
+# Backup contents — exclude from Git tracking
+# Only the directory structure (.gitkeep) is tracked
+*
+!.gitkeep
+!.gitignore

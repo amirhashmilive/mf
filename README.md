@@ -142,6 +142,46 @@ ijmeer/
 Published by **Meer Foundation**  
 https://www.meerfoundation.co.in/
 
+### Project Memory System
+
+This project includes a comprehensive documentation system for consistent development:
+
+| File                | Purpose                                    |
+|---------------------|--------------------------------------------|
+| `.agents/AGENTS.md` | AI agent instructions & project context    |
+| `ARCHITECTURE.md`   | System architecture documentation          |
+| `UI_GUIDELINES.md`  | Complete design token & component reference|
+| `WORKFLOW.md`       | Daily development workflow guide           |
+| `DECISIONS.md`      | Architecture Decision Records (ADRs)       |
+| `CODING_STANDARD.md`| HTML/CSS/JS coding conventions             |
+| `CURRENT_TASK.md`   | Living task tracker                        |
+| `CHANGELOG.md`      | Change history (Keep a Changelog format)   |
+| `ROADMAP.md`        | Short/medium/long-term development plans   |
+
+### Backup System
+
+Automated backup via PowerShell:
+
+```powershell
+# Run manually
+powershell -ExecutionPolicy Bypass -File backup.ps1
+
+# Automatically runs before each git commit (pre-commit hook)
+```
+
+- **Config**: `backup-config.json` — exclusion patterns, retention limit
+- **Storage**: `backups/` — timestamped snapshots (excluded from Git)
+- **Retention**: Last 20 backups kept, older ones auto-pruned
+- **Log**: `backups/backup-log.txt`
+
+### Commit Convention
+
+```
+[TYPE] Description
+
+TYPE: FEATURE | FIX | SEO | CONTENT | DESIGN | REFACTOR | BACKUP
+```
+
 ---
 
 © 2025 IJMEER - International Journal of Multidisciplinary Explication and Emerging Research
