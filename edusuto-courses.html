@@ -7,7 +7,7 @@
   <meta name="description" content="Master the science, policy, and practical implementation of carbon capture and storage. Learn to develop bankable carbon projects.">
   <link rel="canonical" href="https://meerfoundation.co.in/edusuto-courses.html">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
   <style>
     .page-hero { background: var(--bg-2); padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
     .sdg-badge { display: inline-block; font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; padding: 4px 12px; border-radius: 20px; background: rgba(30,64,175,.08); color: #1e40af; margin-bottom: 14px; }
@@ -15,7 +15,7 @@
     .module-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 24px; margin-bottom: 20px; transition: var(--t); }
     .module-card:hover { transform: translateY(-4px); box-shadow: var(--sh); border-color: var(--blue); }
     .module-title { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: #1e40af; margin-bottom: 12px; }
-    .module-meta { display: flex; gap: 16px; font-size: 0.85rem; color: var(--text-3); margin-bottom: 16px; }
+    .module-meta { display: flex; gap: 16px; font-size: 0.85rem; color: var(--text-3); margin-bottom: 16px; flex-wrap: wrap; }
     
     .check-list { list-style: none; padding: 0; }
     .check-list li { display: flex; gap: 12px; margin-bottom: 14px; color: var(--text-2); font-size: .95rem; line-height: 1.6; }
@@ -37,24 +37,74 @@
     tbody tr:last-child td { border-bottom: none; }
     tbody tr:hover { background: var(--bg-2); }
     
-    .icon-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 24px; text-align: center; transition: var(--t); }
+    .icon-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 24px; text-align: center; transition: var(--t); height: 100%; display: flex; flex-direction: column; }
     .icon-card:hover { transform: translateY(-4px); box-shadow: var(--sh); border-color: var(--blue); }
     .icon-card .ico { font-size: 2.5rem; margin-bottom: 16px; }
     .icon-card h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: #1e40af; margin-bottom: 12px; }
-    .icon-card p { font-size: 0.95rem; color: var(--text-2); line-height: 1.6; }
+    .icon-card p { font-size: 0.95rem; color: var(--text-2); line-height: 1.6; flex-grow: 1; }
     
     .price-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-xl); padding: 32px; display: flex; flex-direction: column; position: relative; }
     .price-card.feat { border: 2px solid #1e40af; background: var(--bg-2); transform: scale(1.02); }
     .price-badge { position: absolute; top: -14px; left: 24px; background: var(--amber); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
     .price-amt { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 800; color: #1e40af; margin: 16px 0 8px; }
 
-    /* Button utilities if missing from style.css */
+    /* Button utilities */
     .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: var(--r-sm); font-weight: 600; font-size: 0.95rem; transition: var(--t); cursor: pointer; text-decoration: none; }
     .btn-primary { background: #1e40af; color: #fff; border: 1px solid #1e40af; }
     .btn-primary:hover { background: #15328a; border-color: #15328a; color: #fff; transform: translateY(-2px); box-shadow: var(--sh-sm); }
     .btn-outline { background: transparent; color: #1e40af; border: 1px solid var(--border); }
     .btn-outline:hover { background: var(--bg-2); border-color: #1e40af; color: #1e40af; transform: translateY(-2px); box-shadow: var(--sh-sm); }
     .text-center { text-align: center; }
+
+    /* Page Navigation */
+    .page-nav { display: flex; justify-content: center; gap: 24px; padding: 20px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); position: sticky; top: 78px; z-index: 90; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap; }
+    .page-nav a { font-size: 0.95rem; font-weight: 600; color: var(--text-2); text-decoration: none; transition: color 0.2s; }
+    .page-nav a:hover, .page-nav a.active { color: #1e40af; }
+
+    /* Accordion (Details) Styling */
+    details { background: #fff; border: 1px solid var(--border); border-radius: var(--r); margin-bottom: 16px; overflow: hidden; transition: var(--t); }
+    details:hover { border-color: var(--blue); }
+    details > summary { padding: 20px; font-weight: 700; font-size: 1.1rem; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fff; transition: background 0.2s; list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details > summary::after { content: '+'; font-size: 1.4rem; color: #1e40af; font-weight: 400; transition: transform 0.3s; }
+    details[open] > summary::after { content: '−'; }
+    details[open] > summary { background: var(--bg-2); border-bottom: 1px solid var(--border); }
+    details > summary:hover { background: var(--bg-2); }
+    .details-content { padding: 20px; background: #fff; color: var(--text-2); font-size: 0.95rem; line-height: 1.7; }
+    
+    .topic-block { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .topic-block:first-child { padding-top: 0; }
+    .topic-block:last-child { border-bottom: none; padding-bottom: 0; }
+    .topic-title { font-weight: 700; color: #15328a; margin-bottom: 8px; font-size: 1.05rem; }
+    .topic-list { margin-left: 20px; margin-top: 10px; color: var(--text-3); font-size: 0.9rem; }
+
+    /* Tabs Styling */
+    .tabs-header { display: flex; border-bottom: 2px solid var(--border); overflow-x: auto; margin-bottom: 32px; gap: 0; }
+    .tab-btn { padding: 12px 24px; background: none; border: none; font-size: 1rem; font-weight: 600; color: var(--text-3); cursor: pointer; position: relative; white-space: nowrap; transition: color 0.2s; font-family: var(--font-sans); }
+    .tab-btn.active { color: #1e40af; }
+    .tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: #1e40af; }
+    .tab-btn:hover { color: #1e40af; }
+    .tab-pane { display: none; animation: fadeIn 0.4s ease; }
+    .tab-pane.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Dashboard Styling */
+    .dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 40px; }
+    .dash-card { background: #fff; border-radius: var(--r-xl); padding: 24px; border: 1px solid var(--border); text-align: center; }
+    .dash-val { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 800; color: #1e40af; margin-bottom: 8px; }
+    .dash-lbl { font-size: 0.85rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    
+    .refund-box { background: #1e40af; color: #fff; border-radius: var(--r); padding: 32px; margin-top: 40px; }
+    .refund-box h3 { color: #fff; margin-bottom: 12px; font-family: var(--font-serif); }
+    .refund-box p { opacity: 0.9; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; }
+
+    /* Progress bar */
+    .pbar { width: 100%; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-top: 8px; }
+    .pfill { height: 100%; background: #1e40af; border-radius: 4px; }
+
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    @media (max-width: 900px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .grid-4 { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -64,58 +114,81 @@
 <section class="page-hero">
   <div class="container">
     <div class="section-header reveal">
-      <div class="sdg-badge">Certified Course · 10 Weeks · 100 Seats</div>
-      <h1 class="section-title" style="margin-bottom: 16px;">Climate Change:<br>Carbon Capture & Storage</h1>
-      <p style="font-size: 1.15rem; color: var(--text-2); max-width: 800px; line-height: 1.7;">Master the science, policy, and practical implementation of carbon capture and storage. Learn to develop bankable carbon projects, navigate carbon markets, and contribute to net-zero solutions.</p>
+      <div class="sdg-badge">Certified Course &middot; 10 Weeks &middot; 100 Seats</div>
+      <h1 class="section-title" style="margin-bottom: 16px;">Climate Change:<br>Carbon Capture &amp; Storage</h1>
+      <p style="font-size: 1.15rem; font-weight: 300; margin-bottom: 16px; color: #1e40af;">Education for a Sustainable Tomorrow</p>
+      <p style="font-size: 1.1rem; color: var(--text-2); max-width: 800px; line-height: 1.7;">Master the science, policy, and practical implementation of carbon capture and storage. Learn to develop bankable carbon projects, navigate carbon markets, and contribute to net-zero solutions — designed for students, professionals, and development practitioners.</p>
+      
+      <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-2); display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Verified Certificate</span>
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-2); display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> 100% Online</span>
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-2); display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg> Lifetime Access</span>
+      </div>
+
       <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="contact.html" class="btn btn-primary">Enroll Now — ₹34,999</a>
-        <a href="#modules" class="btn btn-outline">View Syllabus</a>
+        <a href="#pricing" class="btn btn-primary">Enroll Now — &inr;34,999</a>
+        <a href="#" class="btn btn-outline" onclick="alert('Syllabus PDF will be downloaded.')">Download Syllabus</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Page Navigation -->
+<div class="page-nav">
+  <a href="#overview">Overview</a>
+  <a href="#modules">Modules</a>
+  <a href="#resources">Resources</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+</div>
+
 <!-- Overview Sections -->
-<section class="section">
+<section class="section" id="overview">
   <div class="container">
     <div class="section-header reveal text-center" style="margin-bottom: 40px;">
       <h2 class="section-title">What You'll Learn</h2>
+      <p style="color: var(--text-3); margin-top: 8px;">Comprehensive outcomes and career-focused skills for climate professionals</p>
     </div>
-    <div class="grid-3 reveal reveal-delay-1">
+    
+    <div class="grid-4 reveal reveal-delay-1">
       <div class="icon-card"><div class="ico">🌡️</div><h3>Climate Science</h3><p>Greenhouse gases, carbon budgets, Paris Agreement, and tipping points.</p></div>
       <div class="icon-card"><div class="ico">📊</div><h3>Carbon Markets</h3><p>Navigate compliance and voluntary markets, credit mechanisms and pricing.</p></div>
-      <div class="icon-card"><div class="ico">🏭</div><h3>Industrial CCS</h3><p>Post-combustion, pre-combustion, oxyfuel capture — design and costs.</p></div>
+      <div class="icon-card"><div class="ico">🏭</div><h3>Industrial CCS</h3><p>Post-combustion, pre-combustion, oxyfuel capture &mdash; design and costs.</p></div>
       <div class="icon-card"><div class="ico">🛰️</div><h3>Digital MRV Systems</h3><p>Satellite analysis, IoT sensors, geotagging, and blockchain registries.</p></div>
+      <div class="icon-card"><div class="ico">💰</div><h3>Project Finance</h3><p>Structure carbon credit agreements, financial models, and bankability.</p></div>
       <div class="icon-card"><div class="ico">📋</div><h3>Project Development</h3><p>Design complete bankable carbon project proposals from concept to execution.</p></div>
       <div class="icon-card"><div class="ico">🌾</div><h3>Nature-Based Solutions</h3><p>Biochar, soil carbon, agroforestry, regenerative agriculture practices.</p></div>
+      <div class="icon-card"><div class="ico">🔬</div><h3>Geological Storage</h3><p>Trapping mechanisms, site selection, monitoring, and permanence.</p></div>
     </div>
     
     <!-- Skills & Certification -->
-    <div class="grid-2" style="margin-top: 80px;">
+    <div class="grid-2" style="margin-top: 80px;" id="skills">
       <div class="reveal">
         <h2 class="section-title" style="margin-bottom: 24px; font-size: 1.8rem;">Skills Gained</h2>
         <table>
           <thead><tr><th>Skill Category</th><th>Key Competencies</th></tr></thead>
           <tbody>
-            <tr><td><strong>Carbon Accounting</strong></td><td>Baseline setting, additionality proof, MRV system design</td></tr>
-            <tr><td><strong>Project Dev</strong></td><td>Aggregation models, benefit sharing, legal structures</td></tr>
-            <tr><td><strong>Tech & DMRV</strong></td><td>Satellite analysis, geotagging, blockchain registries</td></tr>
-            <tr><td><strong>Market & Finance</strong></td><td>Offtake agreements, financial modelling, ESG reporting</td></tr>
-            <tr><td><strong>Agricultural CCS</strong></td><td>Biochar production, soil carbon sequestration, agroforestry</td></tr>
+            <tr><td><strong>Carbon Accounting</strong></td><td>Baseline setting, additionality proof, methodology selection, MRV system design</td></tr>
+            <tr><td><strong>Project Development</strong></td><td>Aggregation models, benefit sharing, legal structures, community engagement, risk management</td></tr>
+            <tr><td><strong>Technology &amp; DMRV</strong></td><td>Satellite analysis, geotagging, blockchain registries, mobile data capture, IoT sensors</td></tr>
+            <tr><td><strong>Market &amp; Finance</strong></td><td>Offtake agreements, financial modelling (IRR/NPV), ESG reporting, impact funding, carbon pricing</td></tr>
+            <tr><td><strong>Agricultural CCS</strong></td><td>Biochar production, soil carbon sequestration, agroforestry design, regenerative agriculture</td></tr>
+            <tr><td><strong>Geological Storage</strong></td><td>Site characterisation, reservoir engineering, monitoring plans, leakage risk assessment</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="reveal reveal-delay-1">
+      <div class="reveal reveal-delay-1" id="certification">
         <div class="blue-card">
           <h3 style="font-family:var(--font-serif); font-size: 1.5rem; text-transform: none; margin-bottom: 24px;">Certification Levels</h3>
           <ul class="check-list" style="margin-bottom: 32px;">
-            <li style="color: #fff;"><span class="cert-badge cert-o">≥ 85%</span> Distinction Practitioner</li>
-            <li style="color: #fff;"><span class="cert-badge cert-g">75–84%</span> Excellence Practitioner</li>
-            <li style="color: #fff;"><span class="cert-badge cert-y">65–74%</span> Professional Practitioner</li>
-            <li style="color: #fff;"><span class="cert-badge cert-c">50–64%</span> Certificate of Completion</li>
+            <li style="color: #fff;"><span class="cert-badge cert-o">&ge; 85%</span> Distinction Practitioner</li>
+            <li style="color: #fff;"><span class="cert-badge cert-g">75&ndash;84%</span> Excellence Practitioner</li>
+            <li style="color: #fff;"><span class="cert-badge cert-y">65&ndash;74%</span> Professional Practitioner</li>
+            <li style="color: #fff;"><span class="cert-badge cert-c">50&ndash;64%</span> Certificate of Completion</li>
           </ul>
           <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: var(--r); text-align: center;">
-            <p style="margin-bottom: 0; font-weight: 500; font-size: 0.9rem;">Digital certificate with QR verification code · LinkedIn badge · Shareable link</p>
+            <p style="margin-bottom: 0; font-weight: 500; font-size: 0.9rem;">Digital certificate with QR verification code &middot; LinkedIn badge &middot; Shareable link</p>
           </div>
         </div>
       </div>
@@ -127,78 +200,465 @@
 <section class="section bg-2" id="modules">
   <div class="container">
     <div class="section-header reveal text-center" style="margin-bottom: 40px;">
-      <h2 class="section-title">Course Modules (10-Week Curriculum)</h2>
+      <h2 class="section-title">Course Modules</h2>
+      <p style="color: var(--text-3); margin-top: 8px;">10-week curriculum &mdash; click any module to expand full content</p>
     </div>
-    <div class="grid-2 reveal reveal-delay-1">
-      <div class="module-card">
-        <div class="module-title">Module 1: Climate Drivers</div>
-        <div class="module-meta"><span>Weeks 1–2</span><span>10% Grade</span></div>
-        <ul class="check-list">
-          <li>The Greenhouse Gas Effect</li>
-          <li>The Paris Agreement & International Policy</li>
-          <li>The Carbon Budget & Global Energy Systems</li>
-          <li>Introduction to CCS & CDR Technologies</li>
-        </ul>
-      </div>
+    
+    <div class="reveal reveal-delay-1" style="max-width: 900px; margin: 0 auto;">
       
-      <div class="module-card">
-        <div class="module-title">Module 2: CCS Across the Economy</div>
-        <div class="module-meta"><span>Weeks 3–4</span><span>20% Grade</span></div>
-        <ul class="check-list">
-          <li>Industrial point-source capture</li>
-          <li>Power sector decarbonisation</li>
-          <li>Blue hydrogen and DAC</li>
-          <li>Capture chemistry and solvents</li>
-        </ul>
+      <!-- Module 1 -->
+      <details>
+        <summary>Module 1: Climate Drivers</summary>
+        <div class="details-content">
+          <div class="module-meta" style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+            <span><strong>Weeks:</strong> 1&ndash;2</span> |
+            <span><strong>Topics:</strong> 7</span> |
+            <span><strong>Grade:</strong> 10%</span> |
+            <span><strong>Time:</strong> ~18 hrs</span>
+          </div>
+          
+          <div class="topic-block">
+            <div class="topic-title">1.1 The Greenhouse Gas Effect</div>
+            <p>The natural greenhouse effect maintains Earth's average temperature at +15&deg;C. Human activities have raised atmospheric CO&sub2; from 280 ppm (pre-industrial) to 420+ ppm today, intensifying this effect and driving +1.1&deg;C of observed warming.</p>
+            <ul class="topic-list">
+              <li>Major greenhouse gases: CO&sub2;, CH&sub4;, N&sub2;O, F-gases</li>
+              <li>Radiative forcing, feedback loops, and tipping points</li>
+            </ul>
+          </div>
+          
+          <div class="topic-block">
+            <div class="topic-title">1.2 The Paris Agreement &amp; International Policy</div>
+            <p>The Paris Agreement (2015) established the 1.5&deg;C and 2&deg;C temperature goals. Countries submit Nationally Determined Contributions (NDCs) every 5 years.</p>
+            <ul class="topic-list">
+              <li>NDC structure: mitigation targets, adaptation plans, finance needs</li>
+              <li>Article 6.2 and Article 6.4 explained</li>
+            </ul>
+          </div>
+
+          <div class="topic-block">
+            <div class="topic-title">1.3 The Carbon Budget</div>
+            <p>The remaining 1.5&deg;C carbon budget is approximately 250 GtCO&sub2; &mdash; at current global emissions, this will be exhausted in ~6 years.</p>
+          </div>
+
+          <div class="topic-block">
+            <div class="topic-title">1.4 Global Energy Systems</div>
+            <p>Fossil fuels provide 81% of global primary energy. The energy transition requires simultaneous renewable expansion and CCS for hard-to-abate sectors.</p>
+          </div>
+
+          <div class="topic-block">
+            <div class="topic-title">1.5 Introduction to Carbon Capture and Storage (CCS)</div>
+            <p>CCS captures 90&ndash;99% of CO&sub2; from industrial point sources, compresses it, transports it, and injects it into deep geological formations.</p>
+          </div>
+
+          <div class="topic-block">
+            <div class="topic-title">1.6 Carbon Dioxide Removal (CDR) Technologies</div>
+            <p>Nature-based options (afforestation, biochar) and Technology-based options (BECCS, DAC).</p>
+          </div>
+
+          <div class="topic-block">
+            <div class="topic-title">1.7 Module 1 Assessment</div>
+            <p><strong>Assignment:</strong> Carbon Budget Analysis (500 words).<br><strong>Quiz:</strong> 10 MCQs covering all Module 1 topics.</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- Module 2 -->
+      <details>
+        <summary>Module 2: CCS Across the Economy</summary>
+        <div class="details-content">
+          <div class="module-meta" style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+            <span><strong>Weeks:</strong> 3&ndash;4</span> |
+            <span><strong>Topics:</strong> 6</span> |
+            <span><strong>Grade:</strong> 20%</span> |
+            <span><strong>Time:</strong> ~22 hrs</span>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">2.1 Industrial Point-Source Capture</div>
+            <p>Cement, steel, and chemicals account for roughly 20% of global CO&sub2; emissions. CCS is often the only viable decarbonisation pathway for these sectors due to process emissions.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">2.2 Power Sector Decarbonisation</div>
+            <p>Retrofitting coal and gas power plants with CCS to provide dispatchable, low-carbon electricity.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">2.3 Capture Technologies</div>
+            <p>Post-combustion (amines), pre-combustion (gasification), and oxyfuel combustion technologies.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">2.4 Blue Hydrogen Production</div>
+            <p>Producing hydrogen from natural gas with CCS (Steam Methane Reforming or Autothermal Reforming).</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">2.5 Direct Air Capture (DAC)</div>
+            <p>Extracting CO&sub2; directly from the atmosphere using liquid solvents or solid sorbents.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">2.6 Module 2 Assessment</div>
+            <p><strong>Assignment:</strong> Techno-economic analysis of a capture facility.<br><strong>Quiz:</strong> 10 MCQs.</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- Module 3 -->
+      <details>
+        <summary>Module 3: Technologies for Capturing Carbon &amp; NBS</summary>
+        <div class="details-content">
+          <div class="module-meta" style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+            <span><strong>Weeks:</strong> 5&ndash;6</span> |
+            <span><strong>Topics:</strong> 8</span> |
+            <span><strong>Grade:</strong> 20%</span> |
+            <span><strong>Time:</strong> ~24 hrs</span>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.1 Nature-Based Solutions Overview</div>
+            <p>Harnessing natural ecosystems to draw down CO&sub2;.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.2 Soil Carbon Sequestration</div>
+            <p>Regenerative agriculture practices to build soil organic matter.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.3 Biochar Production and Application</div>
+            <p>Converting agricultural waste into stable carbon (biochar) through pyrolysis.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.4 Agroforestry Systems</div>
+            <p>Integrating trees into agricultural landscapes for carbon storage and co-benefits.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.5 Biomass Energy with CCS (BECCS)</div>
+            <p>Combining bioenergy with geological storage for net-negative emissions.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.6 Smallholder Aggregation Models</div>
+            <p>Structuring carbon projects across thousands of smallholder farmers.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.7 Digital MRV for Agriculture</div>
+            <p>Using satellite data, IoT, and mobile apps to measure nature-based carbon.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">3.8 Module 3 Assessment</div>
+            <p><strong>Assignment:</strong> NBS Project Design.<br><strong>Quiz:</strong> 10 MCQs.</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- Module 4 -->
+      <details>
+        <summary>Module 4: Geological Storage &amp; Permanence</summary>
+        <div class="details-content">
+          <div class="module-meta" style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+            <span><strong>Weeks:</strong> 7&ndash;8</span> |
+            <span><strong>Topics:</strong> 7</span> |
+            <span><strong>Grade:</strong> 15%</span> |
+            <span><strong>Time:</strong> ~18 hrs</span>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.1 Deep Saline Aquifer Storage</div>
+            <p>Injecting CO&sub2; into deep, porous rock formations containing saltwater.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.2 Depleted Oil and Gas Reservoirs</div>
+            <p>Utilising known geological structures for permanent storage.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.3 CO&sub2; Transport Infrastructure</div>
+            <p>Pipeline networks and shipping logistics for liquid CO&sub2;.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.4 Trapping Mechanisms</div>
+            <p>Structural, residual, solubility, and mineral trapping over 10,000+ years.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.5 Monitoring, Reporting, and Verification (MRV)</div>
+            <p>4D seismic, pressure monitoring, and geochemical tracers to ensure permanence.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.6 Leakage Risk Assessment</div>
+            <p>Evaluating and mitigating risks of CO&sub2; migration.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">4.7 Module 4 Assessment</div>
+            <p><strong>Assignment:</strong> Site Assessment Report.<br><strong>Quiz:</strong> 10 MCQs.</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- Module 5 -->
+      <details>
+        <summary>Module 5: Future Prospects &amp; Capstone Project</summary>
+        <div class="details-content">
+          <div class="module-meta" style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+            <span><strong>Weeks:</strong> 9&ndash;10</span> |
+            <span><strong>Topics:</strong> 6</span> |
+            <span><strong>Grade:</strong> 35%</span> |
+            <span><strong>Time:</strong> ~26 hrs</span>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">5.1 Global CCS Deployment Scenarios</div>
+            <p>Scaling up CCS 100-fold to meet net-zero targets by 2050.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">5.2 Policy, Economics, and Carbon Pricing</div>
+            <p>Carbon markets (ETS), tax credits (45Q), and subsidies driving deployment.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">5.3 Carbon Credit Markets and Monetisation</div>
+            <p>Voluntary and compliance markets, registries (Verra, Gold Standard), and offtake agreements.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">5.4 CO&sub2; Utilisation</div>
+            <p>Converting captured carbon into e-fuels, concrete, or chemicals.</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-title">5.5 CCS in Rural Contexts (India Focus)</div>
+            <p>Applying aggregation models and DMRV in Indian agriculture.</p>
+          </div>
+          <div class="topic-block" style="border-left: 4px solid #1e40af; padding-left: 16px; margin-top: 16px; background: var(--bg-2);">
+            <div class="topic-title">5.6 Capstone Project</div>
+            <p>Develop a complete Carbon Project Proposal covering: Baseline Assessment, Carbon Accounting, MRV Plan, Financial Model, and Offtake Strategy.</p>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Resources Library -->
+<section class="section" id="resources">
+  <div class="container">
+    <div class="section-header reveal text-center" style="margin-bottom: 40px;">
+      <h2 class="section-title">Learning Resources Library</h2>
+      <p style="color: var(--text-3); margin-top: 8px;">Videos, readings, templates, case studies, and a searchable glossary</p>
+    </div>
+
+    <div class="tabs-header reveal">
+      <button class="tab-btn active" data-tab="tab-readings">Readings</button>
+      <button class="tab-btn" data-tab="tab-templates">Templates</button>
+      <button class="tab-btn" data-tab="tab-case-studies">Case Studies</button>
+    </div>
+
+    <!-- Tab: Readings -->
+    <div class="tab-pane active" id="tab-readings">
+      <div class="grid-3">
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📄</div>
+          <h3>IPCC AR6 Climate Science</h3>
+          <p>The definitive climate science assessment. Covers attribution, impacts, and mitigation pathways.</p>
+          <a href="assets/pdfs/13_reading_ipcc_ar6.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📄</div>
+          <h3>IEA Net Zero Roadmap</h3>
+          <p>Deployment scenarios, cost trajectories, and policy recommendations for CCS to 2050.</p>
+          <a href="assets/pdfs/14_reading_iea_roadmap.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📄</div>
+          <h3>Gold Standard Soil Carbon Methodology</h3>
+          <p>Technical requirements for designing and verifying soil carbon enhancement projects.</p>
+          <a href="assets/pdfs/15_reading_gold_standard_soil.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📄</div>
+          <h3>Verra VM0042 Carbon Methodology</h3>
+          <p>Methodology for quantifying GHG emissions reductions from biochar production and application.</p>
+          <a href="assets/pdfs/16_reading_verra_vm0042.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📄</div>
+          <h3>MRV Guide for Carbon Projects</h3>
+          <p>Comprehensive field guide to monitoring, reporting, and verification for land-based projects.</p>
+          <a href="assets/pdfs/17_reading_mrv_guide.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📄</div>
+          <h3>Paris Agreement Article 6</h3>
+          <p>Practical guide to the Paris Agreement Article 6 mechanisms for project developers.</p>
+          <a href="assets/pdfs/18_reading_article6.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
       </div>
-      
-      <div class="module-card">
-        <div class="module-title">Module 3: Nature-Based Solutions</div>
-        <div class="module-meta"><span>Weeks 5–6</span><span>20% Grade</span></div>
-        <ul class="check-list">
-          <li>Soil carbon sequestration</li>
-          <li>Biochar production & application</li>
-          <li>Agroforestry carbon accounting</li>
-          <li>Smallholder aggregation models</li>
-        </ul>
-      </div>
-      
-      <div class="module-card">
-        <div class="module-title">Module 4: Transport, Storage & MRV</div>
-        <div class="module-meta"><span>Weeks 7–8</span><span>15% Grade</span></div>
-        <ul class="check-list">
-          <li>CO2 pipelines and shipping</li>
-          <li>Geological storage mechanisms</li>
-          <li>Digital MRV and satellite proxies</li>
-          <li>Leakage risk and permanence</li>
-        </ul>
+    </div>
+
+    <!-- Tab: Templates -->
+    <div class="tab-pane" id="tab-templates">
+      <div class="grid-3">
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📋</div>
+          <h3>Project Design Document Template</h3>
+          <p>Structured template for writing a carbon project PDD (Verra/Gold Standard format).</p>
+          <a href="assets/pdfs/19_template_pdd.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📊</div>
+          <h3>Financial Model Template</h3>
+          <p>10-year cashflow projection with IRR, NPV, and break-even analysis for projects.</p>
+          <a href="assets/pdfs/20_template_financial_model.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📝</div>
+          <h3>MRV Data Collection Form</h3>
+          <p>Standardised field form for soil sampling and activity data tracking.</p>
+          <a href="assets/pdfs/21_template_mrv_form.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">📑</div>
+          <h3>Offtake Agreement Template</h3>
+          <p>Draft carbon credit purchase agreement with pricing and delivery clauses.</p>
+          <a href="assets/pdfs/22_template_offtake.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">👥</div>
+          <h3>Bilingual Enrollment Form</h3>
+          <p>Community participation and informed consent form for beneficiaries (English/Hindi).</p>
+          <a href="assets/pdfs/23_template_enrollment_bilingual.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
       </div>
     </div>
     
-    <div class="module-card reveal" style="margin-top: 24px; border-left: 4px solid #1e40af;">
-      <div class="module-title">Module 5: Capstone Project (Complete Project Proposal)</div>
-      <div class="module-meta"><span>Weeks 9–10</span><span>35% of final grade</span></div>
-      <p style="color: var(--text-2); line-height: 1.6; margin-bottom: 0;">The capstone project is a full project development document covering: Baseline Assessment, Carbon Accounting, MRV Plan, Financial Model, and Offtake Strategy.</p>
+    <!-- Tab: Case Studies -->
+    <div class="tab-pane" id="tab-case-studies">
+      <div class="grid-3">
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">🏭</div>
+          <h3>Boundary Dam CCS Project</h3>
+          <p>Power sector: World's first commercial CCS on a coal plant. First-mover challenges and economics.</p>
+          <a href="assets/pdfs/24_cs_boundary_dam.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">🌊</div>
+          <h3>Sleipner CCS Project</h3>
+          <p>Geological storage: 30+ years of continuous CO&sub2; injection into a saline aquifer. Zero leakage.</p>
+          <a href="assets/pdfs/25_cs_sleipner.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">🧱</div>
+          <h3>Norcem Cement CCS Project</h3>
+          <p>Cement industry: Full-scale CCS on a cement kiln. Lessons for industrial CCS.</p>
+          <a href="assets/pdfs/26_cs_norcem.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">🌾</div>
+          <h3>Smallholder Biochar Project</h3>
+          <p>Agricultural CDR: Community-based biochar production aggregated under FPO structure.</p>
+          <a href="assets/pdfs/27_cs_smallholder_biochar.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">🌍</div>
+          <h3>Northern Lights CCS Project</h3>
+          <p>Infrastructure: Open-access CCS hub. Ship-based CO&sub2; transport from European emitters.</p>
+          <a href="assets/pdfs/28_cs_northern_lights.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+        <div class="icon-card" style="text-align: left;">
+          <div class="ico">⚡</div>
+          <h3>Quest CCS Project</h3>
+          <p>Blue hydrogen: CCS on an SMR hydrogen plant. Cost evolution and regulatory experience.</p>
+          <a href="assets/pdfs/29_cs_quest.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Glossary Card -->
+    <div class="reveal reveal-delay-1" style="margin-top: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <div class="icon-card" style="text-align: center;">
+        <div class="ico">📖</div>
+        <h3>CCS Terminology Glossary</h3>
+        <p>Complete glossary of carbon capture and storage terms.</p>
+        <a href="assets/pdfs/30_glossary_ccs_terms.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: center;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Section -->
+<section class="section bg-2" id="dashboard">
+  <div class="container">
+    <div class="section-header reveal text-center" style="margin-bottom: 40px;">
+      <h2 class="section-title">Your Learning Dashboard</h2>
+      <p style="color: var(--text-3); margin-top: 8px;">Sample progress view &mdash; tracks your modules, quiz scores, and certificate eligibility</p>
+    </div>
+
+    <div class="dash-grid reveal">
+      <div class="dash-card"><div class="dash-val">0%</div><div class="dash-lbl">Overall Progress</div></div>
+      <div class="dash-card"><div class="dash-val">0 / 5</div><div class="dash-lbl">Modules Complete</div></div>
+      <div class="dash-card"><div class="dash-val">0</div><div class="dash-lbl">Quizzes Passed</div></div>
+      <div class="dash-card"><div class="dash-val" style="color:var(--amber);">Pending</div><div class="dash-lbl">Certificate Status</div></div>
+    </div>
+
+    <div class="grid-3 reveal reveal-delay-1">
+      <div class="icon-card" style="text-align: left; justify-content: flex-start;">
+        <h3 style="margin-bottom: 24px;">Module Progress</h3>
+        
+        <div style="margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; font-size:.85rem; margin-bottom: 4px;"><span>Module 1: Climate Drivers</span><span style="color:var(--text-3)">0%</span></div>
+          <div class="pbar"><div class="pfill" style="width:0%"></div></div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; font-size:.85rem; margin-bottom: 4px;"><span>Module 2: CCS Across Economy</span><span style="color:var(--text-3)">0%</span></div>
+          <div class="pbar"><div class="pfill" style="width:0%"></div></div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; font-size:.85rem; margin-bottom: 4px;"><span>Module 3: Capturing Carbon</span><span style="color:var(--text-3)">0%</span></div>
+          <div class="pbar"><div class="pfill" style="width:0%"></div></div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; font-size:.85rem; margin-bottom: 4px;"><span>Module 4: Geological Storage</span><span style="color:var(--text-3)">0%</span></div>
+          <div class="pbar"><div class="pfill" style="width:0%"></div></div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; font-size:.85rem; margin-bottom: 4px;"><span>Module 5: Future Prospects</span><span style="color:var(--text-3)">0%</span></div>
+          <div class="pbar"><div class="pfill" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="icon-card" style="text-align: left; justify-content: flex-start;">
+        <h3 style="margin-bottom: 16px;">Next Steps</h3>
+        <p style="margin-bottom: 24px;">Start with Module 1: Climate Drivers. Complete the reading, watch the intro video, and take the quiz.</p>
+        <a href="#pricing" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">Enroll to Begin</a>
+        <button class="btn btn-outline" style="width: 100%;" onclick="alert('Demo Quiz available after enrollment.')">Take Sample Quiz</button>
+      </div>
+
+      <div class="icon-card" style="text-align: left; justify-content: flex-start;">
+        <h3 style="margin-bottom: 24px;">Certification Path</h3>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom: 12px; padding: 12px; background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px;">
+          <span class="cert-badge cert-o" style="margin:0;">85%+</span><span style="font-size:.9rem; font-weight:600;">Distinction</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom: 12px; padding: 12px; background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 8px;">
+          <span class="cert-badge cert-g" style="margin:0;">75&ndash;84%</span><span style="font-size:.9rem; font-weight:600;">Excellence</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom: 12px; padding: 12px; background: rgba(234,179,8,0.05); border: 1px solid rgba(234,179,8,0.2); border-radius: 8px;">
+          <span class="cert-badge cert-y" style="margin:0;">65&ndash;74%</span><span style="font-size:.9rem; font-weight:600;">Professional</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom: 12px; padding: 12px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px;">
+          <span class="cert-badge cert-c" style="margin:0;">50&ndash;64%</span><span style="font-size:.9rem; font-weight:600;">Completion</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Pricing -->
-<section class="section">
+<section class="section" id="pricing">
   <div class="container">
     <div class="section-header reveal text-center" style="margin-bottom: 40px;">
-      <h2 class="section-title">Pricing & Enrollment</h2>
+      <h2 class="section-title">Pricing &amp; Enrollment</h2>
+      <p style="color: var(--text-3); margin-top: 8px;">Flexible fee structure for students, NGOs, government staff, and professionals</p>
     </div>
     
     <div class="grid-3 reveal reveal-delay-1">
       <div class="price-card">
         <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--text-1);">Student</h3>
-        <div class="price-amt">₹9,999</div>
+        <div class="price-amt">&inr;9,999</div>
         <p style="color: var(--text-3); font-size: 0.9rem; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">Valid student ID required</p>
         <ul class="check-list" style="flex-grow: 1; margin-bottom: 24px;">
           <li>Full 10-week course</li>
+          <li>All 5 modules and resources</li>
           <li>Digital verified certificate</li>
+          <li>Lifetime access to updates</li>
           <li>Peer discussion community</li>
+          <li>Career mentorship session</li>
         </ul>
         <a href="contact.html" class="btn btn-outline" style="width: 100%;">Enroll Now</a>
       </div>
@@ -206,33 +666,158 @@
       <div class="price-card feat">
         <div class="price-badge">Most Popular</div>
         <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: #1e40af;">NGO / Government</h3>
-        <div class="price-amt">₹22,999</div>
-        <p style="color: var(--text-3); font-size: 0.9rem; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">For registered NGOs & govt employees</p>
+        <div class="price-amt">&inr;22,999</div>
+        <p style="color: var(--text-3); font-size: 0.9rem; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">For registered NGOs &amp; govt employees</p>
         <ul class="check-list" style="flex-grow: 1; margin-bottom: 24px;">
           <li>Full 10-week course</li>
+          <li>All 5 modules and resources</li>
           <li>Digital verified certificate</li>
+          <li>Lifetime access to updates</li>
           <li>Priority email support</li>
+          <li>Discount on future courses</li>
         </ul>
         <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
       </div>
       
       <div class="price-card">
         <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--text-1);">Standard Professional</h3>
-        <div class="price-amt">₹34,999</div>
-        <p style="color: var(--text-3); font-size: 0.9rem; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">One-time · Lifetime access</p>
+        <div class="price-amt">&inr;34,999</div>
+        <p style="color: var(--text-3); font-size: 0.9rem; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">One-time &middot; Lifetime access</p>
         <ul class="check-list" style="flex-grow: 1; margin-bottom: 24px;">
           <li>Full 10-week course</li>
+          <li>All 5 modules and resources</li>
           <li>Digital verified certificate</li>
+          <li>Lifetime access to updates</li>
+          <li>Discussion forum access</li>
           <li>LinkedIn credential badge</li>
         </ul>
         <a href="contact.html" class="btn btn-outline" style="width: 100%;">Enroll Now</a>
       </div>
     </div>
+    
+    <div class="refund-box reveal">
+      <h3>Refund Policy</h3>
+      <p>Full refund within 7 days of enrollment if course access has not been substantially used. After 7 days no refunds are possible. Enrollment is non-transferable. To request a refund contact <strong>meercare@live.com</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-2" id="faq">
+  <div class="container">
+    <div class="section-header reveal text-center" style="margin-bottom: 40px;">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p style="color: var(--text-3); margin-top: 8px;">Everything you need to know before enrolling</p>
+    </div>
+
+    <div class="reveal reveal-delay-1" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="font-size: 1.1rem; color: #15328a; margin: 24px 0 16px;">Course Content</h3>
+      <details>
+        <summary>What is the time commitment?</summary>
+        <div class="details-content">
+          8&ndash;10 hours per week for 10 weeks, self-paced within each module. You can start any topic in any order within your enrolled modules and revisit materials any time.
+        </div>
+      </details>
+      <details>
+        <summary>Are there any prerequisites?</summary>
+        <div class="details-content">
+          A bachelor's degree or equivalent professional experience is preferred. Basic familiarity with climate change is helpful but not required &mdash; Module 1 covers all foundational content.
+        </div>
+      </details>
+      <details>
+        <summary>Is the course fully online?</summary>
+        <div class="details-content">
+          Yes, fully online with recorded lectures, readings, interactive quizzes, and assignments. Optional monthly live Q&amp;A sessions via Zoom are recorded and made available to all enrolled students.
+        </div>
+      </details>
+
+      <h3 style="font-size: 1.1rem; color: #15328a; margin: 32px 0 16px;">Technical &amp; Payment</h3>
+      <details>
+        <summary>What platform is used?</summary>
+        <div class="details-content">
+          A custom learning management platform accessible via any modern browser (Chrome, Firefox, Safari, Edge). Mobile-responsive on all devices. No app download required.
+        </div>
+      </details>
+      <details>
+        <summary>Do I need special software?</summary>
+        <div class="details-content">
+          No. Just a web browser and internet connection. The financial model template uses Excel; the MRV data form is a PDF. Both are optional tools provided as downloadable templates.
+        </div>
+      </details>
+      <details>
+        <summary>What payment methods are accepted?</summary>
+        <div class="details-content">
+          Razorpay: credit and debit cards, UPI, net banking, and digital wallets. Secure encrypted payment. Invoice provided for institutional purchases.
+        </div>
+      </details>
+
+      <h3 style="font-size: 1.1rem; color: #15328a; margin: 32px 0 16px;">Certification &amp; Support</h3>
+      <details>
+        <summary>How do I receive the certificate?</summary>
+        <div class="details-content">
+          Complete all module quizzes, written assignments, and the capstone project with a minimum score of 50%. Your digital certificate is generated automatically and delivered to your registered email.
+        </div>
+      </details>
+      <details>
+        <summary>Is the certificate verified?</summary>
+        <div class="details-content">
+          Yes. Each certificate has a unique QR code that employers can scan to verify authenticity. The certificate is issued under the Meer Foundation EduSuTo programme.
+        </div>
+      </details>
+      <details>
+        <summary>How do I get help?</summary>
+        <div class="details-content">
+          Email meercare@live.com &mdash; response within 24&ndash;48 working hours. Support hours: 10 AM &ndash; 6 PM, Monday to Saturday (IST).
+        </div>
+      </details>
+    </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="assets/js/components.js?v=5"></script>
-<script src="assets/js/core.js?v=5"></script>
+<script src="assets/js/components.js?v=6"></script>
+<script src="assets/js/core.js?v=6"></script>
+<script>
+  // Simple Tabs Script
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+        
+        // Add active class to clicked button and target pane
+        btn.classList.add('active');
+        const targetId = btn.getAttribute('data-tab');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+
+    // Page Nav active state handler
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.page-nav a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
