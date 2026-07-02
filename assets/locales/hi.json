@@ -1,0 +1,17 @@
+{
+  "nav.home": "[MT] मुखपृष्ठ",
+  "nav.about": "[MT] के बारे में",
+  "nav.initiatives": "[MT] पहल",
+  "nav.research": "[MT] अनुसंधान",
+  "nav.emerging": "[MT] उभरते",
+  "nav.impact": "[MT] प्रभाव",
+  "nav.get_involved": "[MT] शामिल हों",
+  "nav.contact": "[MT] संपर्क",
+  "nav.donate": "[MT] दान करें",
+  "controls.title": "[MT] साइट नियंत्रण",
+  "controls.language": "[MT] भाषा",
+  "controls.theme": "[MT] थीम",
+  "controls.theme.light": "[MT] लाइट",
+  "controls.theme.dark": "[MT] डार्क",
+  "controls.region": "[MT] क्षेत्र"
+}

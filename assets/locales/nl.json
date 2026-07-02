@@ -1,0 +1,17 @@
+{
+  "nav.home": "[MT] Startpagina",
+  "nav.about": "[MT] Over ons",
+  "nav.initiatives": "[MT] Initiatieven",
+  "nav.research": "[MT] Onderzoek",
+  "nav.emerging": "[MT] Opkomend",
+  "nav.impact": "[MT] Impact",
+  "nav.get_involved": "[MT] Doe mee",
+  "nav.contact": "[MT] Contact",
+  "nav.donate": "[MT] Doneren",
+  "controls.title": "[MT] Sitebeheer",
+  "controls.language": "[MT] Taal",
+  "controls.theme": "[MT] Thema",
+  "controls.theme.light": "[MT] Licht",
+  "controls.theme.dark": "[MT] Donker",
+  "controls.region": "[MT] Regio"
+}

@@ -1,0 +1,17 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.initiatives": "Initiatives",
+  "nav.research": "Research",
+  "nav.emerging": "Emerging",
+  "nav.impact": "Impact",
+  "nav.get_involved": "Get Involved",
+  "nav.contact": "Contact",
+  "nav.donate": "Donate",
+  "controls.title": "Site Controls",
+  "controls.language": "Language",
+  "controls.theme": "Theme",
+  "controls.theme.light": "Light",
+  "controls.theme.dark": "Dark",
+  "controls.region": "Region"
+}

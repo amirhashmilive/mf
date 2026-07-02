@@ -1,0 +1,48 @@
+html[data-theme="dark"] {
+    --white: #0F172A;
+    --bg-light: #1E293B;
+    --text-dark: #F8FAFC;
+    --text-muted: #94A3B8;
+    --shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] body {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+html[data-theme="dark"] .initiative-card {
+    background: var(--bg-light);
+    border-color: #334155;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+html[data-theme="dark"] .initiative-card:hover {
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+html[data-theme="dark"] .dropdown {
+    background: var(--bg-light);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+html[data-theme="dark"] .dropdown-link {
+    color: var(--text-dark);
+}
+
+html[data-theme="dark"] .dropdown-link:hover {
+    background: #334155;
+}
+
+html[data-theme="dark"] .panel-control {
+    background: var(--bg-light);
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .panel-section {
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .panel-close-btn {
+    color: var(--text-dark);
+}

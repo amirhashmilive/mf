@@ -1,11 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=journal.html#metrics">
-  <link rel="canonical" href="https://www.ijmeer.com/journal.html#metrics">
-  <title>Redirecting… | IJMEER</title>
-  <script>window.location.replace('journal.html#metrics');</script>
+$htmlFiles = Get-ChildItem -Path "." -Filter "*.html" -Recurse
+
+$foucScript = @"
 <script>
   (function(){
     var t=localStorage.getItem('mf-theme');
@@ -16,9 +11,9 @@
   })();
 </script>
 <link rel="stylesheet" href="assets/css/dark-mode.css">
-</head>
-<body>
-  <p>This page has moved. <a href="journal.html#metrics">Click here if you are not redirected automatically.</a></p>
+"@
+
+$panelHtml = @"
 <!-- Floating Control Panel -->
 <link rel="stylesheet" href="assets/css/styles.css">
 <button id="mf-controls-fab" class="mf-controls-fab" aria-label="Site controls">
@@ -35,13 +30,13 @@
     <span class="panel-section-title" data-i18n="controls.language">Language</span>
     <select id="mf-lang-select" class="panel-select">
       <option value="en">English</option>
-      <option value="hi">à¤¹à¤¿à¤¨à¥à¤¦à¥€ (Hindustani)</option>
+      <option value="hi">हिन्दी (Hindustani)</option>
       <option value="de">Deutsch</option>
-      <option value="es">EspaÃ±ol</option>
-      <option value="fr">FranÃ§ais</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
       <option value="it">Italiano</option>
       <option value="nl">Nederlands</option>
-      <option value="pt">PortuguÃªs</option>
+      <option value="pt">Português</option>
     </select>
   </div>
   
@@ -56,19 +51,44 @@
   <div class="panel-section">
     <span class="panel-section-title" data-i18n="controls.region">Region</span>
     <select id="mf-region-select" class="panel-select">
-      <option value="IN">India (â‚¹ INR)</option>
+      <option value="IN">India (₹ INR)</option>
       <option value="US">United States ($ USD)</option>
-      <option value="GB">United Kingdom (Â£ GBP)</option>
-      <option value="EU">Europe (â‚¬ EUR)</option>
-      <option value="DE">Germany (â‚¬ EUR)</option>
-      <option value="ES">Spain (â‚¬ EUR)</option>
-      <option value="FR">France (â‚¬ EUR)</option>
-      <option value="IT">Italy (â‚¬ EUR)</option>
-      <option value="NL">Netherlands (â‚¬ EUR)</option>
-      <option value="PT">Portugal (â‚¬ EUR)</option>
+      <option value="GB">United Kingdom (£ GBP)</option>
+      <option value="EU">Europe (€ EUR)</option>
+      <option value="DE">Germany (€ EUR)</option>
+      <option value="ES">Spain (€ EUR)</option>
+      <option value="FR">France (€ EUR)</option>
+      <option value="IT">Italy (€ EUR)</option>
+      <option value="NL">Netherlands (€ EUR)</option>
+      <option value="PT">Portugal (€ EUR)</option>
     </select>
   </div>
 </div>
 <script src="assets/js/main.js"></script>
-</body>
-</html>
+"@
+
+foreach ($file in $htmlFiles) {
+    if ($file.FullName -like "*backups*") { continue }
+    if ($file.FullName -like "*scratch*") { continue }
+
+    $content = Get-Content $file.FullName -Raw
+    
+    # Inject FOUC script before </head> if not already present
+    if ($content -notmatch "mf-theme") {
+        $content = $content -replace "(?i)</head>", "$foucScript`n</head>"
+    }
+    
+    # Inject Panel before </body> if not already present
+    if ($content -notmatch "mf-controls-fab") {
+        # Check if main.js is already there so we don't duplicate
+        if ($content -match "assets/js/main.js") {
+            # Strip out the <script src="assets/js/main.js"></script> from panelHtml since it's already there
+            $cleanPanelHtml = $panelHtml -replace '<script src="assets/js/main.js"></script>', ''
+            $content = $content -replace "(?i)</body>", "$cleanPanelHtml`n</body>"
+        } else {
+            $content = $content -replace "(?i)</body>", "$panelHtml`n</body>"
+        }
+    }
+    
+    Set-Content -Path $file.FullName -Value $content -Encoding UTF8
+}

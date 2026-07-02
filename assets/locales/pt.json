@@ -1,0 +1,17 @@
+{
+  "nav.home": "[MT] Início",
+  "nav.about": "[MT] Sobre",
+  "nav.initiatives": "[MT] Iniciativas",
+  "nav.research": "[MT] Pesquisa",
+  "nav.emerging": "[MT] Emergente",
+  "nav.impact": "[MT] Impacto",
+  "nav.get_involved": "[MT] Envolva-se",
+  "nav.contact": "[MT] Contato",
+  "nav.donate": "[MT] Doar",
+  "controls.title": "[MT] Controles do site",
+  "controls.language": "[MT] Idioma",
+  "controls.theme": "[MT] Tema",
+  "controls.theme.light": "[MT] Claro",
+  "controls.theme.dark": "[MT] Escuro",
+  "controls.region": "[MT] Região"
+}

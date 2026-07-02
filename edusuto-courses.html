@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     
     .check-list { list-style: none; padding: 0; }
     .check-list li { display: flex; gap: 12px; margin-bottom: 14px; color: var(--text-2); font-size: .95rem; line-height: 1.6; }
-    .check-list li::before { content: "✓"; color: #10b981; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+    .check-list li::before { content: "âœ“"; color: #10b981; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
     
     .blue-card { background: #1e40af; color: #fff; padding: 40px; border-radius: var(--r-2xl); }
     .blue-card h3 { margin-bottom: 16px; opacity: .9; font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; }
@@ -67,7 +67,7 @@
     details > summary { padding: 20px; font-weight: 700; font-size: 1.1rem; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fff; transition: background 0.2s; list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     details > summary::after { content: '+'; font-size: 1.4rem; color: #1e40af; font-weight: 400; transition: transform 0.3s; }
-    details[open] > summary::after { content: '−'; }
+    details[open] > summary::after { content: 'âˆ’'; }
     details[open] > summary { background: var(--bg-2); border-bottom: 1px solid var(--border); }
     details > summary:hover { background: var(--bg-2); }
     .details-content { padding: 20px; background: #fff; color: var(--text-2); font-size: 0.95rem; line-height: 1.7; }
@@ -106,6 +106,16 @@
     @media (max-width: 900px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .grid-4 { grid-template-columns: 1fr; } }
   </style>
+<script>
+  (function(){
+    var t=localStorage.getItem('mf-theme');
+    if(t)document.documentElement.setAttribute('data-theme',t);
+    else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');
+    var l=localStorage.getItem('mf-lang');
+    if(l)document.documentElement.setAttribute('lang',l);
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -117,7 +127,7 @@
       <div class="sdg-badge">Certified Course &middot; 10 Weeks &middot; 100 Seats</div>
       <h1 class="section-title" style="margin-bottom: 16px;">Climate Change:<br>Carbon Capture &amp; Storage</h1>
       <p style="font-size: 1.15rem; font-weight: 300; margin-bottom: 16px; color: #1e40af;">Education for a Sustainable Tomorrow</p>
-      <p style="font-size: 1.1rem; color: var(--text-2); max-width: 800px; line-height: 1.7;">Master the science, policy, and practical implementation of carbon capture and storage. Learn to develop bankable carbon projects, navigate carbon markets, and contribute to net-zero solutions — designed for students, professionals, and development practitioners.</p>
+      <p style="font-size: 1.1rem; color: var(--text-2); max-width: 800px; line-height: 1.7;">Master the science, policy, and practical implementation of carbon capture and storage. Learn to develop bankable carbon projects, navigate carbon markets, and contribute to net-zero solutions â€” designed for students, professionals, and development practitioners.</p>
       
       <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap;">
         <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-2); display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Verified Certificate</span>
@@ -126,7 +136,7 @@
       </div>
 
       <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="#pricing" class="btn btn-primary">Enroll Now — &inr;34,999</a>
+        <a href="#pricing" class="btn btn-primary">Enroll Now â€” &inr;34,999</a>
         <a href="#" class="btn btn-outline" onclick="alert('Syllabus PDF will be downloaded.')">Download Syllabus</a>
       </div>
     </div>
@@ -152,14 +162,14 @@
     </div>
     
     <div class="grid-4 reveal reveal-delay-1">
-      <div class="icon-card"><div class="ico">🌡️</div><h3>Climate Science</h3><p>Greenhouse gases, carbon budgets, Paris Agreement, and tipping points.</p></div>
-      <div class="icon-card"><div class="ico">📊</div><h3>Carbon Markets</h3><p>Navigate compliance and voluntary markets, credit mechanisms and pricing.</p></div>
-      <div class="icon-card"><div class="ico">🏭</div><h3>Industrial CCS</h3><p>Post-combustion, pre-combustion, oxyfuel capture &mdash; design and costs.</p></div>
-      <div class="icon-card"><div class="ico">🛰️</div><h3>Digital MRV Systems</h3><p>Satellite analysis, IoT sensors, geotagging, and blockchain registries.</p></div>
-      <div class="icon-card"><div class="ico">💰</div><h3>Project Finance</h3><p>Structure carbon credit agreements, financial models, and bankability.</p></div>
-      <div class="icon-card"><div class="ico">📋</div><h3>Project Development</h3><p>Design complete bankable carbon project proposals from concept to execution.</p></div>
-      <div class="icon-card"><div class="ico">🌾</div><h3>Nature-Based Solutions</h3><p>Biochar, soil carbon, agroforestry, regenerative agriculture practices.</p></div>
-      <div class="icon-card"><div class="ico">🔬</div><h3>Geological Storage</h3><p>Trapping mechanisms, site selection, monitoring, and permanence.</p></div>
+      <div class="icon-card"><div class="ico">ðŸŒ¡ï¸</div><h3>Climate Science</h3><p>Greenhouse gases, carbon budgets, Paris Agreement, and tipping points.</p></div>
+      <div class="icon-card"><div class="ico">ðŸ“Š</div><h3>Carbon Markets</h3><p>Navigate compliance and voluntary markets, credit mechanisms and pricing.</p></div>
+      <div class="icon-card"><div class="ico">ðŸ­</div><h3>Industrial CCS</h3><p>Post-combustion, pre-combustion, oxyfuel capture &mdash; design and costs.</p></div>
+      <div class="icon-card"><div class="ico">ðŸ›°ï¸</div><h3>Digital MRV Systems</h3><p>Satellite analysis, IoT sensors, geotagging, and blockchain registries.</p></div>
+      <div class="icon-card"><div class="ico">ðŸ’°</div><h3>Project Finance</h3><p>Structure carbon credit agreements, financial models, and bankability.</p></div>
+      <div class="icon-card"><div class="ico">ðŸ“‹</div><h3>Project Development</h3><p>Design complete bankable carbon project proposals from concept to execution.</p></div>
+      <div class="icon-card"><div class="ico">ðŸŒ¾</div><h3>Nature-Based Solutions</h3><p>Biochar, soil carbon, agroforestry, regenerative agriculture practices.</p></div>
+      <div class="icon-card"><div class="ico">ðŸ”¬</div><h3>Geological Storage</h3><p>Trapping mechanisms, site selection, monitoring, and permanence.</p></div>
     </div>
     
     <!-- Skills & Certification -->
@@ -444,37 +454,37 @@
     <div class="tab-pane active" id="tab-readings">
       <div class="grid-3">
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📄</div>
+          <div class="ico">ðŸ“„</div>
           <h3>IPCC AR6 Climate Science</h3>
           <p>The definitive climate science assessment. Covers attribution, impacts, and mitigation pathways.</p>
           <a href="assets/pdfs/13_reading_ipcc_ar6.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📄</div>
+          <div class="ico">ðŸ“„</div>
           <h3>IEA Net Zero Roadmap</h3>
           <p>Deployment scenarios, cost trajectories, and policy recommendations for CCS to 2050.</p>
           <a href="assets/pdfs/14_reading_iea_roadmap.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📄</div>
+          <div class="ico">ðŸ“„</div>
           <h3>Gold Standard Soil Carbon Methodology</h3>
           <p>Technical requirements for designing and verifying soil carbon enhancement projects.</p>
           <a href="assets/pdfs/15_reading_gold_standard_soil.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📄</div>
+          <div class="ico">ðŸ“„</div>
           <h3>Verra VM0042 Carbon Methodology</h3>
           <p>Methodology for quantifying GHG emissions reductions from biochar production and application.</p>
           <a href="assets/pdfs/16_reading_verra_vm0042.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📄</div>
+          <div class="ico">ðŸ“„</div>
           <h3>MRV Guide for Carbon Projects</h3>
           <p>Comprehensive field guide to monitoring, reporting, and verification for land-based projects.</p>
           <a href="assets/pdfs/17_reading_mrv_guide.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📄</div>
+          <div class="ico">ðŸ“„</div>
           <h3>Paris Agreement Article 6</h3>
           <p>Practical guide to the Paris Agreement Article 6 mechanisms for project developers.</p>
           <a href="assets/pdfs/18_reading_article6.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
@@ -486,31 +496,31 @@
     <div class="tab-pane" id="tab-templates">
       <div class="grid-3">
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📋</div>
+          <div class="ico">ðŸ“‹</div>
           <h3>Project Design Document Template</h3>
           <p>Structured template for writing a carbon project PDD (Verra/Gold Standard format).</p>
           <a href="assets/pdfs/19_template_pdd.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📊</div>
+          <div class="ico">ðŸ“Š</div>
           <h3>Financial Model Template</h3>
           <p>10-year cashflow projection with IRR, NPV, and break-even analysis for projects.</p>
           <a href="assets/pdfs/20_template_financial_model.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📝</div>
+          <div class="ico">ðŸ“</div>
           <h3>MRV Data Collection Form</h3>
           <p>Standardised field form for soil sampling and activity data tracking.</p>
           <a href="assets/pdfs/21_template_mrv_form.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">📑</div>
+          <div class="ico">ðŸ“‘</div>
           <h3>Offtake Agreement Template</h3>
           <p>Draft carbon credit purchase agreement with pricing and delivery clauses.</p>
           <a href="assets/pdfs/22_template_offtake.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">👥</div>
+          <div class="ico">ðŸ‘¥</div>
           <h3>Bilingual Enrollment Form</h3>
           <p>Community participation and informed consent form for beneficiaries (English/Hindi).</p>
           <a href="assets/pdfs/23_template_enrollment_bilingual.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
@@ -522,37 +532,37 @@
     <div class="tab-pane" id="tab-case-studies">
       <div class="grid-3">
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">🏭</div>
+          <div class="ico">ðŸ­</div>
           <h3>Boundary Dam CCS Project</h3>
           <p>Power sector: World's first commercial CCS on a coal plant. First-mover challenges and economics.</p>
           <a href="assets/pdfs/24_cs_boundary_dam.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">🌊</div>
+          <div class="ico">ðŸŒŠ</div>
           <h3>Sleipner CCS Project</h3>
           <p>Geological storage: 30+ years of continuous CO&sub2; injection into a saline aquifer. Zero leakage.</p>
           <a href="assets/pdfs/25_cs_sleipner.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">🧱</div>
+          <div class="ico">ðŸ§±</div>
           <h3>Norcem Cement CCS Project</h3>
           <p>Cement industry: Full-scale CCS on a cement kiln. Lessons for industrial CCS.</p>
           <a href="assets/pdfs/26_cs_norcem.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">🌾</div>
+          <div class="ico">ðŸŒ¾</div>
           <h3>Smallholder Biochar Project</h3>
           <p>Agricultural CDR: Community-based biochar production aggregated under FPO structure.</p>
           <a href="assets/pdfs/27_cs_smallholder_biochar.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">🌍</div>
+          <div class="ico">ðŸŒ</div>
           <h3>Northern Lights CCS Project</h3>
           <p>Infrastructure: Open-access CCS hub. Ship-based CO&sub2; transport from European emitters.</p>
           <a href="assets/pdfs/28_cs_northern_lights.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
         </div>
         <div class="icon-card" style="text-align: left;">
-          <div class="ico">⚡</div>
+          <div class="ico">âš¡</div>
           <h3>Quest CCS Project</h3>
           <p>Blue hydrogen: CCS on an SMR hydrogen plant. Cost evolution and regulatory experience.</p>
           <a href="assets/pdfs/29_cs_quest.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: flex-start;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
@@ -563,7 +573,7 @@
     <!-- Glossary Card -->
     <div class="reveal reveal-delay-1" style="margin-top: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
       <div class="icon-card" style="text-align: center;">
-        <div class="ico">📖</div>
+        <div class="ico">ðŸ“–</div>
         <h3>CCS Terminology Glossary</h3>
         <p>Complete glossary of carbon capture and storage terms.</p>
         <a href="assets/pdfs/30_glossary_ccs_terms.pdf" class="btn btn-outline" style="margin-top: 16px; align-self: center;" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download PDF</a>
@@ -816,5 +826,56 @@
     });
   });
 </script>
+<!-- Floating Control Panel -->
+<link rel="stylesheet" href="assets/css/styles.css">
+<button id="mf-controls-fab" class="mf-controls-fab" aria-label="Site controls">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+</button>
+
+<div id="mf-controls-panel" class="mf-controls-panel" role="dialog" aria-modal="true">
+  <div class="panel-header">
+    <h3 data-i18n="controls.title">Site Controls</h3>
+    <button id="mf-panel-close" class="panel-close-btn">&times;</button>
+  </div>
+  
+  <div class="panel-section">
+    <span class="panel-section-title" data-i18n="controls.language">Language</span>
+    <select id="mf-lang-select" class="panel-select">
+      <option value="en">English</option>
+      <option value="hi">à¤¹à¤¿à¤¨à¥à¤¦à¥€ (Hindustani)</option>
+      <option value="de">Deutsch</option>
+      <option value="es">EspaÃ±ol</option>
+      <option value="fr">FranÃ§ais</option>
+      <option value="it">Italiano</option>
+      <option value="nl">Nederlands</option>
+      <option value="pt">PortuguÃªs</option>
+    </select>
+  </div>
+  
+  <div class="panel-section">
+    <span class="panel-section-title" data-i18n="controls.theme">Theme</span>
+    <div class="theme-toggle-wrapper">
+      <button class="theme-btn active" data-theme="light" data-i18n="controls.theme.light">Light</button>
+      <button class="theme-btn" data-theme="dark" data-i18n="controls.theme.dark">Dark</button>
+    </div>
+  </div>
+  
+  <div class="panel-section">
+    <span class="panel-section-title" data-i18n="controls.region">Region</span>
+    <select id="mf-region-select" class="panel-select">
+      <option value="IN">India (â‚¹ INR)</option>
+      <option value="US">United States ($ USD)</option>
+      <option value="GB">United Kingdom (Â£ GBP)</option>
+      <option value="EU">Europe (â‚¬ EUR)</option>
+      <option value="DE">Germany (â‚¬ EUR)</option>
+      <option value="ES">Spain (â‚¬ EUR)</option>
+      <option value="FR">France (â‚¬ EUR)</option>
+      <option value="IT">Italy (â‚¬ EUR)</option>
+      <option value="NL">Netherlands (â‚¬ EUR)</option>
+      <option value="PT">Portugal (â‚¬ EUR)</option>
+    </select>
+  </div>
+</div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
