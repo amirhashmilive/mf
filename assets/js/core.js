@@ -1,10 +1,17 @@
 /* ============================================================
-   IJMEER — core.js  (v3 — Premium Edition)
+   IJMEER — core.js  (v4 — Fixed Edition)
    Navigation, dark mode, scroll effects, reveal animations
    ============================================================ */
 
 (function () {
   'use strict';
+
+  // ── Apply stored theme IMMEDIATELY (before DOMContentLoaded) ─────────────
+  // This prevents flash of wrong theme
+  const storedTheme = localStorage.getItem('mf-theme');
+  if (storedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
 
   // ── Progress bar ──────────────────────────────────────────
   const progressBar = document.getElementById('progress-bar');
@@ -181,125 +188,105 @@
     });
   };
 
-  // ── Floating Control Panel Logic ─────────────
+  // ── Floating Control Panel Logic ─────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
-      const panelFab = document.getElementById('mf-controls-fab');
-      const panel = document.getElementById('mf-controls-panel');
-      const panelClose = document.getElementById('mf-panel-close');
+    const panelFab = document.getElementById('mf-controls-fab');
+    const panel    = document.getElementById('mf-controls-panel');
+    const panelClose = document.getElementById('mf-panel-close');
 
-      if (panelFab && panel && panelClose) {
-          panelFab.addEventListener('click', () => {
-              panel.classList.toggle('active');
-          });
-
-          panelClose.addEventListener('click', () => {
-              panel.classList.remove('active');
-          });
-      }
-
-      // Theme Toggle
-      const themeBtns = document.querySelectorAll('.theme-btn');
-      themeBtns.forEach(btn => {
-          btn.addEventListener('click', (e) => {
-              const theme = e.target.dataset.theme;
-              
-              // Update active class
-              themeBtns.forEach(b => b.classList.remove('active'));
-              e.target.classList.add('active');
-              
-              // Apply theme
-              if (theme === 'dark') {
-                  document.documentElement.setAttribute('data-theme', 'dark');
-              } else {
-                  document.documentElement.removeAttribute('data-theme');
-              }
-              
-              localStorage.setItem('mf-theme', theme);
-          });
+    // ── Panel open / close ──────────────────────────────────
+    if (panelFab && panel) {
+      panelFab.addEventListener('click', () => {
+        panel.classList.toggle('active');
       });
+    }
 
-      // Language Toggle
-      const langSelect = document.getElementById('mf-lang-select');
-      if (langSelect) {
-          // Pre-select current language if available
-          const currentLang = localStorage.getItem('mf-lang');
-          if (currentLang) {
-              langSelect.value = currentLang;
-          }
+    if (panelClose && panel) {
+      panelClose.addEventListener('click', () => {
+        panel.classList.remove('active');
+      });
+    }
 
-          langSelect.addEventListener('change', async (e) => {
-              const lang = e.target.value;
-              localStorage.setItem('mf-lang', lang);
-              document.documentElement.setAttribute('lang', lang);
-              
-              if (lang !== 'en') {
-                  try {
-                      const response = await fetch(`assets/locales/${lang}.json`);
-                      const translations = await response.json();
-                      
-                      document.querySelectorAll('[data-i18n]').forEach(el => {
-                          const key = el.getAttribute('data-i18n');
-                          if (translations[key]) {
-                              el.textContent = translations[key];
-                          }
-                      });
-                  } catch (error) {
-                      console.error('Error loading translations:', error);
-                  }
-              } else {
-                  try {
-                      const response = await fetch(`assets/locales/en.json`);
-                      const translations = await response.json();
-                      
-                      document.querySelectorAll('[data-i18n]').forEach(el => {
-                          const key = el.getAttribute('data-i18n');
-                          if (translations[key]) {
-                              el.textContent = translations[key];
-                          }
-                      });
-                  } catch (error) {
-                      console.error('Error loading en translations:', error);
-                  }
-              }
-          });
+    // ── Theme Toggle ────────────────────────────────────────
+    const themeBtns = document.querySelectorAll('.theme-btn');
+    const savedTheme = localStorage.getItem('mf-theme') || 'light';
+
+    // Sync active state with stored preference
+    themeBtns.forEach(btn => {
+      if (btn.dataset.theme === savedTheme) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    themeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.dataset.theme;
+
+        themeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+
+        localStorage.setItem('mf-theme', theme);
+      });
+    });
+
+    // ── Language Toggle ─────────────────────────────────────
+    const langSelect = document.getElementById('mf-lang-select');
+    if (langSelect) {
+      // Pre-select current language if stored
+      const currentLang = localStorage.getItem('mf-lang') || 'en';
+      langSelect.value = currentLang;
+
+      // Apply stored language on page load (non-English pages)
+      if (currentLang !== 'en') {
+        applyTranslations(currentLang);
       }
 
-      // Region Toggle
-      const regionSelect = document.getElementById('mf-region-select');
-      if (regionSelect) {
-          const currentRegion = localStorage.getItem('mf-region');
-          if (currentRegion) {
-              regionSelect.value = currentRegion;
-          }
+      langSelect.addEventListener('change', async (e) => {
+        const lang = e.target.value;
+        localStorage.setItem('mf-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
 
-          regionSelect.addEventListener('change', (e) => {
-              const region = e.target.value;
-              localStorage.setItem('mf-region', region);
-              
-              const regionData = {
-                  'IN': { curr: '₹', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'US': { curr: '$', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'GB': { curr: '£', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'EU': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'DE': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'ES': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'FR': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'IT': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'NL': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
-                  'PT': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' }
-              };
-              
-              const data = regionData[region] || regionData['IN'];
-              
-              document.querySelectorAll('[data-region-currency]').forEach(el => {
-                  el.textContent = data.curr;
-              });
-              
-              document.querySelectorAll('[data-region-donate]').forEach(el => {
-                  el.href = data.donate;
-              });
-          });
-      }
+        // Auto-close panel after selection
+        if (panel) {
+          panel.classList.remove('active');
+        }
+
+        await applyTranslations(lang);
+      });
+    }
   });
+
+  // ── Translation helper ────────────────────────────────────
+  async function applyTranslations(lang) {
+    const localeLang = (lang && lang !== 'en') ? lang : 'en';
+    try {
+      // Build base path from current page URL so it works from any depth
+      const base = document.querySelector('base')?.href || '';
+      const localeUrl = base
+        ? new URL(`assets/locales/${localeLang}.json`, base).href
+        : `assets/locales/${localeLang}.json`;
+
+      const response = await fetch(localeUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const translations = await response.json();
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          el.textContent = translations[key];
+        }
+      });
+    } catch (error) {
+      console.warn(`Could not load translations for "${localeLang}":`, error);
+    }
+  }
 
 })();
