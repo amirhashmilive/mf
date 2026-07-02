@@ -181,4 +181,125 @@
     });
   };
 
+  // ── Floating Control Panel Logic ─────────────
+  document.addEventListener('DOMContentLoaded', () => {
+      const panelFab = document.getElementById('mf-controls-fab');
+      const panel = document.getElementById('mf-controls-panel');
+      const panelClose = document.getElementById('mf-panel-close');
+
+      if (panelFab && panel && panelClose) {
+          panelFab.addEventListener('click', () => {
+              panel.classList.toggle('active');
+          });
+
+          panelClose.addEventListener('click', () => {
+              panel.classList.remove('active');
+          });
+      }
+
+      // Theme Toggle
+      const themeBtns = document.querySelectorAll('.theme-btn');
+      themeBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+              const theme = e.target.dataset.theme;
+              
+              // Update active class
+              themeBtns.forEach(b => b.classList.remove('active'));
+              e.target.classList.add('active');
+              
+              // Apply theme
+              if (theme === 'dark') {
+                  document.documentElement.setAttribute('data-theme', 'dark');
+              } else {
+                  document.documentElement.removeAttribute('data-theme');
+              }
+              
+              localStorage.setItem('mf-theme', theme);
+          });
+      });
+
+      // Language Toggle
+      const langSelect = document.getElementById('mf-lang-select');
+      if (langSelect) {
+          // Pre-select current language if available
+          const currentLang = localStorage.getItem('mf-lang');
+          if (currentLang) {
+              langSelect.value = currentLang;
+          }
+
+          langSelect.addEventListener('change', async (e) => {
+              const lang = e.target.value;
+              localStorage.setItem('mf-lang', lang);
+              document.documentElement.setAttribute('lang', lang);
+              
+              if (lang !== 'en') {
+                  try {
+                      const response = await fetch(`assets/locales/${lang}.json`);
+                      const translations = await response.json();
+                      
+                      document.querySelectorAll('[data-i18n]').forEach(el => {
+                          const key = el.getAttribute('data-i18n');
+                          if (translations[key]) {
+                              el.textContent = translations[key];
+                          }
+                      });
+                  } catch (error) {
+                      console.error('Error loading translations:', error);
+                  }
+              } else {
+                  try {
+                      const response = await fetch(`assets/locales/en.json`);
+                      const translations = await response.json();
+                      
+                      document.querySelectorAll('[data-i18n]').forEach(el => {
+                          const key = el.getAttribute('data-i18n');
+                          if (translations[key]) {
+                              el.textContent = translations[key];
+                          }
+                      });
+                  } catch (error) {
+                      console.error('Error loading en translations:', error);
+                  }
+              }
+          });
+      }
+
+      // Region Toggle
+      const regionSelect = document.getElementById('mf-region-select');
+      if (regionSelect) {
+          const currentRegion = localStorage.getItem('mf-region');
+          if (currentRegion) {
+              regionSelect.value = currentRegion;
+          }
+
+          regionSelect.addEventListener('change', (e) => {
+              const region = e.target.value;
+              localStorage.setItem('mf-region', region);
+              
+              const regionData = {
+                  'IN': { curr: '₹', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'US': { curr: '$', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'GB': { curr: '£', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'EU': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'DE': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'ES': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'FR': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'IT': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'NL': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' },
+                  'PT': { curr: '€', donate: 'https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view' }
+              };
+              
+              const data = regionData[region] || regionData['IN'];
+              
+              document.querySelectorAll('[data-region-currency]').forEach(el => {
+                  el.textContent = data.curr;
+              });
+              
+              document.querySelectorAll('[data-region-donate]').forEach(el => {
+                  el.href = data.donate;
+              });
+          });
+      }
+  });
+
 })();
