@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,16 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
-<script>
-  (function(){
-    var t=localStorage.getItem('mf-theme');
-    if(t)document.documentElement.setAttribute('data-theme',t);
-    else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');
-    var l=localStorage.getItem('mf-lang');
-    if(l)document.documentElement.setAttribute('lang',l);
-  })();
-</script>
-<link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 
         param($m)
@@ -25,7 +15,7 @@
         <!-- Page Header -->
                 <section class="hero" style="background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('images/hero-home.png') center/cover; padding: 80px 0 60px;">
             <div class="container fade-in">
-                <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif;">Meer Foundation Â· Est. 2011 Â· Chhattisgarh</p>
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif;">Meer Foundation · Est. 2011 · Chhattisgarh</p>
                 <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 20px; font-weight: 800; text-transform: uppercase; color: white;">Evidence-Based Development</h1>
                 <p style="font-size: 1.1rem; max-width: 800px; line-height: 1.8; opacity: 0.95; margin-bottom: 30px;">Driving change through research, training, and data.</p>
                 <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
@@ -45,8 +35,8 @@
                         <h2 class="card-title">Rivers of Chhattisgarh</h2>
                         <p>A comprehensive research project mapping the health of tributaries across Chhattisgarh. We document water quality, riparian biodiversity, and the socio-economic impact of river health on rural populations.</p>
                         <ul style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
-                            <li>â€¢ Periodic Water Quality Index (WQI) reports</li>
-                            <li>â€¢ Biodiversity mapping of river banks</li>
+                            <li>• Periodic Water Quality Index (WQI) reports</li>
+                            <li>• Biodiversity mapping of river banks</li>
                         </ul>
                     </div>
                 </div>
@@ -58,8 +48,8 @@
                         <h2 class="card-title">EduSuTo Courses</h2>
                         <p>Education for Sustainable Transformation (EduSuTo). We develop specialized training modules for rural youth and community leaders on sustainable living, eco-entrepreneurship, and water management.</p>
                          <ul style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
-                            <li>â€¢ Certification programs for youth</li>
-                            <li>â€¢ Skill development workshops</li>
+                            <li>• Certification programs for youth</li>
+                            <li>• Skill development workshops</li>
                         </ul>
                     </div>
                 </div>
@@ -115,46 +105,8 @@
             </div>
         </div>
     </footer>
-<!-- Floating Control Panel -->
-<button id="mf-controls-fab" class="mf-controls-fab" aria-label="Site controls">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
-</button>
-
-<div id="mf-controls-panel" class="mf-controls-panel" role="dialog" aria-modal="true">
-  <div class="panel-header">
-    <h3 data-i18n="controls.title">Site Controls</h3>
-    <button id="mf-panel-close" class="panel-close-btn">&times;</button>
-  </div>
-  
-  <div class="panel-section">
-    <span class="panel-section-title" data-i18n="controls.language">Language</span>
-    <select id="mf-lang-select" class="panel-select">
-      <option value="en">English</option>
-      <option value="hi">हिन्दी (Hindustani)</option>
-      <option value="de">Deutsch</option>
-      <option value="es">Español</option>
-      <option value="fr">Français</option>
-      <option value="it">Italiano</option>
-      <option value="nl">Nederlands</option>
-      <option value="pt">Português</option>
-    </select>
-  </div>
-  
-  <div class="panel-section">
-    <span class="panel-section-title" data-i18n="controls.theme">Theme</span>
-    <div class="theme-toggle-wrapper">
-      <button class="theme-btn active" data-theme="light" data-i18n="controls.theme.light">Light</button>
-      <button class="theme-btn" data-theme="dark" data-i18n="controls.theme.dark">Dark</button>
-    </div>
-  </div>
-  
-  
-</div>
 </body>
 </html>
-
-
-
 
 
 

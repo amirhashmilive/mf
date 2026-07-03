@@ -6,25 +6,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/)
 
 ---
 
-## [2026-07-02] — Site Controls: Dark Mode, Language Fix, Country Removed
-
-### Fixed
-- **Dark Mode** — Complete dark theme overrides in `assets/css/dark-mode.css` covering all components (header, nav, hero, cards, footer, forms, tables, tabs, accordions, Site Controls panel). Theme preference persists via localStorage with no flash-of-wrong-theme.
-- **Language Switching** — Fixed mojibake (garbled text) for Hindi (हिन्दी), Español, Français, Português in all language selector dropdowns across 78 HTML pages. Cause: UTF-8 bytes double-encoded due to wrong charset in PowerShell write operations.
-- **Auto-close Panel** — Site Controls panel now auto-closes after a language is selected.
-- **Theme Init** — Dark/light button active state now correctly reflects stored preference on page load.
-
-### Removed
-- **Country/Region Selector** — Removed the Country/Region dropdown from the Site Controls panel across all 80+ HTML pages.
-
-### Changed
-- `assets/js/core.js` — Complete rewrite of floating panel logic: theme init, language switching with auto-close, removed Region handler.
-- `assets/css/dark-mode.css` — Replaced minimal 35-line stub with 270-line comprehensive dark theme.
-- All `*.html` pages — Removed `<div class="panel-section">` Region block; fixed encoding of language option labels.
-
----
-
-
+## [2026-06-27] — Project Memory & Backup System
 
 ### Added
 - `.agents/AGENTS.md` — AI agent instructions and project context
