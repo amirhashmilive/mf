@@ -39,6 +39,7 @@
 - Follow the design tokens in `assets/css/style.css` `:root { }` block
 - Use semantic HTML5 elements (`<section>`, `<article>`, `<nav>`, `<header>`, `<footer>`)
 - Maintain accessibility: `aria-label`, `role` attributes, `:focus-visible` styles
+- Enforce Image Standards: `.webp` only, max 50 chars, lowercase, no special chars
 - Update `CHANGELOG.md` after every change
 - Test on mobile viewport (375px) before committing
 

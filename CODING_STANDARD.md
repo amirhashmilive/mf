@@ -197,9 +197,21 @@ document.getElementById('my-element').addEventListener('click', handler);
 | HTML pages | `kebab-case`    | `peer-review.html`         |
 | CSS files  | `kebab-case`    | `style.css`, `premium.css` |
 | JS files   | `kebab-case`    | `core.js`, `components.js` |
-| Images     | `kebab-case`    | `hero-bg.png`              |
+| Images     | `kebab-case`    | `hero-bg.webp` (max 50 char)|
 | Data files | `kebab-case`    | `papers.json`              |
 | Docs       | `UPPER_CASE`    | `README.md`, `CHANGELOG.md`|
+
+---
+
+## Image Standards
+
+1. **Format**: All images MUST be in `.webp` format (except `favicon.ico` and `favicon.svg`).
+2. **Naming**: 
+   - Maximum 50 characters in length.
+   - All lowercase letters.
+   - No special characters (only `[a-z]`, `[0-9]`, and `-`).
+   - Example: `hero-banner.webp`, `bolti-nadi.webp`.
+3. **Enforcement**: Image format and naming are checked by a Git pre-commit hook (`scripts/enforce-image-rules.py`).
 
 ---
 

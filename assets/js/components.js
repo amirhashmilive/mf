@@ -14,7 +14,7 @@
 <header class="site-header" id="site-header" role="banner">
   <div class="container header-inner">
     <a href="/" class="brand" aria-label="Meer Foundation Home">
-      <img src="assets/images/logo/logo-horizontal.png" alt="Meer Foundation" style="height: 50px; width: auto;">
+      <img src="assets/images/logo/logo-horizontal.webp" alt="Meer Foundation" style="height: 50px; width: auto;">
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
@@ -139,7 +139,7 @@
       <!-- Brand column -->
       <div class="footer-brand">
         <a href="/" class="brand" style="margin-bottom:16px;" aria-label="Meer Foundation Home">
-          <img src="assets/images/logo/logo-1x1.png" alt="Meer Foundation" style="height: 60px; width: auto; margin-bottom: 10px;">
+          <img src="assets/images/logo/logo-1x1.webp" alt="Meer Foundation" style="height: 60px; width: auto; margin-bottom: 10px;">
           <div class="brand-text">
             <span class="brand-name">Meer Foundation</span>
             <span class="brand-sub">Empowering Communities</span>

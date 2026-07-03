@@ -25,7 +25,7 @@
   ],
   "screenshots": [
     {
-      "src": "assets/images/hero-bg.png",
+      "src": "assets/images/hero-bg.webp",
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide"
