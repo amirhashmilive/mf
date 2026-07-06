@@ -16,6 +16,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/)
 - Converted flat HTML structure to directory-based routing
 - Updated \`assets/js/components.js\` to use root-relative paths for all assets and links
 - Updated \`sitemap.xml\` with new directory-based URLs
+- Implemented HTML \`<meta http-equiv="refresh">\` redirects in 30+ legacy flat `.html` files in root to preserve SEO backlinks
 
 ### Files Modified
 - \`assets/js/components.js\`

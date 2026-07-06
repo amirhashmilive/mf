@@ -2,20 +2,18 @@
 
 ## Current Task
 
-**Website Restructure — Directory-Based URLs**
+**Implement Legacy HTML Meta Redirects**
 
 ### Status: ✅ Complete
 
 ### What Was Done
-- Conducted full audit of existing website
-- Created a flat-to-directory URL restructure map
-- Auto-generated 40+ directory-based \`index.html\` pages (e.g., \`/about/our-story/\`)
-- Updated \`components.js\` navigation to reflect new structure with root-relative paths
-- Generated new \`sitemap.xml\`
+- Mapped 30+ legacy flat HTML files (e.g. \`farmours.html\`) to their new directory-based URLs (e.g. \`/initiatives/farmours/\`).
+- Wrote \`scratch/apply-redirects.js\` to auto-generate HTML `<meta http-equiv="refresh">` tags.
+- Overwrote the legacy `.html` files in the root folder with client-side redirects to preserve SEO and prevent 404s for existing backlinks.
 
 ### Next Steps
-- [ ] Push changes to GitHub
-- [ ] Test the new navigation via GitHub Pages
+- [ ] Push legacy redirects to GitHub
+- [ ] Determine next feature or cleanup task
 
 ---
 
