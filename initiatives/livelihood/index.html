@@ -3,11 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Livelihood — Farmours Initiative | Meer Foundation</title>
-  <meta name="description" content="Farmours — Meer Foundation's indigenous farming systems initiative empowering rural women entrepreneurs with sustainable livelihood in Chhattisgarh.">
+  <title>Livelihood Initiative | Meer Foundation</title>
+  <meta name="description" content="Meer Foundation's Livelihood practice area — Farmours initiative, empowering rural women through SHGs and FPOs in Chhattisgarh.">
   <link rel="canonical" href="https://meerfoundation.co.in/initiatives/livelihood/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .init-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+    .init-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .init-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .init-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .init-card .tag { font-size: 0.8rem; color: #1e40af; font-weight: 600; background: #1e40af10; padding: 4px 10px; border-radius: 100px; display: inline-block; margin-bottom: 12px; }
+    .init-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+    .init-card ul { padding-left: 16px; margin: 0; }
+    .init-card li { font-size: 0.85rem; color: var(--text-3); margin-bottom: 6px; }
+
+    .strategy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px; }
+    .strategy-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .strategy-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .strategy-card h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .strategy-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -16,34 +37,94 @@
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">SDG 1 · SDG 2 · SDG 8</div>
-      <h1 class="section-title">Farmours: Indigenous Farming Systems</h1>
-      <p class="section-subtitle">Transforming traditional village-based farming into a structured, community-owned livelihood model across Chhattisgarh.</p>
+      <div class="section-tag">FPF Pillar: Initiative (I)</div>
+      <h1 class="section-title">Livelihood</h1>
+      <p class="section-subtitle">Move 1 lakh+ rural households from subsistence to enterprise. Empower 12,000+ women farmers through direct market access and collective organisation.</p>
     </div>
-    <div class="grid-2" style="margin-top:50px;">
-      <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:18px;">Meer Foundation's Indigenous Farming Systems (FARMOURS) transforms traditional village-based farming into a structured, community-owned livelihood model. Implemented in the Nagri forest region of Dhamtari district, this initiative introduces makhana (fox nut) cultivation as a high-value, sustainable livelihood.</p>
-        <ul style="list-style:none;padding:0;">
-          <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> 100 acres identified; 25 acres in active cultivation (Phase 1)</li>
-          <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> Women SHGs mobilised and trained as primary decision-makers</li>
-          <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> Demonstration pilot plots and market linkages established</li>
-          <li style="display:flex;gap:12px;"><span style="color:#10b981;font-weight:800;">✓</span> Medicinal plant cultivation across 200 acres in Kanker-Narayanpur</li>
-        </ul>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">1L+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Households Reached</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">860+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Women's SHGs</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">3,320</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Crossed ₹2.5L Income</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">18</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Registered FPOs</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Farmours Initiative</h2><p class="section-subtitle">Start with savings groups. Layer on training. Aggregate through FPOs. Lock in 100% women-led governance.</p></div>
+    <div class="init-grid">
+      <div class="init-card reveal">
+        <div class="tag">🌾 SDG 1 — No Poverty</div>
+        <h3>Organic Agriculture</h3>
+        <p>Native seeds, organic inputs, and fair markets. We revive what tribal Chhattisgarh already knew and scale it through SHG discipline.</p>
+        <ul><li>Organic input training</li><li>SRI / SSI cultivation</li><li>Crop-rotation planning</li></ul>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">54+</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">SHGs Formed</div></div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">216+</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">Women Entrepreneurs</div></div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">100</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">Acres Identified</div></div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">200</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">Farmers Trained</div></div>
-        </div>
+      <div class="init-card reveal">
+        <div class="tag">👩🏽 SDG 5 — Gender Equality</div>
+        <h3>Women-led Governance</h3>
+        <p>Every SHG, federation, and FPO under Farmours has a women-led board. This is not a quota — it is the design.</p>
+        <ul><li>Bookkeeping training</li><li>AGM procedures</li><li>Scheme navigation</li></ul>
+      </div>
+      <div class="init-card reveal">
+        <div class="tag">📈 Direct Market Access</div>
+        <h3>Financial Independence</h3>
+        <p>Bypass the middlemen. Sell directly to mandis and processors.</p>
+        <ul><li>Internal low-interest lending</li><li>Peer-guaranteed loans</li><li>7-day member payout</li></ul>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Empowerment Strategies</h2><p class="section-subtitle">How we move households up the economic ladder.</p></div>
+    <div class="strategy-grid">
+      <div class="strategy-card reveal">
+        <h3>💰 Micro-finance & Savings</h3>
+        <p>The foundation of all our livelihood work. Over ₹12.4Cr in cumulative SHG savings. 35 block-level federations created.</p>
+      </div>
+      <div class="strategy-card reveal">
+        <h3>🚜 Agriculture & Organic Farming</h3>
+        <p>Training 12,000+ women farmers in SRI cultivation and organic input production to reduce farming costs.</p>
+      </div>
+      <div class="strategy-card reveal">
+        <h3>🐄 Livestock & Allied Income</h3>
+        <p>Diversifying income streams. Backyard poultry, dairy co-operatives, and fishery in restored rivers.</p>
+      </div>
+      <div class="strategy-card reveal">
+        <h3>🏛️ Governance & Leadership</h3>
+        <p>Ensuring 100% women-led boards. Providing training in bookkeeping, holding AGMs, and navigating government schemes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Livelihood FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">How does a woman join Farmours? <span>+</span></div><div class="faq-answer">She first joins or forms a Self-Help Group (SHG) in her village. Once the SHG shows 6 months of disciplined saving and internal lending, they are inducted into the cluster federation and FPO.</div></div>
+      <div class="faq-item"><div class="faq-question">Why 100% women-led? <span>+</span></div><div class="faq-answer">Data and our own 14 years of experience show that when women control household income, a larger percentage is reinvested in children's education, nutrition, and health.</div></div>
+      <div class="faq-item"><div class="faq-question">Do you provide agricultural loans? <span>+</span></div><div class="faq-answer">We do not provide direct loans. We facilitate bank linkages and train SHGs to manage their own internal lending corpus at low interest rates.</div></div>
+      <div class="faq-item"><div class="faq-question">Can men participate? <span>+</span></div><div class="faq-answer">Men participate in the farming activities, but the FPO shareholding, board seats, and financial decision-making remain strictly with the women members.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Support women's enterprise</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/get-involved/donate/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Donate to Livelihoods</a>
+      <a href="/get-involved/csr-partner/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">Partner via CSR</a>
+    </div>
+  </div>
+</section>
+
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

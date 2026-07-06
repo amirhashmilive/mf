@@ -4,36 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impact Statistics | Meer Foundation</title>
-  <meta name="description" content="Meer Foundation impact statistics: 400K+ lives, 10+ districts, 54+ SHGs, 216+ entrepreneurs, 150+ schools across Chhattisgarh since 2011.">
+  <meta name="description" content="Audited, source-linked impact statistics for Meer Foundation. No estimation, no extrapolation.">
   <link rel="canonical" href="https://meerfoundation.co.in/impact/statistics/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .stat-hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
+    .stat-hero-card { background: var(--bg); border: 2px solid var(--border); border-radius: var(--r-xl); padding: 32px 24px; text-align: center; }
+    .stat-hero-val { font-family: var(--font-serif); font-size: 3rem; color: #1e40af; font-weight: 800; line-height: 1; margin-bottom: 12px; }
+    .stat-hero-label { font-size: 0.9rem; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .sec-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 30px; }
+    .sec-stat-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px; display: flex; align-items: center; gap: 16px; }
+    .sec-stat-val { font-family: var(--font-serif); font-size: 2rem; color: #047857; font-weight: 700; }
+    .sec-stat-label { font-size: 0.85rem; font-weight: 600; color: var(--text-2); }
+
+    .sdg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+    .sdg-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px; }
+    .sdg-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .sdg-num { background: #1e40af; color: #fff; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: 700; font-size: 0.9rem; }
+    .sdg-title { font-weight: 700; color: var(--text-1); }
+    .sdg-desc { font-size: 0.85rem; color: var(--text-2); line-height: 1.5; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Quantified Impact</div><h1 class="section-title">Impact Statistics</h1><p class="section-subtitle">Key metrics from 14+ years of on-ground community development across Chhattisgarh.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Impact Ledger</div>
+      <h1 class="section-title">Audited Statistics</h1>
+      <p class="section-subtitle">Household counts begin at the SHG register, are aggregated at the village level, then at the cluster. No top-down estimation, no extrapolation. Audited. Source-linked.</p>
+    </div>
+    
+    <div class="stat-hero-grid">
+      <div class="stat-hero-card reveal">
+        <div class="stat-hero-val">1L+</div>
+        <div class="stat-hero-label">Households Reached</div>
+      </div>
+      <div class="stat-hero-card reveal">
+        <div class="stat-hero-val">860+</div>
+        <div class="stat-hero-label">Active Women's SHGs</div>
+      </div>
+      <div class="stat-hero-card reveal">
+        <div class="stat-hero-val">12</div>
+        <div class="stat-hero-label">Districts Active</div>
+      </div>
+      <div class="stat-hero-card reveal">
+        <div class="stat-hero-val">90km</div>
+        <div class="stat-hero-label">Sakri River Walked</div>
+      </div>
+      <div class="stat-hero-card reveal">
+        <div class="stat-hero-val">12k+</div>
+        <div class="stat-hero-label">Women Farmers Trained</div>
+      </div>
+      <div class="stat-hero-card reveal">
+        <div class="stat-hero-val">14</div>
+        <div class="stat-hero-label">Years Independently Audited</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;" class="reveal">
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">400K+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Lives Impacted</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">14+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Years of Service</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">10+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Districts Active</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">54+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">SHGs Formed</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">216+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Women Entrepreneurs</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">225+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Youth Trained</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">150+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Schools Reached</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">90KM</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">River Walk (2019)</div></div>
-      <div class="feature-card" style="text-align:center;padding:40px 20px;"><div style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#1e40af;line-height:1;">5K+</div><div style="font-size:0.85rem;color:var(--text-3);font-weight:600;margin-top:8px;">Citizens Mobilized</div></div>
+    <div class="section-header reveal"><h2 class="section-title">Secondary Ledger</h2><p class="section-subtitle">Narrower in scope, but equally rigorous.</p></div>
+    <div class="sec-stat-grid">
+      <div class="sec-stat-card reveal"><div class="sec-stat-val">18</div><div class="sec-stat-label">Registered Women-led FPOs</div></div>
+      <div class="sec-stat-card reveal"><div class="sec-stat-val">3,320+</div><div class="sec-stat-label">Households in lead FPO</div></div>
+      <div class="sec-stat-card reveal"><div class="sec-stat-val">₹2.5L</div><div class="sec-stat-label">Avg. Income (FY25, lead FPO)</div></div>
+      <div class="sec-stat-card reveal"><div class="sec-stat-val">5,000+</div><div class="sec-stat-label">Youth in Heritage Walks</div></div>
+      <div class="sec-stat-card reveal"><div class="sec-stat-val">62</div><div class="sec-stat-label">Learning Centres Adopted</div></div>
+    </div>
+    <div class="reveal mt-4">
+      <p style="font-size:0.85rem;color:var(--text-3);padding:16px;background:var(--bg-2);border-radius:8px;"><strong>On the ₹2.5L figure:</strong> The lead FPO (Sunita's collective, Dhamtari) reported an average household income of ₹2.5 lakh in FY 2024–25 — verified against procurement records and bank deposits. This is a programme-specific outcome, not a state-wide average.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">SDG Alignment</h2><p class="section-subtitle">Every major initiative is mapped to a UN goal.</p></div>
+    <div class="sdg-grid">
+      <div class="sdg-card reveal"><div class="sdg-head"><div class="sdg-num">1</div><div class="sdg-title">No Poverty</div></div><div class="sdg-desc">Moving households from subsistence to enterprise via Farmours FPOs.</div></div>
+      <div class="sdg-card reveal"><div class="sdg-head"><div class="sdg-num">2</div><div class="sdg-title">Zero Hunger</div></div><div class="sdg-desc">Ensuring midday meals at Prayaas centres in Bastar and Kanker.</div></div>
+      <div class="sdg-card reveal"><div class="sdg-head"><div class="sdg-num">3</div><div class="sdg-title">Good Health</div></div><div class="sdg-desc">Yoga Kutumb wellness sessions and 8 emergency response modules.</div></div>
+      <div class="sdg-card reveal"><div class="sdg-head"><div class="sdg-num">4</div><div class="sdg-title">Quality Education</div></div><div class="sdg-desc">128 free CGBSE-aligned study materials via Prayaas.</div></div>
+      <div class="sdg-card reveal"><div class="sdg-head"><div class="sdg-num">5</div><div class="sdg-title">Gender Equality</div></div><div class="sdg-desc">100% women-led boards across all Farmours SHGs and FPOs.</div></div>
+      <div class="sdg-card reveal"><div class="sdg-head"><div class="sdg-num">6</div><div class="sdg-title">Clean Water</div></div><div class="sdg-desc">Restoring 8 priority rivers in Chhattisgarh via Bolti Nadi.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Data FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">What does a '+' suffix mean instead of an exact figure? <span>+</span></div><div class="faq-answer">The '+' suffix means 'at least this many'. We publish the verified floor — currently one lakh-plus households — and update upward as additional village surveys return. We do not extrapolate from a sample.</div></div>
+      <div class="faq-item"><div class="faq-question">How are SHGs counted? <span>+</span></div><div class="faq-answer">Each Self-Help Group is registered in the Farmours SHG ledger with its village, formation date, member list, and savings record. A group is 'active' if it has held a meeting and recorded a savings transaction in the last 90 days.</div></div>
+      <div class="faq-item"><div class="faq-question">What is the difference between 'households reached' and 'households in lead FPO'? <span>+</span></div><div class="faq-answer">'Households reached' (1L+) is the broad count of any household that has participated in any programme. 'Households in lead FPO' (3,320+) is the narrow count of households that are dues-paying members of the lead FPO in Dhamtari.</div></div>
+      <div class="faq-item"><div class="faq-question">Are these numbers independently audited? <span>+</span></div><div class="faq-answer">Internally, every figure passes through three layers. Externally, PwC audited the FY 2023–24 ledger in September 2024, and an academic review by the IIT Bilaspur Development Studies group was completed in February 2025.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Behind every number is a story</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/impact/case-studies/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Read Case Studies</a>
+      <a href="/impact/district-profiles/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">View District Profiles</a>
     </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

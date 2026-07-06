@@ -4,32 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Radio | Meer Foundation</title>
-  <meta name="description" content="Meer Foundation's Community Radio initiative bringing local news, health information, and cultural programming to rural communities in regional languages across Chhattisgarh.">
+  <meta name="description" content="Meer FM 90.4 — the community radio station broadcasting across Dhamtari district, reaching 80+ villages with 14 hours of original programming per week.">
   <link rel="canonical" href="https://meerfoundation.co.in/emerging/community-radio/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .radio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+    .show-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .show-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .show-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+    .show-title { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-1); }
+    .show-time { font-size: 0.85rem; font-weight: 600; color: var(--text-3); background: var(--bg-2); padding: 4px 10px; border-radius: 100px; }
+    .show-host { font-size: 0.85rem; font-weight: 700; color: #1e40af; margin-bottom: 8px; }
+    .show-desc { font-size: 0.95rem; color: var(--text-2); line-height: 1.5; margin-bottom: 20px; }
+    .sdg-badge { font-size: 0.75rem; font-weight: 600; background: var(--bg-2); padding: 4px 10px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); }
+    
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+
+    .live-player { background: #1e40af; color: #fff; border-radius: var(--r-xl); padding: 32px; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 40px; }
+    .freq { font-family: var(--font-serif); font-size: 3rem; font-weight: 800; margin-bottom: 8px; }
+    .live-tag { background: #ef4444; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 100px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Community Media</div><h1 class="section-title">Community Radio</h1><p class="section-subtitle">Grassroots radio programming connecting rural communities with local news, health advisories, and cultural content in regional languages.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Emerging Formats</div>
+      <h1 class="section-title">Meer FM 90.4</h1>
+      <p class="section-subtitle">In villages where newspapers arrive a day late and television signals fade, the radio is on. We don't broadcast at the village; we broadcast with it.</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">80+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Villages Reached</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">6</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Shows per week</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">14h</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Original Weekly Auth</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">4</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Community Reporters</div></div>
+    </div>
+  </div>
 </section>
+
 <section class="section">
-  <div class="container"><div class="grid-2">
-    <div class="reveal"><p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Community Radio Meer is an emerging platform dedicated to amplifying local voices across Chhattisgarh. Broadcasting in Chhattisgarhi, Hindi, and tribal dialects, the station provides health information, agricultural advisories, cultural programming, and civic awareness content designed specifically for rural audiences.</p>
-    <ul style="list-style:none;padding:0;">
-      <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> Local language programming in Chhattisgarhi and tribal dialects</li>
-      <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> Health and nutrition advisories for rural women</li>
-      <li style="display:flex;gap:12px;"><span style="color:#10b981;font-weight:800;">✓</span> Agricultural information and market price updates</li>
-    </ul></div>
-    <div class="reveal reveal-delay-1"><div class="feature-card" style="text-align:center;padding:40px;"><div style="font-size:3rem;margin-bottom:16px;">📻</div><h3>Radio Meer</h3><p style="color:var(--text-3);font-size:0.9rem;margin-top:12px;">Your voice. Your community. Your radio.</p><a href="/contact/" class="btn btn-primary" style="margin-top:24px;">Partner With Us</a></div></div>
-  </div></div>
+  <div class="container">
+    <div class="live-player reveal">
+      <div class="live-tag">Live Broadcast</div>
+      <div class="freq">90.4 FM</div>
+      <p style="font-size:1.1rem;margin-bottom:24px;max-width:500px;">Broadcasting live from Dhamtari. Six weekly shows, two hours of original programming each weekday evening.</p>
+      <a href="#" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Listen Live Stream</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Weekly Schedule</h2><p class="section-subtitle">Every show is anchored by trained community reporters — village youth, SHG members, and educators.</p></div>
+    
+    <div class="radio-grid">
+      <!-- Show 1 -->
+      <div class="show-card reveal" style="border-top:4px solid #15803d;">
+        <div class="show-header">
+          <h3 class="show-title">Bolti Nadi Samvad</h3>
+          <span class="show-time">Mon 19:00</span>
+        </div>
+        <div class="show-host">Hosted by the Bolti Nadi field team</div>
+        <p class="show-desc">River-conservation conversations, interviews with riparian village elders, and check-dam construction updates.</p>
+        <span class="sdg-badge">SDG 6: Clean Water</span>
+      </div>
+      <!-- Show 2 -->
+      <div class="show-card reveal" style="border-top:4px solid #0369a1;">
+        <div class="show-header">
+          <h3 class="show-title">Kisan Ki Baat</h3>
+          <span class="show-time">Tue 18:30</span>
+        </div>
+        <div class="show-host">Hosted by Farmours FPO members</div>
+        <p class="show-desc">A 45-minute show discussing Kharif/Rabi prep, organic transition, mandi rates, and seed-saving techniques.</p>
+        <span class="sdg-badge">SDG 2: Zero Hunger</span>
+      </div>
+      <!-- Show 3 -->
+      <div class="show-card reveal" style="border-top:4px solid #be185d;">
+        <div class="show-header">
+          <h3 class="show-title">Mahila Manch</h3>
+          <span class="show-time">Wed 19:00</span>
+        </div>
+        <div class="show-host">Hosted by SHG secretaries</div>
+        <p class="show-desc">A platform for women's voices — covering financial literacy, SHG management, and rural enterprise.</p>
+        <span class="sdg-badge">SDG 5: Gender Equality</span>
+      </div>
+      <!-- Show 4 -->
+      <div class="show-card reveal" style="border-top:4px solid #b45309;">
+        <div class="show-header">
+          <h3 class="show-title">Bal Sansar</h3>
+          <span class="show-time">Fri 17:00</span>
+        </div>
+        <div class="show-host">Hosted by Prayaas educators</div>
+        <p class="show-desc">Children's storytelling, CGBSE-aligned learning, rhymes, and a weekly child-reporter segment.</p>
+        <span class="sdg-badge">SDG 4: Quality Education</span>
+      </div>
+      <!-- Show 5 -->
+      <div class="show-card reveal" style="border-top:4px solid #047857;">
+        <div class="show-header">
+          <h3 class="show-title">Swasthya Salah</h3>
+          <span class="show-time">Thu 18:30</span>
+        </div>
+        <div class="show-host">Hosted by Yoga Kutumb instructors</div>
+        <p class="show-desc">First-response literacy, non-communicable disease awareness, and preventative wellness tips.</p>
+        <span class="sdg-badge">SDG 3: Good Health</span>
+      </div>
+      <!-- Show 6 -->
+      <div class="show-card reveal" style="border-top:4px solid #4338ca;">
+        <div class="show-header">
+          <h3 class="show-title">Virasat</h3>
+          <span class="show-time">Sat 18:00</span>
+        </div>
+        <div class="show-host">Hosted by the Heritage team</div>
+        <p class="show-desc">Chhattisgarhi folk music, oral histories, and heritage stories — featuring village elders as guests.</p>
+        <span class="sdg-badge">SDG 11: Sustainable Cities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Radio FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">Can I listen to Meer FM outside Dhamtari? <span>+</span></div><div class="faq-answer">Yes. While the FM signal covers Dhamtari district, every show is archived as a podcast within 24 hours of broadcast. Listen on-demand from anywhere in the world.</div></div>
+      <div class="faq-item"><div class="faq-question">How do I become a community reporter? <span>+</span></div><div class="faq-answer">Write to meercare@live.com with your name, village, and a short note. We onboard new reporters every quarter — training includes broadcast basics, interviewing, and audio editing.</div></div>
+      <div class="faq-item"><div class="faq-question">Are Meer FM shows free to air? <span>+</span></div><div class="faq-answer">Yes — 100% free. Any FM receiver within range can pick up Meer FM 90.4. There is no subscription, no paywall, and no commercial advertising.</div></div>
+      <div class="faq-item"><div class="faq-question">Is there commercial advertising on Meer FM? <span>+</span></div><div class="faq-answer">No. We do not carry commercial advertisements. CSR partners who underwrite shows are acknowledged briefly on-air and in podcast notes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Speak Up. Listen In.</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:meercare@live.com" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Volunteer as a reporter</a>
+      <a href="/emerging/field-notes/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">Read Field Notes</a>
+    </div>
+  </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

@@ -4,31 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Gallery | Meer Foundation</title>
-  <meta name="description" content="Visual documentation of Meer Foundation's completed and ongoing projects — field photography and project coverage from across Chhattisgarh.">
+  <meta name="description" content="A visual log of Meer Foundation's fieldwork over the last 12 months across all programmes.">
   <link rel="canonical" href="https://meerfoundation.co.in/impact/project-gallery/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+    .gallery-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+    .gallery-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .gallery-img-placeholder { height: 180px; background: var(--bg-2); display: flex; align-items: center; justify-content: center; color: var(--text-3); font-size: 0.85rem; font-weight: 600; border-bottom: 1px solid var(--border); }
+    .gallery-content { padding: 20px; }
+    .gallery-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 12px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .gallery-title { font-weight: 700; color: var(--text-1); margin-bottom: 6px; font-size: 1.1rem; }
+    .gallery-desc { font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin-bottom: 12px; }
+    .gallery-meta { font-size: 0.8rem; color: var(--text-3); display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 12px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Visual Documentation</div><h1 class="section-title">Project Gallery</h1><p class="section-subtitle">Visual evidence of impact — from river banks to classrooms, from farms to communities across Chhattisgarh.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Impact Ledger</div>
+      <h1 class="section-title">Project Gallery</h1>
+      <p class="section-subtitle">A visual log of fieldwork. Twelve projects from the last twelve months. The log rolls forward — older projects rotate out to the permanent Media Gallery.</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">12</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Projects Logged</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">6</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Programmes</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">12</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Months Rolling</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">8</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Districts</div></div>
+    </div>
+  </div>
 </section>
+
 <section class="section">
-  <div class="container reveal">
-    <div style="background:var(--bg-2);border:2px dashed var(--border);border-radius:var(--r-2xl);padding:80px 40px;text-align:center;">
-      <div style="font-size:3rem;margin-bottom:16px;">🖼️</div>
-      <h3 style="margin-bottom:12px;">Photo Gallery Coming Soon</h3>
-      <p style="color:var(--text-3);max-width:500px;margin:0 auto 24px;">We are curating our visual archive of field photography spanning 14+ years and dozens of community projects. The gallery will be live soon.</p>
-      <a href="/contact/" class="btn btn-primary">Request Media Kit</a>
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Fieldwork Log</h2><p class="section-subtitle">Real field photography is hosted in the Media Gallery (Emerging section). This page uses placeholders for speed.</p></div>
+    
+    <div class="gallery-grid">
+      <!-- Project 1 -->
+      <div class="gallery-card reveal">
+        <div class="gallery-img-placeholder">[ Photo: Farmours Collection ]</div>
+        <div class="gallery-content">
+          <span class="gallery-tag" style="background:#e0f2fe;color:#0369a1;">Farmours</span>
+          <div class="gallery-title">Seed Procurement</div>
+          <div class="gallery-desc">Women's collective sorting native seeds for the upcoming Kharif season.</div>
+          <div class="gallery-meta"><span>Dhamtari</span><span>May 2025</span></div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="gallery-card reveal">
+        <div class="gallery-img-placeholder">[ Photo: Bolti Nadi Collection ]</div>
+        <div class="gallery-content">
+          <span class="gallery-tag" style="background:#dcfce7;color:#15803d;">Bolti Nadi</span>
+          <div class="gallery-title">Sakri River Check Dam</div>
+          <div class="gallery-desc">Community inspection of the new MGNREGA-funded check dam.</div>
+          <div class="gallery-meta"><span>Kawardha</span><span>April 2025</span></div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="gallery-card reveal">
+        <div class="gallery-img-placeholder">[ Photo: Prayaas Collection ]</div>
+        <div class="gallery-content">
+          <span class="gallery-tag" style="background:#fef3c7;color:#b45309;">Prayaas</span>
+          <div class="gallery-title">Material Distribution</div>
+          <div class="gallery-desc">Class 8 students receiving the new bilingual science PDFs printed locally.</div>
+          <div class="gallery-meta"><span>Bastar</span><span>March 2025</span></div>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="gallery-card reveal">
+        <div class="gallery-img-placeholder">[ Photo: Yoga Kutumb Collection ]</div>
+        <div class="gallery-content">
+          <span class="gallery-tag" style="background:#fce7f3;color:#be185d;">Yoga Kutumb</span>
+          <div class="gallery-title">Morning Wellness</div>
+          <div class="gallery-desc">Public session led by newly certified rural instructors.</div>
+          <div class="gallery-meta"><span>Kanker</span><span>Feb 2025</span></div>
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="gallery-card reveal">
+        <div class="gallery-img-placeholder">[ Photo: Heritage Walk Collection ]</div>
+        <div class="gallery-content">
+          <span class="gallery-tag" style="background:#e0e7ff;color:#4338ca;">Heritage Walk</span>
+          <div class="gallery-title">Tribal Museum Visit</div>
+          <div class="gallery-desc">Youth exploring local history on World Heritage Day.</div>
+          <div class="gallery-meta"><span>Raipur</span><span>April 2024</span></div>
+        </div>
+      </div>
+      <!-- Project 6 -->
+      <div class="gallery-card reveal">
+        <div class="gallery-img-placeholder">[ Photo: Tiranga Event ]</div>
+        <div class="gallery-content">
+          <span class="gallery-tag" style="background:#ffedd5;color:#c2410c;">Tiranga</span>
+          <div class="gallery-title">15km Human Chain</div>
+          <div class="gallery-desc">Record-breaking continuous human chain for local heritage awareness.</div>
+          <div class="gallery-meta"><span>Raipur</span><span>August 2019</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Gallery FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">Why does this page use placeholders instead of photographs? <span>+</span></div><div class="faq-answer">Because the Project Gallery is a refreshable log, not a permanent archive. Real field photographs are processed, captioned, and licensed (CC-BY 4.0) before they enter the Media Gallery under the Emerging section. The placeholders allow this log to refresh rapidly.</div></div>
+      <div class="faq-item"><div class="faq-question">How often is the Project Gallery refreshed? <span>+</span></div><div class="faq-answer">Monthly. At the start of each month, the previous month's fieldwork is added and the oldest projects (older than 12 months) rotate out into the Media Gallery archive.</div></div>
+      <div class="faq-item"><div class="faq-question">Can I use a project's photograph in my news article? <span>+</span></div><div class="faq-answer">Yes — but pull from the Media Gallery, not from this page. The Media Gallery hosts the licensed photographs, all CC-BY 4.0. Use them with attribution to 'Meer Foundation, Dhamtari, Chhattisgarh.'</div></div>
+      <div class="faq-item"><div class="faq-question">Are the project descriptions verbatim from field logs? <span>+</span></div><div class="faq-answer">They are editorial summaries written from field logs. We do not publish raw field logs directly because they often contain household-level details that require consent to publish.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Want the full photography archive?</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/emerging/media-gallery/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Open Media Gallery</a>
+      <a href="/impact/case-studies/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">Read Case Studies</a>
     </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

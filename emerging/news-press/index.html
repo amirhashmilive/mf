@@ -4,31 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News & Press | Meer Foundation</title>
-  <meta name="description" content="Meer Foundation in the news — press releases, media coverage, and news stories featuring our community work across Chhattisgarh.">
+  <meta name="description" content="Media coverage of Meer Foundation's work across Chhattisgarh, official press releases, and a dedicated press desk.">
   <link rel="canonical" href="https://meerfoundation.co.in/emerging/news-press/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .news-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+    @media (min-width: 768px) { .news-grid { grid-template-columns: 1fr 1fr; } }
+    .news-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px; transition: transform 0.2s, box-shadow 0.2s; }
+    .news-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .news-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .news-outlet { font-weight: 700; color: #1e40af; font-size: 0.95rem; }
+    .news-date { font-size: 0.85rem; color: var(--text-3); font-weight: 600; }
+    .news-title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-1); margin-bottom: 12px; line-height: 1.4; }
+    .news-desc { font-size: 0.95rem; color: var(--text-2); line-height: 1.6; margin-bottom: 20px; }
+    .news-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 8px; }
+
+    .press-release-card { background: var(--bg-2); border-left: 4px solid #1e40af; border-radius: var(--r-md); padding: 20px; margin-bottom: 16px; }
+    .pr-date { font-size: 0.85rem; font-weight: 700; color: var(--text-3); margin-bottom: 8px; }
+    .pr-title { font-weight: 700; color: var(--text-1); font-size: 1.1rem; margin-bottom: 8px; }
+    .pr-desc { font-size: 0.95rem; color: var(--text-2); margin-bottom: 16px; }
+
+    .press-desk { background: #1e40af; color: #fff; border-radius: var(--r-xl); padding: 32px; display: grid; gap: 24px; }
+    @media (min-width: 768px) { .press-desk { grid-template-columns: 1fr 1fr; } }
+    .desk-item h3 { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .desk-item p, .desk-item a { font-size: 1.2rem; font-weight: 700; color: #fff; text-decoration: none; }
+    .desk-item a:hover { text-decoration: underline; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Media Coverage</div><h1 class="section-title">News &amp; Press</h1><p class="section-subtitle">Meer Foundation in the media — coverage, press releases, and news stories about our work across Chhattisgarh.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Emerging Formats</div>
+      <h1 class="section-title">News &amp; Press</h1>
+      <p class="section-subtitle">Media coverage of our work across Chhattisgarh, official press releases, and a dedicated press desk for journalists with a one-day SLA.</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">8</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Articles Archived</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">8</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Outlets Covered</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">4</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Press Releases</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">1 Day</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Response SLA</div></div>
+    </div>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <div class="grid-3">
-      <div class="paper-card reveal"><div class="hero-card-badge">River Conservation</div><h4 style="margin:12px 0;">Bolti Nadi Documentary Screened in 50+ Countries</h4><p style="font-size:.85rem;color:var(--text-3);">The Sakri River Walk documentary brought global attention to water conservation challenges in Chhattisgarh.</p></div>
-      <div class="paper-card reveal reveal-delay-1"><div class="hero-card-badge">World Record</div><h4 style="margin:12px 0;">Tiranga World Record — Independence Day 2019</h4><p style="font-size:.85rem;color:var(--text-3);">Meer Foundation organized a 15km Tiranga rally in Raipur, setting a world record for national pride celebration.</p></div>
-      <div class="paper-card reveal reveal-delay-2"><div class="hero-card-badge">Education</div><h4 style="margin:12px 0;">Smart Classrooms Transformed Rural Learning</h4><p style="font-size:.85rem;color:var(--text-3);">150+ government schools upgraded with digital learning tools, impacting 34.6 lakh students across Chhattisgarh.</p></div>
+    <div class="section-header reveal"><h2 class="section-title">Media Coverage</h2><p class="section-subtitle">A deliberate mix of national English and regional Hindi press.</p></div>
+    
+    <div class="news-grid">
+      <!-- Coverage 1 -->
+      <div class="news-card reveal" style="border-top:4px solid #1e40af;">
+        <div class="news-meta"><span class="news-outlet">The Hindu</span><span class="news-date">12 Aug 2019</span></div>
+        <h3 class="news-title">Meri Jaan Tiranga Hai sets human chain record</h3>
+        <p class="news-desc">Coverage of the 15-km continuous human chain in Raipur organised by Meer Foundation, entering the Limca Book of Records.</p>
+        <div><span class="news-badge" style="background:#e0e7ff;color:#4338ca;">Tiranga</span><a href="#" style="font-size:0.85rem;font-weight:600;color:#1e40af;">Read Article &rarr;</a></div>
+      </div>
+      <!-- Coverage 2 -->
+      <div class="news-card reveal" style="border-top:4px solid #047857;">
+        <div class="news-meta"><span class="news-outlet">Patrika</span><span class="news-date">20 Apr 2023</span></div>
+        <h3 class="news-title">Dhamtari NGO marks World Heritage Day</h3>
+        <p class="news-desc">Annual Social Heritage Walk coverage featuring student participation and heritage site visits across Dhamtari.</p>
+        <div><span class="news-badge" style="background:#e0e7ff;color:#4338ca;">Heritage</span><a href="#" style="font-size:0.85rem;font-weight:600;color:#1e40af;">Read Article &rarr;</a></div>
+      </div>
+      <!-- Coverage 3 -->
+      <div class="news-card reveal" style="border-top:4px solid #1e40af;">
+        <div class="news-meta"><span class="news-outlet">Dainik Bhaskar</span><span class="news-date">05 Jun 2024</span></div>
+        <h3 class="news-title">Bolti Nadi team completes 90-km Sakri River expedition</h3>
+        <p class="news-desc">Five-year retrospective on the Sakri River Walk and the policy outcomes it triggered across 12 villages.</p>
+        <div><span class="news-badge" style="background:#dcfce7;color:#15803d;">Bolti Nadi</span><a href="#" style="font-size:0.85rem;font-weight:600;color:#1e40af;">Read Article &rarr;</a></div>
+      </div>
+      <!-- Coverage 4 -->
+      <div class="news-card reveal" style="border-top:4px solid #b45309;">
+        <div class="news-meta"><span class="news-outlet">Scroll.in</span><span class="news-date">10 Mar 2026</span></div>
+        <h3 class="news-title">Rural research gets its own open-access journal</h3>
+        <p class="news-desc">Coverage of the IJMEER launch — the quarterly multidisciplinary journal focusing exclusively on rural Chhattisgarh.</p>
+        <div><span class="news-badge" style="background:#fef3c7;color:#b45309;">Research</span><a href="#" style="font-size:0.85rem;font-weight:600;color:#1e40af;">Read Article &rarr;</a></div>
+      </div>
     </div>
-    <div style="text-align:center;margin-top:40px;" class="reveal"><a href="mailto:info@meerfoundation.co.in" class="btn btn-primary">Press Enquiries</a></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Press Releases</h2><p class="section-subtitle">Official statements from the foundation. Each is the authoritative source.</p></div>
+    
+    <div class="reveal mt-4">
+      <div class="press-release-card">
+        <div class="pr-date">March 2026</div>
+        <div class="pr-title">Meer Foundation Launches IJMEER Open-Access Journal</div>
+        <div class="pr-desc">Announcing the inaugural issue of the International Journal of Multidisciplinary Educational & Empirical Research.</div>
+        <a href="#" class="btn-submit" style="padding:6px 12px;font-size:0.8rem;background:#fff;color:#1e40af;border:1px solid var(--border);">Download PDF</a>
+      </div>
+      <div class="press-release-card">
+        <div class="pr-date">October 2025</div>
+        <div class="pr-title">Farmours Collective Crosses 12,000 Trained Farmers</div>
+        <div class="pr-desc">End-of-year milestone for the agricultural cooperative incubation programme across five districts.</div>
+        <a href="#" class="btn-submit" style="padding:6px 12px;font-size:0.8rem;background:#fff;color:#1e40af;border:1px solid var(--border);">Download PDF</a>
+      </div>
+      <div class="press-release-card">
+        <div class="pr-date">August 2024</div>
+        <div class="pr-title">PwC Completes Independent Audit of Impact Ledger</div>
+        <div class="pr-desc">Publication of the external audit verifying the 1L+ household reach and 860+ active SHGs metric.</div>
+        <a href="#" class="btn-submit" style="padding:6px 12px;font-size:0.8rem;background:#fff;color:#1e40af;border:1px solid var(--border);">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="press-desk reveal">
+      <div>
+        <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:12px;">Press Desk</h2>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.8);line-height:1.6;">For interviews, statements, site visits, and embargoed briefings — we commit to a one-working-day response time on every press enquiry.</p>
+      </div>
+      <div>
+        <div class="desk-item" style="margin-bottom:20px;">
+          <h3>Email</h3>
+          <a href="mailto:meercare@live.com">meercare@live.com</a>
+        </div>
+        <div class="desk-item">
+          <h3>Phone</h3>
+          <a href="tel:+919826121177">+91 98261 21177</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Press FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">How do I request an interview with the founder? <span>+</span></div><div class="faq-answer">Write to meercare@live.com with the outlet, angle, and deadline. The founder is available for interview on 48 hours' notice. Phone interviews can often be arranged faster.</div></div>
+      <div class="faq-item"><div class="faq-question">Can I visit a project site? <span>+</span></div><div class="faq-answer">Yes. Site visits can be arranged across eight Chhattisgarh districts with 48 hours' notice. Write to us with the site you'd like to visit and preferred dates. We handle logistics.</div></div>
+      <div class="faq-item"><div class="faq-question">Can I use gallery photographs in my article? <span>+</span></div><div class="faq-answer">Yes — every photograph in our Media Gallery is CC-BY 4.0. Use it freely for editorial purposes with attribution to Meer Foundation, Dhamtari.</div></div>
+      <div class="faq-item"><div class="faq-question">Do you charge for press access? <span>+</span></div><div class="faq-answer">No. Press access — interviews, site visits, embargoed briefings — is always free for working journalists. We do not accept payment for placement.</div></div>
+      <div class="faq-item"><div class="faq-question">How do I get on the press release distribution list? <span>+</span></div><div class="faq-answer">Write to meercare@live.com with 'Press list — add' in the subject line, and your outlet and contact details in the body.</div></div>
+    </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

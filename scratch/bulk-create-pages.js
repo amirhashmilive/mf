@@ -612,7 +612,7 @@ const pages = [
   <div class="container">
     <div class="grid-2">
       <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Meer Foundation's CSR research builds on the Penta-Alignment Model, providing corporations with evidence-based frameworks to align their CSR investments with genuine community need. This research directly informs our role as a CSR implementing agency in Chhattisgarh.</p>
+        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Meer Foundation's CSR research builds on the Five Pillars Framework, providing corporations with evidence-based frameworks to align their CSR investments with genuine community need. This research directly informs our role as a CSR implementing agency in Chhattisgarh.</p>
         <p style="color:var(--text-2);line-height:1.8;">Founder Amir Hashmi's PhD research at Kabindra Tagore University focuses specifically on CSR communication and community development — feeding cutting-edge academic insight directly into our on-ground programmes.</p>
         <a href="/get-involved/csr-partner/" class="btn btn-primary" style="margin-top:30px;">Become a CSR Partner</a>
       </div>
@@ -621,7 +621,7 @@ const pages = [
           <h3 style="margin-bottom:20px;">Research Focus Areas</h3>
           <ul style="list-style:none;padding:0;">
             <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> CSR Communication Effectiveness in Rural India</li>
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Penta-Alignment Model Application in Corporate Programmes</li>
+            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Five Pillars Framework Application in Corporate Programmes</li>
             <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Community Development Indicators and Measurement</li>
             <li style="display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Environmental CSR: River Conservation Policy Impact</li>
           </ul>
@@ -1001,7 +1001,7 @@ const pages = [
   <div class="container">
     <div class="grid-2">
       <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">As a CSR partner, your company gains a credible, experienced implementing agency that designs evidence-based programmes, executes with community sensitivity, and reports with full transparency under the Penta-Alignment Framework.</p>
+        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">As a CSR partner, your company gains a credible, experienced implementing agency that designs evidence-based programmes, executes with community sensitivity, and reports with full transparency under the Five Pillars Framework Framework.</p>
         <div class="grid-2">
           <div class="feature-card" style="padding:20px;"><h5 style="color:#1e40af;margin-bottom:8px;">Programme Design</h5><p style="font-size:.85rem;color:var(--text-3);">Need assessment, strategy, and intervention design aligned to company CSR policy.</p></div>
           <div class="feature-card" style="padding:20px;"><h5 style="color:#1e40af;margin-bottom:8px;">Implementation</h5><p style="font-size:.85rem;color:var(--text-3);">On-ground execution with community mobilization and government coordination.</p></div>

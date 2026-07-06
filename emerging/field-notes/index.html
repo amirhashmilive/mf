@@ -3,31 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Field Notes Blog | Meer Foundation</title>
-  <meta name="description" content="Field Notes — first-hand accounts, reflections, and learnings from Meer Foundation's team members working on the ground across rural Chhattisgarh.">
+  <title>Field Notes | Meer Foundation</title>
+  <meta name="description" content="Field Notes from Meer Foundation. One new post every week, published on Friday morning IST. Subscribe via RSS.">
   <link rel="canonical" href="https://meerfoundation.co.in/emerging/field-notes/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .notes-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
+    @media (min-width: 768px) { .notes-grid { grid-template-columns: 1fr 1fr; } }
+    .note-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+    .note-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .note-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; color: var(--text-3); font-weight: 600; margin-bottom: 12px; }
+    .note-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--text-1); margin-bottom: 12px; line-height: 1.3; }
+    .note-excerpt { font-size: 0.95rem; color: var(--text-2); line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
+    .note-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .note-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px; background: var(--bg-2); color: var(--text-2); border: 1px solid var(--border); }
+
+    .rss-box { background: #fef3c7; border: 1px solid #f59e0b; border-radius: var(--r-lg); padding: 24px; display: flex; flex-direction: column; gap: 16px; margin-top: 40px; align-items: flex-start; }
+    @media (min-width: 768px) { .rss-box { flex-direction: row; align-items: center; justify-content: space-between; } }
+    .rss-text { color: #92400e; font-size: 0.95rem; line-height: 1.5; max-width: 600px; }
+    .rss-link { font-family: monospace; font-size: 0.85rem; font-weight: 600; background: rgba(255,255,255,0.5); padding: 4px 8px; border-radius: 4px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">From the Ground</div><h1 class="section-title">Field Notes Blog</h1><p class="section-subtitle">First-hand accounts, reflections, and learnings from our team working across rural Chhattisgarh.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Emerging Formats</div>
+      <h1 class="section-title">Field Notes</h1>
+      <p class="section-subtitle">Stories from the ground. Every post is written by the team that did the work — no ghost-writing, no PR filters.</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">52</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Posts / Year Target</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">7m</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Average Read Time</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">Fri</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Publish Day</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">RSS</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Delivery</div></div>
+    </div>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <div class="grid-2">
-      <div class="paper-card reveal"><div class="hero-card-badge">River Walk</div><h4 style="margin:12px 0;">90km on Foot: What the Sakri River Taught Us</h4><p style="font-size:.85rem;color:var(--text-3);">A reflection on four days walking alongside the Sakri — its beauty, its scars, and the communities that depend on it.</p><div style="margin-top:16px;color:#1e40af;font-weight:700;font-size:0.85rem;">Read More →</div></div>
-      <div class="paper-card reveal reveal-delay-1"><div class="hero-card-badge">Farming</div><h4 style="margin:12px 0;">From Forest to Market: The Makhana Journey</h4><p style="font-size:.85rem;color:var(--text-3);">How women farmers in Dhamtari turned a traditional forest food into a sustainable income source through the Farmours initiative.</p><div style="margin-top:16px;color:#1e40af;font-weight:700;font-size:0.85rem;">Read More →</div></div>
+    <div class="section-header reveal"><h2 class="section-title">Featured Note</h2></div>
+    
+    <div class="note-card reveal" style="border-top:4px solid #1e40af; margin-top: 24px;">
+      <div class="note-tags">
+        <span class="note-tag" style="background:#dcfce7;color:#15803d;border-color:#bbf7d0;">Bolti Nadi</span>
+      </div>
+      <h3 class="note-title" style="font-size: 2rem;">Three weeks on the riverbank</h3>
+      <div class="note-meta"><span>By Field Team</span><span>&bull;</span><span>07 Jun 2026</span><span>&bull;</span><span>7 min read</span></div>
+      <p class="note-excerpt" style="font-size: 1.1rem;">Three weeks on the riverbank taught us more about declining flow than any satellite image could. Here are the field observations that didn't make it into the formal report — the texture of silt, the smell of stagnant pools, the conversations with farmers whose wells had run dry.</p>
+      <div><a href="#" style="font-weight:700;color:#1e40af;">Read Note &rarr;</a></div>
     </div>
-    <div style="text-align:center;margin-top:40px;" class="reveal"><p style="color:var(--text-3);">More field notes coming soon. <a href="/contact/" style="color:#1e40af;font-weight:700;">Subscribe for updates</a>.</p></div>
+
+    <div class="rss-box reveal">
+      <div class="rss-text">
+        <div style="font-weight:800;font-size:1.1rem;margin-bottom:8px;color:#b45309;">Subscribe via RSS</div>
+        Field Notes publishes every Friday. Add <span class="rss-link">meerfoundation.org/emerging/field-notes/rss.xml</span> to your newsreader (Feedly, Inoreader, NetNewsWire). New posts arrive every Friday morning IST — no newsletter, no tracking, no inbox clutter.
+      </div>
+      <a href="/emerging/field-notes/rss.xml" class="btn-submit" style="background:#b45309;color:#fff;border:none;white-space:nowrap;">Copy RSS URL</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Archive</h2></div>
+    
+    <div class="notes-grid">
+      <!-- Post 2 -->
+      <div class="note-card reveal">
+        <div class="note-tags"><span class="note-tag">Farmours</span><span class="note-tag">Women</span></div>
+        <h3 class="note-title">When the SHG becomes the gram sabha</h3>
+        <div class="note-meta"><span>By Field Team</span><span>&bull;</span><span>28 May 2026</span><span>&bull;</span><span>6 min read</span></div>
+        <p class="note-excerpt">How a women's self-help group took over the proceedings of a village meeting, and why economic agency precedes political agency in rural spaces.</p>
+        <div><a href="#" style="font-weight:700;color:#1e40af;">Read Note &rarr;</a></div>
+      </div>
+      
+      <!-- Post 3 -->
+      <div class="note-card reveal">
+        <div class="note-tags"><span class="note-tag">Yoga Kutumb</span></div>
+        <h3 class="note-title">Yoga Kutumb: 5,000 Mats</h3>
+        <div class="note-meta"><span>By Instructors</span><span>&bull;</span><span>15 May 2026</span><span>&bull;</span><span>5 min read</span></div>
+        <p class="note-excerpt">Behind the scenes of coordinating 5,000 participants across 12 districts for International Yoga Day, and why rural health infrastructure matters.</p>
+        <div><a href="#" style="font-weight:700;color:#1e40af;">Read Note &rarr;</a></div>
+      </div>
+
+      <!-- Post 4 -->
+      <div class="note-card reveal">
+        <div class="note-tags"><span class="note-tag">Heritage</span><span class="note-tag">Prayaas</span></div>
+        <h3 class="note-title">Guriya magazine: what 32 children taught us about heritage</h3>
+        <div class="note-meta"><span>By Guriya Team</span><span>&bull;</span><span>20 Mar 2026</span><span>&bull;</span><span>5 min read</span></div>
+        <p class="note-excerpt">Editorial reflections on Issue 4. The children's drawings of local temples revealed details that adult architects had missed during our formal surveys.</p>
+        <div><a href="#" style="font-weight:700;color:#1e40af;">Read Note &rarr;</a></div>
+      </div>
+      
+      <!-- Post 5 -->
+      <div class="note-card reveal">
+        <div class="note-tags"><span class="note-tag">FPF</span></div>
+        <h3 class="note-title">Applying the Five Pillars Framework to our own programmes</h3>
+        <div class="note-meta"><span>By Founder</span><span>&bull;</span><span>10 Mar 2026</span><span>&bull;</span><span>9 min read</span></div>
+        <p class="note-excerpt">Where we score well on A-E-I-O-M, where the architecture is still deficient, and what we're doing about it in 2026.</p>
+        <div><a href="#" style="font-weight:700;color:#1e40af;">Read Note &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Field Notes FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">How do I subscribe to Field Notes? <span>+</span></div><div class="faq-answer">Add the RSS feed URL (meerfoundation.org/emerging/field-notes/rss.xml) to your newsreader (Feedly, Inoreader, NetNewsWire, etc.). We do not run a newsletter and we do not store your email address.</div></div>
+      <div class="faq-item"><div class="faq-question">Why don't you have a newsletter? <span>+</span></div><div class="faq-answer">Because RSS is better. It is open, decentralised, and does not require us to track your reading habits. Add the feed once, and every post arrives automatically. No inbox clutter.</div></div>
+      <div class="faq-item"><div class="faq-question">Who writes the posts? <span>+</span></div><div class="faq-answer">Every post is written by the Meer Foundation team member who did the work — field staff, educators, researchers, and occasionally our founder. We do not ghost-write.</div></div>
+      <div class="faq-item"><div class="faq-question">Can I republish a Field Notes post? <span>+</span></div><div class="faq-answer">Yes. Field Notes posts are licensed CC-BY 4.0. You may republish any post in full or in part, with attribution to Meer Foundation and a link back to the original post.</div></div>
+    </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

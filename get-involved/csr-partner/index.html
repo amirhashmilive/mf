@@ -3,49 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSR Partner | Meer Foundation</title>
-  <meta name="description" content="Partner with Meer Foundation as your CSR implementing agency. Evidence-based programme design, on-ground execution, and transparent impact reporting in Chhattisgarh.">
+  <title>CSR Partnership | Meer Foundation</title>
+  <meta name="description" content="Partner with Meer Foundation for verifiable betterment — not compliance theatre. CSR-1 registered, 14 years audited, 6 ready-to-scope programmes.">
   <link rel="canonical" href="https://meerfoundation.co.in/get-involved/csr-partner/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .prog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+    .prog-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .prog-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .prog-title { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .prog-desc { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+    .prog-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .prog-tag { font-size: 0.8rem; color: #1e40af; font-weight: 600; background: #1e40af10; padding: 4px 10px; border-radius: 100px; }
+    
+    .lifecycle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px; }
+    .life-step { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; text-align: center; }
+    .life-num { font-family: var(--font-serif); font-size: 2rem; color: #1e40af; font-weight: 800; margin-bottom: 8px; }
+    .life-title { font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .life-desc { font-size: 0.85rem; color: var(--text-2); line-height: 1.5; }
+
+    .csr-form { max-width: 700px; margin: 0 auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 40px; }
+    .form-group { margin-bottom: 24px; }
+    .form-label { display: block; font-weight: 600; color: var(--text-1); margin-bottom: 8px; font-size: 0.9rem; }
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg); color: var(--text-1); font-size: 1rem; font-family: inherit; transition: border-color 0.2s; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: #1e40af; box-shadow: 0 0 0 3px rgba(30,64,175,0.1); }
+    .form-textarea { min-height: 100px; resize: vertical; }
+    .form-submit { background: #1e40af; color: #fff; border: none; border-radius: var(--r-md); padding: 14px 24px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; transition: background 0.2s; }
+    .form-submit:hover { background: #15328a; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Corporate Partnership</div><h1 class="section-title">Become a CSR Partner</h1><p class="section-subtitle">Meer Foundation serves as a trusted CSR implementing agency with 14+ years of on-ground expertise in Chhattisgarh.</p></div></div>
-</section>
-<section class="section">
   <div class="container">
-    <div class="grid-2">
-      <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">As a CSR partner, your company gains a credible, experienced implementing agency that designs evidence-based programmes, executes with community sensitivity, and reports with full transparency under the Penta-Alignment Framework.</p>
-        <div class="grid-2">
-          <div class="feature-card" style="padding:20px;"><h5 style="color:#1e40af;margin-bottom:8px;">Programme Design</h5><p style="font-size:.85rem;color:var(--text-3);">Need assessment, strategy, and intervention design aligned to company CSR policy.</p></div>
-          <div class="feature-card" style="padding:20px;"><h5 style="color:#1e40af;margin-bottom:8px;">Implementation</h5><p style="font-size:.85rem;color:var(--text-3);">On-ground execution with community mobilization and government coordination.</p></div>
-          <div class="feature-card" style="padding:20px;"><h5 style="color:#1e40af;margin-bottom:8px;">Monitoring</h5><p style="font-size:.85rem;color:var(--text-3);">Real-time progress tracking, field visits, and quarterly review meetings.</p></div>
-          <div class="feature-card" style="padding:20px;"><h5 style="color:#1e40af;margin-bottom:8px;">Impact Reporting</h5><p style="font-size:.85rem;color:var(--text-3);">Comprehensive impact reports with data, stories, and MCA-compliant documentation.</p></div>
-        </div>
-        <a href="/contact/" class="btn btn-primary" style="margin-top:30px;">Discuss Partnership</a>
+    <div class="section-header reveal">
+      <div class="section-tag">Corporate Social Responsibility</div>
+      <h1 class="section-title">CSR Partnership</h1>
+      <p class="section-subtitle">Verifiable betterment for your CSR spend — not compliance theatre. CSR-1 registered, 14 years independently audited, 6 ready-to-scope programmes.</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">6</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Programmes</div>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background:var(--bg-2);padding:40px;border-radius:var(--r-2xl);border:1px solid var(--border);">
-          <h3 style="margin-bottom:20px;">Sectors We Work In</h3>
-          <ul style="list-style:none;padding:0;">
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:700;">🎓</span> Education (SDG 4)</li>
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:700;">🌊</span> Water &amp; Environment (SDG 6, 15)</li>
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:700;">🌱</span> Livelihood &amp; Agriculture (SDG 1, 8)</li>
-            <li style="display:flex;gap:10px;"><span style="color:#1e40af;font-weight:700;">🧘</span> Health &amp; Well-being (SDG 3)</li>
-          </ul>
-        </div>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">9</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">CSR Partners</div>
+      </div>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">11</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Districts Covered</div>
+      </div>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">14+</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Years Audited</div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Programme Menu</h2>
+      <p class="section-subtitle">Ready to scope. Every programme is co-designed with your CSR team.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card reveal">
+        <h3 class="prog-title">🌊 Bolti Nadi — River Restoration</h3>
+        <p class="prog-desc">River health monitoring, check dams, desilting, bank plantation, sewage treatment. A flagship Outcome (O) programme.</p>
+        <div class="prog-meta"><span class="prog-tag">4 Districts</span><span class="prog-tag">24–36 Months</span></div>
+      </div>
+      <div class="prog-card reveal">
+        <h3 class="prog-title">📚 Prayaas — Learning Centres</h3>
+        <p class="prog-desc">Class 1–12 materials, mentor salaries, midday meals, and learning outcome tracking. Adopt a learning centre.</p>
+        <div class="prog-meta"><span class="prog-tag">1 District</span><span class="prog-tag">Annual</span></div>
+      </div>
+      <div class="prog-card reveal">
+        <h3 class="prog-title">🌾 Farmours — Women's FPOs</h3>
+        <p class="prog-desc">Seed 1 incorporated FPO. Input procurement, market linkages, accounting training for women-led enterprises.</p>
+        <div class="prog-meta"><span class="prog-tag">2 Districts</span><span class="prog-tag">12–24 Months</span></div>
+      </div>
+      <div class="prog-card reveal">
+        <h3 class="prog-title">🧘 Yoga Kutumb — Community Wellness</h3>
+        <p class="prog-desc">Weekly yoga and wellness sessions across 12 villages. Certified instructors, health screening camps.</p>
+        <div class="prog-meta"><span class="prog-tag">3 Districts</span><span class="prog-tag">12 Months</span></div>
+      </div>
+      <div class="prog-card reveal">
+        <h3 class="prog-title">📖 Guriya Magazine</h3>
+        <p class="prog-desc">4 quarterly issues distributed to 250+ rural schools. A children's magazine produced by rural reporters.</p>
+        <div class="prog-meta"><span class="prog-tag">5 Districts</span><span class="prog-tag">Annual</span></div>
+      </div>
+      <div class="prog-card reveal">
+        <h3 class="prog-title">📻 Meer FM — Community Radio</h3>
+        <p class="prog-desc">Studio setup + transmission infrastructure. Community-operated radio serving underserved villages.</p>
+        <div class="prog-meta"><span class="prog-tag">Dhamtari</span><span class="prog-tag">24 Months</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Partnership Lifecycle</h2>
+      <p class="section-subtitle">From concept to closure in four phases.</p>
+    </div>
+    <div class="lifecycle-grid">
+      <div class="life-step reveal"><div class="life-num">1</div><div class="life-title">Co-Design</div><div class="life-desc">Every programme is co-designed with your CSR team. The menu is a starting point, not a take-it-or-leave-it list.</div></div>
+      <div class="life-step reveal"><div class="life-num">2</div><div class="life-title">Execute</div><div class="life-desc">Milestones set in writing. Field visits welcome. Mid-year review with your team. Slippage flagged immediately.</div></div>
+      <div class="life-step reveal"><div class="life-num">3</div><div class="life-title">Verify</div><div class="life-desc">Betterment Verification — household surveys, oral histories, and direct observation. Not output counting.</div></div>
+      <div class="life-step reveal"><div class="life-num">4</div><div class="life-title">Closure Report</div><div class="life-desc">Published under CC-BY 4.0. Raw survey data annexed. Your stakeholders and the communities served can read it.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CSR ENQUIRY FORM -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Submit CSR Enquiry</h2></div>
+    <div class="csr-form reveal">
+      <form action="mailto:meercare@live.com" method="POST" enctype="text/plain">
+        <div class="form-group"><label class="form-label" for="company">Company Name</label><input type="text" id="company" name="company" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="contact">Contact Person</label><input type="text" id="contact" name="contact" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="email">Email</label><input type="email" id="email" name="email" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="programme">Programme Interest</label>
+          <select id="programme" name="programme" class="form-select">
+            <option value="" disabled selected>Select a programme...</option>
+            <option value="Bolti Nadi">Bolti Nadi — River Restoration</option>
+            <option value="Prayaas">Prayaas — Learning Centres</option>
+            <option value="Farmours">Farmours — Women's FPOs</option>
+            <option value="Yoga Kutumb">Yoga Kutumb — Community Wellness</option>
+            <option value="Guriya">Guriya Magazine</option>
+            <option value="Meer FM">Meer FM — Community Radio</option>
+            <option value="Custom">Custom Programme</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label" for="budget">CSR Budget Envelope</label>
+          <select id="budget" name="budget" class="form-select">
+            <option value="Under 25L">Under ₹25 lakh</option>
+            <option value="25L-1Cr">₹25L – ₹1 crore</option>
+            <option value="1Cr-5Cr">₹1 – 5 crore</option>
+            <option value="Above 5Cr">Above ₹5 crore</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label" for="brief">Brief (optional)</label><textarea id="brief" name="brief" class="form-textarea" placeholder="Your CSR focus areas, timeline, or any specific requirements..."></textarea></div>
+        <button type="submit" class="form-submit">Submit CSR Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--bg-2);">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">CSR Partnership FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">What is the typical duration of a CSR partnership? <span>+</span></div><div class="faq-answer">Most CSR partnerships run 12–36 months. River restoration programmes run 24–36 months because of the monitoring commitment. Prayaas learning centre adoptions are annual. We will not propose a duration shorter than what the work genuinely requires.</div></div>
+      <div class="faq-item"><div class="faq-question">Can a CSR partnership cover multiple programme areas? <span>+</span></div><div class="faq-answer">Yes. A common pattern is a 'portfolio partnership' combining, for example, a Prayaas learning centre adoption with a Meer FM radio sponsorship. The Five Pillars Framework encourages cross-pillar coherence.</div></div>
+      <div class="faq-item"><div class="faq-question">Can our employees visit the project sites? <span>+</span></div><div class="faq-answer">Yes, and we encourage it. Field visits are organised quarterly for CSR partners. Visits include community interaction (with consent), programme team briefings, and a structured walk-through. We do not stage photo opportunities — what you see is what is actually happening.</div></div>
+      <div class="faq-item"><div class="faq-question">What happens if programme milestones are not met? <span>+</span></div><div class="faq-answer">We flag it — to your CSR team, in writing, as soon as we know. We do not hide bad news. Milestone slippage triggers a re-scoping conversation. We have closed programmes early when betterment was not materialising. Honesty is the only sustainable CSR policy.</div></div>
+      <div class="faq-item"><div class="faq-question">Can a small or mid-size company partner? <span>+</span></div><div class="faq-answer">Yes. The Heritage walk + Guriya magazine programme starts at ₹6 lakh — accessible to mid-size companies. We have scoped programmes for CSR budgets ranging from ₹25 lakh to ₹10 crore. The conversation begins with your CSR focus and budget envelope.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Betterment, not compliance theatre.</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/contact/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Contact CSR Desk</a>
+      <a href="/about/annual-reports/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">View Annual Reports</a>
+    </div>
+  </div>
+</section>
+
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-question').forEach(q => { q.classList.remove('active'); q.querySelector('span').textContent = '+'; });
+      if (!wasActive) { item.classList.add('active'); item.querySelector('span').textContent = '−'; }
+    });
+  });
+</script>
 </body>
 </html>

@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Environment — Bolti Nadi River Conservation | Meer Foundation</title>
-  <meta name="description" content="Bolti Nadi: Meer Foundation's flagship river conservation initiative documenting and protecting Chhattisgarh's rivers through community-led walks and scientific assessment.">
+  <title>Environment Initiative | Meer Foundation</title>
+  <meta name="description" content="Meer Foundation's Environment practice area — Bolti Nadi river restoration and the Social Heritage Walk across Chhattisgarh.">
   <link rel="canonical" href="https://meerfoundation.co.in/initiatives/environment/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .init-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+    .init-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .init-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .init-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .init-card .tag { font-size: 0.8rem; color: #1e40af; font-weight: 600; background: #1e40af10; padding: 4px 10px; border-radius: 100px; display: inline-block; margin-bottom: 12px; }
+    .init-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+    .init-card ul { padding-left: 16px; margin: 0; }
+    .init-card li { font-size: 0.85rem; color: var(--text-3); margin-bottom: 6px; }
+
+    .river-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 30px; }
+    .river-card { background: var(--bg); border-left: 4px solid #1e40af; border-radius: 0 var(--r-md) var(--r-md) 0; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .river-name { font-weight: 700; color: var(--text-1); margin-bottom: 4px; }
+    .river-meta { font-size: 0.8rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -16,37 +36,81 @@
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">SDG 6 · SDG 15</div>
-      <h1 class="section-title">Bolti Nadi: Let the Rivers Speak</h1>
-      <p class="section-subtitle">A community-driven movement to restore, protect, and document the lifelines of Chhattisgarh.</p>
+      <div class="section-tag">FPF Pillar: Initiative (I)</div>
+      <h1 class="section-title">Environment</h1>
+      <p class="section-subtitle">Make rural Chhattisgarh drought-free. Restore priority rivers. Train communities to monitor their own water — without depending on external experts.</p>
     </div>
-    <div class="grid-2" style="margin-top:50px;">
-      <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:18px;">In 2019, the Bolti Nadi initiative undertook a historic 90-kilometer on-foot expedition along the Sakri River. Traversing from its origin in Kariyama Village to its confluence with the Half River in Darhi Village, the team spent four continuous days documenting the river's health.</p>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px;">
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">90KM</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">On-Foot Expedition</div></div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">5K+</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">Citizens Mobilized</div></div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">59</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">Villages Reached</div></div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#1e40af;">50+</div><div style="font-size:.75rem;text-transform:uppercase;font-weight:700;color:var(--text-4);">Countries Screened</div></div>
-        </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">90km</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Sakri River Walked</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">20M+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">People Depending</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">12+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Villages Restored</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">8</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Rivers Monitored</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Our Initiatives</h2><p class="section-subtitle">Two SDGs, one mission. Clean Water (SDG 6) and Sustainable Communities (SDG 11).</p></div>
+    <div class="init-grid">
+      <div class="init-card reveal">
+        <div class="tag">🌊 SDG 6 — Clean Water</div>
+        <h3>Bolti Nadi (River Restoration)</h3>
+        <p>Walk the river. Listen to villagers. Document with rigour. Pressure authorities to act on evidence.</p>
+        <ul><li>8 rivers under study</li><li>12+ villages restored</li><li>Triggered check dams & STPs</li><li>Free monitoring courses</li></ul>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background:var(--bg-2);padding:40px;border-radius:var(--r-2xl);border:1px solid var(--border);">
-          <h3 style="margin-bottom:20px;">Measurable Impact</h3>
-          <ul style="list-style:none;padding:0;">
-            <li style="margin-bottom:15px;display:flex;gap:10px;"><span style="color:#10b981;font-weight:800;">✓</span> ₹2 Crore Sewage Treatment Plant established in Kawardha due to our policy submission.</li>
-            <li style="margin-bottom:15px;display:flex;gap:10px;"><span style="color:#10b981;font-weight:800;">✓</span> Large-scale tree plantation along banks approved under Mukhyamantri Vriksh Sampada Yojana.</li>
-            <li style="margin-bottom:15px;display:flex;gap:10px;"><span style="color:#10b981;font-weight:800;">✓</span> MGNREGA teams mobilized for desilting across 59 villages.</li>
-            <li style="display:flex;gap:10px;"><span style="color:#10b981;font-weight:800;">✓</span> Continuous monitoring of 3 major rivers established with local youth volunteers.</li>
-          </ul>
-        </div>
+      <div class="init-card reveal">
+        <div class="tag">🏛️ SDG 11 — Sustainable Cities</div>
+        <h3>Social Heritage Walk</h3>
+        <p>Every World Heritage Day (18 April), youth dedicate one hour to a nearby heritage site. #LocalHeritage</p>
+        <ul><li>Annual event on 18 April</li><li>Tribal heritage focus</li><li>Host guide PDFs provided</li><li>Community-authored reports</li></ul>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">8 Rivers Under Study</h2><p class="section-subtitle">Eight rivers, eight stories. From ongoing monitoring to complete restoration.</p></div>
+    <div class="river-grid">
+      <div class="river-card reveal" style="border-color:#10b981;"><div class="river-name">Sakri River</div><div class="river-meta">Kawardha · Status: Walked</div></div>
+      <div class="river-card reveal" style="border-color:#1e40af;"><div class="river-name">Mahanadi River</div><div class="river-meta">Dhamtari · Status: Ongoing</div></div>
+      <div class="river-card reveal" style="border-color:#10b981;"><div class="river-name">Hasdeo River</div><div class="river-meta">Korba · Status: Walked</div></div>
+      <div class="river-card reveal" style="border-color:#1e40af;"><div class="river-name">Shivnath River</div><div class="river-meta">Durg · Status: Ongoing</div></div>
+      <div class="river-card reveal" style="border-color:#1e40af;"><div class="river-name">Indravati River</div><div class="river-meta">Bastar · Status: Ongoing</div></div>
+      <div class="river-card reveal" style="border-color:#1e40af;"><div class="river-name">Kharun River</div><div class="river-meta">Raipur · Status: Ongoing</div></div>
+      <div class="river-card reveal" style="border-color:#1e40af;"><div class="river-name">Arpa River</div><div class="river-meta">Bilaspur · Status: Ongoing</div></div>
+      <div class="river-card reveal" style="border-color:#1e40af;"><div class="river-name">Tandula River</div><div class="river-meta">Balod · Status: Ongoing</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Environment FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">Can I participate in a river walk? <span>+</span></div><div class="faq-answer">Yes. Bolti Nadi conducts regular river walks. Write to meercare@live.com to join the next expedition. No prior experience required — bring sturdy shoes, a water bottle, and curiosity.</div></div>
+      <div class="faq-item"><div class="faq-question">Are the river-conservation courses free? <span>+</span></div><div class="faq-answer">Yes. All Bolti Nadi awareness modules and courses are free for rural Chhattisgarh communities. Certification is included. PDFs are CC-BY 4.0.</div></div>
+      <div class="faq-item"><div class="faq-question">How do I host a Social Heritage Walk? <span>+</span></div><div class="faq-answer">Download the heritage walk host guide. Choose a site within 5 km, gather 5-15 participants, and submit your walk report. We feature the best reports on our website.</div></div>
+      <div class="faq-item"><div class="faq-question">What policy outcomes has Bolti Nadi triggered? <span>+</span></div><div class="faq-answer">Riverbank plantation, check dams, erosion control structures, desilting operations, a sewage treatment plant, and public employment drives under MGNREGA — all triggered by the Sakri River Walk report.</div></div>
+      <div class="faq-item"><div class="faq-question">How can my village request a river assessment? <span>+</span></div><div class="faq-answer">Write to meercare@live.com with your village name, district, and the river in question. Our field team will schedule a preliminary walk within 60 days.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Let the river speak</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/get-involved/donate/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Donate to Environment</a>
+      <a href="/get-involved/volunteer/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">Join a walk</a>
+    </div>
+  </div>
+</section>
+
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

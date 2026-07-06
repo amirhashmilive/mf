@@ -3,63 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Five Pillars — Penta-Alignment Model | Meer Foundation</title>
-  <meta name="description" content="The Penta-Alignment Model by Amir Hashmi — a five-pillar strategic framework ensuring every Meer Foundation initiative achieves systemic, verifiable social impact.">
+  <title>Five Pillars Model (FPF) | Meer Foundation</title>
+  <meta name="description" content="Amir Hashmi's communication framework for transparent, evidence-based institutional communication. Accountability, Execution, Initiative, Outcome, Meaning.">
   <link rel="canonical" href="https://meerfoundation.co.in/about/five-pillars/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
   <style>
-    .pillar-card { background: #fff; border-radius: var(--r-xl); padding: 40px; border: 1px solid var(--border); transition: var(--t); position: relative; }
-    .pillar-card:hover { transform: translateY(-10px); box-shadow: var(--sh-xl); border-color: #1e40af; }
-    .pillar-num { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 800; color: rgba(30, 64, 175, 0.1); position: absolute; top: 20px; right: 30px; }
-    .pillar-icon { width: 50px; height: 50px; background: rgba(30, 64, 175, 0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #1e40af; margin-bottom: 25px; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    @media (max-width: 992px) { .about-grid { grid-template-columns: 1fr; } }
+    .fpf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+    .fpf-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 32px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+    .fpf-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .fpf-letter { font-family: var(--font-serif); font-size: 5rem; font-weight: 800; color: #1e40af; opacity: 0.1; position: absolute; top: -10px; right: 10px; line-height: 1; pointer-events: none; }
+    .fpf-title { font-family: var(--font-serif); font-size: 1.5rem; color: #1e40af; font-weight: 700; margin-bottom: 16px; position: relative; z-index: 1; }
+    .fpf-desc { font-size: 0.95rem; color: var(--text-2); line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1; }
+    .fpf-question { font-style: italic; color: var(--text-3); font-size: 0.9rem; padding-top: 16px; border-top: 1px solid var(--border); }
+    
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 24px; margin-bottom: 32px; font-size: 0.9rem; }
+    .compare-table th { background: #1e40af; color: #fff; text-align: left; padding: 12px; font-weight: 600; }
+    .compare-table td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: top; }
+    .compare-table tr:nth-child(even) td { background: var(--bg-2); }
+    
+    .principle-box { background: var(--grad-brand); color: #fff; padding: 40px; border-radius: var(--r-2xl); margin: 40px 0; text-align: center; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
   </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
-<section class="section" style="padding-top: 140px; background: var(--bg-2);">
+<section class="section" style="padding-top:140px;background:var(--bg-2);">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">Proprietary Framework</div>
-      <h1 class="section-title">The Penta-Alignment Model</h1>
-      <p class="section-subtitle">A strategic framework developed by Founder Amir Hashmi to ensure systemic impact and structural coherence in social development and CSR initiatives.</p>
+      <div class="section-tag">Institutional Communication</div>
+      <h1 class="section-title">Five Pillars Model (FPF)</h1>
+      <p class="section-subtitle">Amir Hashmi's communication framework for transparent, evidence-based institutional communication. Five pillars — Accountability, Execution, Initiative, Outcome, Meaning — bound by one principle: Pillar Coherence.</p>
     </div>
-    <div class="grid-3" style="margin-top: 60px;">
-      <div class="pillar-card reveal">
-        <div class="pillar-num">01</div>
-        <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3 style="margin-bottom: 15px;">Corporate Identity (CI)</h3>
-        <p style="color: var(--text-3); font-size: 0.95rem; line-height: 1.6;">The organizational self-conception regarding social purpose, encompassing mission integration and strategic positioning of social goals.</p>
+    
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif); font-size:2.5rem; color:#1e40af; font-weight:800; line-height:1;">5</div>
+        <div style="font-size:0.85rem; font-weight:600; color:var(--text-3); margin-top:8px; text-transform:uppercase;">Core Pillars</div>
       </div>
-      <div class="pillar-card reveal reveal-delay-1">
-        <div class="pillar-num">02</div>
-        <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3 style="margin-bottom: 15px;">Implementation Architecture (IA)</h3>
-        <p style="color: var(--text-3); font-size: 0.95rem; line-height: 1.6;">The structural and procedural mechanisms through which initiatives are executed, including organizational and governance protocols.</p>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif); font-size:2.5rem; color:#1e40af; font-weight:800; line-height:1;">5</div>
+        <div style="font-size:0.85rem; font-weight:600; color:var(--text-3); margin-top:8px; text-transform:uppercase;">Practice Mappings</div>
       </div>
-      <div class="pillar-card reveal reveal-delay-2">
-        <div class="pillar-num">03</div>
-        <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-        <h3 style="margin-bottom: 15px;">Initiative Portfolio (IP)</h3>
-        <p style="color: var(--text-3); font-size: 0.95rem; line-height: 1.6;">The composition and configuration of social activities across sectors, beneficiaries, and intervention types for maximum focus.</p>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif); font-size:2.5rem; color:#1e40af; font-weight:800; line-height:1;">4</div>
+        <div style="font-size:0.85rem; font-weight:600; color:var(--text-3); margin-top:8px; text-transform:uppercase;">Frameworks Completed</div>
       </div>
-    </div>
-    <div class="grid-2" style="margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <div class="pillar-card reveal">
-        <div class="pillar-num">04</div>
-        <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-        <h3 style="margin-bottom: 15px;">Impact Verification (IV)</h3>
-        <p style="color: var(--text-3); font-size: 0.95rem; line-height: 1.6;">Systems for documenting, evaluating, and validating outcomes through rigorous measurement design and evidence hierarchy.</p>
-      </div>
-      <div class="pillar-card reveal reveal-delay-1">
-        <div class="pillar-num">05</div>
-        <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <h3 style="margin-bottom: 15px;">Communication Ecosystem (CE)</h3>
-        <p style="color: var(--text-3); font-size: 0.95rem; line-height: 1.6;">The channels and feedback mechanisms through which information flows between the organization and its stakeholders.</p>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif); font-size:2.5rem; color:#1e40af; font-weight:800; line-height:1;">14+</div>
+        <div style="font-size:0.85rem; font-weight:600; color:var(--text-3); margin-top:8px; text-transform:uppercase;">Years in Field</div>
       </div>
     </div>
   </div>
@@ -67,26 +65,168 @@
 
 <section class="section">
   <div class="container">
-    <div class="about-grid">
-      <div class="reveal">
-        <h2 style="font-family: var(--font-serif); margin-bottom: 25px;">Academic Foundation</h2>
-        <p style="color: var(--text-2); line-height: 1.8; margin-bottom: 20px;">The Penta-Alignment construct constitutes a unified theoretical artifact designed to bridge the gap between macro-level institutional analysis and micro-level organizational practice.</p>
-        <p style="color: var(--text-2); line-height: 1.8;">Meer Foundation applies this model across all its initiatives — from Bolti Nadi to Prayaas — ensuring that our on-ground work is theoretically sound and empirically verifiable.</p>
+    <div class="section-header reveal">
+      <h2 class="section-title">The Five Pillars</h2>
+      <p class="section-subtitle">Five pillars, one architecture. The framework catches what single-pillar metrics miss.</p>
+    </div>
+    
+    <div class="fpf-grid reveal mt-4">
+      <div class="fpf-card">
+        <div class="fpf-letter">A</div>
+        <h3 class="fpf-title">Accountability</h3>
+        <p class="fpf-desc">The mechanism of delivery. Ensuring that resources reach the intended beneficiary with zero friction, and that governance structures are transparent.</p>
+        <div class="fpf-question">"Does our delivery system actually reach the last household?"</div>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background: var(--bg-2); padding: 40px; border-radius: var(--r-2xl); border: 1px solid var(--border);">
-          <h3 style="margin-bottom: 20px;">Strategic Pathways</h3>
-          <div style="margin-bottom: 15px;"><strong style="color: #1e40af;">Bridge Design-Execution Gap:</strong> Aligning identity with implementation architecture.</div>
-          <div style="margin-bottom: 15px;"><strong style="color: #1e40af;">Close Execution-Evidence Gap:</strong> Strengthening impact verification systems.</div>
-          <div><strong style="color: #1e40af;">Bridge Evidence-Recognition Gap:</strong> Enhancing the communication ecosystem.</div>
-        </div>
+      <div class="fpf-card">
+        <div class="fpf-letter">E</div>
+        <h3 class="fpf-title">Execution</h3>
+        <p class="fpf-desc">The conversion of intent into measurable action. The operational rigor that ensures projects are completed on time, within budget, and to spec.</p>
+        <div class="fpf-question">"Did we build the check dam before the monsoon?"</div>
+      </div>
+      <div class="fpf-card">
+        <div class="fpf-letter">I</div>
+        <h3 class="fpf-title">Initiative</h3>
+        <p class="fpf-desc">The genesis of the intervention. It must arise from community need, not institutional convenience. Working with people, never for them.</p>
+        <div class="fpf-question">"Did the community help design this — or did we impose it?"</div>
+      </div>
+      <div class="fpf-card">
+        <div class="fpf-letter">O</div>
+        <h3 class="fpf-title">Outcome</h3>
+        <p class="fpf-desc">The measurable change in baseline condition. Activity is not outcome. Walking 90 km is activity; restoring water quality is outcome.</p>
+        <div class="fpf-question">"Are communities measurably better because of us?"</div>
+      </div>
+      <div class="fpf-card">
+        <div class="fpf-letter">M</div>
+        <h3 class="fpf-title">Meaning</h3>
+        <p class="fpf-desc">The legibility of the work. How effectively the outcomes are communicated to stakeholders, ensuring the work can be replicated and understood.</p>
+        <div class="fpf-question">"Is our communication legible, verifiable, and actionable?"</div>
+      </div>
+    </div>
+    
+    <div class="principle-box reveal">
+      <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 16px;">The Core Principle: Pillar Coherence</h2>
+      <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+        Pillar Coherence is the architecture's core principle. The strength of the strongest pillar cannot compensate for the weakness of the weakest. An institution excellent at Outcome but failing at Accountability is not legitimate.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Framework Comparison</h2>
+      <p class="section-subtitle">How FPF completes existing frameworks like GRI, SDG, ESG, and BRSR.</p>
+    </div>
+    
+    <div class="reveal mt-4">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Focus</th>
+            <th>What it measures</th>
+            <th>What FPF adds</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>GRI</strong><br><span style="font-size:0.8rem; font-weight:normal;">Global Reporting Initiative</span></td>
+            <td>Standardisation</td>
+            <td>Consistent disclosure formats</td>
+            <td>The requirement that disclosures demonstrate actual community agency (Initiative).</td>
+          </tr>
+          <tr>
+            <td><strong>SDG</strong><br><span style="font-size:0.8rem; font-weight:normal;">UN Sustainable Development Goals</span></td>
+            <td>Targets</td>
+            <td>Global macro-level goals (e.g., Zero Hunger)</td>
+            <td>The mechanism of delivery (Accountability) at the hyper-local village level.</td>
+          </tr>
+          <tr>
+            <td><strong>ESG</strong><br><span style="font-size:0.8rem; font-weight:normal;">Environmental, Social, Governance</span></td>
+            <td>Risk</td>
+            <td>Investor risk mitigation</td>
+            <td>The shift from avoiding risk to demonstrating proactive betterment (Outcome).</td>
+          </tr>
+          <tr>
+            <td><strong>BRSR</strong><br><span style="font-size:0.8rem; font-weight:normal;">Business Responsibility & Sustainability Reporting</span></td>
+            <td>Compliance</td>
+            <td>Statutory SEBI requirements</td>
+            <td>The narrative legibility (Meaning) that turns compliance into replicable models.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section">
+  <div class="container" style="max-width: 800px;">
+    <div class="section-header reveal">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="reveal mt-4">
+      <div class="faq-item">
+        <div class="faq-question">What is the Five Pillars Framework (FPF)? <span>+</span></div>
+        <div class="faq-answer">The Five Pillars Framework is a communication framework for transparent, evidence-based institutional communication, set out by Amir Hashmi. It comprises five pillars — Accountability (A), Execution (E), Initiative (I), Outcome (O), and Meaning (M) — bound by one principle: Pillar Coherence. The strength of the strongest pillar cannot compensate for the weakness of the weakest.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is FPF a replacement for GRI, SDG, ESG, or BRSR? <span>+</span></div>
+        <div class="faq-answer">No. FPF is a communication framework that completes them. GRI, SDG, ESG, and BRSR each address part of how betterment is communicated. FPF adds the Pillar Coherence test — turning disclosure into demonstrable community-level betterment. Institutions continue to use existing frameworks; FPF provides the missing architecture.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the Betterment Question? <span>+</span></div>
+        <div class="faq-answer">The Betterment Question is the founding premise of FPF: how does an institution prove — to a skeptical observer — that its presence has measurably improved the communities it serves? The Five Pillars Framework is the architecture for answering it. Activity is not outcome; outcome is what an institution can demonstrate.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How does FPF map to Meer Foundation's practice? <span>+</span></div>
+        <div class="faq-answer">Each of Meer Foundation's five practice areas maps to exactly one FPF pillar: Education → I (Initiative), Health → M (Meaning), Environment → O (Outcome), Livelihood → E (Execution), Women Empowerment → A (Accountability). The framework is not abstract — it governs daily field decisions across 12 districts of Chhattisgarh.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is Pillar Coherence? <span>+</span></div>
+        <div class="faq-answer">Pillar Coherence is the FPF's core principle. An institution excellent at Outcome (O) but failing at Accountability (A) is not legitimate — it is dangerous. Coherence requires all five pillars to be present and demonstrable simultaneously. No single pillar's strength compensates for another's weakness.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I study the Five Pillars Framework formally? <span>+</span></div>
+        <div class="faq-answer">Yes. The EduSuTo 'Foundation Course in CSR & Sustainability' includes a dedicated FPF module. IJMEER — Meer Foundation's peer-reviewed journal — publishes FPF research across multiple issues. The founder's book 'The Five Pillars Framework' is the primary source.</div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section" style="background: var(--grad-brand); color: #fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 16px;">See FPF in the field</h2>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="/initiatives/" class="btn-submit" style="background: #fff; color: #1e40af; border: none;">View Initiatives</a>
+      <a href="/about/our-story/" class="btn-submit" style="background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3);">Read the founder's story</a>
+    </div>
+  </div>
+</section>
+
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>
+  // Simple FAQ Accordion Logic
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      const wasActive = item.classList.contains('active');
+      
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.classList.remove('active');
+        q.querySelector('span').textContent = '+';
+      });
+      
+      if (!wasActive) {
+        item.classList.add('active');
+        item.querySelector('span').textContent = '−';
+      }
+    });
+  });
+</script>
 </body>
 </html>

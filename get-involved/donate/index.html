@@ -3,49 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate | Support Meer Foundation</title>
-  <meta name="description" content="Donate to Meer Foundation — support river conservation, education, and rural empowerment in Chhattisgarh. 80G tax exemption available for Indian donors.">
+  <title>Donate | Meer Foundation</title>
+  <meta name="description" content="Support Meer Foundation's grassroots work in Chhattisgarh. 100% transparent allocation, 80G tax receipt emailed immediately.">
   <link rel="canonical" href="https://meerfoundation.co.in/get-involved/donate/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .donate-container { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; margin-top: 40px; }
+    @media (max-width: 992px) { .donate-container { grid-template-columns: 1fr; } }
+    
+    .donation-form { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 40px; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05); }
+    
+    .freq-toggle { display: flex; background: var(--bg-2); padding: 6px; border-radius: 100px; margin-bottom: 30px; }
+    .freq-btn { flex: 1; padding: 12px; text-align: center; background: transparent; border: none; font-weight: 600; border-radius: 100px; color: var(--text-2); cursor: pointer; transition: all 0.2s; font-size: 0.95rem; }
+    .freq-btn.active { background: #1e40af; color: #fff; box-shadow: 0 4px 10px rgba(30,64,175,0.2); }
+    
+    .amount-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+    @media (max-width: 480px) { .amount-grid { grid-template-columns: repeat(2, 1fr); } }
+    .amt-btn { padding: 16px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-md); text-align: center; cursor: pointer; transition: all 0.2s; }
+    .amt-btn:hover { border-color: #1e40af; background: rgba(30,64,175,0.02); }
+    .amt-btn.active { border-color: #1e40af; background: #1e40af; color: #fff; }
+    .amt-val { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+    .amt-desc { font-size: 0.75rem; color: var(--text-3); }
+    .amt-btn.active .amt-desc { color: rgba(255,255,255,0.8); }
+
+    .custom-amt { margin-bottom: 30px; position: relative; }
+    .custom-input { width: 100%; padding: 16px 20px 16px 40px; border: 1px solid var(--border); border-radius: var(--r-md); font-family: var(--font-mono); font-size: 1.2rem; transition: all 0.2s; }
+    .custom-input:focus { border-color: #1e40af; outline: none; box-shadow: 0 0 0 3px rgba(30,64,175,0.1); }
+    .currency-symbol { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--text-3); font-size: 1.1rem; pointer-events: none; }
+
+    .donor-info { display: grid; gap: 20px; margin-bottom: 30px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-label { font-size: 0.9rem; font-weight: 600; color: var(--text-1); }
+    .form-input { padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--bg); font-family: inherit; font-size: 1rem; }
+    .form-input:focus { border-color: #1e40af; outline: none; }
+
+    .tax-summary { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 16px; border-radius: var(--r-md); margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .tax-label { color: #166534; font-size: 0.85rem; font-weight: 600; }
+    .tax-val { font-family: var(--font-mono); color: #15803d; font-size: 1.1rem; font-weight: 700; }
+    
+    .btn-donate { width: 100%; background: #1e40af; color: #fff; border: none; padding: 16px; border-radius: var(--r-md); font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .btn-donate:hover { background: #15328a; }
+
+    .allocation-box { background: var(--bg-2); padding: 30px; border-radius: var(--r-xl); margin-top: 40px; }
+    .alloc-bar { height: 12px; display: flex; border-radius: 6px; overflow: hidden; margin: 20px 0; }
+    .alloc-legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; }
+    .legend-item { display: flex; align-items: center; gap: 6px; color: var(--text-2); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Make a Difference</div><h1 class="section-title">Support Meer Foundation</h1><p class="section-subtitle">Your donation directly funds river conservation, education, and livelihood programmes across rural Chhattisgarh.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Fund Betterment</div>
+      <h1 class="section-title">Support the Work</h1>
+      <p class="section-subtitle">Zero deductions for 'awareness fees'. Every rupee auditable. We are a registered non-profit working across 12 districts of Chhattisgarh.</p>
+    </div>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <div class="grid-2">
+    <div class="donate-container">
+      <!-- Left Column: Trust & Allocation -->
       <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Every contribution helps Meer Foundation continue its work across 10+ districts of Chhattisgarh. Donations are eligible for tax exemption under Section 80G of the Income Tax Act.</p>
-        <div style="background:#1e40af;color:#fff;padding:30px;border-radius:var(--r-xl);margin-bottom:24px;">
-          <h3 style="margin-bottom:16px;">Donate Securely via Razorpay</h3>
-          <p style="opacity:.88;margin-bottom:20px;">Quick, secure online payment via UPI, credit/debit card, net banking, or wallets.</p>
-          <a href="https://pages.razorpay.com/pl_P3UWnMipCqTDJM/view" class="btn" style="background:#fff;color:#1e40af;font-weight:700;" target="_blank" rel="noopener">Donate Online Now</a>
+        <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 24px; color: var(--text-1);">Why donate to Meer Foundation?</h2>
+        
+        <div style="display:flex; gap:16px; margin-bottom:24px;">
+          <div style="width:40px; height:40px; background:#1e40af15; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">🧾</div>
+          <div>
+            <h4 style="font-weight:600; margin-bottom:4px;">Instant 80G Tax Receipt</h4>
+            <p style="font-size:0.9rem; color:var(--text-2); line-height:1.5;">Emailed within minutes of a successful donation. 50% of your donation is deductible under Section 80G.</p>
+          </div>
         </div>
-        <p style="color:var(--text-3);font-size:.85rem;">For bank transfers or cheque donations, contact: <a href="mailto:info@meerfoundation.co.in" style="color:#1e40af;">info@meerfoundation.co.in</a></p>
+        
+        <div style="display:flex; gap:16px; margin-bottom:24px;">
+          <div style="width:40px; height:40px; background:#1e40af15; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">🔒</div>
+          <div>
+            <h4 style="font-weight:600; margin-bottom:4px;">Secure Processing</h4>
+            <p style="font-size:0.9rem; color:var(--text-2); line-height:1.5;">Payment processed via a PCI-DSS-compliant gateway. We never see or store your card details.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:16px; margin-bottom:24px;">
+          <div style="width:40px; height:40px; background:#1e40af15; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">📊</div>
+          <div>
+            <h4 style="font-weight:600; margin-bottom:4px;">Open-Access Reporting</h4>
+            <p style="font-size:0.9rem; color:var(--text-2); line-height:1.5;">14 years of consecutive independently audited annual reports. See exactly where your rupee goes.</p>
+          </div>
+        </div>
+
+        <!-- Allocation Box -->
+        <div class="allocation-box">
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px;">How your donation is allocated</h4>
+          <p style="font-size: 0.9rem; color: var(--text-3);">Based on 2024-25 approved budgets</p>
+          
+          <div class="alloc-bar">
+            <div style="width: 32%; background: #1e40af;" title="Prayaas (Education) - 32%"></div>
+            <div style="width: 24%; background: #0ea5e9;" title="Bolti Nadi (Environment) - 24%"></div>
+            <div style="width: 22%; background: #f59e0b;" title="Farmours (Livelihood) - 22%"></div>
+            <div style="width: 12%; background: #10b981;" title="Yoga Kutumb (Health) - 12%"></div>
+            <div style="width: 10%; background: #94a3b8;" title="Operations - 10%"></div>
+          </div>
+          
+          <div class="alloc-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#1e40af;"></div> Prayaas (32%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#0ea5e9;"></div> Bolti Nadi (24%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Farmours (22%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> Health (12%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> Operations (10%)</div>
+          </div>
+        </div>
       </div>
-      <div class="reveal reveal-delay-1">
-        <h3 style="font-family:var(--font-serif);margin-bottom:20px;">Your Donation Funds</h3>
-        <ul style="list-style:none;padding:0;">
-          <li style="display:flex;gap:12px;margin-bottom:16px;"><span style="color:#10b981;font-weight:800;">🌊</span> River conservation and water quality monitoring</li>
-          <li style="display:flex;gap:12px;margin-bottom:16px;"><span style="color:#10b981;font-weight:800;">🎓</span> Smart classroom and scholarship programmes</li>
-          <li style="display:flex;gap:12px;margin-bottom:16px;"><span style="color:#10b981;font-weight:800;">🌱</span> Women farmer training and SHG development</li>
-          <li style="display:flex;gap:12px;"><span style="color:#10b981;font-weight:800;">🧘</span> Community yoga and wellness programmes</li>
-        </ul>
-        <div style="background:var(--bg-2);padding:20px;border-radius:var(--r-xl);border:1px solid var(--border);margin-top:24px;font-size:.85rem;color:var(--text-3);">
-          <strong>Tax Benefits:</strong> Donations to Meer Foundation are eligible for 80G tax exemption under the Income Tax Act, 1961. Please request your donation receipt for tax filing.
-        </div>
+
+      <!-- Right Column: Donation Form -->
+      <div class="donation-form reveal reveal-delay-1">
+        <form action="/donate/process" method="POST">
+          <div class="freq-toggle">
+            <button type="button" class="freq-btn active" id="btn-onetime">One-time</button>
+            <button type="button" class="freq-btn" id="btn-monthly">Monthly</button>
+          </div>
+
+          <div class="amount-grid" id="amount-grid">
+            <!-- Populated via JS -->
+          </div>
+
+          <div class="custom-amt">
+            <span class="currency-symbol">₹</span>
+            <input type="number" class="custom-input" id="custom-amount" placeholder="Other amount" min="100">
+          </div>
+
+          <div class="donor-info">
+            <div class="form-group">
+              <label class="form-label" for="name">Name (for 80G receipt)</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone (for WhatsApp updates)</label>
+              <input type="tel" id="phone" name="phone" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pan">PAN (Mandatory for 80G)</label>
+              <input type="text" id="pan" name="pan" class="form-input" placeholder="ABCDE1234F" style="text-transform:uppercase;" maxlength="10" required>
+            </div>
+          </div>
+
+          <div class="tax-summary">
+            <div>
+              <div class="tax-label">Estimated Tax Deduction</div>
+              <div style="font-size:0.75rem; color:#166534; margin-top:2px;">Under Section 80G (50%)</div>
+            </div>
+            <div class="tax-val" id="tax-deduction">₹0</div>
+          </div>
+
+          <button type="button" class="btn-donate" id="submit-btn" onclick="alert('This is a static demonstration. No payment gateway is attached.')">Donate ₹0</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section" style="background: var(--bg-2);">
+  <div class="container" style="max-width: 800px;">
+    <div class="section-header reveal">
+      <h2 class="section-title">Donation FAQs</h2>
+    </div>
+    <div class="reveal mt-4">
+      <div class="faq-item">
+        <div class="faq-question">How do I claim my 80G tax deduction? <span>+</span></div>
+        <div class="faq-answer">After your donation, you will receive an 80G receipt by email within minutes. The receipt carries your name, PAN, donation amount, date, and our 80G registration ID (AACAM4289JF20241). When filing your Income Tax return, enter the receipt details under Section 80G. The deduction is 50% of the donated amount, subject to the qualifying-limit rule.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is mandatory to receive an 80G receipt? <span>+</span></div>
+        <div class="faq-answer">PAN. Under Income Tax rules, the donor's PAN is mandatory for any 80G receipt above ₹2,000. We collect PAN at donation time regardless of amount to keep the receipt valid and ensure zero friction at tax time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I donate via UPI, cards, and net banking? <span>+</span></div>
+        <div class="faq-answer">Yes. We accept UPI (all major apps), credit and debit cards, and net banking (all major Indian banks). International donations are not currently accepted via this form — write to us at meercare@live.com for FCRA-compliant routing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can my company donate as CSR spend? <span>+</span></div>
+        <div class="faq-answer">Yes — Meer Foundation is CSR-1 registered (CSR00075824). CSR donations above ₹2 lakh typically route through our CSR desk rather than this form, because CSR requires an MoU, milestone reporting, and a formal closure report. Visit the CSR Partner page to begin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How is my donation allocated? <span>+</span></div>
+        <div class="faq-answer">The default allocation is published above: 32% Prayaas (education), 24% Bolti Nadi (environment), 22% Farmours (livelihood), 12% Health, 10% operations. If you want your donation restricted to a specific programme, write to us at meercare@live.com within 24 hours of donating.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is my donation data secure? <span>+</span></div>
+        <div class="faq-answer">Yes. Payment is processed via a PCI-DSS-compliant payment gateway. We never see or store your card number or UPI PIN. We store your basic info (name, PAN, amount) for 7 years as required by Income Tax law. We never share donor data with third parties.</div>
       </div>
     </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>
+  // Simple FAQ Accordion Logic
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.classList.remove('active');
+        q.querySelector('span').textContent = '+';
+      });
+      if (!wasActive) {
+        item.classList.add('active');
+        item.querySelector('span').textContent = '−';
+      }
+    });
+  });
+
+  // Donation UI Logic
+  const presets = [
+    { amount: 500, label: "Child's library access" },
+    { amount: 2500, label: "One health camp kit" },
+    { amount: 10000, label: "Fund an SHG seed" },
+    { amount: 50000, label: "River walk sponsor" },
+    { amount: 200000, label: "Build a check dam" }
+  ];
+  
+  let currentAmount = 500;
+  
+  const grid = document.getElementById('amount-grid');
+  const customInput = document.getElementById('custom-amount');
+  const taxDisplay = document.getElementById('tax-deduction');
+  const submitBtn = document.getElementById('submit-btn');
+  
+  function updateUI() {
+    grid.innerHTML = presets.map(p => `
+      <div class="amt-btn ${p.amount === currentAmount && !customInput.value ? 'active' : ''}" onclick="selectAmount(${p.amount})">
+        <div class="amt-val">₹${p.amount.toLocaleString('en-IN')}</div>
+        <div class="amt-desc">${p.label}</div>
+      </div>
+    `).join('');
+    
+    let activeAmount = customInput.value ? parseInt(customInput.value) : currentAmount;
+    if(isNaN(activeAmount)) activeAmount = 0;
+    
+    taxDisplay.innerText = `₹${(activeAmount * 0.5).toLocaleString('en-IN')}`;
+    submitBtn.innerText = `Donate ₹${activeAmount.toLocaleString('en-IN')}`;
+  }
+  
+  window.selectAmount = function(amt) {
+    currentAmount = amt;
+    customInput.value = '';
+    updateUI();
+  }
+  
+  customInput.addEventListener('input', () => {
+    updateUI();
+  });
+  
+  updateUI();
+  
+  // Frequency toggle
+  document.getElementById('btn-onetime').addEventListener('click', (e) => {
+    e.target.classList.add('active');
+    document.getElementById('btn-monthly').classList.remove('active');
+  });
+  document.getElementById('btn-monthly').addEventListener('click', (e) => {
+    e.target.classList.add('active');
+    document.getElementById('btn-onetime').classList.remove('active');
+  });
+</script>
 </body>
 </html>

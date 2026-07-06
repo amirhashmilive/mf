@@ -3,50 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Internship | Meer Foundation</title>
-  <meta name="description" content="Apply for a Meer Foundation internship — hands-on field experience in social development, research, communications, and community work across Chhattisgarh.">
+  <title>Internship (MDAP) | Meer Foundation</title>
+  <meta name="description" content="Meer Foundation Development Apprenticeship Program (MDAP) — a structured, immersive, field-based learning programme for aspiring development professionals.">
   <link rel="canonical" href="https://meerfoundation.co.in/get-involved/internship/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .mdap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+    .mdap-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .mdap-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .mdap-card h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .mdap-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 12px; }
+    .mdap-tag { font-size: 0.8rem; color: #1e40af; font-weight: 600; background: #1e40af10; padding: 4px 10px; border-radius: 100px; display: inline-block; margin-right: 8px; }
+
+    .phase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 40px; }
+    .phase-card { background: var(--bg); border-left: 4px solid #1e40af; border-radius: 0 var(--r-md) var(--r-md) 0; padding: 24px; }
+    .phase-num { font-family: var(--font-mono); font-size: 0.85rem; color: #1e40af; font-weight: 700; margin-bottom: 4px; }
+    .phase-title { font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .phase-desc { font-size: 0.85rem; color: var(--text-2); line-height: 1.5; }
+
+    .disc-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .disc-pill { background: var(--bg-2); border: 1px solid var(--border); color: var(--text-2); padding: 8px 16px; border-radius: 100px; font-size: 0.85rem; font-weight: 500; }
+
+    .intern-form { max-width: 700px; margin: 0 auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 40px; }
+    .form-group { margin-bottom: 24px; }
+    .form-label { display: block; font-weight: 600; color: var(--text-1); margin-bottom: 8px; font-size: 0.9rem; }
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg); color: var(--text-1); font-size: 1rem; font-family: inherit; transition: border-color 0.2s; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: #1e40af; box-shadow: 0 0 0 3px rgba(30,64,175,0.1); }
+    .form-textarea { min-height: 120px; resize: vertical; }
+    .form-submit { background: #1e40af; color: #fff; border: none; border-radius: var(--r-md); padding: 14px 24px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; transition: background 0.2s; }
+    .form-submit:hover { background: #15328a; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Learn by Doing</div><h1 class="section-title">Internship Programme</h1><p class="section-subtitle">Hands-on field internships for students and young professionals passionate about social development and sustainability.</p></div></div>
-</section>
-<section class="section">
   <div class="container">
-    <div class="grid-2">
-      <div class="reveal">
-        <h3 style="font-family:var(--font-serif);margin-bottom:20px;">Available Internship Tracks</h3>
-        <ul style="list-style:none;padding:0;">
-          <li style="display:flex;gap:12px;margin-bottom:16px;"><span style="color:#1e40af;font-weight:800;font-size:1.2rem;">•</span><div><strong>Community Research</strong> — Data collection, surveys, and impact documentation for ongoing programmes.</div></li>
-          <li style="display:flex;gap:12px;margin-bottom:16px;"><span style="color:#1e40af;font-weight:800;font-size:1.2rem;">•</span><div><strong>Environmental Studies</strong> — River monitoring, ecological assessment, and conservation reporting.</div></li>
-          <li style="display:flex;gap:12px;margin-bottom:16px;"><span style="color:#1e40af;font-weight:800;font-size:1.2rem;">•</span><div><strong>Communications &amp; Media</strong> — Social media, content writing, photography, and community storytelling.</div></li>
-          <li style="display:flex;gap:12px;"><span style="color:#1e40af;font-weight:800;font-size:1.2rem;">•</span><div><strong>Programme Management</strong> — Support CSR project coordination and stakeholder management.</div></li>
-        </ul>
-        <a href="mailto:info@meerfoundation.co.in" class="btn btn-primary" style="margin-top:30px;">Apply for Internship</a>
+    <div class="section-header reveal">
+      <div class="section-tag">Development Apprenticeship</div>
+      <h1 class="section-title">MDAP — Internship Programme</h1>
+      <p class="section-subtitle">Meer Foundation Development Apprenticeship Program (MDAP): a structured, immersive, field-based learning programme designed to produce development practitioners who can design, execute, and evaluate rural development work from day one.</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">4</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Learning Phases</div>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background:#1e40af;color:#fff;padding:40px;border-radius:var(--r-2xl);">
-          <h3 style="margin-bottom:16px;">Eligibility &amp; Terms</h3>
-          <ul style="list-style:none;padding:0;opacity:.88;">
-            <li style="margin-bottom:12px;">✓ Open to UG/PG students and recent graduates</li>
-            <li style="margin-bottom:12px;">✓ Duration: 4–12 weeks (flexible)</li>
-            <li style="margin-bottom:12px;">✓ Location: Dhamtari or remote options available</li>
-            <li style="margin-bottom:12px;">✓ Certificate of completion provided</li>
-            <li>✓ Opportunity for paper co-authorship in IJMEER</li>
-          </ul>
-        </div>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">7</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Initiative Placements</div>
+      </div>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">6</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Core Competencies</div>
+      </div>
+      <div class="feature-card reveal text-center">
+        <div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;line-height:1;">12</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Districts Active</div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Programme Tracks</h2>
+      <p class="section-subtitle">Three durations. One standard: learn by doing, not by observing.</p>
+    </div>
+    <div class="mdap-grid">
+      <div class="mdap-card reveal">
+        <h3>☀️ Summer Apprenticeship</h3>
+        <p>2–3 months, full-time intensive. Designed for students on academic break.</p>
+        <div><span class="mdap-tag">Full-time</span><span class="mdap-tag">2–3 months</span></div>
+      </div>
+      <div class="mdap-card reveal">
+        <h3>📘 Semester Apprenticeship</h3>
+        <p>4–6 months, part-time (20 hrs/week) or full-time. For final-year students.</p>
+        <div><span class="mdap-tag">Part/Full-time</span><span class="mdap-tag">4–6 months</span></div>
+      </div>
+      <div class="mdap-card reveal">
+        <h3>🎯 Year-long Apprenticeship</h3>
+        <p>9–12 months, full-time immersive. For graduates and early-career professionals.</p>
+        <div><span class="mdap-tag">Full-time</span><span class="mdap-tag">9–12 months</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Four-Phase Learning Model</h2>
+      <p class="section-subtitle">Each phase builds on the previous — theory informs practice, practice informs reflection.</p>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-card reveal"><div class="phase-num">Phase 1</div><div class="phase-title">Orientation</div><div class="phase-desc">Chhattisgarh socio-economic context, community engagement ethics, field safety, mentor matching.</div></div>
+      <div class="phase-card reveal"><div class="phase-num">Phase 2</div><div class="phase-title">Classroom</div><div class="phase-desc">M&E fundamentals, community-based research, communication for development, case study analysis.</div></div>
+      <div class="phase-card reveal"><div class="phase-num">Phase 3</div><div class="phase-title">Field</div><div class="phase-desc">Community engagement, data collection, mentor-supervised deliverables, weekly field reports.</div></div>
+      <div class="phase-card reveal"><div class="phase-num">Phase 4</div><div class="phase-title">Capstone</div><div class="phase-desc">Panel presentation and defence, competency evaluation, exit interview, certification and alumni onboarding.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Eligible Disciplines</h2>
+      <p class="section-subtitle">Don't see your discipline? If your background is relevant to rural development, we encourage you to apply.</p>
+    </div>
+    <div class="disc-list reveal">
+      <span class="disc-pill">Environmental Science</span>
+      <span class="disc-pill">Education</span>
+      <span class="disc-pill">Public Health</span>
+      <span class="disc-pill">Agriculture</span>
+      <span class="disc-pill">Economics</span>
+      <span class="disc-pill">Sociology</span>
+      <span class="disc-pill">Journalism</span>
+      <span class="disc-pill">Political Science</span>
+      <span class="disc-pill">Management</span>
+      <span class="disc-pill">Computer Science</span>
+      <span class="disc-pill">Gender Studies</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Apply to MDAP</h2><p class="section-subtitle">We review applications weekly. Expect a response within 14 days.</p></div>
+    <div class="intern-form reveal">
+      <form action="mailto:meercare@live.com" method="POST" enctype="text/plain">
+        <div class="form-group"><label class="form-label" for="name">Full Name</label><input type="text" id="name" name="name" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="email">Email</label><input type="email" id="email" name="email" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="phone">Phone</label><input type="tel" id="phone" name="phone" class="form-input"></div>
+        <div class="form-group"><label class="form-label" for="discipline">Discipline</label>
+          <select id="discipline" name="discipline" class="form-select">
+            <option value="" disabled selected>Select your discipline...</option>
+            <option>Environmental Science / Sustainability</option>
+            <option>Education / Curriculum Design</option>
+            <option>Public Health / Community Health</option>
+            <option>Agriculture / Agribusiness</option>
+            <option>Economics / Development Economics</option>
+            <option>Sociology / Anthropology</option>
+            <option>Journalism / Mass Communication</option>
+            <option>Political Science / Public Policy</option>
+            <option>Management / Social Entrepreneurship</option>
+            <option>Computer Science / Data for Development</option>
+            <option>Gender Studies / Women's Studies</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label" for="duration">Duration</label>
+          <select id="duration" name="duration" class="form-select">
+            <option value="Summer">Summer (2–3 months)</option>
+            <option value="Semester">Semester (4–6 months)</option>
+            <option value="Year-long">Year-long (9–12 months)</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label" for="startdate">Earliest Start Date</label><input type="date" id="startdate" name="startdate" class="form-input"></div>
+        <div class="form-group"><label class="form-label" for="sop">Statement of Purpose (500 words max)</label><textarea id="sop" name="sop" class="form-textarea" placeholder="Why do you want to join MDAP? What do you hope to contribute and learn?" required></textarea></div>
+        <p style="font-size:0.85rem;color:var(--text-3);margin-bottom:20px;">Your data is never shared with third parties.</p>
+        <button type="submit" class="form-submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">MDAP FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">Is the apprenticeship paid? <span>+</span></div><div class="faq-answer">Depending on the programme category, apprentices may receive a field allowance or reimbursement of approved expenses. Details will be specified in each programme announcement.</div></div>
+      <div class="faq-item"><div class="faq-question">Will accommodation be provided? <span>+</span></div><div class="faq-answer">Accommodation may be arranged during designated field placements where required.</div></div>
+      <div class="faq-item"><div class="faq-question">Is prior rural experience mandatory? <span>+</span></div><div class="faq-answer">No. A willingness to learn, adapt, and engage respectfully with communities is more important than previous field experience.</div></div>
+      <div class="faq-item"><div class="faq-question">Can the apprenticeship count for academic credit? <span>+</span></div><div class="faq-answer">Yes. We sign academic MoUs with institutions and structure deliverables to meet academic requirements. Coordinate with your institution's internship cell and we will work with them.</div></div>
+      <div class="faq-item"><div class="faq-question">What happens after the apprenticeship ends? <span>+</span></div><div class="faq-answer">Apprentices receive a certificate, join the alumni network, and may be considered for full-time roles at Meer Foundation based on performance and availability. Several current team members are former apprentices.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Ready to transform Chhattisgarh?</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/contact/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Contact Us</a>
+      <a href="/get-involved/volunteer/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">Volunteer instead</a>
+    </div>
+  </div>
+</section>
+
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-question').forEach(q => { q.classList.remove('active'); q.querySelector('span').textContent = '+'; });
+      if (!wasActive) { item.classList.add('active'); item.querySelector('span').textContent = '−'; }
+    });
+  });
+</script>
 </body>
 </html>

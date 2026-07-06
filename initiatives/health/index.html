@@ -3,11 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Health & Well-being — Yoga Kutumb | Meer Foundation</title>
-  <meta name="description" content="Meer Foundation's Yoga Kutumb initiative promotes holistic well-being through certified yoga training and community wellness programmes in rural Chhattisgarh.">
+  <title>Health Initiative | Meer Foundation</title>
+  <meta name="description" content="Meer Foundation's Health practice area — Yoga Kutumb wellness sessions and 8 critical emergency response modules for rural Chhattisgarh.">
   <link rel="canonical" href="https://meerfoundation.co.in/initiatives/health/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .init-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+    .init-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+    .init-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .init-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+    .init-card .tag { font-size: 0.8rem; color: #1e40af; font-weight: 600; background: #1e40af10; padding: 4px 10px; border-radius: 100px; display: inline-block; margin-bottom: 12px; }
+    .init-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+    
+    .emergency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 30px; }
+    .emergency-card { background: var(--bg); border-left: 4px solid #1e40af; border-radius: 0 var(--r-md) var(--r-md) 0; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .emergency-num { font-family: var(--font-mono); font-size: 0.75rem; color: #1e40af; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+    .emergency-title { font-weight: 700; color: var(--text-1); margin-bottom: 6px; }
+    .emergency-desc { font-size: 0.85rem; color: var(--text-2); line-height: 1.4; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -16,43 +35,85 @@
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">SDG 3 – Good Health &amp; Well-being</div>
-      <h1 class="section-title">Yoga Kutumb: Holistic Well-being</h1>
-      <p class="section-subtitle">Integrating principles of holistic well-being into everyday life through certified yoga professionals and community wellness training.</p>
+      <div class="section-tag">FPF Pillar: Initiative (I)</div>
+      <h1 class="section-title">Health & Wellness</h1>
+      <p class="section-subtitle">Make holistic wellness and emergency-response literacy accessible to every rural household — regardless of distance from a hospital or ability to pay.</p>
     </div>
-    <div class="grid-2" style="margin-top:50px;">
-      <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Yoga Kutumb integrates the science of yoga with community health initiatives, creating a network of trained practitioners who serve as wellness ambassadors in their villages. This initiative addresses physical, mental, and spiritual health through certified training programmes.</p>
-        <ul style="list-style:none;padding:0;">
-          <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> Certified yoga instructor training for community members</li>
-          <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> 225+ youth trained as wellness ambassadors</li>
-          <li style="display:flex;gap:12px;margin-bottom:14px;"><span style="color:#10b981;font-weight:800;">✓</span> Women-focused health and nutrition workshops</li>
-          <li style="display:flex;gap:12px;"><span style="color:#10b981;font-weight:800;">✓</span> Mental health awareness campaigns in rural schools</li>
-        </ul>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">180+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Sessions / Month</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">40+</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Certified Instructors</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">8</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Emergency Modules</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">12</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Districts Reached</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">Yoga Kutumb Initiative</h2><p class="section-subtitle">Launched as a community wellness movement, Yoga Kutumb trains rural women in a 200-hour certified curriculum to lead free weekly sessions in their own villages.</p></div>
+    <div class="init-grid">
+      <div class="init-card reveal">
+        <div class="tag">🧘 Wellness for all ages</div>
+        <h3>Daily Postures</h3>
+        <p>Adapted for rural bodies, agricultural workloads, and age groups 8-80.</p>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div class="feature-card" style="text-align:center;padding:40px;">
-          <div style="font-size:3rem;margin-bottom:16px;">🧘</div>
-          <h3 style="margin-bottom:16px;">Yoga Kutumb</h3>
-          <p style="color:var(--text-3);font-size:0.9rem;line-height:1.7;">A community of wellness practitioners building healthier, happier rural Chhattisgarh — one village at a time.</p>
-          <a href="/get-involved/volunteer/" class="btn btn-primary" style="margin-top:24px;">Join as Volunteer</a>
-        </div>
+      <div class="init-card reveal">
+        <div class="tag">🌬️ Stress Reduction</div>
+        <h3>Breath-work & Meditation</h3>
+        <p>Proven to reduce stress, blood pressure, and anxiety in rural communities.</p>
+      </div>
+      <div class="init-card reveal">
+        <div class="tag">🚑 Emergency Literacy</div>
+        <h3>First Responder Training</h3>
+        <p>Every instructor is trained to teach the 8 emergency PDFs alongside asana practice.</p>
       </div>
     </div>
   </div>
 </section>
+
 <section class="section" style="background:var(--bg-2);">
   <div class="container">
-    <div class="grid-3">
-      <div class="feature-card reveal"><h4 style="color:#1e40af;margin-bottom:10px;">Certified Training</h4><p style="font-size:.9rem;color:var(--text-3);">Nationally accredited yoga instructor certification programmes that empower community members to lead local wellness sessions.</p></div>
-      <div class="feature-card reveal reveal-delay-1"><h4 style="color:#1e40af;margin-bottom:10px;">Women's Health</h4><p style="font-size:.9rem;color:var(--text-3);">Specialized workshops addressing maternal health, nutrition, and mental well-being for women in rural communities.</p></div>
-      <div class="feature-card reveal reveal-delay-2"><h4 style="color:#1e40af;margin-bottom:10px;">School Integration</h4><p style="font-size:.9rem;color:var(--text-3);">Daily yoga sessions integrated into school curricula across project districts, promoting focus and physical fitness from a young age.</p></div>
+    <div class="section-header reveal"><h2 class="section-title">8 Emergency Modules</h2><p class="section-subtitle">When the nearest hospital is two hours away, the first responder is a family member. These 8 PDFs turn every reader into a potential life-saver.</p></div>
+    <div class="emergency-grid">
+      <div class="emergency-card reveal"><div class="emergency-num">#01 Cardiac</div><div class="emergency-title">Heart Attack & Arrest</div><div class="emergency-desc">Recognising symptoms and performing hands-only CPR.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#02 Neurological</div><div class="emergency-title">Stroke (FAST)</div><div class="emergency-desc">Face, Arm, Speech, Time. Golden hour guidelines.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#03 Respiratory</div><div class="emergency-title">Asthma & Choking</div><div class="emergency-desc">Heimlich maneuver and inhaler assistance protocols.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#04 Endocrine</div><div class="emergency-title">Diabetic Emergencies</div><div class="emergency-desc">Managing severe hypoglycaemia (low blood sugar) in the field.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#05 Immunology</div><div class="emergency-title">Severe Allergies</div><div class="emergency-desc">Recognising anaphylaxis and responding to insect/snake bites.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#06 Orthopaedic</div><div class="emergency-title">Trauma & Bleeding</div><div class="emergency-desc">Tourniquets, pressure, and splinting for rural accidents.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#07 Psychological</div><div class="emergency-title">Mental Health Crisis</div><div class="emergency-desc">De-escalation and accessing the free 24x7 Kiran helpline.</div></div>
+      <div class="emergency-card reveal"><div class="emergency-num">#08 General</div><div class="emergency-title">First Aid Quick Ref</div><div class="emergency-desc">Burns, cuts, fever management, and 108 ambulance dispatch.</div></div>
+    </div>
+    <p class="mt-4" style="font-size:0.85rem;color:var(--text-3);"><strong>Disclaimer:</strong> These PDFs are awareness modules, not a substitute for professional medical care. In any emergency, call 108 immediately.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">Health FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">Are Yoga Kutumb sessions free? <span>+</span></div><div class="faq-answer">Yes. All Yoga Kutumb sessions are free for rural participants. Certified instructors volunteer their time. Materials are also free under CC-BY 4.0.</div></div>
+      <div class="faq-item"><div class="faq-question">Can I become a certified yoga instructor? <span>+</span></div><div class="faq-answer">Yes. Our 200-hour Yoga Instructor Certification programme runs twice a year. Women from rural Chhattisgarh are given preference. Write to meercare@live.com to apply.</div></div>
+      <div class="faq-item"><div class="faq-question">Can my school host a session? <span>+</span></div><div class="faq-answer">Yes. We partner with schools, anganwadi centres, and SHGs to host free weekly sessions. Contact us to schedule — we cover all 12 districts of Chhattisgarh.</div></div>
+      <div class="faq-item"><div class="faq-question">Are the emergency PDFs a substitute for medical training? <span>+</span></div><div class="faq-answer">No. They are awareness modules for laypersons — not a substitute for professional training or care. Always call 108 in an emergency.</div></div>
+      <div class="faq-item"><div class="faq-question">Can I print and distribute these PDFs? <span>+</span></div><div class="faq-answer">Yes. All Yoga Kutumb PDFs are licensed CC-BY 4.0. Print, distribute, and adapt with attribution to Meer Foundation.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Bring wellness to your village</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/get-involved/donate/" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Donate to Health</a>
+      <a href="/get-involved/volunteer/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">Volunteer</a>
     </div>
   </div>
 </section>
 
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>

@@ -4,43 +4,166 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSR Research | Meer Foundation</title>
-  <meta name="description" content="Meer Foundation's CSR research programme: evidence-based corporate social responsibility communication, policy analysis, and implementation frameworks for Chhattisgarh.">
+  <meta name="description" content="Meer Foundation's CSR research applies the Five Pillars Framework to CSR programmes, asking the question compliance audits do not: did lives actually improve?">
   <link rel="canonical" href="https://meerfoundation.co.in/research/csr-research/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <style>
+    .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+    .research-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 32px; transition: transform 0.2s, box-shadow 0.2s; }
+    .research-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .research-title { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-1); margin-bottom: 12px; }
+    .research-desc { font-size: 0.95rem; color: var(--text-2); line-height: 1.6; margin-bottom: 20px; }
+    .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .research-tag { font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; color: var(--text-2); line-height: 1.6; font-size: 0.95rem; }
+    .faq-question.active + .faq-answer { display: block; }
+
+    .brsr-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+    @media (min-width: 640px) { .brsr-grid { grid-template-columns: 1fr 1fr; } }
+    .brsr-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px; }
+    .brsr-sector { font-weight: 700; color: #1e40af; margin-bottom: 8px; font-size: 1.1rem; }
+    .brsr-compare { display: grid; gap: 8px; font-size: 0.85rem; }
+    .brsr-label { font-weight: 600; color: var(--text-2); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; }
+    .brsr-val { color: var(--text-1); margin-bottom: 8px; }
+  </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <div id="site-header-inject"></div>
 
 <section class="section" style="padding-top:140px;background:var(--bg-2);">
-  <div class="container"><div class="section-header reveal"><div class="section-tag">Corporate Social Responsibility</div><h1 class="section-title">CSR Research</h1><p class="section-subtitle">Evidence-based research informing corporate social responsibility policy and implementation across central India.</p></div></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">CSR Research</div>
+      <h1 class="section-title">The Five Pillars Applied</h1>
+      <p class="section-subtitle">A CSR company claims it built 200 borewells. The press release says so. The audit certificate confirms the spend. We ask the beneficiary: did it actually work?</p>
+    </div>
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">28</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">CSR Programmes Audited</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">8</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Tribal Districts</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">4</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Open Reports</div></div>
+      <div class="feature-card reveal text-center"><div style="font-family:var(--font-serif);font-size:2.5rem;color:#1e40af;font-weight:800;">5</div><div style="font-size:0.85rem;font-weight:600;color:var(--text-3);margin-top:8px;text-transform:uppercase;">Pillars Tested</div></div>
+    </div>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <div class="grid-2">
-      <div class="reveal">
-        <p style="color:var(--text-2);line-height:1.8;margin-bottom:20px;">Meer Foundation's CSR research builds on the Penta-Alignment Model, providing corporations with evidence-based frameworks to align their CSR investments with genuine community need. This research directly informs our role as a CSR implementing agency in Chhattisgarh.</p>
-        <p style="color:var(--text-2);line-height:1.8;">Founder Amir Hashmi's PhD research at Kabindra Tagore University focuses specifically on CSR communication and community development — feeding cutting-edge academic insight directly into our on-ground programmes.</p>
-        <a href="/get-involved/csr-partner/" class="btn btn-primary" style="margin-top:30px;">Become a CSR Partner</a>
+    <div class="section-header reveal"><h2 class="section-title">Research Methodology</h2><p class="section-subtitle">We adopt the posture of the skeptical observer. The default stance is doubt, not deference.</p></div>
+    
+    <div class="research-grid">
+      <!-- M1 -->
+      <div class="research-card reveal" style="border-top:4px solid #1e40af;">
+        <div class="research-tags">
+          <span class="research-tag" style="background:#e0f2fe;color:#0369a1;">Default Doubt</span>
+          <span class="research-tag" style="background:#e0f2fe;color:#0369a1;">Dissent-seeking</span>
+        </div>
+        <h3 class="research-title">The Skeptical Observer</h3>
+        <p class="research-desc">A CSR claim is treated as a hypothesis, not a fact. Every claim is interrogated: Who says so? Where is the evidence? Can a dissenting voice be heard?</p>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background:var(--bg-2);padding:40px;border-radius:var(--r-2xl);border:1px solid var(--border);">
-          <h3 style="margin-bottom:20px;">Research Focus Areas</h3>
-          <ul style="list-style:none;padding:0;">
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> CSR Communication Effectiveness in Rural India</li>
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Penta-Alignment Model Application in Corporate Programmes</li>
-            <li style="margin-bottom:14px;display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Community Development Indicators and Measurement</li>
-            <li style="display:flex;gap:10px;"><span style="color:#1e40af;font-weight:800;">→</span> Environmental CSR: River Conservation Policy Impact</li>
-          </ul>
+      <!-- M2 -->
+      <div class="research-card reveal" style="border-top:4px solid #047857;">
+        <div class="research-tags">
+          <span class="research-tag" style="background:#dcfce7;color:#15803d;">Cross-pillar</span>
+          <span class="research-tag" style="background:#dcfce7;color:#15803d;">Systems Lens</span>
+        </div>
+        <h3 class="research-title">Pillar Coherence</h3>
+        <p class="research-desc">A CSR programme that addresses Health but undermines Livelihood is not legitimate. We test every programme against all five pillars of the FPF — Accountability, Execution, Initiative, Outcome, and Meaning.</p>
+      </div>
+      <!-- M3 -->
+      <div class="research-card reveal" style="border-top:4px solid #b45309;">
+        <div class="research-tags">
+          <span class="research-tag" style="background:#fef3c7;color:#b45309;">Tribal Tenure</span>
+          <span class="research-tag" style="background:#fef3c7;color:#b45309;">Language Access</span>
+        </div>
+        <h3 class="research-title">Tribal-belt CSR</h3>
+        <p class="research-desc">Of the 28 programmes audited, 19 operated in tribal-majority districts. Tribal-belt CSR carries specific obligations — FPIC, language access, and respect for collective tenure — that we audit explicitly.</p>
+      </div>
+      <!-- M4 -->
+      <div class="research-card reveal" style="border-top:4px solid #be185d;">
+        <div class="research-tags">
+          <span class="research-tag" style="background:#fce7f3;color:#be185d;">Betterment Audit</span>
+        </div>
+        <h3 class="research-title">Compliance vs Betterment</h3>
+        <p class="research-desc">Compliance (was the rule followed?) and betterment (did lives improve?) are not the same. A programme can be fully compliant and produce no betterment. We treat betterment as the higher bar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal"><h2 class="section-title">BRSR Mapping</h2><p class="section-subtitle">We map the SEBI-mandated Business Responsibility & Sustainability Reporting (BRSR) framework against the FPF to identify where BRSR asks the wrong questions.</p></div>
+    
+    <div class="brsr-grid">
+      <div class="brsr-card reveal">
+        <div class="brsr-sector">Education</div>
+        <div class="brsr-compare">
+          <div><div class="brsr-label">BRSR Coverage</div><div class="brsr-val">Measured as spend or infrastructure, but not as outcome.</div></div>
+          <div><div class="brsr-label">FPF Lens</div><div class="brsr-val">Did learning outcomes improve? Was the school still open in year 3?</div></div>
+        </div>
+      </div>
+      <div class="brsr-card reveal">
+        <div class="brsr-sector">Health</div>
+        <div class="brsr-compare">
+          <div><div class="brsr-label">BRSR Coverage</div><div class="brsr-val">Adequate — covered under CSR indicators.</div></div>
+          <div><div class="brsr-label">FPF Lens</div><div class="brsr-val">Did morbidity fall? Did the PHC remain staffed after handover?</div></div>
+        </div>
+      </div>
+      <div class="brsr-card reveal">
+        <div class="brsr-sector">Environment</div>
+        <div class="brsr-compare">
+          <div><div class="brsr-label">BRSR Coverage</div><div class="brsr-val">Strong — covered under E indicators.</div></div>
+          <div><div class="brsr-label">FPF Lens</div><div class="brsr-val">Did river health improve? Was biodiversity actually restored?</div></div>
+        </div>
+      </div>
+      <div class="brsr-card reveal">
+        <div class="brsr-sector">Livelihood</div>
+        <div class="brsr-compare">
+          <div><div class="brsr-label">BRSR Coverage</div><div class="brsr-val">Weak — covered only as CSR spend.</div></div>
+          <div><div class="brsr-label">FPF Lens</div><div class="brsr-val">Did household income rise? Did migration fall? Did the job last?</div></div>
+        </div>
+      </div>
+      <div class="brsr-card reveal">
+        <div class="brsr-sector">Heritage (FPF Pillar)</div>
+        <div class="brsr-compare">
+          <div><div class="brsr-label">BRSR Coverage</div><div class="brsr-val">Absent — not in BRSR.</div></div>
+          <div><div class="brsr-label">FPF Lens</div><div class="brsr-val">Was indigenous knowledge protected? Were sacred sites respected?</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header reveal"><h2 class="section-title">CSR Audit FAQs</h2></div>
+    <div class="reveal mt-4">
+      <div class="faq-item"><div class="faq-question">Why does Meer Foundation audit CSR programmes? <span>+</span></div><div class="faq-answer">Because the Legitimacy Gap is widest in CSR. The press release says a borewell was built; the audit confirms the spend. But did it work? Was it wanted? Nobody asks the beneficiary. We audit CSR because nobody else audits it from the beneficiary's side.</div></div>
+      <div class="faq-item"><div class="faq-question">Do you name the companies you audit? <span>+</span></div><div class="faq-answer">It depends. If the company consented to a public audit, we name them. If it was an independent audit without cooperation, we anonymise the company but publish the findings.</div></div>
+      <div class="faq-item"><div class="faq-question">What is the difference between compliance and betterment? <span>+</span></div><div class="faq-answer">Compliance asks: was the 2% net profit spent and audited? Betterment asks: did lives actually improve in the beneficiaries' own terms? A programme can be fully compliant and produce no betterment.</div></div>
+      <div class="faq-item"><div class="faq-question">Can a CSR team commission a Meer Foundation audit? <span>+</span></div><div class="faq-answer">Yes, and we encourage it. It carries the same rigour as an independent audit, but the company must agree in advance to publish the findings, including adverse ones. Write to csr-research@meerfoundation.org to begin.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--grad-brand);color:#fff;">
+  <div class="container text-center reveal">
+    <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:16px;">Are you ready to audit for betterment?</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:csr-research@meerfoundation.org" class="btn-submit" style="background:#fff;color:#1e40af;border:none;">Commission an audit</a>
+      <a href="/research/publications/" class="btn-submit" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">View publications</a>
+    </div>
+  </div>
+</section>
+
 <div id="site-footer-inject"></div>
-<script src="../../../assets/js/components-sub.js?v=4"></script>
-<script src="../../../assets/js/core.js?v=4"></script>
+<script src="/assets/js/components.js?v=4"></script>
+<script src="/assets/js/core.js?v=4"></script>
+<script>document.querySelectorAll('.faq-question').forEach(item=>{item.addEventListener('click',()=>{const w=item.classList.contains('active');document.querySelectorAll('.faq-question').forEach(q=>{q.classList.remove('active');q.querySelector('span').textContent='+';});if(!w){item.classList.add('active');item.querySelector('span').textContent='−';}});});</script>
 </body>
 </html>
