@@ -227,7 +227,41 @@
     placeholder.remove();
   }
 
+  const ORG_SCHEMA = `
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Meer Foundation",
+  "url": "https://meerfoundation.co.in",
+  "logo": "https://meerfoundation.co.in/assets/images/logo/logo-1x1.webp",
+  "foundingDate": "2011",
+  "description": "A non-profit organization dedicated to sustainable community development, river conservation, and rural empowerment across Chhattisgarh.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sr. MIG 103, Housing Board Colony, Hatkeshar",
+    "addressLocality": "Dhamtari",
+    "addressRegion": "Chhattisgarh",
+    "postalCode": "493773",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@meerfoundation.co.in",
+    "contactType": "customer service"
+  },
+  "sameAs": [
+    "https://facebook.com/meerfoundation",
+    "https://instagram.com/meerfoundations",
+    "https://x.com/meerfoundations",
+    "https://linkedin.com/company/meerfoundation",
+    "https://youtube.com/@meerfoundation"
+  ]
+}
+</script>`;
+
   inject('site-header-inject', HEADER);
   inject('site-footer-inject', FOOTER);
+  document.head.insertAdjacentHTML('beforeend', ORG_SCHEMA);
   document.dispatchEvent(new CustomEvent('headerInjected'));
 })();

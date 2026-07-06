@@ -2,18 +2,18 @@
 
 ## Current Task
 
-**Image Optimization & Lazy Loading**
+**Structured Data (JSON-LD) Implementation**
 
 ### Status: ✅ Complete
 
 ### What Was Done
-- Verified that all images in the codebase are already optimized in WebP format and correctly named according to guidelines.
-- Created and executed a Node.js script to automatically append \`loading="lazy"\` to all below-the-fold \`<img>\` tags.
-- Checked off "Image optimization" and "Lazy load images" from the Short Term Performance & SEO section of ROADMAP.md.
+- Created and injected `Organization` JSON-LD schema into `assets/js/components.js`.
+- The JSON-LD schema is dynamically appended to `<head>` on all pages to ensure Google and other search engines correctly identify Meer Foundation's structure, contact info, and social links.
+- Synced `components-sub.js` so nested directory pages also receive the schema.
 
 ### Next Steps
 - [ ] Push updates to GitHub
-- [ ] Begin working on JSON-LD structured data implementation
+- [ ] Begin working on Core Web Vitals or Lighthouse audits
 
 ---
 
@@ -48,3 +48,4 @@ Update this file whenever you start or complete a task:
 | 2026-07-06 | Website Restructure (Directory URLs)   | ✅ Complete |
 | 2026-07-06 | Legacy HTML Meta Redirects             | ✅ Complete |
 | 2026-07-06 | Image Optimization & Lazy Loading      | ✅ Complete |
+| 2026-07-06 | Structured Data (JSON-LD) Implementation | ✅ Complete |

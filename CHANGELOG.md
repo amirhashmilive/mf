@@ -18,6 +18,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/)
 - Updated \`sitemap.xml\` with new directory-based URLs
 - Implemented HTML \`<meta http-equiv="refresh">\` redirects in 30+ legacy flat `.html` files in root to preserve SEO backlinks
 - Added \`loading="lazy"\` attributes to all non-critical images across the site for better Core Web Vitals
+- Injected global \`Organization\` JSON-LD schema into \`assets/js/components.js\` for enhanced SEO
 
 ### Files Modified
 - \`assets/js/components.js\`
