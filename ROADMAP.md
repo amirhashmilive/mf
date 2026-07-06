@@ -25,11 +25,11 @@ Transform the Meer Foundation website into the leading digital presence for gras
 
 ### Performance & SEO
 - [ ] Lighthouse audit — target 90+ on all metrics
-- [ ] Image optimization — convert large PNGs to WebP
-- [ ] Lazy load images below the fold
+- [x] Image optimization — convert large PNGs to WebP
+- [x] Lazy load images below the fold
 - [ ] Add structured data (JSON-LD) for Organization, Article schemas
 - [ ] Improve Core Web Vitals (LCP, CLS, FID)
-- [ ] Add `loading="lazy"` to all non-critical images
+- [x] Add `loading="lazy"` to all non-critical images
 
 ### Accessibility
 - [ ] Full WCAG 2.1 AA compliance audit

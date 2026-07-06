@@ -2,18 +2,18 @@
 
 ## Current Task
 
-**Implement Legacy HTML Meta Redirects**
+**Image Optimization & Lazy Loading**
 
 ### Status: ✅ Complete
 
 ### What Was Done
-- Mapped 30+ legacy flat HTML files (e.g. \`farmours.html\`) to their new directory-based URLs (e.g. \`/initiatives/farmours/\`).
-- Wrote \`scratch/apply-redirects.js\` to auto-generate HTML `<meta http-equiv="refresh">` tags.
-- Overwrote the legacy `.html` files in the root folder with client-side redirects to preserve SEO and prevent 404s for existing backlinks.
+- Verified that all images in the codebase are already optimized in WebP format and correctly named according to guidelines.
+- Created and executed a Node.js script to automatically append \`loading="lazy"\` to all below-the-fold \`<img>\` tags.
+- Checked off "Image optimization" and "Lazy load images" from the Short Term Performance & SEO section of ROADMAP.md.
 
 ### Next Steps
-- [ ] Push legacy redirects to GitHub
-- [ ] Determine next feature or cleanup task
+- [ ] Push updates to GitHub
+- [ ] Begin working on JSON-LD structured data implementation
 
 ---
 
@@ -46,3 +46,5 @@ Update this file whenever you start or complete a task:
 |------------|----------------------------------------|-----------|
 | 2026-06-27 | Project memory & backup system setup   | ✅ Complete |
 | 2026-07-06 | Website Restructure (Directory URLs)   | ✅ Complete |
+| 2026-07-06 | Legacy HTML Meta Redirects             | ✅ Complete |
+| 2026-07-06 | Image Optimization & Lazy Loading      | ✅ Complete |
