@@ -60,12 +60,12 @@ def check_images():
         print("  IMAGE POLICY VIOLATIONS DETECTED")
         print("=" * 60)
         for err in errors:
-            print(f"✗ {err}")
+            print(f"[ERROR] {err}")
         print("=" * 60)
         print("Please fix these errors before committing.")
         sys.exit(1)
     else:
-        print("✓ All images comply with the formatting and naming rules.")
+        print("[OK] All images comply with the formatting and naming rules.")
         sys.exit(0)
 
 if __name__ == '__main__':

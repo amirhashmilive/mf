@@ -2,21 +2,20 @@
 
 ## Current Task
 
-**Setting up project memory and backup system**
+**Website Restructure — Directory-Based URLs**
 
 ### Status: ✅ Complete
 
 ### What Was Done
-- Created 10 project memory documentation files
-- Created automated backup system (backup.ps1 + backup-config.json)
-- Set up backups/ directory with .gitignore
-- Installed Git pre-commit hook for auto-backup
-- Updated README.md with documentation references
+- Conducted full audit of existing website
+- Created a flat-to-directory URL restructure map
+- Auto-generated 40+ directory-based \`index.html\` pages (e.g., \`/about/our-story/\`)
+- Updated \`components.js\` navigation to reflect new structure with root-relative paths
+- Generated new \`sitemap.xml\`
 
 ### Next Steps
-- [ ] Review all documentation files for accuracy
-- [ ] Run first manual backup test
-- [ ] Begin regular development workflow using WORKFLOW.md
+- [ ] Push changes to GitHub
+- [ ] Test the new navigation via GitHub Pages
 
 ---
 
@@ -48,3 +47,4 @@ Update this file whenever you start or complete a task:
 | Date       | Task                                    | Status    |
 |------------|----------------------------------------|-----------|
 | 2026-06-27 | Project memory & backup system setup   | ✅ Complete |
+| 2026-07-06 | Website Restructure (Directory URLs)   | ✅ Complete |

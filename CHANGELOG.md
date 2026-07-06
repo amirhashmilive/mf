@@ -6,6 +6,24 @@ Format: [Keep a Changelog](https://keepachangelog.com/)
 
 ---
 
+## [2026-07-06] — Website Restructure (Directory-Based URLs)
+
+### Added
+- Created 40+ directory-based pages (e.g., \`/about/our-story/index.html\`)
+- Created \`assets/js/components-sub.js\` for nested route injection (later merged into \`components.js\`)
+
+### Changed
+- Converted flat HTML structure to directory-based routing
+- Updated \`assets/js/components.js\` to use root-relative paths for all assets and links
+- Updated \`sitemap.xml\` with new directory-based URLs
+
+### Files Modified
+- \`assets/js/components.js\`
+- \`sitemap.xml\`
+- Assorted HTML pages created in directories
+
+---
+
 ## [2026-06-27] — Project Memory & Backup System
 
 ### Added
