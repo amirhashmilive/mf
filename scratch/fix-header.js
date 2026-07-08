@@ -8,7 +8,7 @@ function getHeaderHTML(rootPath, logoPath) {
     <a href="${rootPath || '/'}" class="logo"><img src="${logoPath}" alt="Meer Foundation" height="40"></a>
     <nav class="nav" style="margin-left: auto;">
       <div class="nav-item">
-        <a href="${rootPath}about/" class="nav-link">About ▾</a>
+        <a href="${rootPath}about/" class="nav-link">About</a>
         <div class="nav-dropdown">
           <a href="${rootPath}about/our-story/">Our Story & Founder</a>
           <a href="${rootPath}about/annual-reports/">Annual Reports</a>
@@ -16,7 +16,7 @@ function getHeaderHTML(rootPath, logoPath) {
         </div>
       </div>
       <div class="nav-item">
-        <a href="${rootPath}initiatives/" class="nav-link">Initiatives ▾</a>
+        <a href="${rootPath}initiatives/" class="nav-link">Initiatives</a>
         <div class="nav-dropdown">
           <a href="${rootPath}initiatives/education/">Education</a>
           <a href="${rootPath}initiatives/health/">Health</a>
@@ -25,7 +25,7 @@ function getHeaderHTML(rootPath, logoPath) {
         </div>
       </div>
       <div class="nav-item">
-        <a href="${rootPath}research/" class="nav-link">Research ▾</a>
+        <a href="${rootPath}research/" class="nav-link">Research</a>
         <div class="nav-dropdown">
           <a href="${rootPath}research/rivers-chhattisgarh/">Rivers of Chhattisgarh</a>
           <a href="${rootPath}research/ijmeer/">IJMEER Journal</a>
@@ -34,7 +34,7 @@ function getHeaderHTML(rootPath, logoPath) {
         </div>
       </div>
       <div class="nav-item">
-        <a href="${rootPath}emerging/" class="nav-link">Emerging ▾</a>
+        <a href="${rootPath}emerging/" class="nav-link">Emerging</a>
         <div class="nav-dropdown">
           <a href="${rootPath}emerging/community-radio/">Community Radio</a>
           <a href="${rootPath}emerging/media-gallery/">Media Gallery</a>
@@ -43,7 +43,7 @@ function getHeaderHTML(rootPath, logoPath) {
         </div>
       </div>
       <div class="nav-item">
-        <a href="${rootPath}impact/" class="nav-link">Impact ▾</a>
+        <a href="${rootPath}impact/" class="nav-link">Impact</a>
         <div class="nav-dropdown">
           <a href="${rootPath}impact/statistics/">Statistics</a>
           <a href="${rootPath}impact/case-studies/">Case Studies</a>
@@ -53,7 +53,7 @@ function getHeaderHTML(rootPath, logoPath) {
         </div>
       </div>
       <div class="nav-item">
-        <a href="${rootPath}get-involved/" class="nav-link">Get Involved ▾</a>
+        <a href="${rootPath}get-involved/" class="nav-link">Get Involved</a>
         <div class="nav-dropdown">
           <a href="${rootPath}get-involved/volunteer/">Volunteer</a>
           <a href="${rootPath}get-involved/csr-partner/">CSR Partner</a>
