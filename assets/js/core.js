@@ -181,4 +181,46 @@
     });
   };
 
+  // ── Theme Toggle Logic (Z AI) ────────────────────────────────
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('mf_theme', 'dark');
+      document.querySelectorAll('.sun-icon').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.moon-icon').forEach(el => el.style.display = 'block');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('mf_theme', 'light');
+      document.querySelectorAll('.sun-icon').forEach(el => el.style.display = 'block');
+      document.querySelectorAll('.moon-icon').forEach(el => el.style.display = 'none');
+    }
+  }
+
+  // Initialize theme
+  const savedTheme = localStorage.getItem('mf_theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme === 'dark' || (!savedTheme && systemPrefersDark));
+
+  // Bind click events
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      applyTheme(!isDark);
+    });
+  });
+
+  // ── Framer Motion Style Intersection Observer (Z AI) ─────────
+  const framerObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('framer-active');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.framer-reveal').forEach(el => framerObserver.observe(el));
+
 })();

@@ -1,0 +1,197 @@
+/* ============================================================================
+   Z AI THEME TRANSFORMATION PACKAGE: DEEP BLUE -> LOTUS & RIVER
+   Target: Meer Foundation Website
+   ============================================================================ */
+
+/* ----------------------------------------------------------------------------
+   1. CSS REPLACEMENTS (Target: assets/css/style.css)
+   Action: Replace existing :root { ... } and add new utility classes
+---------------------------------------------------------------------------- */
+
+/* -> Add to top of style.css (Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* -> Replace entire :root block */
+:root {
+  /* Lotus & River Core Palette */
+  --river-dark:   #0a222e;
+  --river-mid:    #154863;
+  --river-blue:   #217A9E;
+  --river-light:  #75b9d1;
+  --river-xlight: #dcedf2;
+  
+  --lotus-deep:   #602341;
+  --lotus-pink:   #D65780;
+  --lotus-light:  #f7a8c2;
+  --lotus-xlight: #fde8ef;
+
+  /* Neutrals & Surfaces */
+  --bg:           #ffffff;
+  --bg-2:         #f8fafc;
+  --bg-3:         #f1f5f9;
+  --glass:        rgba(255, 255, 255, 0.85);
+  --glass-dark:   rgba(255, 255, 255, 0.06);
+
+  /* Text */
+  --text-1:       #0f172a;
+  --text-2:       #334155;
+  --text-3:       #64748b;
+
+  /* Borders */
+  --border:       #e2e8f0;
+  --border-2:     #cbd5e1;
+
+  /* Geometry & Radii */
+  --r-xs:         6px;
+  --r-sm:         12px;
+  --r:            16px;
+  --r-lg:         24px;
+  --r-xl:         32px;    /* Cards */
+  --r-full:       9999px;  /* Buttons */
+
+  /* Shadows */
+  --sh-card:      0 12px 30px -5px rgba(21, 72, 99, 0.08), 0 4px 10px -5px rgba(21, 72, 99, 0.04);
+  --sh-glow:      0 0 0 4px rgba(214, 87, 128, 0.15), 0 8px 30px rgba(214, 87, 128, 0.2);
+
+  /* Gradients */
+  --grad-brand:   linear-gradient(135deg, var(--river-blue) 0%, var(--lotus-pink) 100%);
+  --grad-hero-bg: radial-gradient(circle at top left, var(--lotus-xlight) 0%, transparent 40%),
+                  radial-gradient(circle at bottom right, var(--river-xlight) 0%, transparent 40%);
+
+  /* Typography */
+  --font-sans:    'Inter', sans-serif;
+  --font-serif:   'Fraunces', serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+/* -> Add Dark Mode Theme */
+[data-theme="dark"] {
+  --bg:           #0a1017;
+  --bg-2:         #111a24;
+  --bg-3:         #1a2634;
+  --glass:        rgba(10, 16, 23, 0.85);
+  --text-1:       #f8fafc;
+  --text-2:       #cbd5e1;
+  --text-3:       #94a3b8;
+  --border:       #1e293b;
+  --border-2:     #334155;
+  --grad-hero-bg: radial-gradient(circle at top left, rgba(214, 87, 128, 0.12) 0%, transparent 40%),
+                  radial-gradient(circle at bottom right, rgba(33, 122, 158, 0.12) 0%, transparent 40%);
+}
+
+/* -> Add New Utility Classes (Append to end of style.css) */
+/* Aurora Background Element */
+.aurora-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  overflow: hidden; z-index: -1;
+  background: var(--bg);
+}
+.aurora-blob {
+  position: absolute; border-radius: 50%; filter: blur(90px);
+  opacity: 0.6; animation: aurora-float 15s ease-in-out infinite alternate;
+}
+.aurora-blob.lotus { background: var(--lotus-pink); width: 450px; height: 450px; top: -15%; left: -10%; }
+.aurora-blob.river { background: var(--river-blue); width: 550px; height: 550px; bottom: -20%; right: -10%; }
+@keyframes aurora-float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(60px, 80px) scale(1.15); } }
+
+/* Cards & Buttons overrides */
+.card, .post-card, .metric-card { border-radius: var(--r-xl); box-shadow: var(--sh-card); }
+.btn { border-radius: var(--r-full); }
+
+/* Framer Motion-style Scroll Reveal */
+.framer-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.framer-reveal.framer-active { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Theme Toggle Button Style */
+.theme-toggle-btn {
+  background: var(--bg-2); border: 1px solid var(--border);
+  color: var(--text-1); border-radius: 50%; width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.2s ease;
+}
+.theme-toggle-btn:hover { background: var(--bg-3); }
+
+
+/* ----------------------------------------------------------------------------
+   2. JAVASCRIPT REPLACEMENTS (Target: assets/js/core.js)
+   Action: Append to the end of core.js
+---------------------------------------------------------------------------- */
+
+/* -> Theme Toggle Logic */
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('mf_theme', 'dark');
+      document.querySelectorAll('.sun-icon').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.moon-icon').forEach(el => el.style.display = 'block');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('mf_theme', 'light');
+      document.querySelectorAll('.sun-icon').forEach(el => el.style.display = 'block');
+      document.querySelectorAll('.moon-icon').forEach(el => el.style.display = 'none');
+    }
+  }
+
+  // Initialize theme
+  const savedTheme = localStorage.getItem('mf_theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme === 'dark' || (!savedTheme && systemPrefersDark));
+
+  // Bind click events
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      applyTheme(!isDark);
+    });
+  });
+
+  /* -> Framer Motion Style Intersection Observer */
+  const framerObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('framer-active');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.framer-reveal').forEach(el => framerObserver.observe(el));
+});
+
+
+/* ----------------------------------------------------------------------------
+   3. HTML COMPONENTS (Target: index.html & other pages)
+   Action: Insert where appropriate
+---------------------------------------------------------------------------- */
+
+/* -> Theme Toggle Button (Add to <nav> or header) */
+<button class="theme-toggle-btn" aria-label="Toggle Theme">
+  <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+  <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+
+/* -> Breadcrumb Component (Add below header on inner pages) */
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="flex items-center space-x-2 text-sm text-text-3">
+    <li><a href="/" class="hover:text-river-blue transition-colors">Home</a></li>
+    <li><span class="mx-2">/</span></li>
+    <li aria-current="page" class="text-text-1 font-medium">Page Title</li>
+  </ol>
+</nav>
+
+/* -> Aurora Hero Background HTML (Add inside <header> or Hero section) */
+<div class="aurora-bg">
+  <div class="aurora-blob lotus"></div>
+  <div class="aurora-blob river"></div>
+</div>
+
+/* -> Apply framer-reveal to elements */
+<section class="framer-reveal"> ... </section>
+<div class="card framer-reveal"> ... </div>
