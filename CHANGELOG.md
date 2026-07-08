@@ -6,7 +6,25 @@ Format: [Keep a Changelog](https://keepachangelog.com/)
 
 ---
 
+## [2026-07-08] — Fix Menu Structure, Dark Mode Colors, Broken Pages
+
+### Fixed
+- Restored correct menu structure across all 47 pages: About, Initiatives (4 sectors only: Education, Health, Environment, Livelihood), Research, Emerging, Impact, Get Involved, Contact
+- Moved Donate CTA button to far-right of header with correct visual placement
+- Added theme toggle (☾/☀) positioned between Contact link and Donate button
+- Fixed dark mode color rendering: replaced all hardcoded RGBA values in `content-compat.css` with `color-mix(in srgb, var(--primary/secondary/accent) N%, transparent)` so opacity-based colors adapt correctly when dark theme is active
+- Fixed JS syntax error in `main.js` (extra closing parenthesis on `matchMedia` call)
+- Corrected mobile menu structure to include all 7 nav links and Donate CTA
+- Audited 2,946 internal links — zero broken page links
+
+### Changed
+- Rebuilt `scratch/fix-header.js` script to bulk-update all 47 HTML files simultaneously with correct header and mobile menu HTML
+- `content-compat.css`: 77 RGBA color definitions updated to CSS `color-mix()` for dynamic dark mode support
+
+---
+
 ## [2026-07-06] — Website Restructure (Directory-Based URLs)
+
 
 ### Added
 - Created 40+ directory-based pages (e.g., \`/about/our-story/index.html\`)

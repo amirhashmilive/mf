@@ -37,24 +37,24 @@
 .from-primary { --tw-gradient-from: var(--primary); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 .via-\[\#0a4749\] { --tw-gradient-via: #0a4749; }
 .to-secondary { --tw-gradient-to: var(--secondary); }
-.to-accent\/5 { --tw-gradient-to: rgba(212,155,63,0.05); }
-.from-primary\/10 { --tw-gradient-from: rgba(13,91,94,0.1); }
-.via-primary\/5 { --tw-gradient-via: rgba(13,91,94,0.05); }
+.to-accent\/5 { --tw-gradient-to: color-mix(in srgb, var(--accent) 5%, transparent); }
+.from-primary\/10 { --tw-gradient-from: color-mix(in srgb, var(--primary) 10%, transparent); }
+.via-primary\/5 { --tw-gradient-via: color-mix(in srgb, var(--primary) 5%, transparent); }
 .from-transparent { --tw-gradient-from: transparent; }
 .to-transparent { --tw-gradient-to: transparent; }
 
 /* Opacity-modified colors */
-.bg-primary\/5 { background-color: rgba(13,91,94,0.05); }
-.bg-primary\/8 { background-color: rgba(13,91,94,0.08); }
-.bg-primary\/10 { background-color: rgba(13,91,94,0.1); }
-.bg-primary\/15 { background-color: rgba(13,91,94,0.15); }
-.bg-secondary\/5 { background-color: rgba(194,84,44,0.05); }
-.bg-secondary\/10 { background-color: rgba(194,84,44,0.1); }
-.bg-secondary\/15 { background-color: rgba(194,84,44,0.15); }
-.bg-accent\/5 { background-color: rgba(212,155,63,0.05); }
-.bg-accent\/10 { background-color: rgba(212,155,63,0.1); }
-.bg-accent\/15 { background-color: rgba(212,155,63,0.15); }
-.bg-accent\/20 { background-color: rgba(212,155,63,0.2); }
+.bg-primary\/5 { background-color: color-mix(in srgb, var(--primary) 5%, transparent); }
+.bg-primary\/8 { background-color: color-mix(in srgb, var(--primary) 8%, transparent); }
+.bg-primary\/10 { background-color: color-mix(in srgb, var(--primary) 10%, transparent); }
+.bg-primary\/15 { background-color: color-mix(in srgb, var(--primary) 15%, transparent); }
+.bg-secondary\/5 { background-color: color-mix(in srgb, var(--secondary) 5%, transparent); }
+.bg-secondary\/10 { background-color: color-mix(in srgb, var(--secondary) 10%, transparent); }
+.bg-secondary\/15 { background-color: color-mix(in srgb, var(--secondary) 15%, transparent); }
+.bg-accent\/5 { background-color: color-mix(in srgb, var(--accent) 5%, transparent); }
+.bg-accent\/10 { background-color: color-mix(in srgb, var(--accent) 10%, transparent); }
+.bg-accent\/15 { background-color: color-mix(in srgb, var(--accent) 15%, transparent); }
+.bg-accent\/20 { background-color: color-mix(in srgb, var(--accent) 20%, transparent); }
 .bg-success\/5 { background-color: rgba(46,125,50,0.05); }
 .bg-success\/10 { background-color: rgba(46,125,50,0.1); }
 .bg-success\/15 { background-color: rgba(46,125,50,0.15); }
@@ -91,19 +91,19 @@
 .text-white\/80 { color: rgba(255,255,255,0.8); }
 .text-white\/85 { color: rgba(255,255,255,0.85); }
 .text-white\/90 { color: rgba(255,255,255,0.9); }
-.text-foreground\/70 { color: rgba(31,26,20,0.7); }
-.text-foreground\/80 { color: rgba(31,26,20,0.8); }
-.text-foreground\/90 { color: rgba(31,26,20,0.9); }
+.text-foreground\/70 { color: color-mix(in srgb, var(--ink) 70%, transparent); }
+.text-foreground\/80 { color: color-mix(in srgb, var(--ink) 80%, transparent); }
+.text-foreground\/90 { color: color-mix(in srgb, var(--ink) 90%, transparent); }
 .text-muted-foreground\/80 { color: rgba(107,94,78,0.8); }
 
 .border-border\/60 { border-color: rgba(229,219,200,0.6); }
 .border-border\/40 { border-color: rgba(229,219,200,0.4); }
-.border-primary\/20 { border-color: rgba(13,91,94,0.2); }
-.border-primary\/30 { border-color: rgba(13,91,94,0.3); }
-.border-primary\/40 { border-color: rgba(13,91,94,0.4); }
-.border-secondary\/30 { border-color: rgba(194,84,44,0.3); }
-.border-accent\/30 { border-color: rgba(212,155,63,0.3); }
-.border-accent\/40 { border-color: rgba(212,155,63,0.4); }
+.border-primary\/20 { border-color: color-mix(in srgb, var(--primary) 20%, transparent); }
+.border-primary\/30 { border-color: color-mix(in srgb, var(--primary) 30%, transparent); }
+.border-primary\/40 { border-color: color-mix(in srgb, var(--primary) 40%, transparent); }
+.border-secondary\/30 { border-color: color-mix(in srgb, var(--secondary) 30%, transparent); }
+.border-accent\/30 { border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+.border-accent\/40 { border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
 .border-white\/10 { border-color: rgba(255,255,255,0.1); }
 .border-white\/20 { border-color: rgba(255,255,255,0.2); }
 .border-white\/30 { border-color: rgba(255,255,255,0.3); }
@@ -205,11 +205,11 @@
 }
 
 /* ===== HOVER STATES ===== */
-.hover\:bg-accent\/10:hover { background-color: rgba(212,155,63,0.1); }
+.hover\:bg-accent\/10:hover { background-color: color-mix(in srgb, var(--accent) 10%, transparent); }
 .hover\:bg-muted:hover { background-color: #f5f0e5; }
-.hover\:bg-primary\/10:hover { background-color: rgba(13,91,94,0.1); }
-.hover\:bg-primary\/90:hover { background-color: rgba(13,91,94,0.9); }
-.hover\:bg-secondary\/90:hover { background-color: rgba(194,84,44,0.9); }
+.hover\:bg-primary\/10:hover { background-color: color-mix(in srgb, var(--primary) 10%, transparent); }
+.hover\:bg-primary\/90:hover { background-color: color-mix(in srgb, var(--primary) 90%, transparent); }
+.hover\:bg-secondary\/90:hover { background-color: color-mix(in srgb, var(--secondary) 90%, transparent); }
 .hover\:bg-white\/20:hover { background-color: rgba(255,255,255,0.2); }
 .hover\:text-foreground:hover { color: var(--ink); }
 .hover\:text-primary:hover { color: var(--primary); }
