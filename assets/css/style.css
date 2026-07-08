@@ -81,7 +81,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 
   /* Layout */
   --max-width: 1200px;
-  --header-height: 72px;
+  --header-height: 60px;
 }
 
 /* ===== DARK MODE ===== */
@@ -140,11 +140,11 @@ p { margin-bottom: var(--space-sm); }
 .logo img { height: 40px; width: auto; }
 
 /* ===== NAVIGATION ===== */
-.nav { display: flex; align-items: center; gap: var(--space-md); }
+.nav { display: flex; align-items: center; gap: var(--space-xs); }
 .nav-item { position: relative; }
 .nav-link {
   font-size: var(--fs-small); font-weight: 500; color: var(--ink);
-  padding: var(--space-xs) var(--space-sm); border-radius: var(--r-sm);
+  padding: 6px 10px; border-radius: var(--r-sm);
   transition: var(--transition); display: flex; align-items: center; gap: 4px;
 }
 .nav-link:hover { color: var(--primary); background: var(--primary-tint); }

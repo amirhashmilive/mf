@@ -267,5 +267,11 @@
   inject('site-header-inject', HEADER);
   inject('site-footer-inject', FOOTER);
   document.head.insertAdjacentHTML('beforeend', ORG_SCHEMA);
+  
+  // Inject Quiz & Certificate Script
+  const quizScript = document.createElement('script');
+  quizScript.src = '/assets/js/quiz-certificate.js';
+  document.body.appendChild(quizScript);
+
   document.dispatchEvent(new CustomEvent('headerInjected'));
 })();
