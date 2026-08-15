@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/)
 
+## [2026-08-15] — Cinematic Presentation & Glassmorphism UI/UX Transformation
+
+### Added
+- `assets/css/slider-styles.css` — Lightbox modal image viewer styles.
+- `assets/js/theme.js` — Dual dark/light theme switching engine with `themeChanged` event broadcast.
+- `assets/js/slider.js` — Full-screen lightbox modal with touch & keyboard navigation (`initLightbox`).
+- `assets/js/slide-number.js` — Dynamic slide number badge (`.sn-badge`) with interactive slide dropdown jump menus.
+- `assets/js/popup.js` — Statistical popup modal engine with formula definitions and field verification data.
+- `assets/js/charts.js` — Theme-aware Chart.js color palette helper.
+
+### Changed
+- `index.html` — Converted to 8 full-viewport presentation slides (`.slide-container` with 100vh scroll-snap), glassmorphic cards, breathing neon border glows (`.glow-cyan`, `.glow-orange`, etc.), and popover triggers.
+- `assets/css/style.css` — Re-engineered with complete Presentation Framework CSS architecture (dark/light tokens, glass cards, hover magnification safeguard, floating navigation pill).
+- `assets/js/main.js` — Integrated vertical progress dots (`.progress-dots`), keyboard slide scrolling (`ArrowUp`/`ArrowDown`), and wide-card hover magnification protection (`>400px` capped at `1.02x`).
+
+---
+
 ## [2026-08-15] — Premium 3D Theme Transformation & Automated Date-Based Backup System
 
 ### Added

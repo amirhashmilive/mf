@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,1967 +7,438 @@
     <meta name="description" content="Empowering Rural Communities & Restoring Rivers — Meer Foundation, Chhattisgarh NGO working on Education, Environment, Health, Livelihood and Women Empowerment since 2011." />
     <meta property="og:title" content="Empowering Rural Communities & Restoring Rivers · Meer Foundation" />
     <meta property="og:type" content="website" />
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Main Presentation Design System CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/scroll-animations.css" />
-    <link rel="stylesheet" href="assets/css/content-compat.css" />
     <link rel="icon" href="assets/images/logo/logo-horizontal.webp" />
   </head>
   <body>
-    <!-- ===== HEADER ===== -->
-    <header class="header" id="header">
-      <div class="container">
-        <a href="/" class="logo"
-          ><img
-            src="assets/images/logo/logo-horizontal.webp"
-            alt="Meer Foundation"
-            height="40"
-        /></a>
-        <nav class="nav" style="margin-left: auto">
-          <div class="nav-item">
-            <a href="about/" class="nav-link">About</a>
-            <div class="nav-dropdown">
-              <a href="about/our-story/">Our Story & Founder</a>
-              <a href="about/annual-reports/">Annual Reports</a>
-              <a href="about/five-pillars/">Five Pillars Model</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="initiatives/" class="nav-link">Initiatives</a>
-            <div class="nav-dropdown">
-              <a href="initiatives/education/">Education</a>
-              <a href="initiatives/health/">Health</a>
-              <a href="initiatives/environment/">Environment</a>
-              <a href="initiatives/livelihood/">Livelihood</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="research/" class="nav-link">Research</a>
-            <div class="nav-dropdown">
-              <a href="research/rivers-chhattisgarh/">Rivers of Chhattisgarh</a>
-              <a href="research/ijmeer/">IJMEER Journal</a>
-              <a href="research/publications/">Publications</a>
-              <a href="research/csr-research/">CSR Research</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="emerging/" class="nav-link">Emerging</a>
-            <div class="nav-dropdown">
-              <a href="emerging/community-radio/">Community Radio</a>
-              <a href="emerging/media-gallery/">Media Gallery</a>
-              <a href="emerging/news-press/">News & Press</a>
-              <a href="emerging/field-notes/">Field Notes Blog</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="impact/" class="nav-link">Impact</a>
-            <div class="nav-dropdown">
-              <a href="impact/statistics/">Statistics</a>
-              <a href="impact/case-studies/">Case Studies</a>
-              <a href="impact/district-profiles/">District Profiles</a>
-              <a href="impact/project-gallery/">Project Gallery</a>
-              <a href="impact/testimonials/">Testimonials</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="get-involved/" class="nav-link">Get Involved</a>
-            <div class="nav-dropdown">
-              <a href="get-involved/volunteer/">Volunteer</a>
-              <a href="get-involved/csr-partner/">CSR Partner</a>
-              <a href="get-involved/internship/">Internship</a>
-              <a href="get-involved/donate/">Donate</a>
-            </div>
-          </div>
-          <a href="contact/" class="nav-link">Contact</a>
-          <button
-            class="theme-toggle"
-            aria-label="Toggle theme"
-            style="margin-left: 0.5rem; margin-right: 1rem"
-          >
-            ☾
-          </button>
-          <a href="get-involved/donate/" class="btn btn-accent btn-sm"
-            >Donate</a
-          >
-        </nav>
-        <button class="mobile-toggle">☰</button>
-      </div>
-    </header>
+    <!-- ===== FLOATING CHAPTER / NAVIGATION BAR ===== -->
+    <nav class="chap-nav" aria-label="Main Navigation">
+      <a href="index.html" class="active"><i class="fas fa-seedling"></i> Home</a>
+      <span class="chap-nav-sep">|</span>
+      <a href="about/">About</a>
+      <a href="initiatives/">Initiatives</a>
+      <a href="research/">Research</a>
+      <a href="emerging/">Emerging</a>
+      <a href="impact/">Impact</a>
+      <a href="get-involved/">Get Involved</a>
+      <a href="contact/">Contact</a>
+      <button class="theme-toggle" aria-label="Toggle dark/light theme"><i class="fas fa-sun"></i></button>
+      <a href="get-involved/donate/" class="btn btn-accent btn-sm">Donate</a>
+    </nav>
 
-    <!-- ===== MOBILE MENU ===== -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="about/" class="nav-link">About</a>
-      <a href="initiatives/" class="nav-link">Initiatives</a>
-      <a href="research/" class="nav-link">Research</a>
-      <a href="emerging/" class="nav-link">Emerging</a>
-      <a href="impact/" class="nav-link">Impact</a>
-      <a href="get-involved/" class="nav-link">Get Involved</a>
-      <a href="contact/" class="nav-link">Contact</a>
-      <div style="margin-top: 1rem; padding: 1rem; text-align: center">
-        <a
-          href="get-involved/donate/"
-          class="btn btn-accent"
-          style="width: 100%; justify-content: center"
-          >Donate</a
-        >
-      </div>
+    <!-- ===== FULL-VIEWPORT SCROLL-SNAP SLIDE CONTAINER ===== -->
+    <div class="slide-container">
+
+      <!-- ── SLIDE 1: HERO & MISSION ─────────────────────────────── -->
+      <section class="slide" id="slide-1">
+        <div class="slide-inner">
+          <div class="eyebrow-badge">
+            <i class="fas fa-certificate"></i> Founded 2011 · Chhattisgarh, India
+          </div>
+          <h1 class="slide-title">
+            Empowering Rural Communities <span class="neon-text-cg">&amp;</span> Restoring Rivers.
+          </h1>
+          <p class="slide-subtitle">
+            Meer Foundation works with people, never for them. We build self-reliant rural communities across Chhattisgarh across five practice areas — Education, Health, Environment, Livelihood, and Women Empowerment.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
+            <a href="#slide-5" class="btn btn-primary"><i class="fas fa-compass"></i> Discover Our Work</a>
+            <a href="get-involved/" class="btn btn-secondary"><i class="fas fa-hands-helping"></i> Get Involved</a>
+          </div>
+
+          <!-- Quick Metrics Bar with Popovers -->
+          <div class="grid-3" style="max-width: 780px;">
+            <div class="glass-card hover-magnify popup-trigger" data-popup="households" style="text-align: center; padding: 1.5rem;">
+              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">1,00,000+</div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
+                Households Reached <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+              </div>
+            </div>
+            <div class="glass-card hover-magnify popup-trigger" data-popup="districts" style="text-align: center; padding: 1.5rem;">
+              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">12</div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
+                Active Districts <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+              </div>
+            </div>
+            <div class="glass-card hover-magnify popup-trigger" data-popup="years" style="text-align: center; padding: 1.5rem;">
+              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">15</div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
+                Years of Service <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 2: FIVE PILLARS FRAMEWORK (AEIOM) ─────────────── -->
+      <section class="slide" id="slide-2">
+        <div class="slide-inner">
+          <div class="eyebrow-badge popup-trigger" data-popup="aeiom">
+            <i class="fas fa-shapes"></i> The Five Pillars Framework (A-E-I-O-M)
+          </div>
+          <h2 class="slide-title">How We Communicate Betterment</h2>
+          <p class="slide-subtitle">
+            A communication framework for transparent, evidence-based, verifiable institutional communication. Operationalized through the AEIOM Architecture.
+          </p>
+
+          <div class="grid-5">
+            <div class="glass-card hover-magnify glow-cyan">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.8rem; font-weight: 800; color: #00d4ff;">A</span>
+                <i class="fas fa-shield-alt" style="color: #00d4ff;"></i>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Accountability</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                Being answerable for outcomes, not just activities. Pre-specifying verifiable commitments.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify glow-orange">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.8rem; font-weight: 800; color: #ff6b35;">E</span>
+                <i class="fas fa-cogs" style="color: #ff6b35;"></i>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Execution</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                Operational architecture that converts intent into implemented reality across communities.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify glow-blue">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.8rem; font-weight: 800; color: #0d5b5e;">I</span>
+                <i class="fas fa-users" style="color: #0d5b5e;"></i>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Initiative</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                Originating from participatory engagement with communities, not top-down imposed intent.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify glow-green">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.8rem; font-weight: 800; color: #28a745;">O</span>
+                <i class="fas fa-chart-line" style="color: #28a745;"></i>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Outcome</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                Actual, demonstrable, attributable change — measuring real uplift over mere activity.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify glow-purple">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.8rem; font-weight: 800; color: #9b59b6;">M</span>
+                <i class="fas fa-book-reader" style="color: #9b59b6;"></i>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Meaning</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                Communication that corresponds directly to reality and is actionable by all stakeholders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 3: AEIOM ARCHITECTURE DEEP DIVE ───────────────── -->
+      <section class="slide" id="slide-3">
+        <div class="slide-inner">
+          <div class="eyebrow-badge">
+            <i class="fas fa-layer-group"></i> Architecture Deep Dive
+          </div>
+          <h2 class="slide-title">The Three Pillars of Integrity</h2>
+          <p class="slide-subtitle">
+            How AEIOM ensures every claim is backed by field data, verifiable records, and institutional truth.
+          </p>
+
+          <div class="grid-3">
+            <div class="glass-card hover-magnify">
+              <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"><i class="fas fa-project-diagram"></i></div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Pillar Coherence</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                Every programme maps to at least one pillar, producing a consistent institutional narrative across all 5 operational sectors.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify">
+              <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"><i class="fas fa-user-check"></i></div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Skeptical Observer</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                Every claim is written for an independent observer who demands verifiable proof before accepting any reported outcome.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify">
+              <div style="font-size: 2rem; color: #ffd600; margin-bottom: 1rem;"><i class="fas fa-lock"></i></div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Trust Layer</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                Evidence management that links public reports directly to primary field documentation, audited ledgers, and photographic records.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 4: OUR PRACTICE AREAS ─────────────────────────── -->
+      <section class="slide" id="slide-4">
+        <div class="slide-inner">
+          <div class="eyebrow-badge">
+            <i class="fas fa-th-large"></i> Operational Spectrum
+          </div>
+          <h2 class="slide-title">Our Practice Areas</h2>
+          <p class="slide-subtitle">
+            Comprehensive grassroots development targeting the structural needs of rural communities.
+          </p>
+
+          <div class="grid-5">
+            <div class="glass-card hover-magnify" style="text-align: center;">
+              <div style="font-size: 2.2rem; color: var(--accent-cg); margin-bottom: 0.75rem;"><i class="fas fa-graduation-cap"></i></div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Education</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">EduSuTo smart rural learning centres & digital literacy.</p>
+            </div>
+            <div class="glass-card hover-magnify" style="text-align: center;">
+              <div style="font-size: 2.2rem; color: #00e676; margin-bottom: 0.75rem;"><i class="fas fa-heartbeat"></i></div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Health</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Nirogaayam primary care, mobile health camps & nutrition.</p>
+            </div>
+            <div class="glass-card hover-magnify" style="text-align: center;">
+              <div style="font-size: 2.2rem; color: #00d4ff; margin-bottom: 0.75rem;"><i class="fas fa-water"></i></div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Environment</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Bolti Nadi river conservation, tree planting & water security.</p>
+            </div>
+            <div class="glass-card hover-magnify" style="text-align: center;">
+              <div style="font-size: 2.2rem; color: #ff6b35; margin-bottom: 0.75rem;"><i class="fas fa-tractor"></i></div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Livelihood</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Farmours organic farming & market linkages for farmers.</p>
+            </div>
+            <div class="glass-card hover-magnify" style="text-align: center;">
+              <div style="font-size: 2.2rem; color: #9b59b6; margin-bottom: 0.75rem;"><i class="fas fa-female"></i></div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Women</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">SHG micro-enterprises & financial independence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 5: KEY INITIATIVES ────────────────────────────── -->
+      <section class="slide" id="slide-5">
+        <div class="slide-inner">
+          <div class="eyebrow-badge">
+            <i class="fas fa-rocket"></i> Field Programmes
+          </div>
+          <h2 class="slide-title">Flagship Initiatives</h2>
+          <p class="slide-subtitle">
+            Community-driven projects transforming livelihoods and ecological landscapes.
+          </p>
+
+          <div class="grid-4">
+            <a href="initiatives/farmours/" class="resource-card hover-magnify" data-gradient="pink">
+              <div class="resource-glow"></div>
+              <div class="resource-content">
+                <div class="resource-icon">🌾</div>
+                <div>
+                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Farmours</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Organic agricultural value chains & farmer producer collectives.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="initiatives/prayaas/" class="resource-card hover-magnify" data-gradient="cyan">
+              <div class="resource-glow"></div>
+              <div class="resource-content">
+                <div class="resource-icon">🤝</div>
+                <div>
+                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Prayaas</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Grassroots social welfare, health drives & emergency relief.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="initiatives/yoga-kutumb/" class="resource-card hover-magnify" data-gradient="purple">
+              <div class="resource-glow"></div>
+              <div class="resource-content">
+                <div class="resource-icon">🧘</div>
+                <div>
+                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Yoga Kutumb</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Holistic mental wellness & traditional lifestyle programmes.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="initiatives/heritage-walk/" class="resource-card hover-magnify" data-gradient="pink">
+              <div class="resource-glow"></div>
+              <div class="resource-content">
+                <div class="resource-icon">🚶</div>
+                <div>
+                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Heritage Walk</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Tribal arts, craft preservation & cultural immersion journeys.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 6: BOLTI NADI FLAGSHIP REVIVAL ─────────────────── -->
+      <section class="slide" id="slide-6">
+        <div class="slide-inner">
+          <div class="eyebrow-badge popup-trigger" data-popup="bolti-nadi">
+            <i class="fas fa-water"></i> Flagship Ecological Project
+          </div>
+          <h2 class="slide-title">Bolti Nadi — Reviving the Sakri River</h2>
+          <p class="slide-subtitle">
+            After being dry for 30 years, the Sakri River flows again across 90 km through community-led check dams, desiltation, and tree plantation.
+          </p>
+
+          <div class="grid-2" style="align-items: center;">
+            <!-- Interactive Before/After Slider -->
+            <div class="glass-card" style="padding: 0; overflow: hidden; height: 340px;">
+              <div class="before-after" style="height: 100%;">
+                <span class="before-after__label before-after__label--before">Before (Dry 30 Yrs)</span>
+                <span class="before-after__label before-after__label--after">After (Perennial Flow)</span>
+                <img src="assets/images/bolti-nadi-dry.webp" alt="Sakri River Dry" class="before-after__before" />
+                <img src="assets/images/bolti-nadi-flowing.webp" alt="Sakri River Revived" class="before-after__after" />
+                <div class="before-after__slider" aria-label="Drag slider to compare"></div>
+              </div>
+            </div>
+
+            <!-- Stats & Insights -->
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="grid-2">
+                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.25rem;">
+                  <div class="neon-text-cg" style="font-size: 1.8rem; font-weight: 800;">90 km</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">River km Walked</div>
+                </div>
+                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.25rem;">
+                  <div class="neon-text-cg" style="font-size: 1.8rem; font-weight: 800;">12+</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Villages Restored</div>
+                </div>
+              </div>
+              <div class="glass-card hover-magnify" style="padding: 1.25rem;">
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                  <strong style="color: var(--text-main);">How It Happened:</strong> The team walked the entire 90-km dry course, documented 42 check dam points, engaged gram panchayats, and mobilized community desiltation for permanent perennial revival.
+                </p>
+                <div style="margin-top: 0.75rem;">
+                  <a href="initiatives/bolti-nadi/" class="btn btn-primary btn-sm"><i class="fas fa-arrow-right"></i> Read Case Study</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 7: IMPACT SNAPSHOT & ANALYTICS ────────────────── -->
+      <section class="slide" id="slide-7">
+        <div class="slide-inner">
+          <div class="eyebrow-badge">
+            <i class="fas fa-chart-pie"></i> Verifiable Metrics
+          </div>
+          <h2 class="slide-title">Impact Snapshot</h2>
+          <p class="slide-subtitle">
+            15 years of ground evidence audited annually and mapped to Sustainable Development Goals.
+          </p>
+
+          <div class="glass-card hover-magnify hover-magnify-lg" style="width: 100%; max-width: 900px; padding: 1.5rem 2rem;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Indicator</th>
+                  <th>Outcome Metric</th>
+                  <th>Verification Standard</th>
+                  <th>Impact Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="popup-trigger" data-popup="households">
+                  <td><strong>Household Reach</strong></td>
+                  <td>1,00,000+ Families</td>
+                  <td>Field Register Index</td>
+                  <td><span class="badge badge-supported">Verified</span></td>
+                </tr>
+                <tr class="popup-trigger" data-popup="women-shg">
+                  <td><strong>Women Empowerment</strong></td>
+                  <td>12,000+ Farmers / 860 SHGs</td>
+                  <td>NRLM Linkages</td>
+                  <td><span class="badge badge-supported">Active</span></td>
+                </tr>
+                <tr class="popup-trigger" data-popup="bolti-nadi">
+                  <td><strong>River Conservation</strong></td>
+                  <td>90 km Sakri River Flow</td>
+                  <td>Groundwater Level Survey</td>
+                  <td><span class="badge badge-supported">Perennial</span></td>
+                </tr>
+                <tr class="popup-trigger" data-popup="districts">
+                  <td><strong>District Coverage</strong></td>
+                  <td>12 Districts Active</td>
+                  <td>Panchayat Partnerships</td>
+                  <td><span class="badge badge-supported">100% Compliant</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SLIDE 8: GET INVOLVED & ACTION CENTER ───────────────── -->
+      <section class="slide" id="slide-8">
+        <div class="slide-inner">
+          <div class="eyebrow-badge">
+            <i class="fas fa-hands"></i> Join the Movement
+          </div>
+          <h2 class="slide-title">Build the Next Chapter With Us</h2>
+          <p class="slide-subtitle">
+            Partner with Meer Foundation to scale sustainable rural ecosystems across India.
+          </p>
+
+          <div class="grid-4" style="margin-bottom: 2rem;">
+            <a href="get-involved/volunteer/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
+              <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 0.5rem;"><i class="fas fa-hand-holding-heart"></i></div>
+              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Volunteer</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Lend your skills in teaching, research, tech or media.</p>
+            </a>
+
+            <a href="get-involved/csr-partner/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
+              <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 0.5rem;"><i class="fas fa-building"></i></div>
+              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">CSR Partner</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">ESG-aligned projects with complete AEIOM verification.</p>
+            </a>
+
+            <a href="get-involved/internship/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
+              <div style="font-size: 2rem; color: #ffd600; margin-bottom: 0.5rem;"><i class="fas fa-university"></i></div>
+              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Internship</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Immersive rural field research internships.</p>
+            </a>
+
+            <a href="get-involved/donate/" class="glass-card hover-magnify glow-orange" style="text-decoration: none; text-align: center;">
+              <div style="font-size: 2rem; color: #ff6b35; margin-bottom: 0.5rem;"><i class="fas fa-donate"></i></div>
+              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Donate</h3>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Tax-exempt giving under 80G with outcome tracking.</p>
+            </a>
+          </div>
+
+          <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.6;">
+            © 2011–2026 Meer Foundation · CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 · NGO Darpan: CG/2018/0191949
+          </div>
+        </div>
+      </section>
+
     </div>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main id="main-content" class="page-content">
-      <!-- ===== 3D SCROLL HERO ===== -->
-      <section class="scroll-hero" id="hero-scroll" data-scroll-section>
-        <div class="scroll-hero__sticky">
-          <!-- Canvas for 3D frame-by-frame animation -->
-          <canvas class="frame-canvas" id="hero-canvas" data-frame-dir="assets/images/hero-frames" data-frame-count="45" aria-hidden="true"></canvas>
-
-          <!-- Ambient floating particles -->
-          <div class="ambient-particles" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-          </div>
-
-          <!-- Overlay 1: Hero Main Message (Scroll range 0.0 - 0.35) -->
-          <div class="scroll-hero__overlay active" data-scroll-range="0.0-0.35">
-            <div class="eyebrow">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
-              Founded 2011 · Chhattisgarh, India
-            </div>
-            <h1>
-              Empowering Rural<br />Communities <span class="gradient-text">&amp;</span><br />Restoring Rivers.
-            </h1>
-            <p>
-              Meer Foundation works with people, never for them. We build self-reliant rural communities across Chhattisgarh across five practice areas — Education, Health, Environment, Livelihood, and Women Empowerment.
-            </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-              <a href="#initiatives" class="btn-hero-primary">Discover our work →</a>
-              <a href="get-involved/" class="btn-hero-secondary">Get involved</a>
-            </div>
-          </div>
-
-          <!-- Overlay 2: Live Impact Metrics (Scroll range 0.35 - 0.70) -->
-          <div class="scroll-hero__overlay" data-scroll-range="0.35-0.70">
-            <div class="eyebrow">Measurable Ground Impact</div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.1; margin-bottom: 0.5rem;">
-              Transforming Lives Across Chhattisgarh
-            </h2>
-            <p style="max-width: 550px;">
-              Verifiable, evidence-based outcomes across 12 districts since 2011.
-            </p>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-number" data-count-to="100000" data-count-suffix="+" data-count-indian="true">1,00,000+</div>
-                <div class="stat-label">Households</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number" data-count-to="12" data-count-suffix="">12</div>
-                <div class="stat-label">Districts</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number" data-count-to="15" data-count-suffix="">15</div>
-                <div class="stat-label">Years of Service</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Overlay 3: The Five Pillars Philosophy (Scroll range 0.70 - 1.0) -->
-          <div class="scroll-hero__overlay" data-scroll-range="0.70-1.0">
-            <div class="eyebrow">The Five Pillars Framework (A-E-I-O-M)</div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.1; margin-bottom: 0.5rem;">
-              How We Communicate Betterment
-            </h2>
-            <p style="max-width: 600px;">
-              Built on Accountability, Execution, Initiative, Outcome, and Meaning — operationalized through the AEIOM Architecture.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-              <a href="about/five-pillars/" class="btn-hero-primary">Explore AEIOM Framework →</a>
-            </div>
-          </div>
-
-          <!-- Scroll Progress and Indicator -->
-          <div class="scroll-hero__progress" aria-hidden="true"></div>
-          <div class="scroll-hero__indicator" aria-hidden="true">
-            <span>Scroll to explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-background">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="text-center mb-10">
-            <span class="meer-eyebrow mx-auto">The Five Pillars Framework</span>
-            <h2
-              class="font-heading text-[clamp(1.8rem,4vw,3rem)] leading-tight mt-3 text-balance"
-            >
-              A · E · I · O · M —
-              <span class="meer-gradient-text"
-                >how we communicate betterment</span
-              >
-            </h2>
-            <p
-              class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-muted-foreground leading-relaxed"
-            >
-              The Five Pillars Framework is a communication framework for
-              transparent, evidence-based, verifiable institutional
-              communication. It does not replace existing frameworks (GRI, SDG,
-              ESG, BRSR) — it completes them. The framework is operationalized
-              through the<span class="font-semibold text-foreground">
-                AEIOM Architecture</span
-              >
-              — providing evidence management, assessment, reporting, and
-              verification systems.
-            </p>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 scroll-stagger">
-            <div
-              class="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 scroll-reveal--3d tilt-card"
-            >
-              <div
-                class="absolute -top-6 -right-6 font-heading text-7xl font-bold opacity-10 group-hover:opacity-20 transition-opacity"
-                style="color: var(--primary)"
-              >
-                A
-              </div>
-              <div class="relative">
-                <div
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--primary)"
-                >
-                  <span class="font-heading text-base font-bold">A</span>
-                </div>
-                <h3 class="mt-3 font-heading text-base font-semibold">
-                  Accountability
-                </h3>
-                <p
-                  class="mt-1 text-xs font-semibold"
-                  style="color: var(--primary)"
-                >
-                  Being answerable for outcomes, not just activities.
-                </p>
-                <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Institutions must specify, in advance, the outcomes they are
-                  answerable for — and build the architecture to track them.
-                  Accountability demands outcome, not activity.
-                </p>
-              </div>
-            </div>
-            <div
-              class="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 scroll-reveal--3d tilt-card"
-            >
-              <div
-                class="absolute -top-6 -right-6 font-heading text-7xl font-bold opacity-10 group-hover:opacity-20 transition-opacity"
-                style="color: var(--secondary)"
-              >
-                E
-              </div>
-              <div class="relative">
-                <div
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--secondary)"
-                >
-                  <span class="font-heading text-base font-bold">E</span>
-                </div>
-                <h3 class="mt-3 font-heading text-base font-semibold">
-                  Execution
-                </h3>
-                <p
-                  class="mt-1 text-xs font-semibold"
-                  style="color: var(--secondary)"
-                >
-                  Operational architecture that converts intent into implemented
-                  reality.
-                </p>
-                <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Delivery systems must actually reach the communities they
-                  serve. Capacity without reach is intention without effect.
-                  Execution produces what Initiative identifies.
-                </p>
-              </div>
-            </div>
-            <div
-              class="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 scroll-reveal--3d tilt-card"
-            >
-              <div
-                class="absolute -top-6 -right-6 font-heading text-7xl font-bold opacity-10 group-hover:opacity-20 transition-opacity"
-                style="color: var(--accent)"
-              >
-                I
-              </div>
-              <div class="relative">
-                <div
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--accent)"
-                >
-                  <span class="font-heading text-base font-bold">I</span>
-                </div>
-                <h3 class="mt-3 font-heading text-base font-semibold">
-                  Initiative
-                </h3>
-                <p
-                  class="mt-1 text-xs font-semibold"
-                  style="color: var(--accent)"
-                >
-                  Originating from participatory engagement with communities,
-                  not imposed intent.
-                </p>
-                <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Programmes must be designed through participatory engagement
-                  with communities — not imposed from above. Communities must
-                  recognise the initiative as their own.
-                </p>
-              </div>
-            </div>
-            <div
-              class="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 scroll-reveal--3d tilt-card"
-            >
-              <div
-                class="absolute -top-6 -right-6 font-heading text-7xl font-bold opacity-10 group-hover:opacity-20 transition-opacity"
-                style="color: var(--primary)"
-              >
-                O
-              </div>
-              <div class="relative">
-                <div
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--primary)"
-                >
-                  <span class="font-heading text-base font-bold">O</span>
-                </div>
-                <h3 class="mt-3 font-heading text-base font-semibold">
-                  Outcome
-                </h3>
-                <p
-                  class="mt-1 text-xs font-semibold"
-                  style="color: var(--primary)"
-                >
-                  Actual, demonstrable, attributable change — not activity or
-                  output.
-                </p>
-                <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Activity is not outcome. Output is not outcome. The
-                  architecture must demonstrate that communities are measurably
-                  better because of the intervention.
-                </p>
-              </div>
-            </div>
-            <div
-              class="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 scroll-reveal--3d tilt-card"
-            >
-              <div
-                class="absolute -top-6 -right-6 font-heading text-7xl font-bold opacity-10 group-hover:opacity-20 transition-opacity"
-                style="color: var(--secondary)"
-              >
-                M
-              </div>
-              <div class="relative">
-                <div
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--secondary)"
-                >
-                  <span class="font-heading text-base font-bold">M</span>
-                </div>
-                <h3 class="mt-3 font-heading text-base font-semibold">
-                  Meaning
-                </h3>
-                <p
-                  class="mt-1 text-xs font-semibold"
-                  style="color: var(--secondary)"
-                >
-                  Communication that corresponds to reality and is usable by
-                  stakeholders.
-                </p>
-                <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Communication must be legible, verifiable, and actionable by
-                  the people it serves — not by the institution alone. Meaning
-                  makes outcome verifiable.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-5 text-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-quote h-5 w-5 text-primary mx-auto mb-2"
-              aria-hidden="true"
-            >
-              <path
-                d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-              ></path>
-              <path
-                d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-              ></path>
-            </svg>
-            <p
-              class="text-sm italic text-foreground/90 leading-relaxed max-w-2xl mx-auto"
-            >
-              The framework is not the answer. It is the architecture that makes
-              the answer possible — and the answer is the work that remains.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-surface-alt/30">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="mb-10">
-            <span class="meer-eyebrow">Architecture Deep Dive</span>
-            <h2
-              class="font-heading text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight mt-3"
-            >
-              Three principles that
-              <span class="meer-gradient-text">make the framework work</span>
-            </h2>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-3">
-            <div class="rounded-2xl border border-border/60 bg-card p-5">
-              <span
-                class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-3"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-layers h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"
-                  ></path>
-                  <path
-                    d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"
-                  ></path>
-                  <path
-                    d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"
-                  ></path></svg
-              ></span>
-              <h3 class="font-heading text-base font-semibold">
-                Pillar Coherence
-              </h3>
-              <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                Weakness in any one pillar collapses legitimacy, regardless of
-                strength in others. The strength of the strongest pillar cannot
-                compensate for the weakness of the weakest. An institution with
-                four pillars is not four-fifths legitimate — it is illegitimate.
-              </p>
-            </div>
-            <div class="rounded-2xl border border-border/60 bg-card p-5">
-              <span
-                class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-3"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-eye h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
-                  ></path>
-                  <circle cx="12" cy="12" r="3"></circle></svg
-              ></span>
-              <h3 class="font-heading text-base font-semibold">
-                Skeptical Observer Standard
-              </h3>
-              <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                Claims must clear an evidentiary bar sufficient to convince a
-                skeptical, informed, independent observer. Would a reasonable
-                person who is informed, independent, and initially skeptical be
-                convinced by the evidence presented?
-              </p>
-            </div>
-            <div class="rounded-2xl border border-border/60 bg-card p-5">
-              <span
-                class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-3"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-shield-check h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-                  ></path>
-                  <path d="m9 12 2 2 4-4"></path></svg
-              ></span>
-              <h3 class="font-heading text-base font-semibold">Trust Layer</h3>
-              <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
-                The verification infrastructure that makes institutional claims
-                credible. Not more reporting — better architecture. The Trust
-                Layer is what closes the Legitimacy Gap between proclamation and
-                proof.
-              </p>
-            </div>
-          </div>
-          <div class="mt-8 rounded-2xl border border-border/60 bg-card p-6">
-            <div
-              class="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground mb-4"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-network h-3.5 w-3.5 text-primary"
-                aria-hidden="true"
-              >
-                <rect x="16" y="16" width="6" height="6" rx="1"></rect>
-                <rect x="2" y="16" width="6" height="6" rx="1"></rect>
-                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
-                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
-                <path d="M12 12V8"></path>
-              </svg>
-              The A-E-I-O-M dependency chain
-            </div>
-            <div class="flex flex-wrap items-center gap-2 justify-center">
-              <div
-                class="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-xl border"
-                style="
-                  border-color: color-mix(
-                    in oklab,
-                    var(--primary) 35%,
-                    transparent
-                  );
-                "
-              >
-                <span
-                  class="font-heading text-lg font-bold"
-                  style="color: var(--primary)"
-                  >A</span
-                ><span class="text-[10px] font-semibold">Accountability</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-right h-4 w-4 text-muted-foreground"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-              <div
-                class="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-xl border"
-                style="
-                  border-color: color-mix(
-                    in oklab,
-                    var(--secondary) 35%,
-                    transparent
-                  );
-                "
-              >
-                <span
-                  class="font-heading text-lg font-bold"
-                  style="color: var(--secondary)"
-                  >E</span
-                ><span class="text-[10px] font-semibold">Execution</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-right h-4 w-4 text-muted-foreground"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-              <div
-                class="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-xl border"
-                style="
-                  border-color: color-mix(
-                    in oklab,
-                    var(--accent) 35%,
-                    transparent
-                  );
-                "
-              >
-                <span
-                  class="font-heading text-lg font-bold"
-                  style="color: var(--accent)"
-                  >I</span
-                ><span class="text-[10px] font-semibold">Initiative</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-right h-4 w-4 text-muted-foreground"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-              <div
-                class="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-xl border"
-                style="
-                  border-color: color-mix(
-                    in oklab,
-                    var(--primary) 35%,
-                    transparent
-                  );
-                "
-              >
-                <span
-                  class="font-heading text-lg font-bold"
-                  style="color: var(--primary)"
-                  >O</span
-                ><span class="text-[10px] font-semibold">Outcome</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-right h-4 w-4 text-muted-foreground"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-              <div
-                class="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-xl border"
-                style="
-                  border-color: color-mix(
-                    in oklab,
-                    var(--secondary) 35%,
-                    transparent
-                  );
-                "
-              >
-                <span
-                  class="font-heading text-lg font-bold"
-                  style="color: var(--secondary)"
-                  >M</span
-                ><span class="text-[10px] font-semibold">Meaning</span>
-              </div>
-            </div>
-            <p class="text-xs text-muted-foreground text-center mt-3">
-              Each pillar presupposes the previous. The sequence is a chain of
-              dependency, not a list.
-            </p>
-          </div>
-          <div class="mt-6 text-center">
-            <a href="/about/five-pillars/"
-              ><button
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 py-2 has-[&gt;svg]:px-3 rounded-full px-6"
-              >
-                Explore the full framework
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-right ml-2 h-4 w-4"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg></button
-            ></a>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-background">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="mb-10">
-            <span class="meer-eyebrow">Our Practice Areas</span>
-            <h2
-              class="font-heading text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight mt-3"
-            >
-              Five sectors, <span class="meer-gradient-text">one mission</span>
-            </h2>
-            <p
-              class="mt-3 max-w-2xl text-sm text-muted-foreground leading-relaxed"
-            >
-              Our practice areas are the sectors we work in. They are not the
-              Five Pillars Framework — they are where the Framework is applied.
-            </p>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            <div>
-              <a
-                class="group block rounded-2xl border border-border/60 bg-card p-5 h-full hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/initiatives/education/"
-                ><span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm mb-3"
-                  style="background: var(--primary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-book-open h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 7v14"></path>
-                    <path
-                      d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
-                    ></path></svg
-                ></span>
-                <h3 class="font-heading text-sm font-semibold">Education</h3>
-                <p
-                  class="text-[10px] uppercase tracking-wider text-primary font-semibold mt-1"
-                >
-                  FPF Pillar I — Initiative
-                </p>
-                <p class="text-xs text-muted-foreground leading-relaxed mt-2">
-                  Education for a Sustainable Tomorrow
-                </p>
-                <div
-                  class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold text-primary"
-                >
-                  SDG 4 · Quality Education
-                </div></a
-              >
-            </div>
-            <div>
-              <a
-                class="group block rounded-2xl border border-border/60 bg-card p-5 h-full hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/initiatives/environment/"
-                ><span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm mb-3"
-                  style="background: var(--primary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-earth h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path>
-                    <path
-                      d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"
-                    ></path>
-                    <path
-                      d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"
-                    ></path>
-                    <circle cx="12" cy="12" r="10"></circle></svg
-                ></span>
-                <h3 class="font-heading text-sm font-semibold">Environment</h3>
-                <p
-                  class="text-[10px] uppercase tracking-wider text-primary font-semibold mt-1"
-                >
-                  FPF Pillar O — Outcome
-                </p>
-                <p class="text-xs text-muted-foreground leading-relaxed mt-2">
-                  Bolti Nadi — let the river speak
-                </p>
-                <div
-                  class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold text-primary"
-                >
-                  SDG 6 · Clean Water &amp; Sanitation
-                </div></a
-              >
-            </div>
-            <div>
-              <a
-                class="group block rounded-2xl border border-border/60 bg-card p-5 h-full hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/initiatives/health/"
-                ><span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm mb-3"
-                  style="background: var(--secondary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-heart h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                    ></path></svg
-                ></span>
-                <h3 class="font-heading text-sm font-semibold">Health</h3>
-                <p
-                  class="text-[10px] uppercase tracking-wider text-primary font-semibold mt-1"
-                >
-                  FPF Pillar M — Meaning
-                </p>
-                <p class="text-xs text-muted-foreground leading-relaxed mt-2">
-                  Nirogaayam — wellness for all
-                </p>
-                <div
-                  class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold text-primary"
-                >
-                  SDG 3 · Good Health &amp; Well-being
-                </div></a
-              >
-            </div>
-            <div>
-              <a
-                class="group block rounded-2xl border border-border/60 bg-card p-5 h-full hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/initiatives/livelihood/"
-                ><span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm mb-3"
-                  style="background: var(--accent)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-sprout h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 20h10"></path>
-                    <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
-                    <path
-                      d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"
-                    ></path>
-                    <path
-                      d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"
-                    ></path></svg
-                ></span>
-                <h3 class="font-heading text-sm font-semibold">Livelihood</h3>
-                <p
-                  class="text-[10px] uppercase tracking-wider text-primary font-semibold mt-1"
-                >
-                  FPF Pillar E — Execution
-                </p>
-                <p class="text-xs text-muted-foreground leading-relaxed mt-2">
-                  Farmours — from subsistence to enterprise
-                </p>
-                <div
-                  class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold text-primary"
-                >
-                  SDG 1 · No Poverty
-                </div></a
-              >
-            </div>
-            <div>
-              <a
-                class="group block rounded-2xl border border-border/60 bg-card p-5 h-full hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/initiatives/livelihood/"
-                ><span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm mb-3"
-                  style="background: var(--secondary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-users h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                    <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <circle cx="9" cy="7" r="4"></circle></svg
-                ></span>
-                <h3 class="font-heading text-sm font-semibold">
-                  Women Empowerment
-                </h3>
-                <p
-                  class="text-[10px] uppercase tracking-wider text-primary font-semibold mt-1"
-                >
-                  FPF Pillar A — Accountability
-                </p>
-                <p class="text-xs text-muted-foreground leading-relaxed mt-2">
-                  Agency, voice, and economic power
-                </p>
-                <div
-                  class="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold text-primary"
-                >
-                  SDG 5 · Gender Equality
-                </div></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-surface-alt/30">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="mb-10">
-            <span class="meer-eyebrow">Our Initiatives</span>
-            <h2
-              class="font-heading text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight mt-3"
-            >
-              Four initiatives,
-              <span class="meer-gradient-text">multiple programmes each</span>
-            </h2>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-5 flex flex-col gap-3"
-              
-            >
-              <div class="flex items-start justify-between gap-2">
-                <span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--primary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-book-open h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 7v14"></path>
-                    <path
-                      d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
-                    ></path></svg></span
-                ><a
-                  class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border/60 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                  href="/initiatives/edusuto/"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-up-right h-4 w-4 text-muted-foreground"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 7h10v10"></path>
-                    <path d="M7 17 17 7"></path></svg
-                ></a>
-              </div>
-              <div>
-                <h3 class="font-heading text-lg font-semibold">EduSuTo</h3>
-                <p class="text-xs text-muted-foreground italic">
-                  Education for a Sustainable Tomorrow
-                </p>
-              </div>
-              <p class="text-sm text-muted-foreground leading-relaxed">
-                Climate Change: Carbon Capture &amp; Storage (flagship
-                certification course) and Prayaas Online (digital learning
-                platform for CGBSE Class 1-12).
-              </p>
-              <div
-                class="flex flex-wrap gap-1 mt-auto pt-2 border-t border-border/40"
-              >
-                <span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Climate Change: Carbon Capture &amp; Storage</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Prayaas Online</span
-                >
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-5 flex flex-col gap-3"
-              
-            >
-              <div class="flex items-start justify-between gap-2">
-                <span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--secondary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-heart h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                    ></path></svg></span
-                ><a
-                  class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border/60 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                  href="/initiatives/health/"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-up-right h-4 w-4 text-muted-foreground"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 7h10v10"></path>
-                    <path d="M7 17 17 7"></path></svg
-                ></a>
-              </div>
-              <div>
-                <h3 class="font-heading text-lg font-semibold">Nirogaayam</h3>
-                <p class="text-xs text-muted-foreground italic">
-                  Wellness for all
-                </p>
-              </div>
-              <p class="text-sm text-muted-foreground leading-relaxed">
-                Health awareness, CPR, disaster management, first aid, Yoga
-                Kutumb, and 6 more health demonstrations for rural Chhattisgarh.
-              </p>
-              <div
-                class="flex flex-wrap gap-1 mt-auto pt-2 border-t border-border/40"
-              >
-                <span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Health Awareness Program</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >CPR</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Disaster Management</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >First Aid</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Yoga Kutumb</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >+6 more</span
-                >
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-5 flex flex-col gap-3"
-              
-            >
-              <div class="flex items-start justify-between gap-2">
-                <span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--primary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-earth h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path>
-                    <path
-                      d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"
-                    ></path>
-                    <path
-                      d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"
-                    ></path>
-                    <circle cx="12" cy="12" r="10"></circle></svg></span
-                ><a
-                  class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border/60 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                  href="/initiatives/bolti-nadi/"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-up-right h-4 w-4 text-muted-foreground"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 7h10v10"></path>
-                    <path d="M7 17 17 7"></path></svg
-                ></a>
-              </div>
-              <div>
-                <h3 class="font-heading text-lg font-semibold">Bolti Nadi</h3>
-                <p class="text-xs text-muted-foreground italic">
-                  Let the river speak
-                </p>
-              </div>
-              <p class="text-sm text-muted-foreground leading-relaxed">
-                Save River Initiative, tree plantation, and research &amp;
-                development. 90-km Sakri River Walk triggered policy outcomes
-                across 12+ villages.
-              </p>
-              <div
-                class="flex flex-wrap gap-1 mt-auto pt-2 border-t border-border/40"
-              >
-                <span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Save River Initiative</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Tree Plantation</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Research &amp; Development</span
-                >
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-5 flex flex-col gap-3"
-              
-            >
-              <div class="flex items-start justify-between gap-2">
-                <span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--accent)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-sprout h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 20h10"></path>
-                    <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
-                    <path
-                      d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"
-                    ></path>
-                    <path
-                      d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"
-                    ></path></svg></span
-                ><a
-                  class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border/60 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                  href="/initiatives/farmours/"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-up-right h-4 w-4 text-muted-foreground"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 7h10v10"></path>
-                    <path d="M7 17 17 7"></path></svg
-                ></a>
-              </div>
-              <div>
-                <h3 class="font-heading text-lg font-semibold">Farmours</h3>
-                <p class="text-xs text-muted-foreground italic">
-                  From subsistence to enterprise
-                </p>
-              </div>
-              <p class="text-sm text-muted-foreground leading-relaxed">
-                Sustainable agriculture, livestock, fisheries, poultry, goat
-                rearing, irrigation, forest-based livelihoods, women&#x27;s
-                SHGs, FPOs, financial inclusion, nutrition, climate resilience,
-                NRM, and rural entrepreneurship.
-              </p>
-              <div
-                class="flex flex-wrap gap-1 mt-auto pt-2 border-t border-border/40"
-              >
-                <span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Sustainable Agriculture</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Livestock</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Fisheries</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Poultry</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Goat Rearing</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Irrigation</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Forest-based Livelihoods</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Women&#x27;s SHGs</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >FPOs</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Financial Inclusion</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Nutrition</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Climate Resilience</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >NRM</span
-                ><span
-                  class="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-foreground/70"
-                  >Rural Entrepreneurship</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-background relative overflow-hidden">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="mb-10">
-            <span class="meer-eyebrow">Flagship Initiative</span>
-            <h2
-              class="font-heading text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight mt-3"
-            >
-              Bolti Nadi —
-              <span class="meer-gradient-text">Reviving the Sakri River</span>
-            </h2>
-            <p
-              class="mt-3 max-w-2xl text-sm text-muted-foreground leading-relaxed"
-            >
-              After being dry for 30 years, the Sakri River flows again. A
-              90-kilometer community-led revival that proved rivers can come
-              back to life when people walk alongside them.
-            </p>
-          </div>
-          <div class="grid gap-6 lg:grid-cols-[1.2fr_1fr] items-center">
-            <div
-              class="relative aspect-[16/10] rounded-2xl overflow-hidden border border-border/60 shadow-lg scroll-reveal--scale"
-            >
-              <div class="before-after" style="height: 100%; min-height: 320px;">
-                <span class="before-after__label before-after__label--before">Before: Dry (30 Yrs)</span>
-                <span class="before-after__label before-after__label--after">After: Revived Flow</span>
-                <img src="assets/images/bolti-nadi-dry.webp" alt="Sakri River before community revival" class="before-after__before" />
-                <img src="assets/images/bolti-nadi-flowing.webp" alt="Sakri River flowing after community revival" class="before-after__after" />
-                <div class="before-after__slider" aria-label="Drag to compare before and after"></div>
-              </div>
-            </div>
-            <div
-              class="space-y-4"
-              
-            >
-              <div class="grid grid-cols-2 gap-3">
-                <div
-                  class="rounded-2xl border border-border/60 bg-card p-4 text-center"
-                >
-                  <div
-                    class="font-heading text-3xl font-bold text-primary tabular-nums"
-                  >
-                    <span class="tabular-nums">90 km</span>
-                  </div>
-                  <div
-                    class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-                  >
-                    River km walked
-                  </div>
-                </div>
-                <div
-                  class="rounded-2xl border border-border/60 bg-card p-4 text-center"
-                >
-                  <div
-                    class="font-heading text-3xl font-bold text-primary tabular-nums"
-                  >
-                    <span class="tabular-nums">12+</span>
-                  </div>
-                  <div
-                    class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-                  >
-                    Villages restored
-                  </div>
-                </div>
-                <div
-                  class="rounded-2xl border border-border/60 bg-card p-4 text-center"
-                >
-                  <div
-                    class="font-heading text-3xl font-bold text-primary tabular-nums"
-                  >
-                    <span class="tabular-nums">8,200+</span>
-                  </div>
-                  <div
-                    class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-                  >
-                    People impacted
-                  </div>
-                </div>
-                <div
-                  class="rounded-2xl border border-border/60 bg-card p-4 text-center"
-                >
-                  <div
-                    class="font-heading text-3xl font-bold text-primary tabular-nums"
-                  >
-                    <span class="tabular-nums">4</span>
-                  </div>
-                  <div
-                    class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-                  >
-                    Years flowing
-                  </div>
-                </div>
-              </div>
-              <div
-                class="rounded-2xl border border-primary/30 bg-primary/5 p-4"
-              >
-                <p class="text-sm text-muted-foreground leading-relaxed">
-                  <span class="font-semibold text-foreground"
-                    >How it happened:</span
-                  >
-                  A team walked the entire 90-km river, documented everything,
-                  submitted findings to the government, and worked together to
-                  build check dams, plant trees, desilt the riverbed, and
-                  install a sewage treatment plant.
-                </p>
-              </div>
-              <div class="flex flex-wrap gap-3">
-                <button
-                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs h-9 py-2 has-[&gt;svg]:px-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6"
-                >
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-right ml-2 h-4 w-4"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg></button
-                ><button
-                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 py-2 has-[&gt;svg]:px-3 rounded-full px-6"
-                >
-                  Support This Initiative
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-background">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="mb-10">
-            <span class="meer-eyebrow">Impact Snapshot</span>
-            <h2
-              class="font-heading text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight mt-3"
-            >
-              Real-time change,
-              <span class="meer-gradient-text"
-                >result-oriented initiatives</span
-              >
-            </h2>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-6 scroll-stagger">
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 text-center scroll-reveal"
-            >
-              <div
-                class="font-heading text-2xl sm:text-3xl font-bold text-primary tabular-nums"
-                data-count-to="100000" data-count-suffix="+" data-count-indian="true"
-              >
-                1,00,000+
-              </div>
-              <div
-                class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-              >
-                Households reached
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 text-center scroll-reveal"
-            >
-              <div
-                class="font-heading text-2xl sm:text-3xl font-bold text-primary tabular-nums"
-                data-count-to="860" data-count-suffix="+"
-              >
-                860+
-              </div>
-              <div
-                class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-              >
-                Self-Help Groups
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 text-center scroll-reveal"
-            >
-              <div
-                class="font-heading text-2xl sm:text-3xl font-bold text-primary tabular-nums"
-                data-count-to="12"
-              >
-                12
-              </div>
-              <div
-                class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-              >
-                Districts active
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 text-center scroll-reveal"
-            >
-              <div
-                class="font-heading text-2xl sm:text-3xl font-bold text-primary tabular-nums"
-                data-count-to="90" data-count-suffix=" km"
-              >
-                90 km
-              </div>
-              <div
-                class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-              >
-                River kilometres walked
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 text-center scroll-reveal"
-            >
-              <div
-                class="font-heading text-2xl sm:text-3xl font-bold text-primary tabular-nums"
-                data-count-to="12000" data-count-suffix="+" data-count-indian="true"
-              >
-                12,000+
-              </div>
-              <div
-                class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-              >
-                Women farmers empowered
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 text-center scroll-reveal"
-            >
-              <div
-                class="font-heading text-2xl sm:text-3xl font-bold text-primary tabular-nums"
-                data-count-to="15"
-              >
-                15
-              </div>
-              <div
-                class="text-[10px] uppercase tracking-wider text-muted-foreground mt-1"
-              >
-                Years of service
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 grid gap-3 sm:grid-cols-3">
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 flex items-start gap-3"
-            >
-              <span
-                class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-map-pin h-4 w-4"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-                  ></path>
-                  <circle cx="12" cy="10" r="3"></circle></svg
-              ></span>
-              <div>
-                <div class="font-heading text-lg font-bold text-primary">8</div>
-                <div class="text-xs font-semibold">Districts covered</div>
-                <div
-                  class="text-[10px] text-muted-foreground leading-relaxed mt-0.5"
-                >
-                  Raipur, Dhamtari, Kanker, Bastar, Balod, Balodabazar,
-                  Kawardha, Bemetara
-                </div>
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 flex items-start gap-3"
-            >
-              <span
-                class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-users h-4 w-4"
-                  aria-hidden="true"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <circle cx="9" cy="7" r="4"></circle></svg
-              ></span>
-              <div>
-                <div class="font-heading text-lg font-bold text-primary">
-                  1,00,000+
-                </div>
-                <div class="text-xs font-semibold">Beneficiaries reached</div>
-                <div
-                  class="text-[10px] text-muted-foreground leading-relaxed mt-0.5"
-                >
-                  Households across Chhattisgarh
-                </div>
-              </div>
-            </div>
-            <div
-              class="rounded-2xl border border-border/60 bg-card p-4 flex items-start gap-3"
-            >
-              <span
-                class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-award h-4 w-4"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
-                  ></path>
-                  <circle cx="12" cy="8" r="6"></circle></svg
-              ></span>
-              <div>
-                <div class="font-heading text-lg font-bold text-primary">
-                  15+
-                </div>
-                <div class="text-xs font-semibold">Years of service</div>
-                <div
-                  class="text-[10px] text-muted-foreground leading-relaxed mt-0.5"
-                >
-                  Since 2011 · independently audited
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 text-center">
-            <a href="/impact/"
-              ><button
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 py-2 has-[&gt;svg]:px-3 rounded-full px-6"
-              >
-                See full impact
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-right ml-2 h-4 w-4"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg></button
-            ></a>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 lg:py-24 bg-surface-alt/30">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div class="mb-10 text-center">
-            <span class="meer-eyebrow mx-auto">Get Involved</span>
-            <h2
-              class="font-heading text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight mt-3"
-            >
-              Build the next chapter
-              <span class="meer-gradient-text">with us</span>
-            </h2>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <a
-                class="group rounded-2xl border border-border/60 bg-card p-5 h-full flex flex-col gap-3 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/get-involved/volunteer/"
-                ><span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--primary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-hand-heart h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"
-                    ></path>
-                    <path
-                      d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"
-                    ></path>
-                    <path d="m2 15 6 6"></path>
-                    <path
-                      d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"
-                    ></path></svg
-                ></span>
-                <div>
-                  <h3 class="font-heading text-base font-semibold">
-                    Volunteer
-                  </h3>
-                  <p class="text-xs text-muted-foreground leading-relaxed mt-1">
-                    Lend your skills — field or remote. Teaching, research,
-                    media, tech.
-                  </p>
-                </div>
-                <div
-                  class="mt-auto inline-flex items-center gap-1 text-xs font-semibold text-primary"
-                >
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-right h-3 w-3"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg></div
-              ></a>
-            </div>
-            <div>
-              <a
-                class="group rounded-2xl border border-border/60 bg-card p-5 h-full flex flex-col gap-3 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/get-involved/csr-partner/"
-                ><span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--accent)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-briefcase h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    <rect width="20" height="14" x="2" y="6" rx="2"></rect></svg
-                ></span>
-                <div>
-                  <h3 class="font-heading text-base font-semibold">
-                    CSR Partner
-                  </h3>
-                  <p class="text-xs text-muted-foreground leading-relaxed mt-1">
-                    Co-design a multi-year programme. CSR-1 registered. 80G
-                    approved.
-                  </p>
-                </div>
-                <div
-                  class="mt-auto inline-flex items-center gap-1 text-xs font-semibold text-primary"
-                >
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-right h-3 w-3"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg></div
-              ></a>
-            </div>
-            <div>
-              <a
-                class="group rounded-2xl border border-border/60 bg-card p-5 h-full flex flex-col gap-3 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/get-involved/internship/"
-                ><span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--secondary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-graduation-cap h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
-                    ></path>
-                    <path d="M22 10v6"></path>
-                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg
-                ></span>
-                <div>
-                  <h3 class="font-heading text-base font-semibold">
-                    MDAP Internship
-                  </h3>
-                  <p class="text-xs text-muted-foreground leading-relaxed mt-1">
-                    Meer Foundation Development Apprenticeship Program. 4-phase
-                    learning.
-                  </p>
-                </div>
-                <div
-                  class="mt-auto inline-flex items-center gap-1 text-xs font-semibold text-primary"
-                >
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-right h-3 w-3"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg></div
-              ></a>
-            </div>
-            <div>
-              <a
-                class="group rounded-2xl border border-border/60 bg-card p-5 h-full flex flex-col gap-3 hover:border-primary/40 hover:bg-primary/5 transition-colors"
-                href="/get-involved/donate/"
-                ><span
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white shadow-sm"
-                  style="background: var(--secondary)"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-heart h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                    ></path></svg
-                ></span>
-                <div>
-                  <h3 class="font-heading text-base font-semibold">Donate</h3>
-                  <p class="text-xs text-muted-foreground leading-relaxed mt-1">
-                    80G tax-deductible. Every rupee auditable. From ₹100.
-                  </p>
-                </div>
-                <div
-                  class="mt-auto inline-flex items-center gap-1 text-xs font-semibold text-primary"
-                >
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-right h-3 w-3"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg></div
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h4>About</h4>
-            <a href="about/our-story/">Our Story & Founder</a>
-            <a href="about/annual-reports/">Annual Reports</a>
-            <a href="about/five-pillars/">Five Pillars Model</a>
-          </div>
-          <div>
-            <h4>Initiatives</h4>
-            <a href="initiatives/bolti-nadi/">Bolti Nadi</a>
-            <a href="initiatives/prayaas/">Prayaas</a>
-            <a href="initiatives/farmours/">Farmours</a>
-            <a href="initiatives/health/">Nirogaayam</a>
-            <a href="initiatives/edusuto/">EduSuTo</a>
-          </div>
-          <div>
-            <h4>Get Involved</h4>
-            <a href="get-involved/volunteer/">Volunteer</a>
-            <a href="get-involved/csr-partner/">CSR Partner</a>
-            <a href="get-involved/internship/">Internship</a>
-            <a href="get-involved/donate/">Donate</a>
-            <a href="contact/">Contact</a>
-          </div>
-          <div>
-            <h4>Legal</h4>
-            <a href="legal/privacy-policy/">Privacy Policy</a>
-            <a href="legal/terms-of-use/">Terms of Use</a>
-            <a href="legal/cookie-policy/">Cookie Policy</a>
-            <a href="legal/accessibility/">Accessibility</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            © 2011–2026 Meer Foundation · CC-BY 4.0 · Empowering Rural
-            Communities & Restoring Rivers
-          </p>
-          <p >
-            CSR-1: CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 ·
-            NGO Darpan: CG/2018/0191949
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/js/scroll-engine.js"></script>
+    <!-- ===== CORE PRESENTATION SCRIPTS IN STRICT ORDER ===== -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/slider.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/slide-number.js"></script>
+    <script src="assets/js/popup.js"></script>
   </body>
 </html>
