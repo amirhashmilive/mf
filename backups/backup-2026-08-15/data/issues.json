@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "volume": 1,
+    "issue": 1,
+    "quarter": "January–March",
+    "year": 2026,
+    "title": "Volume 1, Issue 1 (January–March 2026)",
+    "theme": "Multidisciplinary Perspectives on Legal, Social and Agricultural Transformation",
+    "publication_date": "April 2026",
+    "status": "published",
+    "papers": ["IJMEER_1_1_01", "IJMEER_1_1_02", "IJMEER_1_1_03", "IJMEER_1_1_04", "IJMEER_1_1_05"],
+    "description": "The inaugural issue of IJMEER presents foundational research across law, public health, agriculture, education, and economics, featuring case studies from across India (Uttar Pradesh, Kerala, Punjab, Maharashtra, and Tamil Nadu).",
+    "articles": [
+      {
+        "title": "Implementation of Three New Criminal Laws in India: A Study of Police Preparedness in Uttar Pradesh",
+        "authors": "Arjun Singh",
+        "pdf_url": "/papers/IJMEER_V1_I1_P01_2026.pdf",
+        "pages": "1-6"
+      },
+      {
+        "title": "Mental Health Awareness Among College Students in Kerala Post-COVID: Prevalence, Perceptions, and Help-Seeking Behaviour",
+        "authors": "Priya Menon & Anitha Krishnan",
+        "pdf_url": "/papers/IJMEER_V1_I1_P02_2026.pdf",
+        "pages": "7-10"
+      },
+      {
+        "title": "Farmers' Adoption of Sustainable Agricultural Practices in Punjab: Barriers, Motivators, and Policy Implications",
+        "authors": "Gurpreet Kaur",
+        "pdf_url": "/papers/IJMEER_V1_I1_P03_2026.pdf",
+        "pages": "11-14"
+      },
+      {
+        "title": "Digital Literacy and Access to Online Education in Rural Maharashtra: A Study of Learner Experiences and Infrastructural Gaps",
+        "authors": "Rajesh Deshmukh & Sunita Wagh",
+        "pdf_url": "/papers/IJMEER_V1_I1_P04_2026.pdf",
+        "pages": "15-20"
+      },
+      {
+        "title": "Impact of MSME Schemes on Women Entrepreneurs in Tamil Nadu: Evidence from Madurai and Tirunelveli Districts",
+        "authors": "Meena Rajan",
+        "pdf_url": "/papers/IJMEER_V1_I1_P05_2026.pdf",
+        "pages": "21-25"
+      }
+    ]
+  }
+]
