@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/)
 
+## [2026-08-15] — End-to-End Site-Wide CSS & JavaScript Engine Restoration
+
+### Fixed
+- Unified `assets/css/style.css` combining site-wide layout classes (`.header`, `.nav`, `.nav-dropdown`, `.mobile-menu`, `.footer`, `.card`, `.stat-card`, `.badge`, `.accordion`, `.btn`, `.container`, `.grid`) with the Presentation Framework & Glassmorphism system.
+- Unified `assets/js/main.js` supporting all sub-page mechanics (theme switching, mobile navigation menu toggle, sticky header scroll shadow, FAQ accordion expansion, form toast submissions, animated counters, before/after slider) and presentation slide features.
+- Restored standard full navigation header and mobile menu to `index.html` ensuring consistent site-wide header UX.
+
+---
+
 ## [2026-08-15] — Cinematic Presentation & Glassmorphism UI/UX Transformation
 
 ### Added
