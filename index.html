@@ -1,510 +1,347 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Empowering Rural Communities & Restoring Rivers · Meer Foundation</title>
-    <meta name="description" content="Empowering Rural Communities & Restoring Rivers — Meer Foundation, Chhattisgarh NGO working on Education, Environment, Health, Livelihood and Women Empowerment since 2011." />
-    <meta property="og:title" content="Empowering Rural Communities & Restoring Rivers · Meer Foundation" />
-    <meta property="og:type" content="website" />
-    
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    
-    <!-- Main Presentation Design System CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" href="assets/images/logo/logo-horizontal.webp" />
-  </head>
-  <body>
-    <!-- ===== HEADER ===== -->
-    <header class="header" id="header">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meer Foundation | Empowering Knowledge & Transforming Lives</title>
+  <meta name="description" content="Meer Foundation — Non-profit NGO and publisher of IJMEER. Advancing rural development, river conservation, education, and multidisciplinary research.">
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Meer Foundation",
+    "url": "https://meerfoundation.co.in/",
+    "logo": "https://meerfoundation.co.in/assets/images/logo/logo-horizontal.webp",
+    "foundingDate": "2011",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Chhattisgarh",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://facebook.com",
+      "https://twitter.com",
+      "https://linkedin.com"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER INJECTION MOUNT ===== -->
+  <div id="header-mount"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="floating-shape floating-shape-1"></div>
+      <div class="floating-shape floating-shape-2"></div>
       <div class="container">
-        <a href="index.html" class="logo"><img src="assets/images/logo/logo-horizontal.webp" alt="Meer Foundation" height="38"></a>
-        <nav class="nav" style="margin-left: auto;">
-          <div class="nav-item">
-            <a href="about/" class="nav-link">About</a>
-            <div class="nav-dropdown">
-              <a href="about/our-story/">Our Story &amp; Founder</a>
-              <a href="about/annual-reports/">Annual Reports</a>
-              <a href="about/five-pillars/">Five Pillars Model</a>
-            </div>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-certificate"></i> Advancing Research &amp; Education Since 2024
           </div>
-          <div class="nav-item">
-            <a href="initiatives/" class="nav-link">Initiatives</a>
-            <div class="nav-dropdown">
-              <a href="initiatives/education/">Education</a>
-              <a href="initiatives/health/">Health</a>
-              <a href="initiatives/environment/">Environment</a>
-              <a href="initiatives/livelihood/">Livelihood</a>
-            </div>
+          <h1 class="hero-title">Empowering Knowledge. Transforming Lives.</h1>
+          <p class="hero-subtitle">
+            Meer Foundation is dedicated to sustainable community development, river conservation, rural education, and peer-reviewed academic excellence through IJMEER Journal.
+          </p>
+          <div class="hero-ctas">
+            <a href="about.html" class="btn btn-primary btn-lg">Explore Our Work <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html#support" class="btn btn-secondary btn-lg">Join Us</a>
           </div>
-          <div class="nav-item">
-            <a href="research/" class="nav-link">Research</a>
-            <div class="nav-dropdown">
-              <a href="research/rivers-chhattisgarh/">Rivers of Chhattisgarh</a>
-              <a href="research/ijmeer/">IJMEER Journal</a>
-              <a href="research/publications/">Publications</a>
-              <a href="research/csr-research/">CSR Research</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="emerging/" class="nav-link">Emerging</a>
-            <div class="nav-dropdown">
-              <a href="emerging/community-radio/">Community Radio</a>
-              <a href="emerging/media-gallery/">Media Gallery</a>
-              <a href="emerging/news-press/">News &amp; Press</a>
-              <a href="emerging/field-notes/">Field Notes Blog</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="impact/" class="nav-link">Impact</a>
-            <div class="nav-dropdown">
-              <a href="impact/statistics/">Statistics</a>
-              <a href="impact/case-studies/">Case Studies</a>
-              <a href="impact/district-profiles/">District Profiles</a>
-              <a href="impact/project-gallery/">Project Gallery</a>
-              <a href="impact/testimonials/">Testimonials</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="get-involved/" class="nav-link">Get Involved</a>
-            <div class="nav-dropdown">
-              <a href="get-involved/volunteer/">Volunteer</a>
-              <a href="get-involved/csr-partner/">CSR Partner</a>
-              <a href="get-involved/internship/">Internship</a>
-              <a href="get-involved/donate/">Donate</a>
-            </div>
-          </div>
-          <a href="contact/" class="nav-link">Contact</a>
-          <button class="theme-toggle" aria-label="Toggle dark/light theme" style="margin-left: 0.5rem; margin-right: 0.5rem;"><i class="fas fa-sun"></i></button>
-          <a href="get-involved/donate/" class="btn btn-accent btn-sm">Donate</a>
-        </nav>
-        <button class="mobile-toggle" aria-label="Open navigation menu">☰</button>
+        </div>
       </div>
-    </header>
-
-    <!-- ===== MOBILE MENU ===== -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="about/" class="nav-link">About</a>
-      <a href="initiatives/" class="nav-link">Initiatives</a>
-      <a href="research/" class="nav-link">Research</a>
-      <a href="emerging/" class="nav-link">Emerging</a>
-      <a href="impact/" class="nav-link">Impact</a>
-      <a href="get-involved/" class="nav-link">Get Involved</a>
-      <a href="contact/" class="nav-link">Contact</a>
-      <div style="margin-top: 1rem; padding: 1rem; text-align: center;">
-        <a href="get-involved/donate/" class="btn btn-accent" style="width: 100%; justify-content: center;">Donate</a>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ===== FULL-VIEWPORT SCROLL-SNAP SLIDE CONTAINER ===== -->
-    <div class="slide-container">
-
-      <!-- ── SLIDE 1: HERO & MISSION ─────────────────────────────── -->
-      <section class="slide" id="slide-1">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-certificate"></i> Founded 2011 · Chhattisgarh, India
-          </div>
-          <h1 class="slide-title">
-            Empowering Rural Communities <span class="neon-text-cg">&amp;</span> Restoring Rivers.
-          </h1>
-          <p class="slide-subtitle">
-            Meer Foundation works with people, never for them. We build self-reliant rural communities across Chhattisgarh across five practice areas — Education, Health, Environment, Livelihood, and Women Empowerment.
-          </p>
-
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
-            <a href="#slide-5" class="btn btn-primary"><i class="fas fa-compass"></i> Discover Our Work</a>
-            <a href="get-involved/" class="btn btn-secondary"><i class="fas fa-hands-helping"></i> Get Involved</a>
-          </div>
-
-          <!-- Quick Metrics Bar with Popovers -->
-          <div class="grid-3" style="max-width: 780px;">
-            <div class="glass-card hover-magnify popup-trigger" data-popup="households" style="text-align: center; padding: 1.5rem;">
-              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">1,00,000+</div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
-                Households Reached <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+    <!-- ABOUT PREVIEW SECTION -->
+    <section class="section" id="about-preview">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div class="gsap-reveal-left">
+            <div class="section-title-wrapper">
+              <span class="card-subtitle">About Meer Foundation</span>
+              <h2 class="section-title">Who We Are</h2>
+              <div class="gold-accent-line" style="margin: 8px 0 20px 0;"></div>
+            </div>
+            <p class="lead">
+              Founded with a commitment to societal growth, Meer Foundation bridges grassroots rural empowerment with global scientific research and education.
+            </p>
+            <p>
+              Through our initiatives in river restoration, community literacy, and open-access multidisciplinary publications, we foster meaningful innovation and social change across communities.
+            </p>
+            <div style="display: flex; gap: 24px; margin: 24px 0 32px 0;">
+              <div>
+                <div class="stat-number" data-count="100+">100+</div>
+                <div class="stat-label">Publications</div>
+              </div>
+              <div>
+                <div class="stat-number" data-count="50+">50+</div>
+                <div class="stat-label">Global Experts</div>
+              </div>
+              <div>
+                <div class="stat-number" data-count="10+">10+</div>
+                <div class="stat-label">Countries</div>
               </div>
             </div>
-            <div class="glass-card hover-magnify popup-trigger" data-popup="districts" style="text-align: center; padding: 1.5rem;">
-              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">12</div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
-                Active Districts <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
-              </div>
-            </div>
-            <div class="glass-card hover-magnify popup-trigger" data-popup="years" style="text-align: center; padding: 1.5rem;">
-              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">15</div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
-                Years of Service <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
-              </div>
+            <a href="about.html" class="btn btn-secondary">Learn More About Us <i class="fas fa-chevron-right"></i></a>
+          </div>
+
+          <div class="gsap-reveal-right">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid var(--secondary);">
+              <img src="assets/images/logo/opengraph.webp" alt="Meer Foundation Work" style="width: 100%; height: 420px; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/hero-bg.jpg';">
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ── SLIDE 2: FIVE PILLARS FRAMEWORK (AEIOM) ─────────────── -->
-      <section class="slide" id="slide-2">
-        <div class="slide-inner">
-          <div class="eyebrow-badge popup-trigger" data-popup="aeiom">
-            <i class="fas fa-shapes"></i> The Five Pillars Framework (A-E-I-O-M)
+    <!-- OUR IMPACT (STATS SECTION) -->
+    <section class="section" style="background: var(--light-gray);" id="impact-stats">
+      <div class="container">
+        <div class="section-header">
+          <span class="card-subtitle">Measurable Change</span>
+          <h2 class="section-title">Our Key Impact</h2>
+          <div class="gold-accent-line"></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card gsap-scale">
+            <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="stat-number" data-count="120+">120+</div>
+            <div class="stat-label">Research Papers Published</div>
           </div>
-          <h2 class="slide-title">How We Communicate Betterment</h2>
-          <p class="slide-subtitle">
-            A communication framework for transparent, evidence-based, verifiable institutional communication. Operationalized through the AEIOM Architecture.
-          </p>
 
-          <div class="grid-5">
-            <div class="glass-card hover-magnify glow-cyan">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #00d4ff;">A</span>
-                <i class="fas fa-shield-alt" style="color: #00d4ff;"></i>
-              </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Accountability</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Being answerable for outcomes, not just activities. Pre-specifying verifiable commitments.
-              </p>
-            </div>
+          <div class="stat-card gsap-scale">
+            <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+            <div class="stat-number" data-count="45+">45+</div>
+            <div class="stat-label">Editorial Board Members</div>
+          </div>
 
-            <div class="glass-card hover-magnify glow-orange">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #ff6b35;">E</span>
-                <i class="fas fa-cogs" style="color: #ff6b35;"></i>
-              </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Execution</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Operational architecture that converts intent into implemented reality across communities.
-              </p>
-            </div>
+          <div class="stat-card gsap-scale">
+            <div class="stat-icon"><i class="fas fa-globe-asia"></i></div>
+            <div class="stat-number" data-count="15+">15+</div>
+            <div class="stat-label">Countries Reached</div>
+          </div>
 
-            <div class="glass-card hover-magnify glow-blue">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #0d5b5e;">I</span>
-                <i class="fas fa-users" style="color: #0d5b5e;"></i>
-              </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Initiative</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Originating from participatory engagement with communities, not top-down imposed intent.
-              </p>
-            </div>
-
-            <div class="glass-card hover-magnify glow-green">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #28a745;">O</span>
-                <i class="fas fa-chart-line" style="color: #28a745;"></i>
-              </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Outcome</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Actual, demonstrable, attributable change — measuring real uplift over mere activity.
-              </p>
-            </div>
-
-            <div class="glass-card hover-magnify glow-purple">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #9b59b6;">M</span>
-                <i class="fas fa-book-reader" style="color: #9b59b6;"></i>
-              </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Meaning</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Communication that corresponds directly to reality and is actionable by all stakeholders.
-              </p>
-            </div>
+          <div class="stat-card gsap-scale">
+            <div class="stat-icon"><i class="fas fa-award"></i></div>
+            <div class="stat-number" data-count="14+">14+</div>
+            <div class="stat-label">Years of Excellence</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ── SLIDE 3: AEIOM ARCHITECTURE DEEP DIVE ───────────────── -->
-      <section class="slide" id="slide-3">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-layer-group"></i> Architecture Deep Dive
-          </div>
-          <h2 class="slide-title">The Three Pillars of Integrity</h2>
-          <p class="slide-subtitle">
-            How AEIOM ensures every claim is backed by field data, verifiable records, and institutional truth.
-          </p>
-
-          <div class="grid-3">
-            <div class="glass-card hover-magnify">
-              <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"><i class="fas fa-project-diagram"></i></div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Pillar Coherence</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                Every programme maps to at least one pillar, producing a consistent institutional narrative across all 5 operational sectors.
-              </p>
-            </div>
-
-            <div class="glass-card hover-magnify">
-              <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"><i class="fas fa-user-check"></i></div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Skeptical Observer</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                Every claim is written for an independent observer who demands verifiable proof before accepting any reported outcome.
-              </p>
-            </div>
-
-            <div class="glass-card hover-magnify">
-              <div style="font-size: 2rem; color: #ffd600; margin-bottom: 1rem;"><i class="fas fa-lock"></i></div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Trust Layer</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                Evidence management that links public reports directly to primary field documentation, audited ledgers, and photographic records.
-              </p>
-            </div>
-          </div>
+    <!-- EDITORIAL BOARD PREVIEW (CAROUSEL) -->
+    <section class="section" id="editorial-preview">
+      <div class="container">
+        <div class="section-header">
+          <span class="card-subtitle">Academic Leadership</span>
+          <h2 class="section-title">Our Distinguished Editorial Board</h2>
+          <div class="gold-accent-line"></div>
+          <p class="section-subtitle">Leading scholars and researchers guiding our multidisciplinary publications.</p>
         </div>
-      </section>
 
-      <!-- ── SLIDE 4: OUR PRACTICE AREAS ─────────────────────────── -->
-      <section class="slide" id="slide-4">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-th-large"></i> Operational Spectrum
-          </div>
-          <h2 class="slide-title">Our Practice Areas</h2>
-          <p class="slide-subtitle">
-            Comprehensive grassroots development targeting the structural needs of rural communities.
-          </p>
+        <div class="carousel-container" id="board-carousel">
+          <div class="carousel-track">
 
-          <div class="grid-5">
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: var(--accent-cg); margin-bottom: 0.75rem;"><i class="fas fa-graduation-cap"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Education</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">EduSuTo smart rural learning centres & digital literacy.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #00e676; margin-bottom: 0.75rem;"><i class="fas fa-heartbeat"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Health</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">Nirogaayam primary care, mobile health camps & nutrition.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #00d4ff; margin-bottom: 0.75rem;"><i class="fas fa-water"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Environment</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">Bolti Nadi river conservation, tree planting & water security.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #ff6b35; margin-bottom: 0.75rem;"><i class="fas fa-tractor"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Livelihood</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">Farmours organic farming & market linkages for farmers.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #9b59b6; margin-bottom: 0.75rem;"><i class="fas fa-female"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Women</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">SHG micro-enterprises & financial independence.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── SLIDE 5: KEY INITIATIVES ────────────────────────────── -->
-      <section class="slide" id="slide-5">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-rocket"></i> Field Programmes
-          </div>
-          <h2 class="slide-title">Flagship Initiatives</h2>
-          <p class="slide-subtitle">
-            Community-driven projects transforming livelihoods and ecological landscapes.
-          </p>
-
-          <div class="grid-4">
-            <a href="initiatives/farmours/" class="resource-card hover-magnify" data-gradient="pink">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🌾</div>
-                <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Farmours</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Organic agricultural value chains & farmer producer collectives.</p>
+            <div class="carousel-slide">
+              <div class="card text-center">
+                <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px auto; overflow: hidden; border: 3px solid var(--secondary);">
+                  <img src="assets/images/logo/logo-1x1.webp" alt="Board Member" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-              </div>
-            </a>
-
-            <a href="initiatives/prayaas/" class="resource-card hover-magnify" data-gradient="cyan">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🤝</div>
-                <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Prayaas</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Grassroots social welfare, health drives & emergency relief.</p>
-                </div>
-              </div>
-            </a>
-
-            <a href="initiatives/yoga-kutumb/" class="resource-card hover-magnify" data-gradient="purple">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🧘</div>
-                <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Yoga Kutumb</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Holistic mental wellness & traditional lifestyle programmes.</p>
-                </div>
-              </div>
-            </a>
-
-            <a href="initiatives/heritage-walk/" class="resource-card hover-magnify" data-gradient="pink">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🚶</div>
-                <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Heritage Walk</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Tribal arts, craft preservation & cultural immersion journeys.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── SLIDE 6: BOLTI NADI FLAGSHIP REVIVAL ─────────────────── -->
-      <section class="slide" id="slide-6">
-        <div class="slide-inner">
-          <div class="eyebrow-badge popup-trigger" data-popup="bolti-nadi">
-            <i class="fas fa-water"></i> Flagship Ecological Project
-          </div>
-          <h2 class="slide-title">Bolti Nadi — Reviving the Sakri River</h2>
-          <p class="slide-subtitle">
-            After being dry for 30 years, the Sakri River flows again across 90 km through community-led check dams, desiltation, and tree plantation.
-          </p>
-
-          <div class="grid-2" style="align-items: center;">
-            <!-- Interactive Before/After Slider -->
-            <div class="glass-card" style="padding: 0; overflow: hidden; height: 340px;">
-              <div class="before-after" style="height: 100%;">
-                <span class="before-after__label before-after__label--before">Before (Dry 30 Yrs)</span>
-                <span class="before-after__label before-after__label--after">After (Perennial Flow)</span>
-                <img src="assets/images/bolti-nadi-dry.webp" alt="Sakri River Dry" class="before-after__before" />
-                <img src="assets/images/bolti-nadi-flowing.webp" alt="Sakri River Revived" class="before-after__after" />
-                <div class="before-after__slider" aria-label="Drag slider to compare"></div>
+                <h3 class="card-title" style="font-size: 1.2rem;">Dr. A. K. Sharma</h3>
+                <div class="card-subtitle">Editor-in-Chief</div>
+                <p style="font-size: 0.88rem; color: var(--dark-gray);">Professor of Environmental Science &amp; Sustainable Development.</p>
               </div>
             </div>
 
-            <!-- Stats & Insights -->
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div class="grid-2">
-                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.25rem;">
-                  <div class="neon-text-cg" style="font-size: 1.8rem; font-weight: 800;">90 km</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">River km Walked</div>
+            <div class="carousel-slide">
+              <div class="card text-center">
+                <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px auto; overflow: hidden; border: 3px solid var(--secondary);">
+                  <img src="assets/images/logo/logo-1x1.webp" alt="Board Member" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.25rem;">
-                  <div class="neon-text-cg" style="font-size: 1.8rem; font-weight: 800;">12+</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Villages Restored</div>
-                </div>
-              </div>
-              <div class="glass-card hover-magnify" style="padding: 1.25rem;">
-                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                  <strong style="color: var(--text-main);">How It Happened:</strong> The team walked the entire 90-km dry course, documented 42 check dam points, engaged gram panchayats, and mobilized community desiltation for permanent perennial revival.
-                </p>
-                <div style="margin-top: 0.75rem;">
-                  <a href="initiatives/bolti-nadi/" class="btn btn-primary btn-sm"><i class="fas fa-arrow-right"></i> Read Case Study</a>
-                </div>
+                <h3 class="card-title" style="font-size: 1.2rem;">Dr. Meera Verma</h3>
+                <div class="card-subtitle">Associate Editor</div>
+                <p style="font-size: 0.88rem; color: var(--dark-gray);">Senior Academician in Rural Education &amp; Social Policy.</p>
               </div>
             </div>
+
+            <div class="carousel-slide">
+              <div class="card text-center">
+                <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px auto; overflow: hidden; border: 3px solid var(--secondary);">
+                  <img src="assets/images/logo/logo-1x1.webp" alt="Board Member" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="card-title" style="font-size: 1.2rem;">Prof. Robert Chen</h3>
+                <div class="card-subtitle">Advisory Committee</div>
+                <p style="font-size: 0.88rem; color: var(--dark-gray);">International Consultant in Hydrology &amp; Ecology.</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="card text-center">
+                <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px auto; overflow: hidden; border: 3px solid var(--secondary);">
+                  <img src="assets/images/logo/logo-1x1.webp" alt="Board Member" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="card-title" style="font-size: 1.2rem;">Dr. Sunita Rao</h3>
+                <div class="card-subtitle">Editorial Member</div>
+                <p style="font-size: 0.88rem; color: var(--dark-gray);">Expert in Community Healthcare &amp; Public Health.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-arrow carousel-prev" aria-label="Previous board member"><i class="fas fa-arrow-left"></i></button>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow carousel-next" aria-label="Next board member"><i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
-      </section>
 
-      <!-- ── SLIDE 7: IMPACT SNAPSHOT & ANALYTICS ────────────────── -->
-      <section class="slide" id="slide-7">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-chart-pie"></i> Verifiable Metrics
+        <div class="text-center" style="margin-top: var(--space-lg);">
+          <a href="editorial.html" class="btn btn-secondary">View All Board Members <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST PUBLICATIONS SECTION -->
+    <section class="section" style="background: var(--light-gray);" id="latest-publications">
+      <div class="container">
+        <div class="section-header">
+          <span class="card-subtitle">Peer-Reviewed Research</span>
+          <h2 class="section-title">Recent Publications</h2>
+          <div class="gold-accent-line"></div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card gsap-reveal">
+            <div class="card-subtitle"><i class="far fa-calendar-alt"></i> Q1 2026 Issue</div>
+            <h3 class="card-title">Sustainable River Basin Management in Central India</h3>
+            <p style="font-size: 0.9rem; color: var(--dark-gray);">
+              A comprehensive analytical study on community-driven river rejuvenation techniques and hydrology impact.
+            </p>
+            <a href="publications.html#current" style="font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 6px;">
+              Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <h2 class="slide-title">Impact Snapshot</h2>
-          <p class="slide-subtitle">
-            15 years of ground evidence audited annually and mapped to Sustainable Development Goals.
-          </p>
 
-          <div class="glass-card hover-magnify hover-magnify-lg" style="width: 100%; max-width: 900px; padding: 1.5rem 2rem;">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Indicator</th>
-                  <th>Outcome Metric</th>
-                  <th>Verification Standard</th>
-                  <th>Impact Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="popup-trigger" data-popup="households">
-                  <td><strong>Household Reach</strong></td>
-                  <td>1,00,000+ Families</td>
-                  <td>Field Register Index</td>
-                  <td><span class="badge badge-supported">Verified</span></td>
-                </tr>
-                <tr class="popup-trigger" data-popup="women-shg">
-                  <td><strong>Women Empowerment</strong></td>
-                  <td>12,000+ Farmers / 860 SHGs</td>
-                  <td>NRLM Linkages</td>
-                  <td><span class="badge badge-supported">Active</span></td>
-                </tr>
-                <tr class="popup-trigger" data-popup="bolti-nadi">
-                  <td><strong>River Conservation</strong></td>
-                  <td>90 km Sakri River Flow</td>
-                  <td>Groundwater Level Survey</td>
-                  <td><span class="badge badge-supported">Perennial</span></td>
-                </tr>
-                <tr class="popup-trigger" data-popup="districts">
-                  <td><strong>District Coverage</strong></td>
-                  <td>12 Districts Active</td>
-                  <td>Panchayat Partnerships</td>
-                  <td><span class="badge badge-supported">100% Compliant</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="card gsap-reveal">
+            <div class="card-subtitle"><i class="far fa-calendar-alt"></i> Q4 2025 Issue</div>
+            <h3 class="card-title">Rural Literacy Models and Digital Education Tools</h3>
+            <p style="font-size: 0.9rem; color: var(--dark-gray);">
+              Evaluating the efficacy of mobile learning kits across rural schools in Chhattisgarh.
+            </p>
+            <a href="publications.html#current" style="font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 6px;">
+              Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="card gsap-reveal">
+            <div class="card-subtitle"><i class="far fa-calendar-alt"></i> Q3 2025 Issue</div>
+            <h3 class="card-title">Empowering Women Farmers through Micro-Agri Ventures</h3>
+            <p style="font-size: 0.9rem; color: var(--dark-gray);">
+              Field observations and financial sustainability assessments of female agricultural collectives.
+            </p>
+            <a href="publications.html#current" style="font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 6px;">
+              Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
-      </section>
 
-      <!-- ── SLIDE 8: GET INVOLVED & ACTION CENTER ───────────────── -->
-      <section class="slide" id="slide-8">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-hands"></i> Join the Movement
-          </div>
-          <h2 class="slide-title">Build the Next Chapter With Us</h2>
-          <p class="slide-subtitle">
-            Partner with Meer Foundation to scale sustainable rural ecosystems across India.
-          </p>
+        <div class="text-center" style="margin-top: var(--space-xl);">
+          <a href="publications.html" class="btn btn-primary">Browse All Publications</a>
+        </div>
+      </div>
+    </section>
 
-          <div class="grid-4" style="margin-bottom: 2rem;">
-            <a href="get-involved/volunteer/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 0.5rem;"><i class="fas fa-hand-holding-heart"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Volunteer</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Lend your skills in teaching, research, tech or media.</p>
-            </a>
+    <!-- NEWS & UPDATES SECTION -->
+    <section class="section" id="news-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="card-subtitle">Latest Announcements</span>
+          <h2 class="section-title">News &amp; Updates</h2>
+          <div class="gold-accent-line"></div>
+        </div>
 
-            <a href="get-involved/csr-partner/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 0.5rem;"><i class="fas fa-building"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">CSR Partner</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">ESG-aligned projects with complete AEIOM verification.</p>
-            </a>
-
-            <a href="get-involved/internship/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: #ffd600; margin-bottom: 0.5rem;"><i class="fas fa-university"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Internship</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Immersive rural field research internships.</p>
-            </a>
-
-            <a href="get-involved/donate/" class="glass-card hover-magnify glow-orange" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: #ff6b35; margin-bottom: 0.5rem;"><i class="fas fa-donate"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Donate</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Tax-exempt giving under 80G with outcome tracking.</p>
-            </a>
+        <div class="grid-3">
+          <div class="card gsap-reveal">
+            <div class="card-subtitle">August 2026</div>
+            <h3 class="card-title">Call for Papers: Q3 2026 Multidisciplinary Issue</h3>
+            <p style="font-size: 0.9rem; color: var(--dark-gray);">
+              Submissions are now open for original research papers, reviews, and case studies. Deadline: Sep 15, 2026.
+            </p>
+            <a href="news.html" style="font-weight: 600; color: var(--primary);">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
 
-          <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.6;">
-            © 2011–2026 Meer Foundation · CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 · NGO Darpan: CG/2018/0191949
+          <div class="card gsap-reveal">
+            <div class="card-subtitle">July 2026</div>
+            <h3 class="card-title">ISSN Application Status Update</h3>
+            <p style="font-size: 0.9rem; color: var(--dark-gray);">
+              Our application for ISSN online assignment has progressed to step 2 of evaluation with international centre.
+            </p>
+            <a href="issn.html" style="font-weight: 600; color: var(--primary);">View Tracker <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="card gsap-reveal">
+            <div class="card-subtitle">June 2026</div>
+            <h3 class="card-title">Bolti Nadi Conservation Drive Launches</h3>
+            <p style="font-size: 0.9rem; color: var(--dark-gray);">
+              Community volunteers join hands to initiate native tree planting along riverbanks.
+            </p>
+            <a href="news.html" style="font-weight: 600; color: var(--primary);">Read Story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </div>
+    <!-- CALL TO ACTION SECTION -->
+    <section class="section" style="background: var(--hero-gradient); color: var(--white);" id="cta-banner">
+      <div class="container text-center">
+        <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 16px;">Join Our Community of Scholars</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem; max-width: 700px; margin: 0 auto 32px auto;">
+          Whether you wish to publish research, participate in community projects, or collaborate on sustainable initiatives, Meer Foundation welcomes your support.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="publications.html#submit" class="btn btn-primary btn-lg">Submit Your Research Today</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg" style="color: var(--white); border-color: var(--secondary-light);">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- ===== CORE PRESENTATION SCRIPTS IN STRICT ORDER ===== -->
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/slider.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/charts.js"></script>
-    <script src="assets/js/slide-number.js"></script>
-    <script src="assets/js/popup.js"></script>
-  </body>
+  </main>
+
+  <!-- ===== FOOTER INJECTION MOUNT ===== -->
+  <div id="footer-mount"></div>
+
+  <!-- JavaScript Scripts -->
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/carousel.js"></script>
+</body>
 </html>
