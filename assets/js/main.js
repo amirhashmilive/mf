@@ -226,10 +226,10 @@
       slides.forEach(s => dotObserver.observe(s));
     }
 
-    // Keyboard Arrow Navigation
+    // Keyboard Arrow Navigation (Safe Fallback)
     document.addEventListener('keydown', (e) => {
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
-      const scrollContainer = document.querySelector('.slide-container');
+      const scrollContainer = document.querySelector('.slide-container[data-scroll-snap="true"]');
       if (!scrollContainer) return;
       const vh = window.innerHeight;
 

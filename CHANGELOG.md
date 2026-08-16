@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/)
 
+## [2026-08-16] — Comprehensive End-to-End Page Audit & Fixes
+
+### Fixed
+- Fixed non-existent image paths `/logos/prayaas-yellow.png` and `/logos/prayaas-white.png` in `initiatives/prayaas/index.html` to use optimized `.webp` logo assets (`assets/images/logo/logo-1x1.webp`).
+- Corrected broken link `/dprs/csr-budget-template-v1.xlsx` in `get-involved/csr-partner/index.html` to point to Governance & Annual Reports.
+- Added interactive toast feedback (`data-toast`, `data-toast-desc`) to forms across `contact/`, `get-involved/csr-partner/`, `get-involved/donate/`, `get-involved/internship/`, and `get-involved/volunteer/`.
+- Replaced dead `href="#"` links across `emerging/` and `initiatives/` pages with active toast notifications and valid resource targets.
+- Conducted full automated end-to-end site audit validating all 47 HTML pages, JS scripts, CSS styles, metadata tags, and relative image references.
+
+---
+
 ## [2026-08-15] — End-to-End Site-Wide CSS & JavaScript Engine Restoration
 
 ### Fixed

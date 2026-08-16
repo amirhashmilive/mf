@@ -7,22 +7,29 @@
     <meta name="description" content="Empowering Rural Communities & Restoring Rivers — Meer Foundation, Chhattisgarh NGO working on Education, Environment, Health, Livelihood and Women Empowerment since 2011." />
     <meta property="og:title" content="Empowering Rural Communities & Restoring Rivers · Meer Foundation" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero-bg.webp" />
     
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Inter & Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     
     <!-- Main Presentation Design System CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/premium.css" />
+    <link rel="stylesheet" href="assets/css/content-compat.css" />
     <link rel="icon" href="assets/images/logo/logo-horizontal.webp" />
   </head>
   <body>
     <!-- ===== HEADER ===== -->
     <header class="header" id="header">
       <div class="container">
-        <a href="index.html" class="logo"><img src="assets/images/logo/logo-horizontal.webp" alt="Meer Foundation" height="38"></a>
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo/logo-horizontal.webp" alt="Meer Foundation" height="38" />
+        </a>
         <nav class="nav" style="margin-left: auto;">
           <div class="nav-item">
             <a href="about/" class="nav-link">About</a>
@@ -35,10 +42,10 @@
           <div class="nav-item">
             <a href="initiatives/" class="nav-link">Initiatives</a>
             <div class="nav-dropdown">
-              <a href="initiatives/education/">Education</a>
-              <a href="initiatives/health/">Health</a>
-              <a href="initiatives/environment/">Environment</a>
-              <a href="initiatives/livelihood/">Livelihood</a>
+              <a href="initiatives/education/">Education (Prayaas)</a>
+              <a href="initiatives/health/">Health (Yoga Kutumb)</a>
+              <a href="initiatives/environment/">Environment (Bolti Nadi)</a>
+              <a href="initiatives/livelihood/">Livelihood (Farmours)</a>
             </div>
           </div>
           <div class="nav-item">
@@ -79,7 +86,9 @@
             </div>
           </div>
           <a href="contact/" class="nav-link">Contact</a>
-          <button class="theme-toggle" aria-label="Toggle dark/light theme" style="margin-left: 0.5rem; margin-right: 0.5rem;"><i class="fas fa-sun"></i></button>
+          <button class="theme-toggle" aria-label="Toggle dark/light theme" style="margin-left: 0.5rem; margin-right: 0.5rem;">
+            <i class="fas fa-sun"></i>
+          </button>
           <a href="get-involved/donate/" class="btn btn-accent btn-sm">Donate</a>
         </nav>
         <button class="mobile-toggle" aria-label="Open navigation menu">☰</button>
@@ -100,411 +109,491 @@
       </div>
     </div>
 
-    <!-- ===== FULL-VIEWPORT SCROLL-SNAP SLIDE CONTAINER ===== -->
-    <div class="slide-container">
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
 
-      <!-- ── SLIDE 1: HERO & MISSION ─────────────────────────────── -->
-      <section class="slide" id="slide-1">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-certificate"></i> Founded 2011 · Chhattisgarh, India
-          </div>
-          <h1 class="slide-title">
-            Empowering Rural Communities <span class="neon-text-cg">&amp;</span> Restoring Rivers.
-          </h1>
-          <p class="slide-subtitle">
-            Meer Foundation works with people, never for them. We build self-reliant rural communities across Chhattisgarh across five practice areas — Education, Health, Environment, Livelihood, and Women Empowerment.
-          </p>
+      <!-- ===== HERO SECTION ===== -->
+      <section class="relative overflow-hidden bg-gradient-to-br from-primary via-[#08403F] to-secondary text-white py-20 lg:py-28" style="background: linear-gradient(135deg, #0A1414 0%, #0D5B5E 50%, #C2542C 100%); color: #fff; padding: 6rem 1rem 4rem;">
+        <div class="container relative z-10" style="max-width: 1200px; margin: 0 auto;">
+          <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+            
+            <div class="eyebrow-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1.2rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.5rem; color: var(--accent-gold);">
+              <i class="fas fa-certificate"></i> Est. 2011 · Non-Profit NGO · Chhattisgarh, India
+            </div>
 
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
-            <a href="#slide-5" class="btn btn-primary"><i class="fas fa-compass"></i> Discover Our Work</a>
-            <a href="get-involved/" class="btn btn-secondary"><i class="fas fa-hands-helping"></i> Get Involved</a>
-          </div>
+            <h1 style="font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.25rem; letter-spacing: -0.02em;">
+              Empowering Rural Communities <span style="background: linear-gradient(135deg, #FFD600 0%, #FF6B35 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&amp; Restoring Rivers</span>
+            </h1>
 
-          <!-- Quick Metrics Bar with Popovers -->
-          <div class="grid-3" style="max-width: 780px;">
-            <div class="glass-card hover-magnify popup-trigger" data-popup="households" style="text-align: center; padding: 1.5rem;">
-              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">1,00,000+</div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
-                Households Reached <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
-              </div>
+            <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255, 255, 255, 0.9); line-height: 1.7; margin-bottom: 2.2rem; font-weight: 400;">
+              Meer Foundation works with people, never for them. We build self-reliant rural communities across Chhattisgarh across five core practice areas — Education, Health, Environment, Livelihood, and Women Empowerment.
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem;">
+              <a href="initiatives/" class="btn btn-accent" style="padding: 0.9rem 2rem; font-weight: 700; border-radius: 9999px;">
+                <i class="fas fa-compass"></i> Explore Initiatives
+              </a>
+              <a href="get-involved/csr-partner/" class="btn btn-secondary" style="padding: 0.9rem 2rem; font-weight: 700; border-radius: 9999px;">
+                <i class="fas fa-building"></i> CSR Partnerships
+              </a>
+              <a href="get-involved/donate/" class="btn btn-primary" style="padding: 0.9rem 2rem; font-weight: 700; border-radius: 9999px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                <i class="fas fa-heart"></i> Donate Now
+              </a>
             </div>
-            <div class="glass-card hover-magnify popup-trigger" data-popup="districts" style="text-align: center; padding: 1.5rem;">
-              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">12</div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
-                Active Districts <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+
+            <!-- Animated Counter Cards Grid -->
+            <div class="grid-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+              
+              <div class="glass-card hover-magnify popup-trigger" data-popup="households" style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                <div style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; color: #FFD600;" data-count="100000" data-suffix="+">1,00,000+</div>
+                <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.8); margin-top: 0.35rem; font-weight: 600;">
+                  Households Reached <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+                </div>
               </div>
-            </div>
-            <div class="glass-card hover-magnify popup-trigger" data-popup="years" style="text-align: center; padding: 1.5rem;">
-              <div class="neon-text-cg" style="font-size: 2rem; font-weight: 800;">15</div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem;">
-                Years of Service <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+
+              <div class="glass-card hover-magnify popup-trigger" data-popup="districts" style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                <div style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; color: #00D4FF;" data-count="12">12</div>
+                <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.8); margin-top: 0.35rem; font-weight: 600;">
+                  Active Districts <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+                </div>
               </div>
+
+              <div class="glass-card hover-magnify popup-trigger" data-popup="years" style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                <div style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; color: #FF6B35;" data-count="15">15</div>
+                <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.8); margin-top: 0.35rem; font-weight: 600;">
+                  Years of Service <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+                </div>
+              </div>
+
+              <div class="glass-card hover-magnify" style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                <div style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; color: #28A745;" data-count="47" data-suffix="+">47+</div>
+                <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.8); margin-top: 0.35rem; font-weight: 600;">
+                  Rivers Mapped
+                </div>
+              </div>
+
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- ── SLIDE 2: FIVE PILLARS FRAMEWORK (AEIOM) ─────────────── -->
-      <section class="slide" id="slide-2">
-        <div class="slide-inner">
-          <div class="eyebrow-badge popup-trigger" data-popup="aeiom">
-            <i class="fas fa-shapes"></i> The Five Pillars Framework (A-E-I-O-M)
+      <!-- ===== FIVE PILLARS SECTION ===== -->
+      <section style="padding: 5rem 1rem; background: var(--bg-tint);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+          <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem;">
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 0.5rem;">
+              Core Practice Areas
+            </div>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">
+              Five Pillars of Rural Transformation
+            </h2>
+            <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6;">
+              Participatory community initiatives operating at the intersection of rural ecology, education, healthcare, and economic self-reliance.
+            </p>
           </div>
-          <h2 class="slide-title">How We Communicate Betterment</h2>
-          <p class="slide-subtitle">
-            A communication framework for transparent, evidence-based, verifiable institutional communication. Operationalized through the AEIOM Architecture.
-          </p>
 
-          <div class="grid-5">
-            <div class="glass-card hover-magnify glow-cyan">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #00d4ff;">A</span>
-                <i class="fas fa-shield-alt" style="color: #00d4ff;"></i>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Pillar 1: Education -->
+            <div class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; display: flex; flex-direction: column;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(13, 91, 94, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                <i class="fas fa-graduation-cap"></i>
               </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Accountability</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Being answerable for outcomes, not just activities. Pre-specifying verifiable commitments.
+              <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">
+                Education
+              </h3>
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 0.75rem;">
+                Prayaas &amp; EduSuTo
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                Free digital CGBSE curriculum (Class 1–12), virtual school access, and village digital learning centers for underprivileged tribal children.
               </p>
+              <a href="initiatives/education/" class="btn btn-sm btn-secondary" style="align-self: flex-start; border-radius: 9999px;">
+                Learn More <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+              </a>
             </div>
 
-            <div class="glass-card hover-magnify glow-orange">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #ff6b35;">E</span>
-                <i class="fas fa-cogs" style="color: #ff6b35;"></i>
+            <!-- Pillar 2: Environment -->
+            <div class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; display: flex; flex-direction: column;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(40, 167, 69, 0.1); color: #28a745; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                <i class="fas fa-water"></i>
               </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Execution</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Operational architecture that converts intent into implemented reality across communities.
+              <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">
+                Environment
+              </h3>
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #28a745; margin-bottom: 0.75rem;">
+                Bolti Nadi Initiative
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                River revival, hydrological mapping, water conservation, and community-led river monitoring across Mahanadi basin tributaries.
               </p>
+              <a href="initiatives/environment/" class="btn btn-sm btn-secondary" style="align-self: flex-start; border-radius: 9999px;">
+                Learn More <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+              </a>
             </div>
 
-            <div class="glass-card hover-magnify glow-blue">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #0d5b5e;">I</span>
-                <i class="fas fa-users" style="color: #0d5b5e;"></i>
+            <!-- Pillar 3: Health -->
+            <div class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; display: flex; flex-direction: column;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(212, 155, 63, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                <i class="fas fa-heartbeat"></i>
               </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Initiative</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Originating from participatory engagement with communities, not top-down imposed intent.
+              <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">
+                Health &amp; Wellness
+              </h3>
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.75rem;">
+                Yoga Kutumb &amp; Health
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                Preventive health education, community wellness centers, maternal care guidance, and holistic health camps in rural hamlets.
               </p>
+              <a href="initiatives/health/" class="btn btn-sm btn-secondary" style="align-self: flex-start; border-radius: 9999px;">
+                Learn More <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+              </a>
             </div>
 
-            <div class="glass-card hover-magnify glow-green">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #28a745;">O</span>
-                <i class="fas fa-chart-line" style="color: #28a745;"></i>
+            <!-- Pillar 4: Livelihood -->
+            <div class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; display: flex; flex-direction: column;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(194, 84, 44, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                <i class="fas fa-seedling"></i>
               </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Outcome</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Actual, demonstrable, attributable change — measuring real uplift over mere activity.
+              <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">
+                Livelihood
+              </h3>
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--secondary); margin-bottom: 0.75rem;">
+                Farmours Program
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                Sustainable farming training, organic cultivation techniques, seed banks, and farmer self-help collectives for rural prosperity.
               </p>
+              <a href="initiatives/livelihood/" class="btn btn-sm btn-secondary" style="align-self: flex-start; border-radius: 9999px;">
+                Learn More <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+              </a>
             </div>
 
-            <div class="glass-card hover-magnify glow-purple">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <span style="font-size: 1.8rem; font-weight: 800; color: #9b59b6;">M</span>
-                <i class="fas fa-book-reader" style="color: #9b59b6;"></i>
+            <!-- Pillar 5: Emerging -->
+            <div class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; display: flex; flex-direction: column;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(0, 212, 255, 0.1); color: #00d4ff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                <i class="fas fa-broadcast-tower"></i>
               </div>
-              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;">Meaning</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-                Communication that corresponds directly to reality and is actionable by all stakeholders.
+              <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">
+                Emerging &amp; Media
+              </h3>
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #00d4ff; margin-bottom: 0.75rem;">
+                Guriya &amp; Radio Meer
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                Grass-roots journalism via Guriya Magazine, community radio broadcasts, and cultural heritage preservation walks.
               </p>
+              <a href="emerging/" class="btn btn-sm btn-secondary" style="align-self: flex-start; border-radius: 9999px;">
+                Learn More <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+              </a>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- ── SLIDE 3: AEIOM ARCHITECTURE DEEP DIVE ───────────────── -->
-      <section class="slide" id="slide-3">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-layer-group"></i> Architecture Deep Dive
-          </div>
-          <h2 class="slide-title">The Three Pillars of Integrity</h2>
-          <p class="slide-subtitle">
-            How AEIOM ensures every claim is backed by field data, verifiable records, and institutional truth.
-          </p>
-
-          <div class="grid-3">
-            <div class="glass-card hover-magnify">
-              <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"><i class="fas fa-project-diagram"></i></div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Pillar Coherence</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                Every programme maps to at least one pillar, producing a consistent institutional narrative across all 5 operational sectors.
+      <!-- ===== BOLTI NADI SPOTLIGHT SECTION ===== -->
+      <section style="padding: 5rem 1rem; background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: center;">
+            
+            <!-- Left Info Column -->
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 0.5rem;">
+                River Conservation Flagship
+              </div>
+              <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text-main); margin-bottom: 1rem; line-height: 1.2;">
+                Bolti Nadi — Giving Voice to Chhattisgarh's Rivers
+              </h2>
+              <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+                Bolti Nadi ("Speaking River") is Meer Foundation’s river restoration initiative. By combining participatory hydrological mapping, community river stewards, and seasonal waterbody rejuvenation, we bring dying tributaries back to life.
               </p>
-            </div>
-
-            <div class="glass-card hover-magnify">
-              <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"><i class="fas fa-user-check"></i></div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Skeptical Observer</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                Every claim is written for an independent observer who demands verifiable proof before accepting any reported outcome.
-              </p>
-            </div>
-
-            <div class="glass-card hover-magnify">
-              <div style="font-size: 2rem; color: #ffd600; margin-bottom: 1rem;"><i class="fas fa-lock"></i></div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Trust Layer</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                Evidence management that links public reports directly to primary field documentation, audited ledgers, and photographic records.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── SLIDE 4: OUR PRACTICE AREAS ─────────────────────────── -->
-      <section class="slide" id="slide-4">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-th-large"></i> Operational Spectrum
-          </div>
-          <h2 class="slide-title">Our Practice Areas</h2>
-          <p class="slide-subtitle">
-            Comprehensive grassroots development targeting the structural needs of rural communities.
-          </p>
-
-          <div class="grid-5">
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: var(--accent-cg); margin-bottom: 0.75rem;"><i class="fas fa-graduation-cap"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Education</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">EduSuTo smart rural learning centres & digital literacy.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #00e676; margin-bottom: 0.75rem;"><i class="fas fa-heartbeat"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Health</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">Nirogaayam primary care, mobile health camps & nutrition.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #00d4ff; margin-bottom: 0.75rem;"><i class="fas fa-water"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Environment</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">Bolti Nadi river conservation, tree planting & water security.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #ff6b35; margin-bottom: 0.75rem;"><i class="fas fa-tractor"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Livelihood</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">Farmours organic farming & market linkages for farmers.</p>
-            </div>
-            <div class="glass-card hover-magnify" style="text-align: center;">
-              <div style="font-size: 2.2rem; color: #9b59b6; margin-bottom: 0.75rem;"><i class="fas fa-female"></i></div>
-              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Women</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted);">SHG micro-enterprises & financial independence.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── SLIDE 5: KEY INITIATIVES ────────────────────────────── -->
-      <section class="slide" id="slide-5">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-rocket"></i> Field Programmes
-          </div>
-          <h2 class="slide-title">Flagship Initiatives</h2>
-          <p class="slide-subtitle">
-            Community-driven projects transforming livelihoods and ecological landscapes.
-          </p>
-
-          <div class="grid-4">
-            <a href="initiatives/farmours/" class="resource-card hover-magnify" data-gradient="pink">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🌾</div>
+              
+              <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
                 <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Farmours</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Organic agricultural value chains & farmer producer collectives.</p>
+                  <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary);">47+</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Rivers Mapped</div>
                 </div>
-              </div>
-            </a>
-
-            <a href="initiatives/prayaas/" class="resource-card hover-magnify" data-gradient="cyan">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🤝</div>
                 <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Prayaas</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Grassroots social welfare, health drives & emergency relief.</p>
+                  <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--secondary);">12,000+</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Volunteers Joined</div>
                 </div>
-              </div>
-            </a>
-
-            <a href="initiatives/yoga-kutumb/" class="resource-card hover-magnify" data-gradient="purple">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🧘</div>
                 <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Yoga Kutumb</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Holistic mental wellness & traditional lifestyle programmes.</p>
+                  <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--accent);">350+</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Waterbodies Restored</div>
                 </div>
               </div>
-            </a>
 
-            <a href="initiatives/heritage-walk/" class="resource-card hover-magnify" data-gradient="pink">
-              <div class="resource-glow"></div>
-              <div class="resource-content">
-                <div class="resource-icon">🚶</div>
-                <div>
-                  <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Heritage Walk</h3>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Tribal arts, craft preservation & cultural immersion journeys.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── SLIDE 6: BOLTI NADI FLAGSHIP REVIVAL ─────────────────── -->
-      <section class="slide" id="slide-6">
-        <div class="slide-inner">
-          <div class="eyebrow-badge popup-trigger" data-popup="bolti-nadi">
-            <i class="fas fa-water"></i> Flagship Ecological Project
-          </div>
-          <h2 class="slide-title">Bolti Nadi — Reviving the Sakri River</h2>
-          <p class="slide-subtitle">
-            After being dry for 30 years, the Sakri River flows again across 90 km through community-led check dams, desiltation, and tree plantation.
-          </p>
-
-          <div class="grid-2" style="align-items: center;">
-            <!-- Interactive Before/After Slider -->
-            <div class="glass-card" style="padding: 0; overflow: hidden; height: 340px;">
-              <div class="before-after" style="height: 100%;">
-                <span class="before-after__label before-after__label--before">Before (Dry 30 Yrs)</span>
-                <span class="before-after__label before-after__label--after">After (Perennial Flow)</span>
-                <img src="assets/images/bolti-nadi-dry.webp" alt="Sakri River Dry" class="before-after__before" />
-                <img src="assets/images/bolti-nadi-flowing.webp" alt="Sakri River Revived" class="before-after__after" />
-                <div class="before-after__slider" aria-label="Drag slider to compare"></div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="initiatives/environment/" class="btn btn-accent" style="border-radius: 9999px;">
+                  Explore Bolti Nadi <i class="fas fa-water" style="margin-left: 0.4rem;"></i>
+                </a>
+                <a href="research/rivers-chhattisgarh/" class="btn btn-secondary" style="border-radius: 9999px;">
+                  Read River Profiles <i class="fas fa-book-open" style="margin-left: 0.4rem;"></i>
+                </a>
               </div>
             </div>
 
-            <!-- Stats & Insights -->
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div class="grid-2">
-                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.25rem;">
-                  <div class="neon-text-cg" style="font-size: 1.8rem; font-weight: 800;">90 km</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">River km Walked</div>
+            <!-- Right Interactive Before/After Slider Component -->
+            <div>
+              <div class="before-after" style="position: relative; width: 100%; height: 380px; overflow: hidden; border-radius: 20px; border: 2px solid var(--border); box-shadow: var(--shadow-lg);">
+                <img src="assets/images/bolti-nadi-flowing.webp" alt="Revived Flowing River" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" />
+                <div class="before-after__before" style="position: absolute; inset: 0; overflow: hidden; clip-path: inset(0 50% 0 0); width: 100%; height: 100%;">
+                  <img src="assets/images/bolti-nadi-dry.webp" alt="Dry River Bed Before Revival" style="width: 100%; height: 100%; object-fit: cover;" />
                 </div>
-                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.25rem;">
-                  <div class="neon-text-cg" style="font-size: 1.8rem; font-weight: 800;">12+</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Villages Restored</div>
+                <div class="before-after__slider" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #ffffff; cursor: ew-resize; transform: translateX(-50%); box-shadow: 0 0 12px rgba(0,0,0,0.5);">
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background: #ffffff; color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    ↔
+                  </div>
+                </div>
+                <div style="position: absolute; bottom: 15px; left: 15px; background: rgba(0,0,0,0.65); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; backdrop-filter: blur(4px);">
+                  Before (Dry Season)
+                </div>
+                <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(13,91,94,0.85); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; backdrop-filter: blur(4px);">
+                  After (Community Revival)
                 </div>
               </div>
-              <div class="glass-card hover-magnify" style="padding: 1.25rem;">
-                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                  <strong style="color: var(--text-main);">How It Happened:</strong> The team walked the entire 90-km dry course, documented 42 check dam points, engaged gram panchayats, and mobilized community desiltation for permanent perennial revival.
-                </p>
-                <div style="margin-top: 0.75rem;">
-                  <a href="initiatives/bolti-nadi/" class="btn btn-primary btn-sm"><i class="fas fa-arrow-right"></i> Read Case Study</a>
-                </div>
+              <p style="font-size: 0.78rem; text-align: center; color: var(--text-muted); margin-top: 0.75rem;">
+                <i class="fas fa-hand-pointer"></i> Drag the slider to compare dry river bed vs revived flowing river.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== AEIOM FRAMEWORK SECTION ===== -->
+      <section style="padding: 5rem 1rem; background: var(--bg-tint);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+          <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem;">
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--secondary); margin-bottom: 0.5rem;">
+              Institutional Standard
+            </div>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">
+              The Five Pillars AEIOM Architecture
+            </h2>
+            <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6;">
+              A institutional communication framework for transparent, evidence-based, verifiable NGO operations.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+            
+            <div class="glass-card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;">
+              <div style="font-size: 2rem; font-weight: 800; color: #00d4ff; margin-bottom: 0.5rem;">A</div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">Accountability</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Answerable for pre-specified outcomes and public commitments across all programs.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;">
+              <div style="font-size: 2rem; font-weight: 800; color: #ff6b35; margin-bottom: 0.5rem;">E</div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">Execution</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Operational field discipline converting intent into measurable rural reality.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;">
+              <div style="font-size: 2rem; font-weight: 800; color: #0d5b5e; margin-bottom: 0.5rem;">I</div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">Initiative</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Originating from grass-roots community needs, not top-down administrative mandates.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;">
+              <div style="font-size: 2rem; font-weight: 800; color: #28a745; margin-bottom: 0.5rem;">O</div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">Outcome</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Demonstrable, attributable change — measuring actual community uplift.
+              </p>
+            </div>
+
+            <div class="glass-card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;">
+              <div style="font-size: 2rem; font-weight: 800; color: #ffd600; margin-bottom: 0.5rem;">M</div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">Measurement</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                Rigorous empirical data collection, field audits, and transparent reporting.
+              </p>
+            </div>
+
+          </div>
+
+          <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="about/five-pillars/" class="btn btn-secondary" style="border-radius: 9999px;">
+              Read Full AEIOM Model Documentation <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== RESEARCH & PUBLICATIONS SHOWCASE ===== -->
+      <section style="padding: 5rem 1rem; background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+            
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem;">
+                Open Access Research
+              </div>
+              <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text-main); margin-bottom: 1rem; line-height: 1.2;">
+                IJMEER Journal &amp; Empirical Field Studies
+              </h2>
+              <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+                Meer Foundation publishes peer-reviewed research through the International Journal of Multidisciplinary Educational and Empirical Research (IJMEER). Our studies cover river hydrology, rural pedagogy, CSR impact verification, and community resilience.
+              </p>
+              
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="research/ijmeer/" class="btn btn-accent" style="border-radius: 9999px;">
+                  Explore IJMEER Journal <i class="fas fa-journal-whills" style="margin-left: 0.4rem;"></i>
+                </a>
+                <a href="research/publications/" class="btn btn-secondary" style="border-radius: 9999px;">
+                  View Published Papers <i class="fas fa-file-alt" style="margin-left: 0.4rem;"></i>
+                </a>
               </div>
             </div>
+
+            <div class="glass-card" style="background: var(--bg-tint); border: 1px solid var(--border); border-radius: 20px; padding: 2rem;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <img src="assets/images/open-access-globe.webp" alt="IJMEER Journal Logo" style="width: 60px; height: 60px; border-radius: 12px; object-fit: cover;" />
+                <div>
+                  <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text-main);">
+                    IJMEER Journal
+                  </div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">
+                    ISSN: 2583-8474 · Peer Reviewed · Open Access
+                  </div>
+                </div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+                Bridging rural field realities with rigorous academic literature. Free downloads for researchers, policymakers, and civil society.
+              </p>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; color: var(--primary); padding-top: 1rem; border-top: 1px solid var(--border);">
+                <span><i class="fas fa-check-circle"></i> Double-Blind Peer Review</span>
+                <span><i class="fas fa-check-circle"></i> Open Access CC-BY 4.0</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <!-- ── SLIDE 7: IMPACT SNAPSHOT & ANALYTICS ────────────────── -->
-      <section class="slide" id="slide-7">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-chart-pie"></i> Verifiable Metrics
+      <!-- ===== GET INVOLVED & CSR SECTION ===== -->
+      <section style="padding: 5rem 1rem; background: var(--bg-tint);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+          <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem;">
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 0.5rem;">
+              Join Our Mission
+            </div>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">
+              Get Involved with Meer Foundation
+            </h2>
+            <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6;">
+              Partner with us through corporate CSR, volunteer your expertise, apply for field research internships, or support our programs.
+            </p>
           </div>
-          <h2 class="slide-title">Impact Snapshot</h2>
-          <p class="slide-subtitle">
-            15 years of ground evidence audited annually and mapped to Sustainable Development Goals.
-          </p>
 
-          <div class="glass-card hover-magnify hover-magnify-lg" style="width: 100%; max-width: 900px; padding: 1.5rem 2rem;">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Indicator</th>
-                  <th>Outcome Metric</th>
-                  <th>Verification Standard</th>
-                  <th>Impact Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="popup-trigger" data-popup="households">
-                  <td><strong>Household Reach</strong></td>
-                  <td>1,00,000+ Families</td>
-                  <td>Field Register Index</td>
-                  <td><span class="badge badge-supported">Verified</span></td>
-                </tr>
-                <tr class="popup-trigger" data-popup="women-shg">
-                  <td><strong>Women Empowerment</strong></td>
-                  <td>12,000+ Farmers / 860 SHGs</td>
-                  <td>NRLM Linkages</td>
-                  <td><span class="badge badge-supported">Active</span></td>
-                </tr>
-                <tr class="popup-trigger" data-popup="bolti-nadi">
-                  <td><strong>River Conservation</strong></td>
-                  <td>90 km Sakri River Flow</td>
-                  <td>Groundwater Level Survey</td>
-                  <td><span class="badge badge-supported">Perennial</span></td>
-                </tr>
-                <tr class="popup-trigger" data-popup="districts">
-                  <td><strong>District Coverage</strong></td>
-                  <td>12 Districts Active</td>
-                  <td>Panchayat Partnerships</td>
-                  <td><span class="badge badge-supported">100% Compliant</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+            
+            <a href="get-involved/volunteer/" class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; text-decoration: none; text-align: center;">
+              <div style="font-size: 2.4rem; color: var(--accent); margin-bottom: 1rem;"><i class="fas fa-hand-holding-heart"></i></div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Volunteer</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                Lend your skills in teaching, research, tech, hydrology, or media production.
+              </p>
+            </a>
+
+            <a href="get-involved/csr-partner/" class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; text-decoration: none; text-align: center;">
+              <div style="font-size: 2.4rem; color: var(--primary); margin-bottom: 1rem;"><i class="fas fa-building"></i></div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">CSR Partner</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                ESG-aligned corporate partnerships with complete AEIOM outcome verification.
+              </p>
+            </a>
+
+            <a href="get-involved/internship/" class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; text-decoration: none; text-align: center;">
+              <div style="font-size: 2.4rem; color: #ffd600; margin-bottom: 1rem;"><i class="fas fa-university"></i></div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Internship</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                Immersive rural field research and social work internships for students.
+              </p>
+            </a>
+
+            <a href="get-involved/donate/" class="card hover-magnify" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; text-decoration: none; text-align: center;">
+              <div style="font-size: 2.4rem; color: var(--secondary); margin-bottom: 1rem;"><i class="fas fa-donate"></i></div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Donate</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                Tax-exempt giving under Section 80G with complete outcome tracking.
+              </p>
+            </a>
+
           </div>
+
+          <div style="margin-top: 3rem; text-align: center; font-size: 0.8rem; color: var(--text-muted); line-height: 1.8;">
+            © 2011–2026 Meer Foundation · CSR-1: CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 · NGO Darpan: CG/2018/0191949
+          </div>
+
         </div>
       </section>
 
-      <!-- ── SLIDE 8: GET INVOLVED & ACTION CENTER ───────────────── -->
-      <section class="slide" id="slide-8">
-        <div class="slide-inner">
-          <div class="eyebrow-badge">
-            <i class="fas fa-hands"></i> Join the Movement
-          </div>
-          <h2 class="slide-title">Build the Next Chapter With Us</h2>
-          <p class="slide-subtitle">
-            Partner with Meer Foundation to scale sustainable rural ecosystems across India.
-          </p>
+    </main>
 
-          <div class="grid-4" style="margin-bottom: 2rem;">
-            <a href="get-involved/volunteer/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 0.5rem;"><i class="fas fa-hand-holding-heart"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Volunteer</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Lend your skills in teaching, research, tech or media.</p>
-            </a>
-
-            <a href="get-involved/csr-partner/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 0.5rem;"><i class="fas fa-building"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">CSR Partner</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">ESG-aligned projects with complete AEIOM verification.</p>
-            </a>
-
-            <a href="get-involved/internship/" class="glass-card hover-magnify" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: #ffd600; margin-bottom: 0.5rem;"><i class="fas fa-university"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Internship</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Immersive rural field research internships.</p>
-            </a>
-
-            <a href="get-involved/donate/" class="glass-card hover-magnify glow-orange" style="text-decoration: none; text-align: center;">
-              <div style="font-size: 2rem; color: #ff6b35; margin-bottom: 0.5rem;"><i class="fas fa-donate"></i></div>
-              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Donate</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Tax-exempt giving under 80G with outcome tracking.</p>
-            </a>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 2.5rem;">
+          
+          <div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-main); margin-bottom: 1rem;">About</h4>
+            <a href="about/our-story/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Our Story &amp; Founder</a>
+            <a href="about/annual-reports/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Annual Reports</a>
+            <a href="about/five-pillars/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Five Pillars Model</a>
           </div>
 
-          <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.6;">
-            © 2011–2026 Meer Foundation · CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 · NGO Darpan: CG/2018/0191949
+          <div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-main); margin-bottom: 1rem;">Initiatives</h4>
+            <a href="initiatives/environment/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Bolti Nadi</a>
+            <a href="initiatives/livelihood/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Prayaas</a>
+            <a href="initiatives/livelihood/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Farmours</a>
+            <a href="initiatives/health/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Yoga Kutumb</a>
+            <a href="initiatives/education/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">EduSuTo</a>
           </div>
+
+          <div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-main); margin-bottom: 1rem;">Get Involved</h4>
+            <a href="get-involved/volunteer/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Volunteer</a>
+            <a href="get-involved/csr-partner/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">CSR Partner</a>
+            <a href="get-involved/internship/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Internship</a>
+            <a href="get-involved/donate/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Donate</a>
+            <a href="contact/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Contact Us</a>
+          </div>
+
+          <div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-main); margin-bottom: 1rem;">Legal &amp; Governance</h4>
+            <a href="legal/privacy-policy/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Privacy Policy</a>
+            <a href="legal/terms-of-use/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Terms of Use</a>
+            <a href="legal/cookie-policy/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Cookie Policy</a>
+            <a href="legal/accessibility/" style="display: block; margin-bottom: 0.5rem; color: var(--text-muted);">Accessibility</a>
+          </div>
+
         </div>
-      </section>
 
-    </div>
+        <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+          <p>© 2011–2026 Meer Foundation · CC-BY 4.0 · Empowering Rural Communities &amp; Restoring Rivers</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- ===== CORE PRESENTATION SCRIPTS IN STRICT ORDER ===== -->
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/charts.js"></script>
-    <script src="assets/js/slide-number.js"></script>
     <script src="assets/js/popup.js"></script>
   </body>
 </html>
