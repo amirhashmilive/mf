@@ -4,27 +4,6 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/)
 
-## [2026-08-16] — Complete End-to-End Website Redesign & Technical Fix
-
-### Added
-- Unified Design System custom properties (`assets/css/style.css`): Deep Navy (`#1A3C5E`), Gold (`#C9A96E`), Warm Coral (`#E85D3A`), Playfair Display serif headings, and Inter sans-serif body typography.
-- Responsive breakpoints CSS framework (`assets/css/responsive.css`) covering Mobile S (320px), Mobile M (375px), Tablet (768px), and Desktop (1025px+).
-- Animation engine hooks (`assets/css/animations.css` and `assets/js/animations.js`) for GSAP text reveals and animated stat counters.
-- Contained zero-overflow touch carousel (`assets/js/carousel.js`) with auto-play, pause on hover, arrow controls, and dot indicators.
-- Client-side form validation script (`assets/js/form.js`) for contact form submission handling.
-
-### Changed
-- Rebuilt `index.html` with dramatic Hero section, About preview, 4-column Impact metrics, Editorial Board carousel, Recent Publications grid, and CTA banner.
-- Redesigned `about.html` and `about/index.html` with Mission/Vision cards, Core Values grid, Team showcase, and Milestones timeline.
-- Redesigned `editorial.html` with filterable Editorial Board member grid and Advisory Committee section.
-- Redesigned `issn.html` with interactive 4-step ISSN status progress tracker and registration details.
-- Redesigned `publications.html` with featured Current Issue article, Journal Archives accordion, and Author submission guide.
-- Redesigned `news.html` with latest news grid and upcoming events calendar.
-- Redesigned `contact.html` and `contact/index.html` with validated contact form, headquarters info, and Razorpay support CTA.
-- Updated `assets/js/components.js` to enforce the exact required 7-item navigation structure across all pages.
-
----
-
 ## [2026-08-15] — End-to-End Site-Wide CSS & JavaScript Engine Restoration
 
 ### Fixed
