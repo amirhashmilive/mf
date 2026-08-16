@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/)
 
+## [2026-08-16] — Formal Corporate UI/UX Transformation & Site-Wide Harmonization
+
+### Added & Refined
+- Re-architected site-wide design system (`assets/css/style.css` & `assets/css/premium.css`) to enforce a formal, minimalist corporate NGO visual identity suitable for Meer Foundation (est. 2011).
+- Harmonized typography across all 47 HTML pages with formal Fraunces serif headings and Inter sans-serif body text.
+- Enforced clean 1px card borders (`#E5DBC8`), 12px/16px border-radii, warm parchment background (`#FBF7F0`), and zero horizontal overflow (`overflow-x: hidden`).
+- Standardized site-wide corporate navigation header and institutional footer across all 8 main sections (`about/`, `initiatives/`, `research/`, `emerging/`, `impact/`, `get-involved/`, `contact/`, `legal/`, `index.html`).
+- Updated statutory compliance badges and registration details (CSR-1: CSR00075824, 12A, 80G, NGO Darpan) across footers and action hubs.
+- Updated agentic memory rules in `.agents/AGENTS.md` and `CURRENT_TASK.md`.
+
+---
+
 ## [2026-08-16] — Comprehensive End-to-End Page Audit & Fixes
 
 ### Fixed
