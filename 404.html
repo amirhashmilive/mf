@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found — Meer Holidays Travels</title>
+    <title>404 Page Not Found — Meer Holidays Travels</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <script>
+        // Intelligent route redirect for clean extensionless URLs (e.g. /flights -> /flights.html)
+        (function() {
+            var path = window.location.pathname;
+            var segments = path.split('/').filter(Boolean);
+            var lastSegment = segments[segments.length - 1] || '';
+            
+            // Known pages map
+            var validPages = ['index', 'flights', 'hotels', 'trains', 'about', 'contact'];
+            
+            if (lastSegment && !lastSegment.includes('.')) {
+                if (validPages.includes(lastSegment.toLowerCase())) {
+                    var targetUrl = path.replace(new RegExp('/' + lastSegment + '/?$'), '/' + lastSegment + '.html') + window.location.search + window.location.hash;
+                    window.location.replace(targetUrl);
+                }
+            }
+        })();
+    </script>
 </head>
-<body style="display:flex; flex-direction:column; min-height:100vh; justify-content:center; align-items:center; text-align:center; padding:var(--space-6);">
+<body style="display:flex; flex-direction:column; min-height:100vh; justify-content:center; align-items:center; text-align:center; padding:var(--space-6); background:var(--color-bg);">
 
-    <div style="font-size:80px; margin-bottom:var(--space-4);">🧭</div>
-    <h1 style="font-size:var(--text-5xl); margin-bottom:var(--space-3);">404 - Off the Map</h1>
-    <p style="font-size:var(--text-lg); color:var(--color-text-muted); max-width:480px; margin-bottom:var(--space-6);">
-        The destination page you are looking for seems to have moved or does not exist. Let's guide you back on track.
+    <div style="font-size:80px; margin-bottom:var(--space-4); animation: bounce 2s infinite ease-in-out;">🧭</div>
+    <h1 style="font-size:var(--text-5xl); font-weight:var(--weight-bold); margin-bottom:var(--space-3); color:var(--color-text);">404 - Destination Not Found</h1>
+    <p style="font-size:var(--text-lg); color:var(--color-text-muted); max-width:540px; margin-bottom:var(--space-6); line-height:1.6;">
+        The page you are trying to reach might have moved or doesn't exist. Choose a destination below to get back on track with Meer Holidays Travels.
     </p>
 
-    <div class="flex gap-4">
-        <a href="index.html" class="btn btn--primary btn--lg">Return Home</a>
-        <a href="flights.html" class="btn btn--outline btn--lg">Search Flights</a>
+    <div class="flex flex-wrap gap-4 justify-center" style="margin-bottom:var(--space-8);">
+        <a href="index.html" class="btn btn--primary btn--lg">✈️ Home Page</a>
+        <a href="flights.html" class="btn btn--outline btn--lg">Flight Search</a>
+        <a href="hotels.html" class="btn btn--outline btn--lg">Hotel Reservations</a>
+        <a href="trains.html" class="btn btn--outline btn--lg">European Trains</a>
+        <a href="about.html" class="btn btn--ghost btn--lg">About Us</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg">Contact Support</a>
+    </div>
+
+    <div style="font-size:var(--text-xs); color:var(--color-text-muted);">
+        © 2026 Meer Holidays Travels • Live Travel Search Engine
     </div>
 
 </body>
