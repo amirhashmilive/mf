@@ -1,25 +1,4 @@
-# ── Build / Dependencies ──
 node_modules/
-.DS_Store
-Thumbs.db
-
-# ── PowerShell maintenance scripts ──
-*.ps1
-!backup.ps1
-
-# ── Temp files & extracted text ──
-temp_*/
-*.zip
-extracted_text.txt
-advisory_extracted.txt
-intl_extracted.txt
-editorial_board_text.md
-transformation_package.txt
-z_ai_theme_package.txt
-
-# ── Scratch & dev artifacts ──
 scratch/
-
-# ── IDE ──
-.vscode/
-.idea/
+*.log
+.env
