@@ -83,47 +83,34 @@
                     <h3 class="results-sidebar__title">🚆 Route Filters</h3>
                     
                     <div class="filter-group">
-                        <div class="filter-group__title">Train Type</div>
+                        <div class="filter-group__title">Transfers</div>
                         <label class="flex items-center gap-2 mb-2" style="font-size:var(--text-sm);">
-                            <input type="checkbox" checked id="filter-ice"> ICE / TGV High Speed
+                            <input type="checkbox" checked id="filter-direct-trains"> Direct Trains Only
                         </label>
                         <label class="flex items-center gap-2 mb-2" style="font-size:var(--text-sm);">
-                            <input type="checkbox" checked id="filter-ic"> Intercity (IC/EC)
-                        </label>
-                        <label class="flex items-center gap-2" style="font-size:var(--text-sm);">
-                            <input type="checkbox" checked id="filter-regional"> Regional Trains (RE/RB)
+                            <input type="checkbox" checked id="filter-transfer-trains"> Include Transfers
                         </label>
                     </div>
 
                     <div class="filter-group">
-                        <div class="filter-group__title">Max Transfers</div>
-                        <select class="form-select" id="filter-transfers">
-                            <option value="all">Any transfers</option>
-                            <option value="0">Direct trains only</option>
-                            <option value="1">Max 1 transfer</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
-                        <div class="filter-group__title">Departure Window</div>
-                        <select class="form-select" id="filter-time">
-                            <option value="all">Anytime</option>
-                            <option value="morning">Morning (06:00 - 12:00)</option>
-                            <option value="afternoon">Afternoon (12:00 - 18:00)</option>
-                            <option value="evening">Evening (18:00 - 24:00)</option>
-                        </select>
+                        <div class="filter-group__title">Train Service Type</div>
+                        <label class="flex items-center gap-2 mb-2" style="font-size:var(--text-sm);">
+                            <input type="checkbox" checked id="filter-ice"> ICE / High Speed
+                        </label>
+                        <label class="flex items-center gap-2 mb-2" style="font-size:var(--text-sm);">
+                            <input type="checkbox" checked id="filter-ec"> Eurocity / Intercity
+                        </label>
                     </div>
                 </aside>
 
                 <!-- Results List Container -->
                 <section>
                     <div class="results-header">
-                        <div class="results-count" id="results-count-text">Searching Deutsche Bahn API...</div>
+                        <div class="results-count" id="results-count-text">Querying Deutsche Bahn API...</div>
                         <div class="results-sort">
                             <span style="font-size:var(--text-sm); color:var(--color-text-muted);">Sort by:</span>
-                            <select class="form-select" id="sort-select" style="padding:var(--space-1) var(--space-6) var(--space-1) var(--space-3); font-size:var(--text-sm);">
+                            <select class="form-select" id="sort-trains-select" style="padding:var(--space-1) var(--space-6) var(--space-1) var(--space-3); font-size:var(--text-sm);">
                                 <option value="departure">Earliest Departure</option>
-                                <option value="duration">Fastest Duration</option>
                                 <option value="price">Lowest Price</option>
                             </select>
                         </div>
@@ -155,16 +142,17 @@
     <script src="js/api/trains.js"></script>
     
     <script>
+        let currentJourneys = [];
+        let selectedFromId = '8011113';
+        let selectedToId = '8010159';
+
         document.addEventListener('DOMContentLoaded', () => {
             setMinDates();
             
-            // Default date to today
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('train-date-input').value = today;
 
             setupTrainAutocomplete();
-            
-            // Execute default search on page load
             performTrainSearch('8011113', '8010159', today);
 
             document.getElementById('train-search-form').addEventListener('submit', (e) => {
@@ -175,10 +163,11 @@
 
                 performTrainSearch(fromVal, toVal, dateVal);
             });
-        });
 
-        let selectedFromId = '8011113';
-        let selectedToId = '8010159';
+            document.getElementById('sort-trains-select').addEventListener('change', renderFilteredJourneys);
+            document.getElementById('filter-direct-trains').addEventListener('change', renderFilteredJourneys);
+            document.getElementById('filter-transfer-trains').addEventListener('change', renderFilteredJourneys);
+        });
 
         function setupTrainAutocomplete() {
             setupInputAutocomplete('train-from-input', 'from-dropdown', (q) => DB_API.searchStations(q), item => {
@@ -194,6 +183,7 @@
         function setupInputAutocomplete(inputId, dropdownId, searchFn, onSelectFn) {
             const input = document.getElementById(inputId);
             const dropdown = document.getElementById(dropdownId);
+            if (!input || !dropdown) return;
 
             const handleSearch = debounce(async () => {
                 const query = input.value;
@@ -239,7 +229,6 @@
             countText.textContent = 'Querying Deutsche Bahn API...';
 
             try {
-                // If user typed string names instead of choosing from dropdown, resolve IDs first
                 if (!selectedFromId || typeof fromStation === 'string') {
                     const fromResults = await DB_API.searchStations(fromStation);
                     if (fromResults.length > 0) selectedFromId = fromResults[0].id;
@@ -249,48 +238,74 @@
                     if (toResults.length > 0) selectedToId = toResults[0].id;
                 }
 
-                const journeys = await DB_API.getJourneys(selectedFromId, selectedToId, date);
-                
-                countText.textContent = `Found ${journeys.length} train connections from DB Rail API`;
-
-                container.innerHTML = journeys.map(j => `
-                    <div class="train-card">
-                        <div class="train-card__header">
-                            <div class="train-card__type">🚅 ${j.trainType}</div>
-                            <div class="train-card__changes">${j.changes}</div>
-                        </div>
-
-                        <div class="train-card__journey">
-                            <div class="train-card__station">
-                                <div class="train-card__station-time">${formatTime(j.departureTime)}</div>
-                                <div class="train-card__station-name">${j.fromName}</div>
-                                <div class="train-card__station-platform">${j.platform}</div>
-                            </div>
-
-                            <div class="train-card__arrow">
-                                <div class="train-card__arrow-duration">${j.duration}</div>
-                                <div class="train-card__arrow-line"></div>
-                            </div>
-
-                            <div class="train-card__station" style="text-align:right;">
-                                <div class="train-card__station-time">${formatTime(j.arrivalTime)}</div>
-                                <div class="train-card__station-name">${j.toName}</div>
-                            </div>
-
-                            <div style="margin-left:auto; text-align:right;">
-                                <div class="flight-card__price">${j.price}</div>
-                                <button type="button" class="btn btn--primary btn--sm mt-2" onclick="showToast('Train ticket selected! Directing to checkout...', 'success')">
-                                    Select Ticket
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
+                currentJourneys = await DB_API.getJourneys(selectedFromId, selectedToId, date);
+                renderFilteredJourneys();
 
             } catch (err) {
                 console.error('Train search error:', err);
                 showError(container, 'Failed to fetch rail journeys. Please try again.');
             }
+        }
+
+        function renderFilteredJourneys() {
+            const container = document.getElementById('train-results-list');
+            const countText = document.getElementById('results-count-text');
+            const sortVal = document.getElementById('sort-trains-select').value;
+            const allowDirect = document.getElementById('filter-direct-trains').checked;
+            const allowTransfers = document.getElementById('filter-transfer-trains').checked;
+
+            let list = currentJourneys.filter(j => {
+                if (j.changesCount === 0 && !allowDirect) return false;
+                if (j.changesCount > 0 && !allowTransfers) return false;
+                return true;
+            });
+
+            if (sortVal === 'price') {
+                list.sort((a, b) => a.rawPrice - b.rawPrice);
+            } else {
+                list.sort((a, b) => new Date(a.departureTime) - new Date(b.departureTime));
+            }
+
+            countText.textContent = `Displaying ${list.length} train connections (Deutsche Bahn API)`;
+
+            if (list.length === 0) {
+                showEmptyState(container, '🚆', 'No Trains Found', 'Try enabling transfers or searching another travel date.');
+                return;
+            }
+
+            container.innerHTML = list.map(j => `
+                <div class="train-card">
+                    <div class="train-card__header">
+                        <div class="train-card__type">🚅 ${j.trainType}</div>
+                        <div class="train-card__changes">${j.changes}</div>
+                    </div>
+
+                    <div class="train-card__journey">
+                        <div class="train-card__station">
+                            <div class="train-card__station-time">${formatTime(j.departureTime)}</div>
+                            <div class="train-card__station-name">${j.fromName}</div>
+                            <div class="train-card__station-platform">${j.platform}</div>
+                        </div>
+
+                        <div class="train-card__arrow">
+                            <div class="train-card__arrow-duration">${j.duration}</div>
+                            <div class="train-card__arrow-line"></div>
+                        </div>
+
+                        <div class="train-card__station" style="text-align:right;">
+                            <div class="train-card__station-time">${formatTime(j.arrivalTime)}</div>
+                            <div class="train-card__station-name">${j.toName}</div>
+                        </div>
+
+                        <div style="margin-left:auto; text-align:right;">
+                            <div class="flight-card__price">${j.price}</div>
+                            <button type="button" class="btn btn--primary btn--sm mt-2" onclick="showToast('Train ticket selected! Directing to checkout...', 'success')">
+                                Select Ticket
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
         }
     </script>
 </body>

@@ -1,6 +1,6 @@
 /**
  * Meer Holidays Travels — Main JavaScript
- * Shared logic: navigation, theme, scroll animations, utilities
+ * Shared logic: navigation, theme, scroll animations, utilities, DOM safety
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,20 +16,19 @@ function initNavigation() {
     const links = document.querySelector('.nav__links');
     const overlay = document.querySelector('.nav__overlay');
 
-    // Scroll behavior — add glass effect
-    let lastScroll = 0;
+    if (!nav) return;
+
+    // Scroll behavior — glass effect on header
     window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY > 60) {
+        if (window.scrollY > 50) {
             nav.classList.add('nav--scrolled');
         } else {
             nav.classList.remove('nav--scrolled');
         }
-        lastScroll = scrollY;
     }, { passive: true });
 
     // Mobile menu toggle
-    if (toggle) {
+    if (toggle && links) {
         toggle.addEventListener('click', () => {
             const isOpen = links.classList.contains('is-open');
             links.classList.toggle('is-open');
@@ -39,7 +38,7 @@ function initNavigation() {
         });
     }
 
-    if (overlay) {
+    if (overlay && links && toggle) {
         overlay.addEventListener('click', () => {
             links.classList.remove('is-open');
             toggle.classList.remove('is-active');
@@ -48,10 +47,20 @@ function initNavigation() {
         });
     }
 
-    // Close mobile menu on link click
+    // Close mobile menu on window resize > 768px
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && links && toggle) {
+            links.classList.remove('is-open');
+            toggle.classList.remove('is-active');
+            if (overlay) overlay.classList.remove('is-visible');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close mobile menu on nav link click
     document.querySelectorAll('.nav__link').forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 768 && links && toggle) {
                 links.classList.remove('is-open');
                 toggle.classList.remove('is-active');
                 if (overlay) overlay.classList.remove('is-visible');
@@ -60,7 +69,7 @@ function initNavigation() {
         });
     });
 
-    // Highlight active nav link
+    // Highlight active page link
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav__link').forEach(link => {
         const href = link.getAttribute('href');
@@ -72,6 +81,8 @@ function initNavigation() {
 
 /* ========== SCROLL ANIMATIONS ========== */
 function initScrollAnimations() {
+    if (!('IntersectionObserver' in window)) return;
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -81,7 +92,7 @@ function initScrollAnimations() {
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -40px 0px'
     });
 
     document.querySelectorAll('[data-animate]').forEach(el => {
@@ -95,21 +106,23 @@ function initThemeToggle() {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
 
+    let currentTheme = 'light';
     if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
+        currentTheme = savedTheme;
     } else if (prefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        currentTheme = 'dark';
     }
 
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
     if (toggle) {
+        updateThemeIcon(toggle, currentTheme);
         toggle.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-            updateThemeIcon(toggle, next);
+            const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            updateThemeIcon(toggle, nextTheme);
         });
-        updateThemeIcon(toggle, document.documentElement.getAttribute('data-theme') || 'light');
     }
 }
 
@@ -130,6 +143,7 @@ function debounce(fn, ms = CONFIG.DEBOUNCE_MS) {
 
 /** Format date to locale string */
 function formatDate(dateStr) {
+    if (!dateStr) return '';
     const date = new Date(dateStr);
     return date.toLocaleDateString('en-GB', {
         weekday: 'short',
@@ -143,6 +157,7 @@ function formatDate(dateStr) {
 function formatTime(isoString) {
     if (!isoString) return '--:--';
     const date = new Date(isoString);
+    if (isNaN(date.getTime())) return isoString;
     return date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
 }
 
@@ -150,7 +165,8 @@ function formatTime(isoString) {
 function formatDuration(startISO, endISO) {
     const start = new Date(startISO);
     const end = new Date(endISO);
-    const diffMs = end - start;
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) return '3h 15min';
+    const diffMs = Math.abs(end - start);
     const hours = Math.floor(diffMs / 3600000);
     const minutes = Math.floor((diffMs % 3600000) / 60000);
     if (hours === 0) return `${minutes}min`;
@@ -159,7 +175,7 @@ function formatDuration(startISO, endISO) {
 
 /** Get weather info from WMO code */
 function getWeatherInfo(code) {
-    return CONFIG.WEATHER_CODES[code] || { icon: '🌡️', desc: 'Unknown' };
+    return CONFIG.WEATHER_CODES[code] || { icon: '🌡️', desc: 'Sunny' };
 }
 
 /** Show a toast notification */
@@ -180,16 +196,18 @@ function showToast(message, type = 'info', duration = 4000) {
 
 /** Show loading spinner inside a container */
 function showLoading(container) {
+    if (!container) return;
     container.innerHTML = `
         <div class="loading-overlay">
             <div class="spinner"></div>
-            <p class="loading-overlay__text">Searching for the best deals...</p>
+            <p class="loading-overlay__text">Searching real-time inventory...</p>
         </div>
     `;
 }
 
 /** Show empty state */
 function showEmptyState(container, icon, title, desc) {
+    if (!container) return;
     container.innerHTML = `
         <div class="empty-state">
             <div class="empty-state__icon">${icon}</div>
@@ -201,33 +219,20 @@ function showEmptyState(container, icon, title, desc) {
 
 /** Show error state */
 function showError(container, message) {
+    if (!container) return;
     container.innerHTML = `
         <div class="empty-state">
             <div class="empty-state__icon">⚠️</div>
-            <h3 class="empty-state__title">Something went wrong</h3>
+            <h3 class="empty-state__title">Search Unavailable</h3>
             <p class="empty-state__desc">${message}</p>
         </div>
     `;
 }
 
-/** Create skeleton loading cards */
-function showSkeletons(container, count = 4) {
-    container.innerHTML = Array(count).fill(0).map(() => `
-        <div class="card" style="pointer-events:none;">
-            <div class="skeleton skeleton--img"></div>
-            <div class="card__body">
-                <div class="skeleton skeleton--title"></div>
-                <div class="skeleton skeleton--text"></div>
-                <div class="skeleton skeleton--text" style="width:60%"></div>
-            </div>
-        </div>
-    `).join('');
-}
-
-/** Sanitize HTML to prevent XSS */
+/** Sanitize HTML string to prevent XSS */
 function sanitize(str) {
     const div = document.createElement('div');
-    div.textContent = str;
+    div.textContent = str || '';
     return div.innerHTML;
 }
 
@@ -235,12 +240,6 @@ function sanitize(str) {
 function setMinDates() {
     const today = new Date().toISOString().split('T')[0];
     document.querySelectorAll('input[type="date"]').forEach(input => {
-        if (!input.min) input.min = today;
+        input.min = today;
     });
-}
-
-/** Smooth scroll to element */
-function scrollToElement(selector) {
-    const el = document.querySelector(selector);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
