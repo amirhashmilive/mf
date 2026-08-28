@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Meer Holidays Travels</title>
+    <meta name="description" content="Get in touch with Meer Holidays Travels support team for flight, hotel, and train booking assistance.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <div class="nav__overlay"></div>
+
+    <header class="nav nav--scrolled">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <div class="nav__logo-icon">M</div>
+                <span>Meer Holidays</span>
+            </a>
+
+            <nav class="nav__links">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="flights.html" class="nav__link">Flights</a>
+                <a href="hotels.html" class="nav__link">Hotels</a>
+                <a href="trains.html" class="nav__link">European Trains</a>
+                <a href="about.html" class="nav__link">About Us</a>
+                <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+                <button type="button" class="btn btn--ghost btn--sm" data-theme-toggle title="Toggle Dark/Light Mode">🌙</button>
+            </nav>
+
+            <button type="button" class="nav__toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Get in Touch with Our Concierge</h1>
+            <p class="page-header__subtitle">We are here 24/7 to assist with your flights, hotels, and European train travel planning.</p>
+        </div>
+    </div>
+
+    <main class="section">
+        <div class="container container--narrow">
+            
+            <div class="card" style="padding:var(--space-8);">
+                <form id="contact-form" onsubmit="event.preventDefault(); showToast('Thank you! Your message has been sent to our travel desk.', 'success'); this.reset();">
+                    <div class="form-group mb-4">
+                        <label class="form-label" for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" class="form-input" placeholder="e.g. Amir Hashmi" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label class="form-label" for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" class="form-input" placeholder="e.g. amir@example.com" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label class="form-label" for="contact-subject">Inquiry Type</label>
+                        <select id="contact-subject" class="form-select">
+                            <option value="flight">Flight Inquiry</option>
+                            <option value="hotel">Hotel Reservation</option>
+                            <option value="train">European Train Booking (DB)</option>
+                            <option value="other">General Support</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-6">
+                        <label class="form-label" for="contact-msg">Message</label>
+                        <textarea id="contact-msg" class="form-input" rows="5" placeholder="How can our travel concierges assist you today?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg btn--full">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom" style="border:none; padding-top:0;">
+                <div class="footer__copyright">
+                    © 2026 Meer Holidays Travels — Support & Concierge Desk
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "paris",
+    "name": "Paris",
+    "country": "France",
+    "code": "PAR",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
+    "price": "€349",
+    "rating": 4.9,
+    "reviews": 1240,
+    "tag": "Top Pick",
+    "description": "Experience the city of light, world-class art, fashion, and cuisine."
+  },
+  {
+    "id": "london",
+    "name": "London",
+    "country": "United Kingdom",
+    "code": "LON",
+    "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
+    "price": "€299",
+    "rating": 4.8,
+    "reviews": 980,
+    "tag": "Trending",
+    "description": "Discover historic landmarks, iconic museums, and vibrant theater."
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "Italy",
+    "code": "ROM",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+    "price": "€279",
+    "rating": 4.9,
+    "reviews": 1120,
+    "tag": "Culture",
+    "description": "Step back in time through the Colosseum, Roman Forum, and Vatican."
+  },
+  {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "country": "Spain",
+    "code": "BCN",
+    "image": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=80",
+    "price": "€249",
+    "rating": 4.7,
+    "reviews": 890,
+    "tag": "Beach & City",
+    "description": "Stunning Gaudí architecture, Mediterranean beaches, and lively tapas bars."
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "code": "AMS",
+    "image": "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=800&q=80",
+    "price": "€289",
+    "rating": 4.8,
+    "reviews": 760,
+    "tag": "Popular",
+    "description": "Picturesque canals, bike routes, world-famous museums, and vibrant nightlife."
+  },
+  {
+    "id": "berlin",
+    "name": "Berlin",
+    "country": "Germany",
+    "code": "BER",
+    "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80",
+    "price": "€219",
+    "rating": 4.6,
+    "reviews": 650,
+    "tag": "Budget",
+    "description": "Dynamic art scene, rich modern history, and legendary music culture."
+  }
+]

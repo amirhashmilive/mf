@@ -1,0 +1,408 @@
+/* ============================================
+   MEER HOLIDAYS TRAVELS — Homepage Styles
+   ============================================ */
+
+/* ========== HERO SECTION ========== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    padding: var(--space-24) 0 var(--space-16);
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.hero__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+    opacity: 0.85;
+}
+
+/* Animated floating shapes */
+.hero__shapes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hero__shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.07;
+    background: var(--color-accent);
+}
+
+.hero__shape--1 {
+    width: 500px;
+    height: 500px;
+    top: -10%;
+    right: -10%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero__shape--2 {
+    width: 300px;
+    height: 300px;
+    bottom: -5%;
+    left: -5%;
+    animation: float 6s ease-in-out infinite 1s;
+}
+
+.hero__shape--3 {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 10%;
+    animation: float 7s ease-in-out infinite 2s;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.hero__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(0, 212, 170, 0.15);
+    border: 1px solid rgba(0, 212, 170, 0.3);
+    border-radius: var(--radius-full);
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-6);
+    animation: fadeInDown 0.6s var(--ease-out) 0.2s backwards;
+}
+
+.hero__title {
+    font-size: var(--text-6xl);
+    font-weight: var(--weight-extrabold);
+    color: white;
+    margin-bottom: var(--space-5);
+    letter-spacing: -0.02em;
+    animation: fadeInUp 0.8s var(--ease-out) 0.3s backwards;
+}
+
+.hero__title-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__subtitle {
+    font-size: var(--text-xl);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto var(--space-10);
+    line-height: var(--leading-relaxed);
+    animation: fadeInUp 0.8s var(--ease-out) 0.5s backwards;
+}
+
+.hero__search {
+    animation: fadeInUp 0.8s var(--ease-out) 0.7s backwards;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.hero__stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-10);
+    margin-top: var(--space-10);
+    animation: fadeIn 1s var(--ease-out) 1s backwards;
+}
+
+.hero__stat {
+    text-align: center;
+}
+
+.hero__stat-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-extrabold);
+    color: var(--color-accent);
+}
+
+.hero__stat-label {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: var(--space-1);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-20) 0 var(--space-10);
+    }
+
+    .hero__stats {
+        gap: var(--space-6);
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ========== DESTINATIONS SECTION ========== */
+.destinations {
+    padding: var(--space-20) 0;
+}
+
+.destinations__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+}
+
+.destinations__grid .card:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.destinations__grid .card:first-child .card__image {
+    aspect-ratio: auto;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .destinations__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destinations__grid .card:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .destinations__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destinations__grid .card:first-child {
+        grid-column: span 1;
+    }
+}
+
+
+/* ========== WHY CHOOSE US ========== */
+.why-us {
+    background: var(--color-bg-alt);
+    padding: var(--space-20) 0;
+}
+
+.why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+    .why-us__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-us__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========== WEATHER SECTION ========== */
+.weather-section {
+    padding: var(--space-20) 0;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+}
+
+.weather-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    transition: all var(--transition-normal);
+}
+
+.weather-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.weather-card__header {
+    background: var(--gradient-hero);
+    color: white;
+    padding: var(--space-5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weather-card__city {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+}
+
+.weather-card__country {
+    font-size: var(--text-xs);
+    opacity: 0.7;
+}
+
+.weather-card__temp {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-extrabold);
+}
+
+.weather-card__icon {
+    font-size: 32px;
+}
+
+.weather-card__body {
+    padding: var(--space-4);
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather-card__detail {
+    text-align: center;
+}
+
+.weather-card__detail-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.weather-card__detail-value {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    margin-top: var(--space-1);
+}
+
+@media (max-width: 768px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========== TESTIMONIALS ========== */
+.testimonials {
+    background: var(--color-bg-alt);
+    padding: var(--space-20) 0;
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+    .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========== CTA SECTION ========== */
+.cta-section {
+    padding: var(--space-20) 0;
+}
+
+.cta-banner {
+    background: var(--gradient-hero);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-16) var(--space-10);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite;
+}
+
+.cta-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite 1s;
+}
+
+.cta-banner__content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-banner__title {
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-extrabold);
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.cta-banner__subtitle {
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin: 0 auto var(--space-8);
+}
+
+.cta-banner__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}

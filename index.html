@@ -3,27 +3,562 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agency</title>
+    <title>Meer Holidays Travels — Flights, Hotels & European Trains</title>
+    <meta name="description" content="Discover world-class travel experiences. Book flights, luxury hotels, and high-speed European train journeys with Meer Holidays Travels.">
+    <meta name="keywords" content="travel agency, flight search, hotel booking, European train tickets, Deutsche Bahn, Open-Meteo weather, holiday packages">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Meer Holidays Travels">
+    <meta property="og:description" content="Search flights, hotels, and European trains instantly with live APIs.">
+
+    <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Travel Agency</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Flights</a></li>
-                <li><a href="#">Hotels</a></li>
-                <li><a href="#">Trains</a></li>
-            </ul>
-        </nav>
+
+    <!-- Overlay for mobile drawer -->
+    <div class="nav__overlay"></div>
+
+    <!-- Navigation Header -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" id="brand-logo">
+                <div class="nav__logo-icon">M</div>
+                <span>Meer Holidays</span>
+            </a>
+
+            <nav class="nav__links" id="main-nav">
+                <a href="index.html" class="nav__link nav__link--active" id="nav-home">Home</a>
+                <a href="flights.html" class="nav__link" id="nav-flights">Flights</a>
+                <a href="hotels.html" class="nav__link" id="nav-hotels">Hotels</a>
+                <a href="trains.html" class="nav__link" id="nav-trains">European Trains</a>
+                <a href="about.html" class="nav__link" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav__link" id="nav-contact">Contact</a>
+                <button type="button" class="btn btn--ghost btn--sm" data-theme-toggle title="Toggle Dark/Light Mode" id="theme-btn">🌙</button>
+                <a href="flights.html" class="nav__cta" id="nav-cta">Book Now</a>
+            </nav>
+
+            <button type="button" class="nav__toggle" aria-label="Toggle menu" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
+
+    <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <h2>Explore the World with Us</h2>
-            <p>Your journey begins here.</p>
+            <div class="hero__shapes">
+                <div class="hero__shape hero__shape--1"></div>
+                <div class="hero__shape hero__shape--2"></div>
+                <div class="hero__shape hero__shape--3"></div>
+            </div>
+            
+            <div class="hero__content">
+                <div class="hero__label">
+                    <span>✨ Live API Powered Travel Engine</span>
+                </div>
+                <h1 class="hero__title">
+                    Explore the World with <span class="hero__title-accent">Unmatched Ease</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Search real-time flights, handpicked luxury hotels, and high-speed European train routes in seconds.
+                </p>
+
+                <!-- Search Card Tabs -->
+                <div class="search-card hero__search" id="hero-search-box">
+                    <div class="search-tabs">
+                        <button type="button" class="search-tab search-tab--active" data-tab="flights" id="tab-btn-flights">
+                            ✈️ Flights
+                        </button>
+                        <button type="button" class="search-tab" data-tab="hotels" id="tab-btn-hotels">
+                            🏨 Hotels
+                        </button>
+                        <button type="button" class="search-tab" data-tab="trains" id="tab-btn-trains">
+                            🚆 European Trains
+                        </button>
+                    </div>
+
+                    <!-- Flight Search Form -->
+                    <form class="search-form search-form--flights" id="hero-flight-form" action="flights.html" method="GET">
+                        <div class="form-group form-input-wrapper">
+                            <label class="form-label" for="flight-from">From</label>
+                            <input type="text" id="flight-from" name="from" class="form-input" placeholder="e.g. DEL (New Delhi)" required autocomplete="off">
+                            <div class="autocomplete-dropdown" id="flight-from-results" style="display:none;"></div>
+                        </div>
+
+                        <div class="form-group form-input-wrapper">
+                            <label class="form-label" for="flight-to">To</label>
+                            <input type="text" id="flight-to" name="to" class="form-input" placeholder="e.g. LHR (London)" required autocomplete="off">
+                            <div class="autocomplete-dropdown" id="flight-to-results" style="display:none;"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="flight-date">Departure Date</label>
+                            <input type="date" id="flight-date" name="date" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="flight-class">Class</label>
+                            <select id="flight-class" name="class" class="form-select">
+                                <option value="economy">Economy</option>
+                                <option value="business">Business</option>
+                                <option value="first">First Class</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--lg" id="submit-flight-search">
+                            Search Flights
+                        </button>
+                    </form>
+
+                    <!-- Hotel Search Form (Hidden by default) -->
+                    <form class="search-form search-form--hotels" id="hero-hotel-form" action="hotels.html" method="GET" style="display:none;">
+                        <div class="form-group">
+                            <label class="form-label" for="hotel-dest">Destination</label>
+                            <input type="text" id="hotel-dest" name="destination" class="form-input" placeholder="City or Landmark (e.g. Paris)" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="hotel-checkin">Check-in</label>
+                            <input type="date" id="hotel-checkin" name="checkin" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="hotel-checkout">Check-out</label>
+                            <input type="date" id="hotel-checkout" name="checkout" class="form-input" required>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--lg" id="submit-hotel-search">
+                            Search Hotels
+                        </button>
+                    </form>
+
+                    <!-- Train Search Form (Hidden by default) -->
+                    <form class="search-form search-form--trains" id="hero-train-form" action="trains.html" method="GET" style="display:none;">
+                        <div class="form-group form-input-wrapper">
+                            <label class="form-label" for="train-from">Departure Station</label>
+                            <input type="text" id="train-from" name="from" class="form-input" placeholder="e.g. Berlin Hbf" required autocomplete="off">
+                            <div class="autocomplete-dropdown" id="train-from-results" style="display:none;"></div>
+                        </div>
+
+                        <div class="form-group form-input-wrapper">
+                            <label class="form-label" for="train-to">Arrival Station</label>
+                            <input type="text" id="train-to" name="to" class="form-input" placeholder="e.g. Paris Gare du Nord" required autocomplete="off">
+                            <div class="autocomplete-dropdown" id="train-to-results" style="display:none;"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="train-date">Travel Date</label>
+                            <input type="date" id="train-date" name="date" class="form-input" required>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--lg" id="submit-train-search">
+                            Search Trains
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Hero Stats -->
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <div class="hero__stat-value">500+</div>
+                        <div class="hero__stat-label">Airlines</div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-value">250,000+</div>
+                        <div class="hero__stat-label">Luxury Hotels</div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-value">100% Live</div>
+                        <div class="hero__stat-label">Deutsche Bahn Rail Data</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Destination Weather Section -->
+        <section class="section weather-section" id="weather-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header__label">Live Climate Tracker</div>
+                    <h2 class="section-header__title">Destination Weather Forecasts</h2>
+                    <p class="section-header__subtitle">Real-time weather data powered by Open-Meteo API for top world destinations.</p>
+                </div>
+
+                <div class="weather-grid" id="weather-cards-container">
+                    <!-- Populated by JS weather API calls -->
+                    <div class="loading-overlay">
+                        <div class="spinner"></div>
+                        <p class="loading-overlay__text">Loading live weather data...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Destinations Grid -->
+        <section class="section destinations" id="destinations-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header__label">Featured Getaways</div>
+                    <h2 class="section-header__title">Popular Worldwide Destinations</h2>
+                    <p class="section-header__subtitle">Explore curated trips with best price guarantees.</p>
+                </div>
+
+                <div class="destinations__grid" id="destinations-container">
+                    <!-- Populated by JS dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section why-us" id="why-us-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header__label">Our Excellence</div>
+                    <h2 class="section-header__title">Why Travel With Meer Holidays?</h2>
+                    <p class="section-header__subtitle">We blend modern technology with dedicated personal care for unforgettable journeys.</p>
+                </div>
+
+                <div class="why-us__grid">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">⚡</div>
+                        <h3 class="feature-card__title">Real-Time API Search</h3>
+                        <p class="feature-card__desc">Direct integration with official transit and weather APIs for accurate schedules and instant booking.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🛡️</div>
+                        <h3 class="feature-card__title">Best Price Guarantee</h3>
+                        <p class="feature-card__desc">We compare rates across hundreds of global partners to bring you transparent, lowest-cost options.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🚆</div>
+                        <h3 class="feature-card__title">European Rail Specialist</h3>
+                        <p class="feature-card__desc">Official Deutsche Bahn connectivity for high-speed ICE, TGV, and Eurostar tickets across Europe.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🤝</div>
+                        <h3 class="feature-card__title">24/7 Dedicated Support</h3>
+                        <p class="feature-card__desc">Our expert travel concierge team is ready to assist you before, during, and after your trip.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials" id="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header__label">Traveler Feedback</div>
+                    <h2 class="section-header__title">Loved by Thousands of Explorers</h2>
+                    <p class="section-header__subtitle">Hear what our travelers say about their seamless vacation bookings.</p>
+                </div>
+
+                <div class="testimonials__grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__quote">“</div>
+                        <p class="testimonial-card__text">Booking our multi-city European train journey was completely stress-free. Real-time platform numbers and transfer info saved our trip!</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">AH</div>
+                            <div>
+                                <div class="testimonial-card__name">Amir Hashmi</div>
+                                <div class="testimonial-card__role">Frequent European Traveler</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__quote">“</div>
+                        <p class="testimonial-card__text">The live weather forecasts and hotel recommendations were spot on. Meer Holidays made our Paris getaway truly unforgettable!</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">SK</div>
+                            <div>
+                                <div class="testimonial-card__name">Sophia Khan</div>
+                                <div class="testimonial-card__role">Vacation Planner</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__quote">“</div>
+                        <p class="testimonial-card__text">Transparent pricing, fast search engine, and no hidden fees. I recommend Meer Holidays to all my colleagues.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">DR</div>
+                            <div>
+                                <div class="testimonial-card__name">David Ross</div>
+                                <div class="testimonial-card__role">International Business Traveler</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-banner__content">
+                        <h2 class="cta-banner__title">Ready for Your Next Great Adventure?</h2>
+                        <p class="cta-banner__subtitle">Search flights, hotels, and train routes now to lock in exclusive rates.</p>
+                        <div class="cta-banner__actions">
+                            <a href="flights.html" class="btn btn--primary btn--lg">Find Flights</a>
+                            <a href="trains.html" class="btn btn--white btn--lg">Explore Rail Routes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="nav__logo-icon">M</div>
+                        <span>Meer Holidays</span>
+                    </div>
+                    <p class="footer__desc">Your trusted global travel partner. Discover live flights, luxury hotel stays, and high-speed rail travel across the globe.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social-link" title="Twitter">🐤</a>
+                        <a href="#" class="footer__social-link" title="Facebook">📘</a>
+                        <a href="#" class="footer__social-link" title="Instagram">📷</a>
+                        <a href="#" class="footer__social-link" title="LinkedIn">💼</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer__heading">Services</h4>
+                    <div class="footer__links">
+                        <a href="flights.html" class="footer__link">Flight Search</a>
+                        <a href="hotels.html" class="footer__link">Hotel Reservations</a>
+                        <a href="trains.html" class="footer__link">European Rail (DB)</a>
+                        <a href="index.html#weather-section" class="footer__link">Live Destination Weather</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer__heading">Company</h4>
+                    <div class="footer__links">
+                        <a href="about.html" class="footer__link">About Meer Holidays</a>
+                        <a href="contact.html" class="footer__link">Contact Support</a>
+                        <a href="about.html#privacy" class="footer__link">Privacy Policy</a>
+                        <a href="about.html#terms" class="footer__link">Terms of Service</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <div class="footer__links">
+                        <span class="footer__link">📍 Global Travel Operations</span>
+                        <span class="footer__link">✉️ info@meerholidays.com</span>
+                        <span class="footer__link">📞 +1 (800) 555-MEER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    © 2026 Meer Holidays Travels. All rights reserved. Powered by open travel APIs.
+                </div>
+                <div class="footer__bottom-links">
+                    <a href="about.html">Privacy</a>
+                    <a href="about.html">Terms</a>
+                    <a href="contact.html">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/api/weather.js"></script>
+    <script src="js/api/trains.js"></script>
+    <script src="js/api/flights.js"></script>
+    <script src="js/api/hotels.js"></script>
+    
+    <script>
+        // Homepage interactive logic
+        document.addEventListener('DOMContentLoaded', () => {
+            setMinDates();
+            initTabSwitcher();
+            loadPopularDestinations();
+            loadWeatherWidgets();
+            setupAutocomplete();
+        });
+
+        // Tab switcher logic for search box
+        function initTabSwitcher() {
+            const tabs = document.querySelectorAll('.search-tab');
+            const forms = {
+                flights: document.getElementById('hero-flight-form'),
+                hotels: document.getElementById('hero-hotel-form'),
+                trains: document.getElementById('hero-train-form')
+            };
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('search-tab--active'));
+                    tab.classList.add('search-tab--active');
+                    
+                    const selected = tab.getAttribute('data-tab');
+                    Object.keys(forms).forEach(key => {
+                        forms[key].style.display = (key === selected) ? 'grid' : 'none';
+                    });
+                });
+            });
+        }
+
+        // Load Popular Destinations from JSON
+        async function loadPopularDestinations() {
+            const container = document.getElementById('destinations-container');
+            try {
+                const res = await fetch('data/popular-destinations.json');
+                const destinations = await res.json();
+
+                container.innerHTML = destinations.map(dest => `
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="${dest.image}" alt="${dest.name}" loading="lazy">
+                            <div class="card__image-overlay">
+                                <span class="card__badge">${dest.tag}</span>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="card__subtitle">${dest.country} ${dest.code}</div>
+                            <h3 class="card__title">${dest.name}</h3>
+                            <p class="text-muted" style="font-size:var(--text-xs); margin-bottom:var(--space-3);">${dest.description}</p>
+                            <div class="card__meta">
+                                <div>
+                                    <div class="card__price-label">Starting from</div>
+                                    <div class="card__price">${dest.price}</div>
+                                </div>
+                                <div class="card__rating">
+                                    ⭐ ${dest.rating} (${dest.reviews})
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.warn('Could not load destinations:', err);
+            }
+        }
+
+        // Load Weather widgets from Open-Meteo API
+        async function loadWeatherWidgets() {
+            const container = document.getElementById('weather-cards-container');
+            const cities = [
+                { name: 'Paris', country: 'France', lat: 48.8566, lon: 2.3522 },
+                { name: 'London', country: 'United Kingdom', lat: 51.5074, lon: -0.1278 },
+                { name: 'Berlin', country: 'Germany', lat: 52.5200, lon: 13.4050 }
+            ];
+
+            try {
+                const weatherDataArray = await Promise.all(cities.map(async city => {
+                    const weather = await WEATHER_API.getWeather(city.lat, city.lon);
+                    return { ...city, weather };
+                }));
+
+                container.innerHTML = weatherDataArray.map(item => `
+                    <div class="weather-card">
+                        <div class="weather-card__header">
+                            <div>
+                                <div class="weather-card__city">${item.name}</div>
+                                <div class="weather-card__country">${item.country}</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <div class="weather-card__temp">${item.weather.temp}°C</div>
+                                <div class="weather-card__icon">${item.weather.icon}</div>
+                            </div>
+                        </div>
+                        <div class="weather-card__body">
+                            <div class="weather-card__detail">
+                                <div class="weather-card__detail-label">Condition</div>
+                                <div class="weather-card__detail-value">${item.weather.description}</div>
+                            </div>
+                            <div class="weather-card__detail">
+                                <div class="weather-card__detail-label">Humidity</div>
+                                <div class="weather-card__detail-value">${item.weather.humidity}%</div>
+                            </div>
+                            <div class="weather-card__detail">
+                                <div class="weather-card__detail-label">Wind</div>
+                                <div class="weather-card__detail-value">${item.weather.windSpeed} km/h</div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.error('Weather load error:', err);
+            }
+        }
+
+        // Setup Autocomplete dropdowns
+        function setupAutocomplete() {
+            // Train station autocompleter
+            setupInputAutocomplete('train-from', 'train-from-results', (q) => DB_API.searchStations(q), item => item.name);
+            setupInputAutocomplete('train-to', 'train-to-results', (q) => DB_API.searchStations(q), item => item.name);
+
+            // Airport autocompleter
+            setupInputAutocomplete('flight-from', 'flight-from-results', (q) => FLIGHTS_API.searchAirports(q), item => `${item.city} (${item.code})`);
+            setupInputAutocomplete('flight-to', 'flight-to-results', (q) => FLIGHTS_API.searchAirports(q), item => `${item.city} (${item.code})`);
+        }
+
+        function setupInputAutocomplete(inputId, dropdownId, searchFn, formatFn) {
+            const input = document.getElementById(inputId);
+            const dropdown = document.getElementById(dropdownId);
+            if (!input || !dropdown) return;
+
+            const handleSearch = debounce(async () => {
+                const query = input.value;
+                if (query.length < 2) {
+                    dropdown.style.display = 'none';
+                    return;
+                }
+                const results = await searchFn(query);
+                if (results.length === 0) {
+                    dropdown.style.display = 'none';
+                    return;
+                }
+
+                dropdown.innerHTML = results.map(item => `
+                    <div class="autocomplete-item" data-val="${formatFn(item)}">
+                        <span class="autocomplete-item__icon">📍</span>
+                        <div class="autocomplete-item__text">
+                            <div class="autocomplete-item__primary">${formatFn(item)}</div>
+                            <div class="autocomplete-item__secondary">${item.country || ''}</div>
+                        </div>
+                    </div>
+                `).join('');
+
+                dropdown.style.display = 'block';
+
+                dropdown.querySelectorAll('.autocomplete-item').forEach(el => {
+                    el.addEventListener('click', () => {
+                        input.value = el.getAttribute('data-val');
+                        dropdown.style.display = 'none';
+                    });
+                });
+            }, 250);
+
+            input.addEventListener('input', handleSearch);
+            document.addEventListener('click', (e) => {
+                if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
