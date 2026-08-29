@@ -40,16 +40,16 @@
   --table-hover-bg: rgba(13, 91, 94, 0.06);
 
   /* Neutrals & Surfaces */
-  --ink: #1F1A14;              /* Body text */
-  --text-main: #1F1A14;
-  --muted: #6B5E4E;            /* Secondary text */
-  --text-muted: #6B5E4E;
+  --ink: #111827;              /* Deep Slate Ink body text */
+  --text-main: #111827;
+  --muted: #4B5563;            /* High-contrast secondary text */
+  --text-muted: #4B5563;
   --bg: #FFFFFF;               /* Page background */
-  --bg-primary: #FBF7F0;       /* Presentation canvas background */
-  --bg-tint: #FBF7F0;          /* Warm parchment background */
-  --bg-card: #FFFFFF;          /* Card background */
-  --border: #E5DBC8;           /* Borders */
-  --border-light: #F0E8D8;     /* Light borders */
+  --bg-primary: #FAF8F5;       /* Warm Alabaster presentation canvas */
+  --bg-tint: #FAF8F5;          /* Warm Alabaster background */
+  --bg-card: #FFFFFF;          /* Pure White Card background */
+  --border: #E5E0D8;           /* Crisp 1px Borders */
+  --border-light: #EFEBE4;     /* Light borders */
 
   /* Typography */
   --font-heading: 'Fraunces', Georgia, serif;
@@ -126,18 +126,18 @@
   --table-hover-bg: rgba(255, 255, 255, 0.04);
 
   /* Neutrals & Surfaces */
-  --ink: #F5F0E5;
-  --text-main: #F5F0E5;
-  --muted: #A89C85;
-  --text-muted: #A89C85;
-  --bg: #0F1A1A;
+  --ink: #F9FAFB;
+  --text-main: #F9FAFB;
+  --muted: #9CA3AF;
+  --text-muted: #9CA3AF;
+  --bg: #0A1414;
   --bg-primary: #0A1414;
   --bg-tint: #0A1414;
-  --bg-card: #1A2A2A;
-  --border: #2A3A3A;
-  --border-light: #1E2E2E;
-  --shadow-lg: 0 12px 30px -5px rgba(0,0,0,0.3);
-  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --bg-card: #132222;
+  --border: #243838;
+  --border-light: #1A2E2E;
+  --shadow-lg: 0 12px 30px -5px rgba(0,0,0,0.5);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 /* ============================================================================

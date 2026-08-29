@@ -23,54 +23,56 @@
 </head>
   <body>
     <!-- ===== HEADER ===== -->
+    <!-- ===== TOP NOTIFICATION / STATUTORY BAR ===== -->
+    <div style="background: linear-gradient(90deg, #0A2E2C 0%, #0D5B5E 50%, #0A2E2C 100%); color: rgba(255,255,255,0.9); font-size: 0.76rem; padding: 0.35rem 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); font-weight: 500; letter-spacing: 0.02em;">
+      <span>✦ Non-Profit NGO Est. 2011 · Registered 12A, 80G &amp; CSR-1 Approved (Govt. of India)</span>
+      <a href="../get-involved/csr-partner/" style="color: #FBBF24; margin-left: 0.75rem; text-decoration: underline; font-weight: 700;">Partner with us &rarr;</a>
+    </div>
+
+    <!-- ===== SITE HEADER ===== -->
     <header class="header" id="header">
       <div class="container">
-        <a href="../" class="logo"
-          ><img
-            src="../assets/images/logo/logo-horizontal.webp"
-            alt="Meer Foundation"
-            height="40"
-        /></a>
-        <nav class="nav" style="margin-left: auto">
+        <a href="../index.html" class="logo" aria-label="Meer Foundation Home">
+          <img src="../assets/images/logo/logo-horizontal.webp" alt="Meer Foundation" height="38" style="height: 38px; width: auto;" />
+        </a>
+        <nav class="nav" style="margin-left: auto;">
           <div class="nav-item">
-            <a href="../about/" class="nav-link">About</a>
+            <a href="../about/" class="nav-link">About <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 3px;"></i></a>
             <div class="nav-dropdown">
-              <a href="../about/our-story/">Our Story & Founder</a>
+              <a href="../about/our-story/">Our Story &amp; Founder</a>
               <a href="../about/annual-reports/">Annual Reports</a>
               <a href="../about/five-pillars/">Five Pillars Model</a>
             </div>
           </div>
           <div class="nav-item">
-            <a href="../initiatives/" class="nav-link">Initiatives</a>
+            <a href="../initiatives/" class="nav-link">Initiatives <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 3px;"></i></a>
             <div class="nav-dropdown">
-              <a href="../initiatives/education/">Education</a>
-              <a href="../initiatives/health/">Health</a>
-              <a href="../initiatives/environment/">Environment</a>
-              <a href="../initiatives/livelihood/">Livelihood</a>
+              <a href="../initiatives/education/">Education (Prayaas)</a>
+              <a href="../initiatives/health/">Health (Yoga Kutumb)</a>
+              <a href="../initiatives/environment/">Environment (Bolti Nadi)</a>
+              <a href="../initiatives/livelihood/">Livelihood (Farmours)</a>
             </div>
           </div>
           <div class="nav-item">
-            <a href="../research/" class="nav-link">Research</a>
+            <a href="../research/" class="nav-link">Research <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 3px;"></i></a>
             <div class="nav-dropdown">
-              <a href="../research/rivers-chhattisgarh/"
-                >Rivers of Chhattisgarh</a
-              >
+              <a href="../research/rivers-chhattisgarh/">Rivers of Chhattisgarh</a>
               <a href="../research/ijmeer/">IJMEER Journal</a>
               <a href="../research/publications/">Publications</a>
               <a href="../research/csr-research/">CSR Research</a>
             </div>
           </div>
           <div class="nav-item">
-            <a href="../emerging/" class="nav-link">Emerging</a>
+            <a href="../emerging/" class="nav-link">Emerging <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 3px;"></i></a>
             <div class="nav-dropdown">
               <a href="../emerging/community-radio/">Community Radio</a>
               <a href="../emerging/media-gallery/">Media Gallery</a>
-              <a href="../emerging/news-press/">News & Press</a>
+              <a href="../emerging/news-press/">News &amp; Press</a>
               <a href="../emerging/field-notes/">Field Notes Blog</a>
             </div>
           </div>
           <div class="nav-item">
-            <a href="../impact/" class="nav-link">Impact</a>
+            <a href="../impact/" class="nav-link">Impact <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 3px;"></i></a>
             <div class="nav-dropdown">
               <a href="../impact/statistics/">Statistics</a>
               <a href="../impact/case-studies/">Case Studies</a>
@@ -80,7 +82,7 @@
             </div>
           </div>
           <div class="nav-item">
-            <a href="../get-involved/" class="nav-link">Get Involved</a>
+            <a href="../get-involved/" class="nav-link">Get Involved <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 3px;"></i></a>
             <div class="nav-dropdown">
               <a href="../get-involved/volunteer/">Volunteer</a>
               <a href="../get-involved/csr-partner/">CSR Partner</a>
@@ -89,22 +91,18 @@
             </div>
           </div>
           <a href="../contact/" class="nav-link">Contact</a>
-          <button
-            class="theme-toggle"
-            aria-label="Toggle theme"
-            style="margin-left: 0.5rem; margin-right: 1rem"
-          >
-            ☾
+          <button class="theme-toggle" aria-label="Toggle dark/light theme" style="margin: 0 0.5rem; width: 36px; height: 36px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border); display: inline-flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 0.9rem;">
+            <i class="fas fa-sun"></i>
           </button>
-          <a href="../get-involved/donate/" class="btn btn-accent btn-sm"
-            >Donate</a
-          >
+          <a href="../get-involved/donate/" class="btn btn-accent btn-sm" style="font-weight: 700;">
+            <i class="fas fa-heart" style="color: #c2542c;"></i> Donate
+          </a>
         </nav>
-        <button class="mobile-toggle">☰</button>
+        <button class="mobile-toggle" aria-label="Open navigation menu">☰</button>
       </div>
     </header>
 
-    <!-- ===== MOBILE MENU ===== -->
+    <!-- ===== MOBILE DRAWER MENU ===== -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="../about/" class="nav-link">About</a>
       <a href="../initiatives/" class="nav-link">Initiatives</a>
@@ -113,17 +111,13 @@
       <a href="../impact/" class="nav-link">Impact</a>
       <a href="../get-involved/" class="nav-link">Get Involved</a>
       <a href="../contact/" class="nav-link">Contact</a>
-      <div style="margin-top: 1rem; padding: 1rem; text-align: center">
-        <a
-          href="../get-involved/donate/"
-          class="btn btn-accent"
-          style="width: 100%; justify-content: center"
-          >Donate</a
-        >
+      <div style="margin-top: 1.5rem; padding: 0.5rem 1rem; text-align: center;">
+        <a href="../get-involved/donate/" class="btn btn-accent" style="width: 100%; justify-content: center; font-weight: 700;">
+          <i class="fas fa-heart"></i> Donate Now
+        </a>
       </div>
     </div>
 
-    <!-- ===== MAIN CONTENT ===== -->
     <main id="main-content" class="page-content">
       <section
         class="relative overflow-hidden bg-gradient-to-br from-primary via-[#0a4749] to-secondary text-white"
@@ -1341,53 +1335,63 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
+    <!-- ===== SITE FOOTER ===== -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
+      <div class="container" style="max-width: 1240px; margin: 0 auto;">
+        <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 3rem;">
+          
           <div>
-            <h4>About</h4>
-            <a href="../about/our-story/">Our Story & Founder</a>
-            <a href="../about/annual-reports/">Annual Reports</a>
-            <a href="../about/five-pillars/">Five Pillars Model</a>
+            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-main); margin-bottom: 1.25rem;">About</h4>
+            <a href="../about/our-story/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Our Story &amp; Founder</a>
+            <a href="../about/annual-reports/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Annual Reports</a>
+            <a href="../about/five-pillars/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Five Pillars Model</a>
           </div>
+
           <div>
-            <h4>Initiatives</h4>
-            <a href="../initiatives/bolti-nadi/">Bolti Nadi</a>
-            <a href="../initiatives/prayaas/">Prayaas</a>
-            <a href="../initiatives/farmours/">Farmours</a>
-            <a href="../initiatives/health/">Nirogaayam</a>
-            <a href="../initiatives/edusuto/">EduSuTo</a>
+            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-main); margin-bottom: 1.25rem;">Initiatives</h4>
+            <a href="../initiatives/environment/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Bolti Nadi (Environment)</a>
+            <a href="../initiatives/education/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Prayaas &amp; EduSuTo (Education)</a>
+            <a href="../initiatives/livelihood/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Farmours (Livelihood)</a>
+            <a href="../initiatives/health/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Yoga Kutumb (Health)</a>
           </div>
+
           <div>
-            <h4>Get Involved</h4>
-            <a href="../get-involved/volunteer/">Volunteer</a>
-            <a href="../get-involved/csr-partner/">CSR Partner</a>
-            <a href="../get-involved/internship/">Internship</a>
-            <a href="../get-involved/donate/">Donate</a>
-            <a href="../contact/">Contact</a>
+            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-main); margin-bottom: 1.25rem;">Get Involved</h4>
+            <a href="../get-involved/volunteer/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Volunteer</a>
+            <a href="../get-involved/csr-partner/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">CSR Partner</a>
+            <a href="../get-involved/internship/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Internship</a>
+            <a href="../get-involved/donate/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Donate</a>
+            <a href="../contact/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Contact Us</a>
           </div>
+
           <div>
-            <h4>Legal</h4>
-            <a href="../legal/privacy-policy/">Privacy Policy</a>
-            <a href="../legal/terms-of-use/">Terms of Use</a>
-            <a href="../legal/cookie-policy/">Cookie Policy</a>
-            <a href="../legal/accessibility/">Accessibility</a>
+            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-main); margin-bottom: 1.25rem;">Legal &amp; Governance</h4>
+            <a href="../legal/privacy-policy/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Privacy Policy</a>
+            <a href="../legal/terms-of-use/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Terms of Use</a>
+            <a href="../legal/cookie-policy/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Cookie Policy</a>
+            <a href="../legal/accessibility/" style="display: block; margin-bottom: 0.6rem; color: var(--text-muted);">Accessibility</a>
           </div>
+
         </div>
-        <div class="footer-bottom">
-          <p>
-            © 2011–2026 Meer Foundation · CC-BY 4.0 · Empowering Rural
-            Communities & Restoring Rivers
-          </p>
-          <p>
-            CSR-1: CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 ·
-            NGO Darpan: CG/2018/0191949
-          </p>
+
+        <!-- Statutory Badges & Copyright -->
+        <div style="border-top: 1px solid var(--border); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 1rem;">
+            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(13, 91, 94, 0.08); border: 1px solid rgba(13, 91, 94, 0.18); font-size: 0.74rem; font-weight: 600; color: var(--primary);">CSR-1: CSR00075824</span>
+            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(13, 91, 94, 0.08); border: 1px solid rgba(13, 91, 94, 0.18); font-size: 0.74rem; font-weight: 600; color: var(--primary);">12A: AAICM9348LE20214</span>
+            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(13, 91, 94, 0.08); border: 1px solid rgba(13, 91, 94, 0.18); font-size: 0.74rem; font-weight: 600; color: var(--primary);">80G: AAICM9348LF20217</span>
+            <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(13, 91, 94, 0.08); border: 1px solid rgba(13, 91, 94, 0.18); font-size: 0.74rem; font-weight: 600; color: var(--primary);">NGO Darpan: CG/2018/0191949</span>
+          </div>
+          <p>© 2011–2026 Meer Foundation · CC-BY 4.0 · Empowering Rural Communities &amp; Restoring Rivers</p>
         </div>
       </div>
-      <div style="text-align: center; padding: 1rem; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border);">CSR-1: CSR00075824 · 12A: AAICM9348LE20214 · 80G: AAICM9348LF20217 · NGO Darpan: CG/2018/0191949</div>
-</footer>
+    </footer>
 
+<!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/slider.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/popup.js"></script>
   </body>
 </html>
