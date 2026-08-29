@@ -1,50 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page Not Found — Meer Holidays Travels</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <script>
-        // Intelligent route redirect for clean extensionless URLs (e.g. /flights -> /flights.html)
-        (function() {
-            var path = window.location.pathname;
-            var segments = path.split('/').filter(Boolean);
-            var lastSegment = segments[segments.length - 1] || '';
-            
-            // Known pages map
-            var validPages = ['index', 'flights', 'hotels', 'trains', 'about', 'contact'];
-            
-            if (lastSegment && !lastSegment.includes('.')) {
-                if (validPages.includes(lastSegment.toLowerCase())) {
-                    var targetUrl = path.replace(new RegExp('/' + lastSegment + '/?$'), '/' + lastSegment + '.html') + window.location.search + window.location.hash;
-                    window.location.replace(targetUrl);
-                }
-            }
-        })();
-    </script>
-</head>
-<body style="display:flex; flex-direction:column; min-height:100vh; justify-content:center; align-items:center; text-align:center; padding:var(--space-6); background:var(--color-bg);">
-
-    <div style="font-size:80px; margin-bottom:var(--space-4); animation: bounce 2s infinite ease-in-out;">🧭</div>
-    <h1 style="font-size:var(--text-5xl); font-weight:var(--weight-bold); margin-bottom:var(--space-3); color:var(--color-text);">404 - Destination Not Found</h1>
-    <p style="font-size:var(--text-lg); color:var(--color-text-muted); max-width:540px; margin-bottom:var(--space-6); line-height:1.6;">
-        The page you are trying to reach might have moved or doesn't exist. Choose a destination below to get back on track with Meer Holidays Travels.
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Page Not Found · Meer Foundation</title>
+    <meta name="description" content="The requested page could not be found. Navigate back to Meer Foundation initiatives, research, and community programs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/premium.css" />
+  </head>
+  <body style="display:flex; flex-direction:column; min-height:100vh; justify-content:center; align-items:center; text-align:center; padding: 2rem; background: var(--color-bg, #0b0f19); color: var(--color-text, #e2e8f0);">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">🌿</div>
+    <h1 style="font-family: 'Fraunces', serif; font-size: 3rem; margin-bottom: 1rem; color: #fff;">404 — Page Not Found</h1>
+    <p style="font-size: 1.125rem; color: #94a3b8; max-width: 540px; margin-bottom: 2rem; line-height: 1.6;">
+      The page you are looking for might have been moved or does not exist. Explore our initiatives, research publications, and community programs below.
     </p>
-
-    <div class="flex flex-wrap gap-4 justify-center" style="margin-bottom:var(--space-8);">
-        <a href="index.html" class="btn btn--primary btn--lg">✈️ Home Page</a>
-        <a href="flights.html" class="btn btn--outline btn--lg">Flight Search</a>
-        <a href="hotels.html" class="btn btn--outline btn--lg">Hotel Reservations</a>
-        <a href="trains.html" class="btn btn--outline btn--lg">European Trains</a>
-        <a href="about.html" class="btn btn--ghost btn--lg">About Us</a>
-        <a href="contact.html" class="btn btn--ghost btn--lg">Contact Support</a>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
+      <a href="/" style="padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; background: #059669; color: #fff; font-weight: 600;">Return Home</a>
+      <a href="/initiatives/" style="padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; border: 1px solid #334155; color: #fff;">Initiatives</a>
+      <a href="/research/" style="padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; border: 1px solid #334155; color: #fff;">Research & IJMEER</a>
+      <a href="/impact/" style="padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; border: 1px solid #334155; color: #fff;">Our Impact</a>
+      <a href="/get-involved/donate/" style="padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; background: #2563eb; color: #fff; font-weight: 600;">Donate</a>
     </div>
-
-    <div style="font-size:var(--text-xs); color:var(--color-text-muted);">
-        © 2026 Meer Holidays Travels • Live Travel Search Engine
+    <div style="font-size: 0.875rem; color: #64748b;">
+      © Meer Foundation · Empowering Rural Communities & Restoring Rivers
     </div>
-
-</body>
+  </body>
 </html>
