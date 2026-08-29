@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-Format: [Keep a Changelog](https://keepachangelog.com/)
+## [2026-08-29] — Removal of All Quiz & Certificate Elements
+
+### Removed
+- Removed interactive "Test Your Knowledge" / quiz sections, question cards, and certificate blocks from `impact/statistics/index.html`, `impact/index.html`, and `initiatives/bolti-nadi/index.html`.
+- Removed quiz navigation buttons and renumbered subsequent section eyebrow badges cleanly.
+- Deleted `assets/js/quiz-certificate.js` and removed dynamic quiz script injection from `assets/js/components.js` and `assets/js/components-sub.js`.
+
+---
 
 ## [2026-08-16] — Formal Corporate UI/UX Transformation & Site-Wide Harmonization
 
