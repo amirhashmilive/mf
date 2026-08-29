@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-08-29] — Modern UI/UX Theme Redesign for Homepage
+
+### Added & Redesigned
+- Redesigned `index.html` with a modern, high-impact NGO UI/UX theme.
+- Implemented ambient mesh gradient hero with pill badge, editorial Fraunces headline, high-contrast action CTAs, and 4 interactive floating metric counter cards.
+- Built interactive 5 Pillars of Rural Transformation cards with practice badges and animated hover states.
+- Enhanced Bolti Nadi River Spotlight with before/after interactive revival slider and hydrological stats.
+- Upgraded the AEIOM governance architecture, IJMEER journal showcase, and Get Involved action matrix.
+- Extended `assets/css/style.css` with modern theme utility classes and responsive styling.
+
+---
+
 ## [2026-08-29] — Removal of All Quiz & Certificate Elements
 
 ### Removed
