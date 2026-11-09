@@ -7,7 +7,7 @@
     'use strict';
 
     function initTheme() {
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
         let toggleBtn = document.querySelector('.theme-toggle');

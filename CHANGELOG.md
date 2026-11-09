@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-11-10] — Modern UI/UX Transformation: Bright White Theme, High Contrast Typography & Interactive Features
+
+### Added & Redesigned
+- **Bright White & High-Contrast Design System**:
+  - Replaced the dark/muddy default theme with a crisp, bright white design system (`--bg: #FFFFFF;`, `--bg-surface: #F8FAFC;`, `--ink: #0F172A;`).
+  - Switched default fallback in `assets/js/theme.js` and `assets/js/main.js` from `'dark'` to `'light'`.
+  - Upgraded `:root` design tokens with vibrant Forest Emerald (`#059669`), River Sky Blue (`#0284C7`), Amber (`#D97706`), and Coral accents while maintaining a clean, high-contrast dark mode toggle.
+- **Interactive Donation Impact Calculator**:
+  - Added an interactive giving calculator to `index.html` with real-time impact generation across preset amounts (₹500, ₹1000, ₹2500, ₹5000, ₹10000) and custom inputs.
+  - Dynamically calculates verifiable ground outcomes: native riverbank saplings, digital CGBSE study kits for tribal children, portable water testing kits, maternal wellness camps, and micro-watershed mapping units.
+- **Interactive Initiatives Tabbed Explorer**:
+  - Implemented tabbed deep-dive panels on `index.html` covering Bolti Nadi, Prayaas & EduSuTo, Yoga Kutumb, Farmours, and Radio Meer & Media with key metrics and direct links.
+- **Hero & Card Modernization**:
+  - Upgraded homepage hero with subtle dot matrix canvas (`radial-gradient(#CBD5E1 1px, transparent 1px)`), elevated white metric cards, and responsive button layouts.
+  - Upgraded `.pillar-card-modern`, `.action-card-modern`, and `.spotlight-box` with crisp 1px borders, smooth hover elevations, and modern typography.
+- **Purged Obsolete Non-NGO Junk & Legacy Artifacts**:
+  - Removed outdated travel concierge folders (`flights/`, `hotels/`, `trains/`).
+  - Removed temporary extraction folders (`temp_bolti_unzipped/`, `temp_docs_unzipped/`, `temp_docx/`).
+  - Replaced legacy `contact.html` with a 0-second meta-redirect to `/contact/`.
+- **Content Compatibility Clean-Up**:
+  - Removed all muddy parchment tones (`#f5f0e5`, `rgba(245,240,229,...)`, `rgba(229,219,200,...)`) and dark murky gradients (`via-[#0a4749]`) from `assets/css/content-compat.css`.
+  - Standardized the top statutory notification bar with modern slate styling across all 49 HTML pages.
+  - Kept all menus and sub-menus completely intact.
+
+---
+
 ## [2026-11-10] — Contact Audit & Privacy Hardening: Removal of Mobile Number (+91 98261 21177) & Direct Addresses
 
 ### Removed & Updated

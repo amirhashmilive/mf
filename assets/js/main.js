@@ -11,7 +11,7 @@
     const html = document.documentElement;
     const savedTheme = localStorage.getItem('theme') || localStorage.getItem('mf_theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const currentTheme = savedTheme || 'light';
     html.setAttribute('data-theme', currentTheme);
 
     const toggles = document.querySelectorAll('.theme-toggle');
@@ -250,6 +250,98 @@
           card.classList.add('hover-magnify-lg');
         }
       }, 150);
+    });
+  })();
+
+  // ===== 10. INTERACTIVE DONATION IMPACT CALCULATOR =====
+  (function initDonationCalculator() {
+    const card = document.querySelector('.donation-calc-card');
+    if (!card) return;
+
+    const presetBtns = card.querySelectorAll('.preset-btn');
+    const customInput = card.querySelector('.calc-custom-input');
+    const impactText = card.querySelector('.calc-impact-text');
+    const impactIcon = card.querySelector('.calc-impact-icon');
+    const donateLink = card.querySelector('.calc-donate-btn');
+
+    function calculateImpact(amount) {
+      amount = Math.max(100, parseInt(amount, 10) || 500);
+
+      let message = '';
+      let icon = 'fas fa-seedling';
+
+      if (amount < 1000) {
+        const trees = Math.max(1, Math.floor(amount / 100));
+        message = `Your donation of ₹${amount.toLocaleString('en-IN')} plants and nourishes <strong>${trees} native saplings</strong> along living riverbanks with local community stewards.`;
+        icon = 'fas fa-seedling';
+      } else if (amount < 2500) {
+        const students = Math.max(1, Math.floor(amount / 500));
+        message = `Your donation of ₹${amount.toLocaleString('en-IN')} provides comprehensive digital learning kits & textbooks for <strong>${students} tribal students</strong> under Prayaas.`;
+        icon = 'fas fa-book-reader';
+      } else if (amount < 5000) {
+        const kits = Math.max(1, Math.floor(amount / 2500));
+        message = `Your donation of ₹${amount.toLocaleString('en-IN')} deploys <strong>${kits} portable water testing laboratory kits</strong> and trains village river monitors.`;
+        icon = 'fas fa-tint';
+      } else if (amount < 10000) {
+        const women = Math.max(1, Math.floor(amount / 250));
+        message = `Your donation of ₹${amount.toLocaleString('en-IN')} sponsors a complete preventive wellness, maternal nutrition & yoga camp for <strong>${women} rural mothers</strong>.`;
+        icon = 'fas fa-heartbeat';
+      } else {
+        message = `Your visionary contribution of ₹${amount.toLocaleString('en-IN')} funds <strong>comprehensive micro-watershed mapping & groundwater recharge structures</strong> for an entire village sector.`;
+        icon = 'fas fa-hand-holding-water';
+      }
+
+      if (impactText) impactText.innerHTML = message;
+      if (impactIcon) impactIcon.innerHTML = `<i class="${icon}"></i>`;
+      if (donateLink) donateLink.href = `get-involved/donate/?amount=${amount}`;
+    }
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const val = btn.dataset.amount;
+        if (customInput) customInput.value = val;
+        calculateImpact(val);
+      });
+    });
+
+    if (customInput) {
+      customInput.addEventListener('input', (e) => {
+        const val = e.target.value.replace(/\D/g, '');
+        presetBtns.forEach(b => {
+          if (b.dataset.amount === val) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+        calculateImpact(val);
+      });
+    }
+
+    // Initialize with default ₹1,000
+    calculateImpact(1000);
+  })();
+
+  // ===== 11. INTERACTIVE INITIATIVES TABBED SWITCHER =====
+  (function initInitiativesTabs() {
+    const tabs = document.querySelectorAll('.tab-nav-btn');
+    const panes = document.querySelectorAll('.tab-pane');
+    if (!tabs.length || !panes.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const activePane = document.getElementById(`tab-${target}`);
+        if (activePane) {
+          activePane.classList.add('active');
+        }
+      });
     });
   })();
 

@@ -35,7 +35,7 @@
 .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops, var(--primary), var(--secondary))); }
 .bg-gradient-to-t { background-image: linear-gradient(to top, var(--tw-gradient-stops, transparent, var(--bg))); }
 .from-primary { --tw-gradient-from: var(--primary); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
-.via-\[\#0a4749\] { --tw-gradient-via: #0a4749; }
+.via-\[\#0a4749\] { --tw-gradient-via: #047857; }
 .to-secondary { --tw-gradient-to: var(--secondary); }
 .to-accent\/5 { --tw-gradient-to: color-mix(in srgb, var(--accent) 5%, transparent); }
 .from-primary\/10 { --tw-gradient-from: color-mix(in srgb, var(--primary) 10%, transparent); }
@@ -65,15 +65,15 @@
 .bg-warn\/15 { background-color: rgba(178,106,0,0.15); }
 .bg-warning\/5 { background-color: rgba(178,106,0,0.05); }
 .bg-warning\/15 { background-color: rgba(178,106,0,0.15); }
-.bg-muted\/20 { background-color: rgba(245,240,229,0.2); }
-.bg-muted\/30 { background-color: rgba(245,240,229,0.3); }
-.bg-muted\/40 { background-color: rgba(245,240,229,0.4); }
-.bg-muted\/50 { background-color: rgba(245,240,229,0.5); }
-.bg-muted-foreground\/30 { background-color: rgba(107,94,78,0.3); }
-.bg-muted-foreground\/40 { background-color: rgba(107,94,78,0.4); }
+.bg-muted\/20 { background-color: rgba(241,245,249,0.5); }
+.bg-muted\/30 { background-color: rgba(241,245,249,0.8); }
+.bg-muted\/40 { background-color: #f1f5f9; }
+.bg-muted\/50 { background-color: #e2e8f0; }
+.bg-muted-foreground\/30 { background-color: rgba(71,85,105,0.15); }
+.bg-muted-foreground\/40 { background-color: rgba(71,85,105,0.25); }
 .bg-card\/60 { background-color: rgba(255,255,255,0.6); }
 .bg-card\/70 { background-color: rgba(255,255,255,0.7); }
-.bg-card\/80 { background-color: rgba(255,255,255,0.8); }
+.bg-card\/80 { background-color: rgba(255,255,255,0.85); }
 .bg-card\/10 { background-color: rgba(255,255,255,0.1); }
 .bg-card\/40 { background-color: rgba(255,255,255,0.4); }
 .bg-background\/40 { background-color: rgba(255,255,255,0.4); }
@@ -85,7 +85,7 @@
 .bg-white\/85 { background-color: rgba(255,255,255,0.85); }
 .bg-black\/50 { background-color: rgba(0,0,0,0.5); }
 .bg-black\/60 { background-color: rgba(0,0,0,0.6); }
-.bg-surface-alt\/30 { background-color: rgba(245,240,229,0.3); }
+.bg-surface-alt\/30 { background-color: rgba(248,250,252,0.6); }
 
 .text-white\/70 { color: rgba(255,255,255,0.7); }
 .text-white\/80 { color: rgba(255,255,255,0.8); }
@@ -94,10 +94,10 @@
 .text-foreground\/70 { color: color-mix(in srgb, var(--ink) 70%, transparent); }
 .text-foreground\/80 { color: color-mix(in srgb, var(--ink) 80%, transparent); }
 .text-foreground\/90 { color: color-mix(in srgb, var(--ink) 90%, transparent); }
-.text-muted-foreground\/80 { color: rgba(107,94,78,0.8); }
+.text-muted-foreground\/80 { color: #64748b; }
 
-.border-border\/60 { border-color: rgba(229,219,200,0.6); }
-.border-border\/40 { border-color: rgba(229,219,200,0.4); }
+.border-border\/60 { border-color: rgba(226,232,240,0.8); }
+.border-border\/40 { border-color: rgba(226,232,240,0.5); }
 .border-primary\/20 { border-color: color-mix(in srgb, var(--primary) 20%, transparent); }
 .border-primary\/30 { border-color: color-mix(in srgb, var(--primary) 30%, transparent); }
 .border-primary\/40 { border-color: color-mix(in srgb, var(--primary) 40%, transparent); }
@@ -206,7 +206,7 @@
 
 /* ===== HOVER STATES ===== */
 .hover\:bg-accent\/10:hover { background-color: color-mix(in srgb, var(--accent) 10%, transparent); }
-.hover\:bg-muted:hover { background-color: #f5f0e5; }
+.hover\:bg-muted:hover { background-color: #f1f5f9; }
 .hover\:bg-primary\/10:hover { background-color: color-mix(in srgb, var(--primary) 10%, transparent); }
 .hover\:bg-primary\/90:hover { background-color: color-mix(in srgb, var(--primary) 90%, transparent); }
 .hover\:bg-secondary\/90:hover { background-color: color-mix(in srgb, var(--secondary) 90%, transparent); }
@@ -255,7 +255,7 @@
 .bg-background { background-color: var(--bg); }
 .bg-card { background-color: var(--bg-card); }
 .bg-danger { background-color: #dc2626; }
-.bg-muted { background-color: #f5f0e5; }
+.bg-muted { background-color: #f8fafc; }
 .bg-primary { background-color: var(--primary); }
 .bg-secondary { background-color: var(--secondary); }
 .bg-success { background-color: var(--success); }

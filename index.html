@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,15 +24,15 @@
     
     <!-- Design System Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/premium.css" />
+    <link rel="stylesheet" href="assets/css/content-compat.css" />
     <link rel="icon" href="assets/images/logo/logo-horizontal.webp" />
   </head>
   <body>
 
     <!-- ===== TOP NOTIFICATION / STATUTORY BAR ===== -->
-    <div style="background: linear-gradient(90deg, #0A2E2C 0%, #0D5B5E 50%, #0A2E2C 100%); color: rgba(255,255,255,0.9); font-size: 0.76rem; padding: 0.35rem 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); font-weight: 500; letter-spacing: 0.02em;">
+    <div style="background: #0F172A; color: #F8FAFC; font-size: 0.78rem; padding: 0.45rem 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 500; letter-spacing: 0.02em;">
       <span>✦ Non-Profit NGO Est. 2011 · Registered 12A, 80G &amp; CSR-1 Approved (Govt. of India)</span>
-      <a href="get-involved/csr-partner/" style="color: #FBBF24; margin-left: 0.75rem; text-decoration: underline; font-weight: 700;">Partner with us &rarr;</a>
+      <a href="get-involved/csr-partner/" style="color: #38BDF8; margin-left: 0.75rem; text-decoration: underline; font-weight: 700;">Partner with us &rarr;</a>
     </div>
 
     <!-- ===== SITE HEADER ===== -->
@@ -296,6 +296,197 @@
             </div>
 
           </div>
+
+          <!-- Interactive Deep-Dive Tabs Switcher -->
+          <div style="margin-top: 4.5rem;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+              <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary);">Interactive Explorer</span>
+              <h3 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-top: 0.35rem;">
+                Explore Initiatives in Action
+              </h3>
+            </div>
+
+            <!-- Tab Switcher Navigation -->
+            <div class="tabs-switcher-nav" role="tablist">
+              <button class="tab-nav-btn active" data-tab="river" role="tab" aria-selected="true">
+                <i class="fas fa-water"></i> Bolti Nadi
+              </button>
+              <button class="tab-nav-btn" data-tab="edu" role="tab" aria-selected="false">
+                <i class="fas fa-graduation-cap"></i> Prayaas &amp; EduSuTo
+              </button>
+              <button class="tab-nav-btn" data-tab="health" role="tab" aria-selected="false">
+                <i class="fas fa-heartbeat"></i> Yoga Kutumb
+              </button>
+              <button class="tab-nav-btn" data-tab="farm" role="tab" aria-selected="false">
+                <i class="fas fa-seedling"></i> Farmours
+              </button>
+              <button class="tab-nav-btn" data-tab="media" role="tab" aria-selected="false">
+                <i class="fas fa-broadcast-tower"></i> Radio Meer &amp; Media
+              </button>
+            </div>
+
+            <!-- Tab Panes -->
+            <div class="tab-pane active" id="tab-river" role="tabpanel">
+              <div class="tab-hero-card">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: #059669; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    Flagship Ecological Restoration
+                  </div>
+                  <h4 style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                    Bolti Nadi: Living River Conservation
+                  </h4>
+                  <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Transforming degraded, seasonal riverbeds into vibrant perennial lifelines through community stewardship, hydro-geological mapping of 47+ rivers, and micro-check dams across the Mahanadi River basin.
+                  </p>
+                  <ul style="list-style: none; padding: 0; margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-main);">
+                    <li><i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> <strong>47+ Rivers &amp; Tributaries</strong> systematically surveyed and mapped</li>
+                    <li><i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> <strong>12,000+ River Stewards</strong> mobilised across rural hamlets</li>
+                    <li><i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> <strong>350+ Waterbodies</strong> revived with local biodiversity zones</li>
+                  </ul>
+                  <a href="initiatives/environment/" class="btn btn-accent" style="border-radius: 9999px; font-weight: 700; padding: 0.75rem 1.6rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Discover Bolti Nadi <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 20px; padding: 2rem; text-align: center;">
+                  <div style="font-size: 3rem; color: #059669; margin-bottom: 0.75rem;"><i class="fas fa-water"></i></div>
+                  <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #065F46;">47+ Rivers</div>
+                  <div style="font-size: 0.85rem; color: #047857; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Mapped Across Chhattisgarh</div>
+                  <p style="font-size: 0.88rem; color: #047857; margin-top: 1rem; line-height: 1.6;">
+                    Combining scientific GIS catchment data with indigenous tribal knowledge to preserve living freshwater ecosystems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-edu" role="tabpanel">
+              <div class="tab-hero-card">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: #0284C7; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    Digital Rural Literacy
+                  </div>
+                  <h4 style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                    Prayaas &amp; EduSuTo Virtual School
+                  </h4>
+                  <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Delivering zero-cost, high-quality digital schooling aligned with the CGBSE curriculum. Reaching first-generation tribal students in remote forest settlements without electricity barriers.
+                  </p>
+                  <ul style="list-style: none; padding: 0; margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-main);">
+                    <li><i class="fas fa-check-circle" style="color: #0284C7; margin-right: 0.5rem;"></i> <strong>Classes 1 to 12</strong> complete digital bilingual syllabus</li>
+                    <li><i class="fas fa-check-circle" style="color: #0284C7; margin-right: 0.5rem;"></i> <strong>Village Learning Hubs</strong> equipped with solar-powered tablets</li>
+                    <li><i class="fas fa-check-circle" style="color: #0284C7; margin-right: 0.5rem;"></i> <strong>15,000+ Tribal Children</strong> enrolled in free academic mentoring</li>
+                  </ul>
+                  <a href="initiatives/education/" class="btn btn-secondary" style="border-radius: 9999px; font-weight: 700; padding: 0.75rem 1.6rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Explore Prayaas Education <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div style="background: #F0F9FF; border: 1px solid #BAE6FD; border-radius: 20px; padding: 2rem; text-align: center;">
+                  <div style="font-size: 3rem; color: #0284C7; margin-bottom: 0.75rem;"><i class="fas fa-graduation-cap"></i></div>
+                  <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #075985;">15,000+</div>
+                  <div style="font-size: 0.85rem; color: #0369A1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Students Empowered</div>
+                  <p style="font-size: 0.88rem; color: #0369A1; margin-top: 1rem; line-height: 1.6;">
+                    Breaking generational poverty cycles through accessible digital foundational learning and STEM mentoring.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-health" role="tabpanel">
+              <div class="tab-hero-card">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: #D97706; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    Preventive Healthcare &amp; Wellness
+                  </div>
+                  <h4 style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                    Yoga Kutumb: Community Wellness
+                  </h4>
+                  <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Promoting grassroots preventive health, maternal and child nutrition, traditional naturopathy, and daily community yoga circles to reduce out-of-pocket health expenditure in rural villages.
+                  </p>
+                  <ul style="list-style: none; padding: 0; margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-main);">
+                    <li><i class="fas fa-check-circle" style="color: #D97706; margin-right: 0.5rem;"></i> <strong>Daily Yoga Circles</strong> across 80+ rural village community centers</li>
+                    <li><i class="fas fa-check-circle" style="color: #D97706; margin-right: 0.5rem;"></i> <strong>Maternal Nutrition Counselling</strong> for expectant mothers</li>
+                    <li><i class="fas fa-check-circle" style="color: #D97706; margin-right: 0.5rem;"></i> <strong>Zero Out-of-Pocket Cost</strong> preventive wellness health camps</li>
+                  </ul>
+                  <a href="initiatives/health/" class="btn btn-secondary" style="border-radius: 9999px; font-weight: 700; padding: 0.75rem 1.6rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Learn About Yoga Kutumb <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 20px; padding: 2rem; text-align: center;">
+                  <div style="font-size: 3rem; color: #D97706; margin-bottom: 0.75rem;"><i class="fas fa-heartbeat"></i></div>
+                  <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #92400E;">25,000+</div>
+                  <div style="font-size: 0.85rem; color: #B45309; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Families Supported</div>
+                  <p style="font-size: 0.88rem; color: #B45309; margin-top: 1rem; line-height: 1.6;">
+                    Empowering rural families with daily physical vitality, stress resilience, and positive nutrition habits.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-farm" role="tabpanel">
+              <div class="tab-hero-card">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: #EA580C; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    Regenerative Livelihoods
+                  </div>
+                  <h4 style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                    Farmours: Sustainable Agriculture
+                  </h4>
+                  <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Championing zero-budget natural farming, organic heirloom seed preservation, vermicomposting, and farmer producer collectives led predominantly by rural women farmers.
+                  </p>
+                  <ul style="list-style: none; padding: 0; margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-main);">
+                    <li><i class="fas fa-check-circle" style="color: #EA580C; margin-right: 0.5rem;"></i> <strong>Heirloom Seed Banks</strong> protecting indigenous crop resilience</li>
+                    <li><i class="fas fa-check-circle" style="color: #EA580C; margin-right: 0.5rem;"></i> <strong>Women Farmer Collectives</strong> with direct farm-to-market links</li>
+                    <li><i class="fas fa-check-circle" style="color: #EA580C; margin-right: 0.5rem;"></i> <strong>30%–40% Input Cost Reduction</strong> via bio-fertilizers</li>
+                  </ul>
+                  <a href="initiatives/livelihood/" class="btn btn-secondary" style="border-radius: 9999px; font-weight: 700; padding: 0.75rem 1.6rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Explore Farmours <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div style="background: #FFF7ED; border: 1px solid #FFEDD5; border-radius: 20px; padding: 2rem; text-align: center;">
+                  <div style="font-size: 3rem; color: #EA580C; margin-bottom: 0.75rem;"><i class="fas fa-seedling"></i></div>
+                  <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #9A3412;">4,200+</div>
+                  <div style="font-size: 0.85rem; color: #C2410C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Farmers Trained</div>
+                  <p style="font-size: 0.88rem; color: #C2410C; margin-top: 1rem; line-height: 1.6;">
+                    Restoring soil ecology and establishing sovereign, drought-resilient food security in tribal belts.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab-media" role="tabpanel">
+              <div class="tab-hero-card">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: #0284C7; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    Grassroots Storytelling &amp; Heritage
+                  </div>
+                  <h4 style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                    Radio Meer &amp; Social Heritage Walks
+                  </h4>
+                  <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Amplifying rural voices through hyper-local community broadcasting, cultural archiving, youth citizen journalism, and experiential heritage walks celebrating Chhattisgarh's indigenous wisdom.
+                  </p>
+                  <ul style="list-style: none; padding: 0; margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-main);">
+                    <li><i class="fas fa-check-circle" style="color: #0284C7; margin-right: 0.5rem;"></i> <strong>Community Podcasts &amp; Radio</strong> in Chhattisgarhi &amp; Hindi</li>
+                    <li><i class="fas fa-check-circle" style="color: #0284C7; margin-right: 0.5rem;"></i> <strong>Heritage Walks</strong> documenting local riparian folklore</li>
+                    <li><i class="fas fa-check-circle" style="color: #0284C7; margin-right: 0.5rem;"></i> <strong>Guriya Magazine</strong> publication for rural school children</li>
+                  </ul>
+                  <a href="emerging/" class="btn btn-secondary" style="border-radius: 9999px; font-weight: 700; padding: 0.75rem 1.6rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Explore Emerging Media <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div style="background: #F0F9FF; border: 1px solid #BAE6FD; border-radius: 20px; padding: 2rem; text-align: center;">
+                  <div style="font-size: 3rem; color: #0284C7; margin-bottom: 0.75rem;"><i class="fas fa-broadcast-tower"></i></div>
+                  <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #075985;">100+</div>
+                  <div style="font-size: 0.85rem; color: #0369A1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Broadcast Episodes</div>
+                  <p style="font-size: 0.88rem; color: #0369A1; margin-top: 1rem; line-height: 1.6;">
+                    Giving voice to rural storytellers, environmental protectors, and folk artisans.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -486,6 +677,84 @@
             </div>
 
           </div>
+        </div>
+      </section>
+
+      <!-- ===== 5B. INTERACTIVE DONATION IMPACT CALCULATOR ===== -->
+      <section style="padding: 5.5rem 1.25rem; background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+        <div class="container" style="max-width: 1240px; margin: 0 auto;">
+          
+          <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem;">
+            <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); margin-bottom: 0.5rem;">
+              Transparent Community Giving
+            </div>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.85rem, 3.8vw, 2.75rem); font-weight: 800; color: var(--text-main); margin-bottom: 1rem; line-height: 1.2;">
+              Calculate Your Real-World Impact
+            </h2>
+            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.7;">
+              Every rupee is audited and directly invested into grassroots Chhattisgarh programs. Select an amount or enter your custom gift below to see the measurable outcome on the ground.
+            </p>
+          </div>
+
+          <div class="donation-calc-card">
+            
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; text-align: center;">
+              Choose a contribution level:
+            </div>
+
+            <!-- Preset Buttons -->
+            <div class="calc-preset-grid">
+              <button type="button" class="preset-btn" data-amount="500">
+                ₹500
+                <small>Saplings</small>
+              </button>
+              <button type="button" class="preset-btn active" data-amount="1000">
+                ₹1,000
+                <small>Study Kits</small>
+              </button>
+              <button type="button" class="preset-btn" data-amount="2500">
+                ₹2,500
+                <small>Water Testing</small>
+              </button>
+              <button type="button" class="preset-btn" data-amount="5000">
+                ₹5,000
+                <small>Health Camp</small>
+              </button>
+              <button type="button" class="preset-btn" data-amount="10000">
+                ₹10,000
+                <small>Watershed Unit</small>
+              </button>
+            </div>
+
+            <!-- Real-time Impact Display Box -->
+            <div class="calc-impact-box">
+              <div class="calc-impact-icon">
+                <i class="fas fa-book-reader"></i>
+              </div>
+              <div class="calc-impact-text">
+                Your donation of ₹1,000 provides comprehensive digital learning kits &amp; textbooks for <strong>2 tribal students</strong> under Prayaas.
+              </div>
+            </div>
+
+            <!-- Custom Amount Input & Donate CTA -->
+            <div class="calc-custom-row">
+              <div class="calc-custom-input-wrap">
+                <span>₹</span>
+                <input type="text" class="calc-custom-input" placeholder="Or enter custom amount..." value="1000" aria-label="Custom donation amount" />
+              </div>
+              <a href="get-involved/donate/?amount=1000" class="btn btn-accent calc-donate-btn" style="border-radius: 14px; font-weight: 700; padding: 0.95rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;">
+                <i class="fas fa-heart"></i> Proceed to Donate
+              </a>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem; color: var(--text-muted); padding-top: 1.25rem; border-top: 1px solid var(--border);">
+              <span><i class="fas fa-shield-alt" style="color: #059669;"></i> 100% Tax Exemption under Section 80G</span>
+              <span><i class="fas fa-check-circle" style="color: #0284C7;"></i> Verified AEIOM Ground Reporting</span>
+              <span><i class="fas fa-lock" style="color: #D97706;"></i> Secure Razorpay Gateway</span>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
