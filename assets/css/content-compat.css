@@ -5,8 +5,8 @@
    ============================================================================ */
 
 /* ===== CUSTOM Z AI SEMANTIC CLASSES ===== */
-.meer-eyebrow { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.5rem; }
-.meer-gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.meer-eyebrow { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #059669; margin-bottom: 0.5rem; display: inline-block; }
+.meer-gradient-text { background: linear-gradient(135deg, #059669 0%, #0284C7 60%, #7C3AED 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .meer-glass-strong { background: rgba(var(--bg-card), 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .meer-aurora { position: absolute; inset: 0; overflow: hidden; }
 .meer-aurora::before, .meer-aurora::after {
