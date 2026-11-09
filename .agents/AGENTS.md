@@ -123,8 +123,8 @@ TYPE: FEATURE | FIX | SEO | CONTENT | DESIGN | REFACTOR | BACKUP
 
 ## Key Contacts
 
-- **Email**: ijmeerj@gmail.com / editor@ijmeer.com
-- **WhatsApp**: +91 98261 21177
+- **Email**: ijmeerj@gmail.com / editor@ijmeer.com / meercare@live.com
+- **WhatsApp Community**: https://chat.whatsapp.com/EpVXdvvrbKc9HlyXKDfftB
 - **Twitter**: @meerfoundations
 
 ---

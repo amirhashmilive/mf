@@ -101,9 +101,9 @@ foreach ($file in $files) {
                 </div>
                 <div class="footer-col" style="padding-left: 20px;">
                     <h4>Contact Details</h4>
-                    <p>House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773</p>
+                    <p>Chhattisgarh, India (Reg. No. 3588)</p>
                     <p>meercare@live.com</p>
-                    <p>+91 98261 21177</p>
+                    <p>info@meerfoundation.co.in</p>
                 </div>
             </div>
             <div class="footer-bottom">

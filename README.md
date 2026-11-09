@@ -135,7 +135,8 @@ ijmeer/
 
 - Email: ijmeerj@gmail.com
 - Editor: editor@ijmeer.com
-- WhatsApp: +91 98261 21177
+- Inquiries: meercare@live.com
+- WhatsApp Community: https://chat.whatsapp.com/EpVXdvvrbKc9HlyXKDfftB
 
 ### Publisher
 

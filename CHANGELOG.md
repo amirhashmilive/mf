@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-11-10] — Contact Audit & Privacy Hardening: Removal of Mobile Number (+91 98261 21177) & Direct Addresses
+
+### Removed & Updated
+- **Mobile Number Stripped**: Removed `+91 98261 21177` and `tel:+919826121177` from all website pages (`contact/`, `about/`, `emerging/news-press/`, `initiatives/edusuto/`, `legal/privacy-policy/`, `legal/refund-policy/`, `data/config.json`, `.agents/AGENTS.md`, `README.md`). Replaced with digital communication channels (`meercare@live.com`, online response desk, and contact form).
+- **Direct Physical Address Removed**: Removed `House No 103, Housing Board Colony, Hatkeshar, Dhamtari, Chhattisgarh 493773` and `Sr. MIG 103...` from all pages and components. Replaced with `Registered Location: Chhattisgarh, India (Reg. No. 3588)`.
+- **Dhamtari Direct Relations Updated**: Updated references in `contact/index.html`, `legal/terms-of-use/index.html` (court jurisdiction to competent courts in Chhattisgarh), `legal/cookie-policy/index.html`, `legal/privacy-policy/index.html`, `about/our-story/index.html`, `emerging/community-radio/index.html`, `emerging/guriya-magazine/index.html`, `get-involved/volunteer/index.html`, and `impact/district-profiles/index.html` to focus on broad regional operations across Chhattisgarh rather than a single residential address or headquarters tag.
+- **Components & Schema Cleaned**: Updated `assets/js/components.js` and `assets/js/components-sub.js` footer addresses and JSON-LD `PostalAddress` structured data to state-level locality without direct street coordinates.
+- **Maintenance Scripts Hardened**: Cleaned legacy build scripts (`unify_pages.ps1`, `deep_clean.ps1`, `emergency_rebuild.ps1`, `final_site_repair.ps1`, `full_repair.ps1`, `merge_rivers_final_fix.ps1`) to prevent re-introduction.
+
+---
+
 ## [2026-08-29] — Complete Site-Wide UI/UX Modernization & Theme Harmonization (All 52 Pages)
 
 ### Added & Harmonized

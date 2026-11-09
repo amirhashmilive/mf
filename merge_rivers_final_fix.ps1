@@ -119,7 +119,7 @@ $header = @"
                     <h4>Contact</h4>
                     <p>Dhamtari, Chhattisgarh 493773</p>
                     <p>meercare@live.com</p>
-                    <p>+91 98261 21177</p>
+                    <p>info@meerfoundation.co.in</p>
                 </div>
             </div>
             <div class="footer-bottom">

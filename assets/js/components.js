@@ -153,10 +153,10 @@
         <p class="footer-desc">Meer Foundation Est. 2011. Working at the intersection of ecology, education, and community.</p>
         <div style="margin-top:20px;">
           <div style="font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">
-            Registered Address
+            Registered Location
           </div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.7;">
-            Sr. MIG 103, Housing Board Colony, Hatkeshar, Dhamtari – 493773, Chhattisgarh, India
+            Chhattisgarh, India (Reg. No. 3588)
           </div>
         </div>
       </div>
@@ -243,10 +243,7 @@
   "description": "A non-profit organization dedicated to sustainable community development, river conservation, and rural empowerment across Chhattisgarh.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Sr. MIG 103, Housing Board Colony, Hatkeshar",
-    "addressLocality": "Dhamtari",
     "addressRegion": "Chhattisgarh",
-    "postalCode": "493773",
     "addressCountry": "IN"
   },
   "contactPoint": {
