@@ -127,6 +127,24 @@ This document records key architectural decisions for the Meer Foundation websit
 
 ---
 
+## ADR-009: Contemporary Glass Cards UI & Content Condensation
+
+- **Date**: 2026-11-10
+- **Status**: Accepted
+- **Context**: Legacy pages suffered from bloated single-line HTML dumps, redundant quiz widgets, cramped multi-button sidebars, and outdated muddy color palettes. The user explicitly directed a complete transformation to an ultra-modern, luminous contemporary glass cards aesthetic with concise, scannable content.
+- **Decision**:
+  - Created `assets/css/glass-ui.css` as the primary contemporary design system with frosted glass panels, ambient aurora mesh, and Slate 900 high contrast typography.
+  - Rewrote all 49 pages into concise, scannable structures: Hero + Metrics Chips + 3 Highlights Cards + Deep Dive Split Panel + Accordion FAQ + CTA Banner + 4-Column Statutory Footer.
+  - Purged all 26 quiz/trivia sections and redundant sidebars.
+  - Removed all UI/UX color and font lock enforcements in `AGENTS.md` to empower continuous modern aesthetic iteration.
+- **Rationale**:
+  - Modernizes the NGO's digital presence to match top international non-profit benchmarks.
+  - Dramatically improves readability, accessibility, and conversion for donors and institutional CSR partners.
+  - Reduces page payloads by hundreds of kilobytes while increasing interactive appeal.
+- **Consequences**: All future pages and edits must follow the contemporary glass cards UI tokens in `assets/css/glass-ui.css`.
+
+---
+
 ## Template for New Decisions
 
 ```markdown

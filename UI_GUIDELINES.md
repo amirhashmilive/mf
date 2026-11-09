@@ -1,73 +1,53 @@
 # UI_GUIDELINES.md — Meer Foundation Website
 
-## Color Palette
+## Contemporary Glass Cards UI Design System
 
-### Core Palette
-| Token          | Hex       | Usage                          |
-|----------------|-----------|--------------------------------|
-| `--navy`       | `#0A1628` | Dark backgrounds, footer       |
-| `--navy-mid`   | `#0F2642` | Secondary dark surfaces        |
-| `--navy-light` | `#1A3A5C` | Tertiary dark surfaces         |
-| `--blue`       | `#2563EB` | Primary brand color, links     |
-| `--blue-dark`  | `#1D4ED8` | Hover states on blue           |
-| `--blue-light` | `#3B82F6` | Light accents                  |
-| `--blue-xlight`| `#DBEAFE` | Blue backgrounds               |
-| `--violet`     | `#7C3AED` | Secondary brand, gradients     |
-| `--violet-light`| `#A78BFA`| Light violet accents           |
-| `--gold`       | `#F59E0B` | Warning, highlights, awards    |
-| `--gold-light` | `#FDE68A` | Light gold backgrounds         |
-| `--emerald`    | `#059669` | Success, CTA, positive states  |
-| `--emerald-light`| `#6EE7B7`| Light green accents          |
-| `--rose`       | `#E11D48` | Error, danger, alerts          |
-| `--amber`      | `#D97706` | Caution states                 |
-| `--teal`       | `#0D9488` | Alternate accent               |
-| `--indigo`     | `#4F46E5` | Deep accent                    |
+The Meer Foundation website utilizes a modern, luminous Frosted Glass Cards design system defined in `assets/css/glass-ui.css`. Agents and developers have full creative freedom to maintain, iterate, and polish UI/UX without restrictive color or font locks, ensuring an engaging, accessible, and world-class non-profit experience.
 
-### Hero-Specific Colors
-| Usage              | Value                                   |
-|--------------------|-----------------------------------------|
-| Hero title gradient| `linear-gradient(270deg, #1e40af, #047857, #1e40af)` |
-| Stat value color   | `#1e40af`                                |
-| Primary blue (legacy) | `#1e40af`                            |
+---
 
-### Surface Colors
-| Token     | Hex       | Usage                          |
-|-----------|-----------|--------------------------------|
-| `--bg`    | `#FFFFFF` | Page background                |
-| `--bg-2`  | `#F8FAFC` | Alternate section background   |
-| `--bg-3`  | `#F1F5F9` | Card backgrounds               |
-| `--bg-4`  | `#E2E8F0` | Muted backgrounds              |
-| `--glass` | `rgba(255,255,255,0.88)` | Glassmorphism panels |
+## Frosted Glass Tokens (`assets/css/glass-ui.css`)
 
-### Text Colors
-| Token      | Hex       | Usage                        |
-|------------|-----------|------------------------------|
-| `--text-1` | `#0F172A` | Body text, headings          |
-| `--text-2` | `#334155` | Secondary text               |
-| `--text-3` | `#64748B` | Tertiary text, labels        |
-| `--text-4` | `#94A3B8` | Muted text, placeholders     |
-| `--text-5` | `#CBD5E1` | Very muted, disabled text    |
+### Glass Surfaces & Borders
+| Token                   | Light Theme Value                  | Dark Theme Value                  | Usage                                |
+|-------------------------|------------------------------------|-----------------------------------|--------------------------------------|
+| `--glass-canvas-bg`     | `#F8FAFC`                         | `#090D16`                         | Base background behind ambient mesh  |
+| `--glass-surface`       | `rgba(255, 255, 255, 0.72)`       | `rgba(15, 23, 42, 0.65)`          | Card and header frosted surface      |
+| `--glass-surface-hover` | `rgba(255, 255, 255, 0.92)`       | `rgba(30, 41, 59, 0.85)`          | Card hover state                     |
+| `--glass-border`        | `rgba(255, 255, 255, 0.85)`       | `rgba(255, 255, 255, 0.1)`        | Outer crisp border                   |
+| `--glass-border-subtle` | `rgba(226, 232, 240, 0.7)`        | `rgba(51, 65, 85, 0.6)`           | Dividers, header bottom border       |
+| `--glass-blur`          | `blur(20px)`                       | `blur(20px)`                      | Standard card backdrop blur          |
+| `--glass-blur-heavy`    | `blur(28px)`                       | `blur(28px)`                      | Header and dropdown backdrop blur    |
+
+### High Contrast Typography & Jewel Accents
+| Token                   | Hex / Value                        | Purpose                              |
+|-------------------------|------------------------------------|--------------------------------------|
+| `--glass-ink`           | `#0F172A` (Light) / `#F8FAFC` (Dark)| High-contrast primary headings/body |
+| `--glass-ink-muted`     | `#475569` (Light) / `#94A3B8` (Dark)| Subtitles, secondary descriptions    |
+| `--glass-primary`       | `#059669` (Forest Emerald)        | CTAs, environmental accents, badges  |
+| `--glass-secondary`     | `#0284C7` (River Sky Blue)        | Water, hydrology, secondary jewels   |
+| `--glass-accent`        | `#D97706` (Warm Amber)            | Attention pills, metric highlights   |
 
 ---
 
 ## Typography
+- **Primary Sans**: `'Inter', -apple-system, sans-serif`
+- **Editorial Serif**: `'Fraunces', 'Playfair Display', serif`
+- **Monospace**: `'JetBrains Mono', monospace`
+- **Accessibility**: All text combinations meet WCAG 2.1 AA 4.5:1 minimum contrast.
 
-### Font Families
-| Token          | Stack                                                | Usage           |
-|----------------|------------------------------------------------------|-----------------|
-| `--font-sans`  | `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif` | Body text, UI |
-| `--font-serif` | `'Playfair Display', Georgia, 'Times New Roman', serif` | Headings, stats |
-| `--font-mono`  | `'JetBrains Mono', 'Cascadia Code', 'Courier New', monospace` | Code snippets |
+---
 
-### Base Typography
-- **Font size**: `16px` (html base)
-- **Line height**: `1.65` (body default)
-- **Font smoothing**: antialiased (webkit + moz)
-
-### Heading Convention
-- Use `--font-serif` (Playfair Display) for major headings and statistics
-- Use `--font-sans` (Inter) for everything else
-- Only one `<h1>` per page
+## Standard Page Architecture
+Every subpage follows this scannable, modern component layout:
+1. **Top Statutory Bar**: Non-profit registration, 12A, 80G, and CSR-1 approval notices.
+2. **Glass Sticky Header**: Floating frosted glass header with dropdown menus and mobile drawer.
+3. **Glass Hero with Aurora Mesh**: High-contrast headline, pill badge, 2-line summary, and 4 metric chips.
+4. **Three-Card Glass Highlights Grid**: Crisp cards with colored frosted icons and concise descriptions.
+5. **Split Feature Panel**: Deep dive into outcomes, methodologies, or CSR alignment.
+6. **Accessible FAQ Accordion**: Interactive Q&A covering the most important questions.
+7. **Glass CTA Banner**: Action-oriented gradient banner with direct donation and contact buttons.
+8. **Contemporary 4-Column Footer**: Statutory badges, structured navigation, and copyright.
 
 ---
 

@@ -27,16 +27,17 @@
 ## Critical Rules
 
 ### DO NOT — Ever
-- Change colors, fonts, or design tokens without explicit approval
-- Add any CSS/JS framework (no Tailwind, Bootstrap, React, etc.)
+- Add heavy external runtime frameworks (no React, Next.js, Vue, Angular runtime)
 - Modify the quarterly auto-timeline logic without understanding `data/config.json`
-- Push directly to `main` without a backup
+- Push directly to `main` without a backup (`backup.ps1`)
 - Remove or alter existing comments/docstrings unrelated to your change
 - Delete any HTML page without explicit instruction
 
 ### DO — Always
+- Prioritize modern, high-contrast, professional, and accessible user experience
+- Maintain the Contemporary Glass Cards UI design system (`assets/css/glass-ui.css`)
+- Keep content concise, readable, and structured into scannable cards and metric chips
 - Read `CURRENT_TASK.md` before starting any work
-- Follow the design tokens in `assets/css/style.css` `:root { }` block
 - Use semantic HTML5 elements (`<section>`, `<article>`, `<nav>`, `<header>`, `<footer>`)
 - Maintain accessibility: `aria-label`, `role` attributes, `:focus-visible` styles
 - Enforce Image Standards: `.webp` only, max 50 chars, lowercase, no special chars
@@ -49,65 +50,54 @@
 
 ```
 Meer Foundation Website/
-├── index.html                    # Homepage
-├── about.html                    # About / Founder story
-├── initiatives.html              # All initiatives overview
-├── bolti-nadi.html               # Bolti Nadi river conservation
-├── farmours.html                 # Farmours initiative
-├── prayaas.html                  # Prayaas initiative
-├── yoga-kutumb.html              # Yoga Kutumb initiative
-├── social-heritage-walk.html     # Social Heritage Walk
-├── rivers.html                   # Rivers of Chhattisgarh
-├── rivers-chhattisgarh.html      # Detailed river profiles
-├── impact.html                   # Impact metrics
-├── contact.html                  # Contact page
-├── donate.html                   # Donation page
-├── get-involved.html             # Volunteer / participate
-├── ijmeer-journal.html           # IJMEER journal landing
-├── journal.html                  # Journal archive
-├── editorial-board.html          # Editorial board
-├── peer-review.html              # Peer review process
-├── archive.html                  # Full archive
-├── 404.html                      # Error page
+├── index.html                    # Homepage (Contemporary Glass UI)
+├── 404.html                      # Error page (Glass UI)
+├── about/                        # About section
+│   ├── index.html                # About overview
+│   ├── our-story/index.html      # Founder story & Sakri expedition
+│   ├── five-pillars/index.html   # AEIOM architecture
+│   └── annual-reports/index.html # 15-year audited filings
+├── initiatives/                  # Initiatives section
+│   ├── index.html                # Initiatives overview
+│   ├── bolti-nadi/index.html     # Bolti Nadi river rejuvenation
+│   ├── education/index.html      # Prayaas & EduSuTo education hub
+│   ├── health/index.html         # Yoga Kutumb health hub
+│   └── livelihood/index.html     # Farmours livelihood hub
+├── research/                     # Research & publications
+├── impact/                       # Impact metrics & district profiles
+├── get-involved/                 # Volunteer, CSR & donation portal
+├── emerging/                     # Community radio & media gallery
+├── contact/                      # Contact desk & enquiry dispatch
+├── legal/                        # Compliance & governance policies
 ├── assets/
 │   ├── css/
-│   │   ├── style.css             # Primary design system (2050 lines)
-│   │   ├── premium.css           # Premium component styles
-│   │   ├── main.css              # Legacy/supplementary styles
-│   │   └── styles.css            # Additional styles
-│   ├── js/
-│   │   ├── core.js               # Navigation, dark mode, scroll, reveal
-│   │   ├── components.js         # Header/footer injection
-│   │   ├── main.js               # Page-specific init
-│   │   ├── timeline.js           # Quarterly auto-timeline
-│   │   └── papers.js             # Paper listing/filtering
-│   └── images/                   # All image assets
-├── data/
-│   ├── config.json               # Site/journal configuration
-│   ├── papers.json               # Published papers
-│   ├── issues.json               # Journal issues
-│   └── editors.json              # Editorial board data
-├── CNAME                         # GitHub Pages domain
-├── manifest.json                 # PWA manifest
-├── robots.txt                    # Search engine rules
-├── sitemap.xml                   # XML sitemap
-└── favicon.ico / favicon.svg     # Favicons
+│   │   ├── glass-ui.css          # Contemporary Glass Cards UI Design System
+│   │   ├── style.css             # Base styles & variables
+│   │   └── content-compat.css    # Supplemental utility overrides
+│   ├── js/                       # Vanilla ES6+ modules
+│   └── images/                   # Optimized .webp visual assets
+└── data/                         # Config & structured datasets
 ```
 
 ---
 
-## Design System Reference
+## Design System Reference (Contemporary Glass Cards UI)
 
-- **Primary Color**: `#1e40af` (used in hero, stats, accents)
-- **Accent Color**: `#047857` (emerald green for CTAs)
-- **Brand Gradient**: `linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)`
-- **Hero Gradient**: `linear-gradient(270deg, #1e40af, #047857, #1e40af)`
-- **Font Sans**: `'Inter', -apple-system, sans-serif`
-- **Font Serif**: `'Playfair Display', Georgia, serif`
-- **Max Width**: `1300px`
-- **Header Height**: `78px`
-
-See `UI_GUIDELINES.md` for complete design token reference.
+- **Design Philosophy**: Ultra-modern, frosted glass cards aesthetic with high-contrast Slate 900 typography, luminous white canvas, and vivid jewel accents.
+- **Glass Tokens** (`assets/css/glass-ui.css`):
+  - `--glass-canvas-bg`: `#F8FAFC` (with fixed subtle aurora mesh overlay)
+  - `--glass-surface`: `rgba(255, 255, 255, 0.72)`
+  - `--glass-border`: `rgba(255, 255, 255, 0.85)`
+  - `--glass-border-subtle`: `rgba(226, 232, 240, 0.7)`
+  - `--glass-blur`: `blur(20px)`
+  - `--glass-shadow`: `0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(226, 232, 240, 0.5)`
+- **Typography & Colors**:
+  - Ink: `--glass-ink: #0F172A;` / Muted: `--glass-ink-muted: #475569;`
+  - Primary Brand Jewel: `--glass-primary: #059669;` (Forest Emerald)
+  - Secondary Brand Jewel: `--glass-secondary: #0284C7;` (River Sky Blue)
+  - Accent Jewel: `--glass-accent: #D97706;` (Warm Amber)
+  - Fonts: `'Inter', sans-serif`, `'Fraunces', serif`, `'JetBrains Mono', monospace`
+- **UI Freedom**: Agents have full flexibility to enhance, modernize, and polish the UI/UX without restrictive color or font locks. Keep designs clean, contemporary, and accessible.
 
 ---
 
